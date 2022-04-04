@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT2255</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="desciption" content="Page du cours IFT2255 (Génie logiciel), enseigné par Louis-Edouard LAFONTANT à l'Université de Montréal">
+    <link rel="stylesheet" href="dist/style.min.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <section class="teaching">
+            <div class="teaching-header">
+                <div class="teaching-logo">
+                    <div class="teaching-logo-name">
+                        <span class="teaching-logo-code">IFT</span>
+                        <span class="teaching-logo-number">2255</span>
+                    </div>
+                </div>
+                <div class="teaching-info teaching-info--large">
+                    <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Génie Logiciel</h1>
+                    <p class="teaching-term">Automne 2021</p>
+                    <p class="teaching-schedule">
+                        <strong>Cours:</strong>
+
+                        Mardi 14:30 &ndash; 16:20 @
+                        B-2325 Pav. 3200 J.-Brillant
+                        <strong>&</strong>
+                        Jeudi 14:30 &ndash; 15:20
+                        1360 Pav. André-Aisenstadt
+                    </p>
+                    <p class="teaching-schedule">
+                        <strong>Démos:</strong>
+                        Jeudi 15:30 &ndash; 17:20
+                        1360 Pav. André-Aisenstadt
+                    </p>
+                </div>
+            </div>
+
+            <ul class="bare-list teaching-links">
+                <li class="teaching-link">
+                    <a class="bare-link teaching-link__link teaching-link__link--plan"
+                        href="https://studium.umontreal.ca/course/view.php?id=199083" target="_blank">
+                        StudiUM
+                    </a>
+                </li>
+                <li class="teaching-link">
+                    <a class="bare-link teaching-link__link teaching-link__link--video"
+                        href="https://classe.iro.umontreal.ca/c/ift2255.a21/videos" target="_blank">
+                        Vidéos
+                    </a>
+                </li>
+            </ul>
+
+            <div class="teaching-info teaching-info--small">
+                <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Génie Logiciel</h1>
+                <p class="teaching-term">Automne 2021</p>
+                <p class="teaching-schedule">
+                    <strong>Cours:</strong>
+
+                    Mardi 14:30 &ndash; 16:20 @
+                    B-2325 Pav. 3200 J.-Brillant
+                    <strong>&</strong>
+                    Jeudi 14:30 &ndash; 15:20
+                    1360 Pav. André-Aisenstadt
+                </p>
+                <p class="teaching-schedule">
+                    <strong>Démos:</strong>
+                    Jeudi 15:30 &ndash; 17:20
+                    1360 Pav. André-Aisenstadt
+                </p>
+            </div>
+        </section>
+
+        <section class="teacher-section">
+            <h2 class="teacher-section-title">Enseignants</h2>
+            <ul class="bare-list teachers">
+                <li class="teacher teacher--instructor card">
+                    <img class="card-img" src="./assets/images/photo_louis_edouard_lafontant.jpeg"
+                        alt="Photo de Louis-Edouard LAFONTANT">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="http://www-ens.iro.umontreal.ca/~lafontle/">Louis-Edouard LAFONTANT</a>
+                        </p>
+                        <p class="card-role">
+                            Chargé de cours <br>
+                            <span class="card-address">Bureau 2352 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a
+                                href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via StudiUM.
+                            Pour plannifier une rencontre, utilisez le <a
+                                href="https://calendly.com/lelafontant/30min">calendrier</a>.
+                        </p>
+                    </div>
+                </li>
+                <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="./assets/images/photo_aurelien_ducoin.png" alt="Photo de Aurélien DUCOIN">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="https://github.com/GreenWallows">Aurélien DUCOIN</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire <br>
+                            <span class="card-address">Bureau 2238 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:aurelien.ducoin@umontreal.ca">courriel</a> ou
+                            via StudiUM.
+                            <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
+                        </p>
+                    </div>
+                </li>
+                <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="./assets/images/photo_naima.jpg" alt="Photo de Naima ESSADI">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="https://www.linkedin.com/in/naima-essadi/">Naima ESSADI</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire <br>
+                            <span class="card-address">Bureau 2238 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:naimaessadi@gmail.com">courriel</a> ou via
+                            StudiUM.
+                            <span class="card-availability">Disponible le mercredi entre 10h30 et 12h30</span>.
+                        </p>
+                    </div>
+                </li>
+                <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="./assets/images/photo_oussama.jpg" alt="Photo de Aurélien DUCOIN">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="https://www.linkedin.com/in/oussama-ben-sghaier/">Oussama BEN
+                                SGHAIER</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire <br>
+                            <span class="card-address">Bureau 2238 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:oussamasghaier1995@gmail.com">courriel</a> ou
+                            via StudiUM.
+                            <span class="card-availability">Disponible le mercredi entre 13h00 et 15h00</span>.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="plan">
+            <h2 class="plan-section-title">Plan de cours</h2>
+            <p class="teaching-content">
+                Le but du cours est de vous introduire au génie logicel en mettant l'emphase sur les techniques
+                et méthodologies. <br>
+                Les sujets couverts sont: les processus de développement, les activités de génie logiciel (analyse des
+                besoins, conception, implémentation, vérification et maintenance)
+                et la modélisation de logiciel en UML. <br>
+                Le cours porte sur la théorie du génie logiciel, mais vous donne aussi
+                une expérience pratique du développement collaboratif d'un logiciel qu'ils auront à construire.
+            </p>
+
+            <div class="plan-parts">
+                <div class="plan-part plan-part--goal">
+                    <h3 class="plan-part-title">Objectifs</h3>
+                    <ul class="plan-goals">
+                        <li class="plan-goal">Comprendre le <strong>processus de développement</strong> d'un logiciel
+                        </li>
+                        <li class="plan-goal">Cueillir et documenter les <strong>besoins</strong> et les
+                            <strong>spécifications</strong> d'un produit logiciel
+                        </li>
+                        <li class="plan-goal">Concevoir un système orienté objet en <strong>UML</strong></li>
+                        <li class="plan-goal">Implémenter un logicel en programmation <strong>orienté objet</strong>
+                        </li>
+                        <li class="plan-goal">Être capable de <strong>tester</strong> un logiciel</li>
+                        <li class="plan-goal">Pouvoir incorporer des <strong>changements</strong> à un logiciel après sa
+                            <strong>livraison</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="plan-part plan-part--evaluation">
+                    <h3 class="plan-part-title">Évaluations</h3>
+                    <ul class="bare-list plan-evaluations">
+                        <li class="plan-evaluation">
+                            <h4 class="plan-evaluation-title">Examens</h4>
+                            Intra (20%), Final (35%)
+                        </li>
+                        <li class="plan-evaluation">
+                            <h4 class="plan-evaluation-title">Devoirs</h4>
+                            <ul class="bare-list plan-eval-assignments">
+                                <li class="plan-eval-assignment">
+                                    DM1 (<strong>10%</strong>)
+                                    <!-- <a class="plan-evaluation__link" href="#">Énoncé DM1</a> -->
+                                </li>
+                                <li class="plan-eval-assignment">
+                                    DM2 (<strong>15%</strong>)
+                                    <!-- <a class="plan-evaluation__link" href="#">Énoncé DM2</a> -->
+                                </li>
+                                <li class="plan-eval-assignment">
+                                    DM3 (<strong>20%</strong>)
+                                    <!-- <a class="plan-evaluation__link" href="#">Énoncé DM3</a> -->
+                                </li>
+                            </ul>
+                            <!-- <h5 style="font-size: 1.1em; margin: 0;">Paramètres</h5>
+                            <ul class="plan-eval-details">
+                                <li class="plan-eval-detail">En groupe (3 idéalement)</li>
+                                <li class="plan-eval-detail">Langage de programmation: Java</li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="plan-part plan-part--resource">
+                    <h3 class="plan-part-title">Matériels</h3>
+
+                    <ul class="bare-list plan-resources">
+                        <li class="plan-resource plan-resource--book">
+                            <h4 class="plan-resource-title">Livre</h4>
+                            Schach, S. R. (2010). <em>Object-oriented and classical software engineering</em>,
+                            8<sup>th</sup> edition. <br>
+                            Rajlich, V. (2011). <em>Software engineering: The current practice.</em> Chapman and
+                            Hall/CRC.
+                        </li>
+                        <li class="plan-resource plan-resource--tool">
+                            <h4 class="plan-resource-title">Logiciel</h4>
+                            Visual Paradigm
+                        </li>
+                        <li class="plan-resource plan-resource--web">
+                            <h4 class="plan-resource-title">Ressource</h4>
+                            <a class="plan-evaluation__link" href="https://laurent-audibert.developpez.com/Cours-UML/" target="_blank">Cours
+                                UML de Laurent AUDIBERT</a>
+                        </li>
+                    </ul>
+                    <p>
+                        Tout le matériel, supports et communications sont disponibles dans
+                        <a class="bare-link inline-link" href="https://studium.umontreal.ca/course/view.php?id=199083"
+                            target="_blank">StudiUM</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="page-body">
+        <aside class="body-navigation">
+            <ul class="bare-list weeks">
+                <li class="week">
+                    <h4 class="week-title">Semaine 01 (02 Sep.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Présentation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Enseignant</li>
+                                <li class="week-content-detail">Plan de cours</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Introduction</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Génie</li>
+                                <li class="week-content-detail">Logiciel</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture</strong>
+                            Ch.1, Rajlich ch.1 <br>
+                            Vie de logicel (StudiUM)
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 02 (07 Sep.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modèle de développement</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Linéaire (Cascade, V)</li>
+                                <li class="week-content-detail">Itératif (Prototypage)</li>
+                                <li class="week-content-detail">Incrémental (Phase)</li>
+                                <li class="week-content-detail">Itératif & Incrémental (Unifié)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Processus de développement</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Phase</li>
+                                <li class="week-content-detail">Flux de travail (<em>workflow</em>)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>🎬Capsule</strong>
+                            <a href="https://classe.iro.umontreal.ca/w/xcGaFixKbbtACEyi9UcYJn">Introduction + Processus de développement</a>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture</strong>
+                            Ch.2-3, Rajlich ch.2-3 <br>
+                            Équipe de développement (StudiUM)
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Présentation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Auxiliaire</li>
+                                <li class="week-content-detail">Disponibilités</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Formation des équipes</span>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Outils nécessaires</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Discord (communication) </li>
+                                <li class="week-content-detail">Bitbucket (code)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 03 (14 Sep.) &ndash; <strong>DM1 disponible</strong></h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exigences</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cueillette des besoins</li>
+                                <li class="week-content-detail">Glossaire</li>
+                                <li class="week-content-detail">Échéancier</li>
+                                <li class="week-content-detail">Prototypage</li>
+                                <li class="week-content-detail">Besoin fonctionnel</li>
+                                <li class="week-content-detail">Besoin non-fonctionnel</li>
+                                <li class="week-content-detail">Priorisation</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Cas d'utilisation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme UML</li>
+                                <li class="week-content-detail">Scénario</li>
+                                <li class="week-content-detail">Cas d'étude: #GYM</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>🎬Capsule</strong>
+                            <a href="https://classe.iro.umontreal.ca/w/jtaQZa6E2B2tTgigkUNN36">Exigences: Glossaire + Cas d'utilisation</a>
+                            <a href="https://classe.iro.umontreal.ca/w/3H2v9eb5tRk8VUDUBwS5qm">Analyse fonctionnelle: Scénarios des CUs</a>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture</strong>
+                            Ch.11 <br>
+                            Versionnement de logiciel (StudiUM)
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Introduction DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Questions-réponses</li>
+                                <li class="week-content-detail">Formation des groupes</li>
+                                <li class="week-content-detail">Initiation à GIT</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Flux des exigences</li>
+                                <li class="week-content-detail">Analyse des besoins</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 04 (21 Sep.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Analyse</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Partie à informatiser</li>
+                                <li class="week-content-detail">Exigences conceptuelles</li>
+                                <li class="week-content-detail">Exigences matérielles</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modèle d'analyse</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme d'activités</li>
+                                <li class="week-content-detail">Diagramme ECB</li>
+                                <li class="week-content-detail">Cas d'étude: #GYM</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>🎬Capsule</strong>
+                            
+                            <a href="https://classe.iro.umontreal.ca/w/tfgyF2yePfo3A7JUtiLhRT">Révision CUs, Exigences matérielles, Modèle</a>
+                            <a href="https://classe.iro.umontreal.ca/w/hN4mwRvWxsDz5ZFvFfJ4Tw">Diagramme d'activités (Modèle dynamique)</a>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture:</strong>
+                            Ch.17.4,17.5 + Ch.13
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cas d'étude: ATM</li>
+                                <li class="week-content-detail">Diagramme de cas d'utilisation</li>
+                                <li class="week-content-detail">Diagramme d'activités</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">UML</li>
+                                <li class="week-content-detail">Exigences non-fonctionnelles</li>
+                                <li class="week-content-detail">Scénarios</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 05 (28 Sep.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Conception</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Vue architecturale</li>
+                                <li class="week-content-detail">Vue détaillée</li>
+                                <li class="week-content-detail">Décomposition</li>
+                                <li class="week-content-detail">Modules</li>
+                                <li class="week-content-detail" title="Conception orientée-objet">Conception OO</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modélisation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme de classe</li>
+                                <li class="week-content-detail">Diagramme de séquence</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture:</strong>
+                            Ch.14 <br>
+                            Modélisation UML (StudiUM)
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cas d'étude: ATM</li>
+                                <li class="week-content-detail">Diagramme de classe</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Jeu vidéo</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 06 (05 Oct.) 🔔</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Architecture</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Couplage & Cohésion</li>
+                                <li class="week-content-detail">Réutilisation</li>
+                                <li class="week-content-detail">Libraire</li>
+                                <li class="week-content-detail">Framework</li>
+                                <li class="week-content-detail">Pipes et filtres</li>
+                                <li class="week-content-detail">En couche</li>
+                                <li class="week-content-detail">MVC</li>
+                                <li class="week-content-detail">Client-serveur</li>
+                                <li class="week-content-detail">Peer-to-peer</li>
+                                <li class="week-content-detail">Microservices</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cas d'étude: ATM</li>
+                                <li class="week-content-detail">Diagramme de séquence (DS)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Modélisation</li>
+                                <li class="week-content-detail">Scénario -> DS</li>
+                                <li class="week-content-detail">Énoncé -> DS</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong>Remise DM1 (10 Octobre)</strong> 🎯
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 07 (12 Oct.) &ndash; <strong>DM2 disponible</strong></h4>
+                    <ul class="bare-list">
+                        <li>Révision</li>
+                        <li><strong>Intra (14 Octobre)</strong> 📅</li>
+                    </ul> 
+                </li>
+                <li class="week break">
+                    <h4 class="week-title">Semaine 08 (19 Oct.)</h4>
+                    <strong>RELACHE</strong>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 09 (26 Oct.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Paradigme OO</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Objets & classes</li>
+                                <li class="week-content-detail">Héritage</li>
+                                <li class="week-content-detail">Polymorphisme</li>
+                                <li class="week-content-detail">Encapsulation</li>
+                                <li class="week-content-detail">Abstraction</li>
+                                <li class="week-content-detail">Généricité</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Patrons de conception</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Singleton</li>
+                                <li class="week-content-detail">Composite</li>
+                                <li class="week-content-detail">Patron-methode</li>
+                                <li class="week-content-detail">Stratégie</li>
+                                <li class="week-content-detail">Adapteur</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Correction DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Glossaire</li>
+                                <li class="week-content-detail">CUs</li>
+                                <li class="week-content-detail">Scénarios</li>
+                                <li class="week-content-detail">Remarques générales</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Architecture</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 10 (02 Nov.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Patrons de conception</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">singleton</li>
+                                <li class="week-content-detail">fabrique</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Implémentation</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">langage-programmation</li>
+                                <li class="week-content-detail">normes</li>
+                                <li class="week-content-detail">documentation</li>
+                                <li class="week-content-detail">IDE</li>
+                                <li class="week-content-detail">éditeur</li>
+                                <li class="week-content-detail">débogage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">patron-adapteur</li>
+                                <li class="week-content-detail">patron-stratégie</li>
+                                <li class="week-content-detail">patron-composite</li>
+                                <li class="week-content-detail">patron-méthode</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 11 (09 Nov.) &ndash; <strong>DM3 disponible</strong></h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Qualités du logiciel (ISO)</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Pertinence fonctionnelle</li>
+                                <li class="week-content-detail">Performance</li>
+                                <li class="week-content-detail">Utilisabilité</li>
+                                <li class="week-content-detail">Fiabilité</li>
+                                <li class="week-content-detail">Maintenabilité</li>
+                                <li class="week-content-detail">Transférabilité</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Vérification & Validation</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Inspections</li>
+                                <li class="week-content-detail">Méthodes formelles</li>
+                                <li class="week-content-detail">Tests</li>
+                                <li class="week-content-detail">Boite noire</li>
+                                <li class="week-content-detail">Boite blanche</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Types de test</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">unitaire</li>
+                                <li class="week-content-detail">intégration</li>
+                                <li class="week-content-detail">système</li>
+                                <li class="week-content-detail">acceptation</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Java</li>
+                                <li class="week-content-detail">JavaDoc</li>
+                                <li class="week-content-detail">ANT</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong>Remise DM2 (12 novembre)</strong> 🎯
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 12 (16 Nov.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Tests unitaires</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">succès</li>
+                                <li class="week-content-detail">échec</li>
+                                <li class="week-content-detail">sanitaire</li>
+                                <li class="week-content-detail">JUnit</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Déploiement</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">versionnement</li>
+                                <li class="week-content-detail">environnement</li>
+                                <li class="week-content-detail">machine-virtuelle</li>
+                                <li class="week-content-detail">conteneur</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">JUnit</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Syntaxe</li>
+                                <li class="week-content-detail">Démo Eclipse</li>
+                                <li class="week-content-detail">Exemple ATM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 13 (23 Nov.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">DevOps</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Pratiques</li>
+                                <li class="week-content-detail">Intégration continue (CI)</li>
+                                <li class="week-content-detail">Livraison continue (CD)</li>
+                                <li class="week-content-detail">Demo-Azure</li>
+                                <li class="week-content-detail">Demo-Github Actions</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Maintenance</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Correctif</li>
+                                <li class="week-content-detail">Adaptif</li>
+                                <li class="week-content-detail">Préventif</li>
+                                <li class="week-content-detail">Perfectif</li>
+                                <li class="week-content-detail">Problèmes OO</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démonstration</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">NPM</li>
+                                <li class="week-content-detail">Webpack</li>
+                                <li class="week-content-detail">Github-conflits</li>
+                                <li class="week-content-detail">Github-branches</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 14 (30 Nov.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Maintenance</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Logiciel suivi</li>
+                                <li class="week-content-detail">Test regression</li>
+                                <li class="week-content-detail">Recherche texuel</li>
+                                <li class="week-content-detail">Recherche graphique</li>
+                                <li class="week-content-detail">Refactoring</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Éthiques et Licenses</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Code-ethique</li>
+                                <li class="week-content-detail">EULA</li>
+                                <li class="week-content-detail">Apache</li>
+                                <li class="week-content-detail">MIT</li>
+                                <li class="week-content-detail">GPL</li>
+                                <li class="week-content-detail">Creative-commons</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modélisation du jeu Tétris</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme de classe</li>
+                                <li class="week-content-detail">Diagramme de séquence</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 15 (07 Dec.)</h4>
+                    
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Conclusion</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Bilan</li>
+                                <li class="week-content-detail">Feedback</li>
+                                <li class="week-content-detail">La suite</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 16 (14 Dec.)</h4>
+
+                    <ul class="bare-list">
+                        <li><strong>Final (16 décembre)</strong> 📅</li>
+                        <li><strong>Remise DM3 (19 décembre)</strong> 🎯</li>
+                    </ul> 
+                </li>
+            </ul>
+        </aside>
+
+        <div class="body-content">
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Génie &rarr; Logiciel</h2>
+                </div>
+
+                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                    <li class="preview">
+                        <div class="preview-slides">
+                            <img class="img-preview" src="assets/images/photo_introduction.png" alt="Caractéristique du génie">
+                        </div>
+                        <div class="preview-description">
+                            <h3 class="preview-description-title">Génie</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
+                                </li>
+                                <li>
+                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
+                                    <strong>solutions innovatrices, durables et adaptés à l'environnement</strong>.
+                                </li>
+                                <li>
+                                    Utilise des outils et une méthodologie de travail
+                                </li>
+                            </ul>
+
+                            <h3 class="preview-description-title">Logiciel</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
+                                </li>
+                                <li>
+                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
+                                </li>
+                                <li>
+                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item"><strong>Génie: </strong>Qualités de l'ingénieur</li>
+                        <li class="section-summary-list-item"><strong>Logiciel: </strong>Caractéristiques du logicel</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Outils + Méthodologie</h2>
+                </div>
+
+                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Modèle de développement</h3>
+                            Manière d'organiser et mettre en oeuvre les activités amenant à la réalisation du logiciel. <br>
+                            <strong>Facteurs décisifs:</strong> Distance entre acteurs & Contraintes sur ressources.
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/modele_cascade.png" alt="Modèle en cascade">
+                                    <img class="img-preview" src="assets/images/modele_v.png" alt="Modèle en V">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Modèle linéaire</h4>
+                                    <span>
+                                        <strong>Cascade, Modèle en V</strong>
+                                    </span>
+                                    <ul class="bare-list">
+                                        <li class="check">Plus on avance dans les étapes plus un changement coûte cher.</li>
+                                        <li class="check">Permet une conception bien pensée.</li>
+                                        <li class="check">Adapté à des projets dont les exigences sont bien comprises et les ressources
+                                            limitées.</li>
+                                        <li>
+                                            <span class="list-title">Avantages 👍</span>
+                                            <ul class="bare-list pros">
+                                                <li class="pro">Simple et facile à suivre.</li>
+                                                <li class="pro">Axé sur la documentation et l'analyse</li>
+                                                <li class="pro">Permet une conception bien pensée</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title red">Inconvénients 👎</span>
+                                            <ul class="bare-list cons">
+                                                <li class="con">Purement <strong>linéaire</strong>.</li>
+                                                <li class="con">Trop <strong>rigide</strong></li>
+                                                <li class="con">Pas de <strong>feedback</strong> du client avant la livraison</li>
+                                                <li class="con"><strong>Vérification</strong> tardive</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/modele_prototypage.png" alt="Processus itératif">
+                                </div>
+                                
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Modèle itératif</h4>
+                                    <span>
+                                        <strong>Prototypage, Code-et-modifie (non recommandé pour projet à livrer)</strong>
+                                    </span>
+                                    <ul class="bare-list">
+                                        <li class="check">Pertinent pour les projets où les exigences ne sont pas clairement
+                                            définies/comprises.</li>
+                                        <li class="check">Chaque version a pour but de se rapprocher du système cible plus que la version
+                                            précédente.</li>
+                                        <li class="check">Architecte la coquille du produit complet, puis améliore chaque composant.</li>
+                                        <li>
+                                            <span class="list-title">Avantages 👍</span>
+                                            <ul class="bare-list pros">
+                                                <li class="pro"><strong>Réutilisation</strong> de prototypes.</li>
+                                                <li class="pro">Produit visible très tôt</li>
+                                                <li class="pro">Souci de <strong>vérification</strong> et validation du <strong>client</strong> anticipé</li>
+                                                <li class="pro">Intégration facilitée, moins de raffinement</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title red">Inconvénients 👎</span>
+                                            <ul class="bare-list cons">
+                                                <li class="con"><strong>Retravaille</strong> chaque itération.</li>
+                                                <li class="con">Produit livré à la fin</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/modele_increment.png" alt="Modèle incrémental">
+                                    <img class="img-preview" src="assets/images/modele_i.png" alt="Modèle incrémental">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Modèle incrémental</h4>
+                                    <span>
+                                        <strong>Phase</strong>
+                                    </span>
+                                    <ul class="bare-list">
+                                        <li class="check">Pertinent pour les projets d'envergures.</li>
+                                        <li class="check">Pour gérer de plus grandes information, utiliser le raffinement par étapes.</li>
+                                        <li class="check">Permet de développer par ordre de priorité (on se concentre ce qui est important à
+                                            chaque étape).</li>
+                                        <li class="check">Chaque incrément abouti à une livraison.</li>
+                                        <li>
+                                            <span class="list-title">Avantages 👍</span>
+                                            <ul class="bare-list pros">
+                                                <li class="pro">Développer par ordre de <strong>priorité</strong>.</li>
+                                                <li class="pro"><strong>Livraison</strong> de composants rapides</li>
+                                                <li class="pro">Facile de mesurer le <strong>progrès</strong></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title red">Inconvénients 👎</span>
+                                            <ul class="bare-list cons">
+                                                <li class="con">Pas de <strong>processus</strong> visible et clair à suivre.</li>
+                                                <li class="con">Tache d'<strong>intégration</strong> prend plus d'importance</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/modele_i_i.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Modèle itératif & incrémental (I & I)</h4>
+
+                                    <ul class="bare-list">
+                                        <li class="check">Tous les flux d'activités (workflow) sont impliqués dans chaque incrément, mais
+                                            certains vont dominer plus.</li>
+                                        <li class="check">Plusieurs opportunités de tester, recevoir du feedback et s'ajuster.</li>
+                                        <li class="check">Robustesse de l'architecture peut être déterminée tôt dans le développement.</li>
+                                        <li class="check">Livrables spécifiques pour chaque incrément et chaque workflow.</li>
+                                        <li class="check">On peut atténuer et résoudre les risques plus tôt.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                 
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Processus Unifié</h3>
+                            Définit un cadre de méthodes de développement en suivant une <strong>démarche itérative et incrémentale</strong>. <br>
+                            Définit un processus intégrant toutes les activités de conception et de réalisation au sein de 
+                            cycles de développement réparties sur plusieurs phases, comprenant chacune plusieurs itérations.
+                        </div>
+
+                        <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                            <li class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/model-unifie.png" alt="Modèle unifié">
+                                    <img class="img-preview" src="assets/images/package.gif" alt="Groupement en paquets (phases)">
+                                </div>
+                                <div class="preview-description">
+                                    
+                                    <h4 class="preview-description-subtitle">Flux de travail</h4>
+                                    <ul class="bare-list">
+                                        <li>
+                                            <strong>Exigences</strong>: Déterminer ce dont le client a <strong>besoin</strong>.
+                                        </li>
+                                        <li>
+                                            <strong>Analyse</strong>: Analyser et <strong>affiner</strong> les exigences.
+                                        </li>
+                                        <li>
+                                            <strong>Conception</strong>: <strong>Affiner</strong> l'analyse et produire un
+                                            design <strong>implémentable</strong> par les programmeurs.
+                                        </li>
+                                        <li>
+                                            <strong>Implémentation</strong>: <strong>Traduire</strong> le design dans le langage
+                                            de programmation choisi.
+                                        </li>
+                                        <li>
+                                            <strong>Test</strong>: <strong>Évaluer</strong> les artéfacts produits jusqu'à
+                                            présent.
+                                        </li>
+                                        <li>
+                                            <strong>Déploiement</strong>: <strong>Installation</strong> du logiciel et
+                                            <strong>livraison</strong> de tous les artéfacts au client.
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="preview-description-subtitle">Phase</h4>
+                                    <ul class="bare-list">
+                                        <li>
+                                            <strong>Création</strong>: Déterminer les nécessités et la faisabilité du logiciel à
+                                            développer.
+                                            <!-- <h5 class="list-title">Flux actifs</h5> -->
+                                            <ul class="bare-list preview-relations">
+                                                <li class="preview-relation">Exigences</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Élaboration</strong>: Affiner et élaborer ce qui a été fait durant la phase
+                                            de création.
+                                            <!-- <h5 class="list-title">Flux actifs</h5> -->
+                                            <ul class="bare-list preview-relations">
+                                                <li class="preview-relation">Exigences (révision)</li>
+                                                <li class="preview-relation">Analyse</li>
+                                                <li class="preview-relation">Conception (architectural)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Construction</strong>: Produire une première version du logiciel,
+                                            fonctionnelle et de qualité.
+                                            <!-- <h5 class="list-title">Flux actifs</h5> -->
+                                            <ul class="bare-list preview-relations">
+                                                <li class="preview-relation">Conception</li>
+                                                <li class="preview-relation">Implémentation (itérative)</li>
+                                                <li class="preview-relation">Tests</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Transition</strong>: Implantation du système dans l'environnement de
+                                            production.
+                                            <!-- <h5 class="list-title">Flux actifs</h5> -->
+                                            <ul class="bare-list preview-relations">
+                                                <li class="preview-relation">Test</li>
+                                                <li class="preview-relation">Déploiement</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Agile</h3>
+    
+                            Principes de développement organique (plusieurs incréments, plannification flexible) et inclusive (client fait partie de l'équipe)
+                            orienté résulat (emphase sur les activités de construction).
+                            <a class="link" href="https://www.agilealliance.org/">Plus de détails...</a>
+                        </div>
+                        <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                            <li class="preview">
+                                <div class="preview-slides optional">
+                                    <img class="img-preview" src="assets/images/agile-manifesto-12-principles.png" alt="Agile manifesto (12 principes)">
+                                </div>
+                                <div class="preview-description">
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Scrum</span>
+                                            <ul class="bare-list">
+                                                <li class="dash"><strong>Principe fondamental</strong>: capacité de réorienter la réalisation au cours de son avancement pour toujours être en phase avec les attentes des clients.</li>
+                                                <li class="dash"><strong>Équipe Scrum</strong>: Propriétaire du produit (représentant des clients et utilisateurs), Scrum master, Équipe de développement (7±2, pluridisciplinaire)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Développement dirigé par les tests (<abbr title="Test-Driven development">TDD</abbr>)</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Processus en petites étapes où les <strong>tests sont utilisés comme spécification</strong>.</li>
+                                                <li class="dash">Écrire chaque test avant d'écrire le code source et remanier le code continuellement.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Développement dirigé par les fonctionnalités (<abbr title="Feature-Driven development">FDD</abbr>)</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Centré sur le client, il suit un processus <strong>d'itération à courte durée composoé de cinq activités de base</strong>.</li>
+                                                <li class="dash">Permet de faire un suivi de l'avancement des fonctionnalités dans toutes les activités entreprises.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Extreme Programming (XP)</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Projet divisé en <strong>courtes itérations</strong> (déploiement fréquent).</li>
+                                                <li class="dash">Chaque jour: réunion debout, formation des paires, rédiger les tests, programmer.</li>
+                                                <li class="dash">Chaque semaine, le client fait des tests à partir des scénarios et on ajuste les prochaines itétations en conséquent.</li>
+                                            </ul>                                          
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Lean Development (ex: Kanban)</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Traduction du <em>Lean manufacturing</em> développé en gestion de la production (génie industriel).</li>
+                                                <li class="dash">Kanban organise le travail sur un tableau sectionné en phases ou statuts d'avancements.</li>
+                                                <li class="dash">Permet d'avoir une vue d'ensemble de l'avancement et de travailler efficacement en équipe</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Gestion de versions (VC)</h3>
+                            Gérer l'ensemble des versions (états) de plusieurs fichiers. Les stratégies employées permettent
+                            de <strong> suivre et controler l'évolution</strong> du code source ou d'un projet, <strong>faire des sauts</strong>
+                            vers différents états et <strong>collaborer</strong> avec d'autres.
+                        </div>
+                        <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                            <li class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/vc_centralized.png" alt="versionnement centralisé">
+                                    <img class="img-preview" src="assets/images/vc_decentralized.png" alt="versionnement decentralisé">
+                                    <img class="img-preview optional" src="https://miro.medium.com/max/1288/1*UPFkjUXdEk2jRNMiPTXiBg.png" alt="versionnement decentralisé">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Caractéristique</h4>
+                                    <ul class="bare-list">
+                                        <li class="check">
+                                            Besoin de sauvegarde sécuritaire du code source (back-up)
+                                        </li>
+                                        <li class="check">
+                                            Conserver une <strong>trace</strong>
+                                        </li>
+                                        <li class="check">
+                                            <strong>Collaborer</strong> entre individus
+                                        </li>
+                                        <li class="check">
+                                            Développement incrémental et itératif: <strong>plusieurs versions du code</strong>
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="preview-description-subtitle">Types de système VC</h4>
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Centralisé</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Source de vérité unique</li>
+                                                <li class="dash">Tout le monde communique obligatoirement avec le même dépot (<em>repository</em>)</li>
+                                                <li><em>Exemples: SVN (Tortoise), CVS</em> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Décentralisé</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Source de vérité relative</li>
+                                                <li class="dash">Tout le monde communique avec le dépot externe de son choix</li>
+                                                <li class="dash">Tout le monde possède une copie de tout l'historique ou état du dépot sur sa machine.</li>
+                                                <li><em>Exemples: Git (Github, Bitbucket), Mercurian (Atlassian)</em> </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="preview-description-subtitle">Commandes de base</h4>
+                                    <ul class="bare-list git-actions">
+                                        <li class="git-action">
+                                            <strong>Clone/Check out <code class="snippet">git clone git@github.com:path/to/repository.git</code></strong>: 
+                                            Récupération du <em>remote</em> dépot pour la première fois
+                                        </li>
+                                        <li class="git-action">
+                                            <strong>Commit <code class="snippet">git commit -m <i class="snippet-comment">"commentaire rattaché au commit"</i></code></strong>: 
+                                            Soumet les modifications complétés et <strong>enregistrés</strong> en créant un identifiant unique rattaché à ce nouvel état.
+                                        </li>
+                                        <li class="git-action">
+                                            <strong>Push <code class="snippet">git push origin master</code></strong>: 
+                                            Envoie les changements (soumis par commit) dans le <em>working copy</em> (en local) vers un <em>remote</em> dépot (serveur).
+                                        </li>
+                                        <li class="git-action">
+                                            <strong>Pull <code class="snippet">git pull</code></strong>: 
+                                            Récupération des changements apportés au <em>remote</em> dépot depuis la dernière récupération. Effectue un merge avec le <em>working copy</em>
+                                        </li>
+                                        <li class="git-action">
+                                            <strong>Fetch <code class="snippet">git fetch</code></strong>: 
+                                            Vérification des changements apportés au dépot. Les changements sont placés dans le <em>local repository</em> et peuvent être comparés au <em>working copy</em>.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">UML</h3>
+                            UML (Unified Modeling language) est un de <strong>langage de modélisation</strong> composé de
+                            14 types de diagrammes (structurels et comportementaux). Chaque diagramme représente une
+                            <strong>vue distincte</strong> pour représenter des concepts particuliers du système d'information (logiciel).                             
+                        </div>
+                        <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                            <li class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/cas_utilisation.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-title">Cas d'utilisation</h4>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            Capture le comportement d'un système tel qu'un utilisateur extérieur le voit.
+                                            Regroupe les <strong>besoins fonctionnels</strong> en unités cohérentes (cas d'utilisation), ayant un sens pour les acteurs.
+                                        </li>
+                                        <li>
+                                            Décrit une <strong>interaction</strong> entre le logiciel et ses utilisateurs (acteurs) qui initient les CUs.
+                                        </li>
+                                        
+                                        <li>
+                                            <strong>Système</strong>: Cadre du sytème à développer
+                                        </li>
+                                        <li>
+                                            <strong>Acteur</strong>: A un but en utilisant le système. Joue un rôle d'interaction                                    
+                                        </li>
+                                        <li>
+                                            <strong>But (objectif)</strong>: Ce que l'acteur veut accomplir en interagissant avec le système. Chaque but est un CU.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/diagramme_activites.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h3 class="preview-description-title">Diagramme d'activités</h3>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            Permet de mettre l'accent sur les traitements &rArr; Particulièrement adapté à la modélisation du cheminement de flots de contrôle et de flots de données. 
+                                        </li>
+                                        <li>
+                                            Représenter graphiquement le comportement d'une méthode ou le déroulement d'un cas d'utilisation.
+                                        </li>
+        
+                                        <li>
+                                            <strong>Actions</strong>: Plus petit <strong>traitement</strong> en UML qui a une incidence sur l'état du système ou en extrait une information.
+                                        </li>
+                                        <li>
+                                            <strong>Activités</strong>: Définit un comportement décrit par un séquencement d'actions.
+                                        </li>
+                                        <li>
+                                            <strong>Transitions</strong>: Passage d'une activité/action à une autre. Elles spécifient l'enchaînement des traitements et définissent le flot de contrôle.
+                                        </li>
+                                        <li>
+                                            <strong>Objets</strong>: Représente l'existence d'un objet généré par une action dans une activité et utilisé par d'autres actions.
+                                        </li>
+                                        <li>
+                                            <strong>Nœuds de contrôle</strong>: initial, fin d'activité, fin de flot, décision, fusion, bifurcation, d'union
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/diagramme_ecb.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h3 class="preview-description-title">Diagramme ECB (Entité-Controle-Interface)</h3>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            Utilie pour représenter un premier modèle conceptuel du système.
+                                        </li>
+                                        
+                                        <li>
+                                            <img src="assets/images/icon_entity.png" height="24" alt=""> <strong>Classes d'entité</strong>: Concepts et information qui vit et persiste dans le logiciel
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/icon_boundary.png" height="24" alt=""> <strong>Classes d'interface</strong>: Interactions entre le système et l'environnement/acteurs
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/icon_control.png" height="24" alt=""> <strong>Classes de contrôle</strong>: Calculs et algorithmes complexes
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/diagramme_classe_etudiant.png" alt="">
+                                    <img class="img-preview" src="assets/images/diagramme_classe_relation.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h3 class="preview-description-title">Diagramme de classes</h3>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            Permet de décrire la structure statique du logiciel. Indique les contraintes sur les objets et leurs relations.
+                                        </li>
+                                        
+                                        <li>
+                                            <strong>Classes</strong>: attributs, opérations
+                                        </li>
+                                        
+                                        <li>
+                                            <strong>Visibilité</strong>: private <i class="symbol">-</i>, protected <i class="symbol">#</i>, package <i class="symbol">~</i>, public <i class="symbol">+</i>
+                                        </li>
+                                        
+                                        <li>
+                                            <strong>Relations</strong>: association, agrégation, composition, généralisation/spécialisation
+                                        </li>
+                                        <li>
+                                            <strong>Multiplcité</strong>: nombre d'instances participantes (
+                                                <strong><code>0..1</code></strong> | <strong><code>1</code></strong> | <strong><code>0..*</code></strong> |
+                                                <strong><code>0..k</code></strong> | <strong><code>k..*</code></strong> | <strong><code>n..m</code></strong>
+                                            )
+                                        </li>
+                                        <li>
+                                            <strong>Roles</strong>: Nom (fonction sémantique) donné à une classe dans une association (<strong>indispensable pour les associations réflexives</strong>).
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/diagramme_sequence.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h3 class="preview-description-title">Diagramme de séquences</h3>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            Décrit les CU en mettant en évidence les <strong>interactions</strong> entre les instances des classes (<strong>objets</strong>) du logiciel.
+                                        </li>
+                                        <li>
+                                            Montre la séquence <strong>au cours du temps</strong> des échanges de messages (numérotés) entre les objets participant à un scénario.
+                                        </li>
+                                        <li>
+                                            <strong>Type de messages</strong>: envoie d'un signal, invocation d'une opération, création ou destruction d'une instance
+                                        </li>
+                                        <li>
+                                            <strong>Messages synchrones</strong>: attend la réponse du destinataire avant de poursuivre.
+                                        </li>
+                                        <li>
+                                            <strong>Messages asynchrones</strong>: poursuit son activité sans attendre la réponse à son message.
+                                        </li>
+                                        <li>
+                                            <strong>Fragments</strong>: Sections démarquée d'un diagramme de séquence.
+                                            <strong><code>OPT</code></strong>  (optionnel, <code>if</code>), 
+                                            <strong><code>ALT</code></strong> (alternatives, <code>if-then-else</code>), 
+                                            <strong><code>LOOP</code></strong> (répétition, <code>while</code>), 
+                                            <strong><code>REF</code></strong> (référence à une interaction)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item"><strong>Modèle de développement: </strong>Linéaire (Cascade, V), Itératif, Incrémental</li>
+                        <li class="section-summary-list-item"><strong>Processus unifié: </strong>Flux et Phase (itératif et incrémental)</li>
+                        <li class="section-summary-list-item"><strong>Agile: </strong>TDD, XP, Scrum</li>
+                        <li class="section-summary-list-item"><strong>Gestion de versions: </strong>Centralisé (SVN), non-centralisé (Git)</li>
+                        <li class="section-summary-list-item"><strong>UML: </strong>Diagramme de CU, diagramme d'activités, diagramme de classes, diagramme de séquence</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Processus de développement</h2>
+                </div>
+
+                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Exigences</h3>
+                            Déterminer ce dont le client <strong>a besoin</strong> &ndash; <em>pas nécessairement ce qu'il dit vouloir</em>. <br>
+                            Ensemble des activités reliées au développement et à l'entente des spécifications finales.
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">         
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/exigences.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Ingénierie des exigences</h4>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            <strong>Cueillette des besoins</strong>: Entrevue, Sondage, Observation
+                                        </li>
+                                        <li>
+                                            <strong>Compréhension du domaine</strong>: Glossaire, Persona, Prototypage
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Analyse des besoins et risques</span>
+                                            <ul class="bare-list requirements">
+                                                <li class="requirement"><strong>Besoins fonctionnels</strong>: Spécifie une action que le système doit accomplir sous forme d'interaction entre le <strong>système</strong> et son <strong>environnement</strong>.</li>
+                                                <li class="requirement"><strong>Besoins non-fonctionnels</strong>: Spécifie des propriétés du logiciel même (utilisabilité, fiabilité, performance, sécurité, interopérabilité...)</li>
+                                                <li class="requirement"><strong>Priorisation des besoins</strong>: Par valeur d'affaire ou par sévérité de risque.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">                
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/cu.png" alt="">
+                                </div>
+                                <div class="preview-description">                                    
+                                    <h4 class="preview-description-subtitle">Cas d'utilisation</h4>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            Capture le comportement d'un système tel qu'un utilisateur extérieur le voit.
+                                            Regroupe les <strong>besoins fonctionnels</strong> en unités cohérentes (cas d'utilisation), ayant un sens pour les acteurs.
+                                        </li>
+                                        <li>
+                                            Décrit une <strong>interaction</strong> entre le logiciel et ses utilisateurs (acteurs) qui initient les CUs.
+                                        </li>
+                                    </ul>
+        
+                                    <h5 class="list-title">Scénario</h5>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            <strong>Séquence</strong> spécifique <strong>d'interactions</strong> entre les acteurs et le système et <strong>d'actions</strong> subséquentes du système
+                                        </li>  
+                                        <li>
+                                            <strong>Acteurs</strong>: Principal (initie le CU) et secondaires (intervient dans la réalisation du CU).
+                                        </li>                              
+                                        <li>
+                                            <strong>Scénario principal</strong>: Décrit ce qui se déroule <strong>normalement</strong>, quand il n'y a pas d'erreur.
+                                        </li>
+                                        <li>
+                                            <strong>Scénario alternatif</strong>: <strong>Variantes</strong> du scénario principal. <strong>Exceptions</strong> que le système doit traiter.
+                                        </li>
+                                        <li>
+                                            <strong>Préconditions</strong> nécessaires pour entamer le scénario principal.
+                                        </li>
+                                        <li>
+                                            <strong>Postconditions</strong> de l'état du système lorsque le CU est complété avec succès.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Analyse</h3>
+                            Produire un modèle d'analyse du système qui soit correct, complet, cohérent et vérifiable. <br>
+                            Définir les <strong>contraintes de la conception et de l'implémentation.</strong>.
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/diagramme_activite.png" alt="">
+                                    <img class="img-preview" src="assets/images/modele_ecb.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Caractéristique de l'analyse</h4>
+        
+                                    <ul class="bare-list">
+                                        <li class="dash">
+                                            Pas nécessairement compréhensible par le client.
+                                        </li>
+                                        <li class="dash">
+                                            Force le client et les développeurs à prendre des <strong>décisions</strong> difficiles le plus tôt possible.
+                                        </li>
+                                        <li class="dash">
+                                           Déterminer la partie à informatiser, les ressources physiques nécessaires, les exigences conceptuelles et matérielles.
+                                        </li>
+                                    </ul>
+    
+                                    <h4 class="preview-description-subtitle">Modèle d'analyse complet</h4>
+                                            
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Modèle fonctionnel</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Définir les fonctionnalités du système</li>
+                                                <li class="dash">Cas d'utilisations + scénarios</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Modèle dynamique</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Définir le comportement du système</li>
+                                                <li class="dash">Activités + Flux de données</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Modèle d'objet</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Concepts manipulés par le système et leurs propriétés</li>
+                                                <li class="dash">Classes, composants</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Conception</h3>
+                            Détermine la <strong>structure interne</strong> du logiciel: <strong>comment</strong> il va atteindre ses buts. <br>
+                            Bonne conception contribue à la <strong>qualité</strong> du logiciel (Fiabilité, correction et facilité d'évolution).
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides optional">
+                                    <img class="img-preview" src="assets/images/objectif_bonne_conception.svg" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Objectifs</h4>
+        
+                                    <ul class="bare-list">
+                                        <li><strong>Forte cohésion</strong>: Éléments ne sont pas réunis dans un même module par hasard, ils forment un tout pour réaliser une tâche</li>
+                                        <li><strong>Faible couplage</strong>: Modules sont relativement indépendants : dépendent le moins possible des éléments d'autres modules</li>
+                                        <li><strong>Abstraction</strong>: Décomposition intuitive exprimée en termes du problème, qui permet de se concentrer sur un module à la fois</li>
+                                        <li><strong>Encapsulation et dissimulation d'information</strong>: Détails d'implémentation propices à changer sont cachés derrière une interface stable</li>
+                                    </ul>
+    
+                                    <h5 class="list-title">Conception <strong>architecturale</strong> (haut niveau)</h5>
+                                    <ul class="bare-list">
+                                        <li class="dash">Définit la <strong>structure et l'organisation générale</strong> du logiciel</li>
+                                        <li class="dash">Décrit les modules clés du domaine, les relations entre eux et contraintes</li>
+                                    </ul>
+    
+                                    <h5 class="list-title">Conception <strong>détaillée</strong> (bas niveau)</h5>
+                                    <ul class="bare-list">
+                                        <li class="dash">Réalise chaque <strong>cas d'utilisation</strong></li>
+                                        <li class="dash">Respecte le plan de la conception architecturale</li>
+                                        <li class="dash">Décrit le <strong>fonctionnement interne</strong> de chaque module</li>
+                                        <li class="dash">Prépare l'implémentation</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/decomposition_module_1.png" alt="">
+                                    <img class="img-preview" src="assets/images/decomposition_module_2.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Décomposition du système</h4>
+                                    <ul class="bare-list">
+                                        <li><strong>Décomposer</strong> le système en <strong>petits modules</strong> qui sont individuellement plus faciles à concevoir et implémenter</li>
+                                                <li><strong>Décomposition fonctionnelle</strong>: Décomposer  le système en modules par fonctionnalité</li>
+                                                <li><strong>Système est partitionné en modules</strong> distincts mis en relation</li>
+                                                <li><strong>Établir une hiéarchie</strong>: Facilite la compréhension de la structure par niveau <strong>d'abstraction</strong></li>
+                                    </ul>
+                                    
+                                    <h5 class="list-title">Interface: <strong>partie publique</strong></h5>
+                                    <ul class="bare-list">
+                                        <li class="dash"><em>Quoi offrir?</em> Analyse et conception</li>
+                                        <li class="dash">Ensemble des ressources (opérations, attributs) rendues <strong>accessibles aux autres modules</strong> (clients)</li>
+                                        <li class="dash">Conception d'un module ne nécessite que les interfaces des modules qu'il pourra utiliser</li>
+                                    </ul>
+    
+                                    <h5 class="list-title">Implémentation: <strong>partie privée</strong></h5>
+                                    <ul class="bare-list">
+                                        <li class="dash"><em>Comment le réaliser?</em> Conception et implémentation</li>
+                                        <li class="dash">Façon dont les ressources sont <strong>concrètement représentées et réalisées</strong> dans le module</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/class_diagram.svg" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Diagramme utiles</h4>
+
+                                    <h5 class="list-title">Diagramme de classe</h5>
+                                    <ul class="bare-list">
+                                        <li class="dash">Vue détaillée du design</li>
+                                        <li class="dash">Plus de <strong>classes</strong> que dans le modèle d'analyse</li>
+                                        <li class="dash">Identifier et caractériser les attributs et méthodes de chaque classe en pensant à l'implémentation</li>
+                                    </ul>
+
+                                    <h5 class="list-title">Diagramme de séquence</h5>
+                                    <ul class="bare-list">
+                                        <li class="dash">Décrit les interactions entre les objets, instances du diagramme de classe</li>
+                                        <li class="dash">Un diagramme de séquence par CU</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Implémentation</h3>
+                            Traduire la conception détaillée en code exécutable par une machine. L'implémentation et la
+                            conception doivent rester cohérents.
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/bonne_pratique.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Contraintes et bonnes pratiques</h4>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            Grand système partitionné en <strong>sous-systèmes</strong> développés en parallèle.
+                                            Le développement <strong>d'interfaces</strong> est crucial pour la programmation distribuée.
+                                        </li>
+                                        <li>Implémentation d'un artéfact ou module est toujours suivi de <strong>tests</strong>.</li>                          
+                                        <li>
+                                            <span class="list-title">Choix du langage de programmation</span>
+                                           
+                                           <ul class="bare-list">
+                                               <li><strong>Spécification du contrat</strong>. <em>Langage peut être laissé au choix</em></li>
+                                               <li><strong>Environnement cible</strong>. <em>Le web (frontend) ne supporte que le Javascript, HTML et CSS</em></li>
+                                               <li><strong>Expérience/Préférences de l'équipe de développement</strong>. <em>Réutilisation de libraires internes</em></li>
+                                           </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Normes de programmation et bonnes pratiques</span>
+                                           
+                                            <ul class="bare-list">
+                                                <li class="check">Utiliser des noms de variables <strong>significatifs et cohérents</strong> (<span style="text-decoration: line-through;">ambigus ou génériques</span>).</li>
+                                                <li class="check">Suivre la <strong>nomenclature</strong> du langage de programmation (ex: camelCase pour Java)</li>
+                                                <li class="check"><strong>Décrire</strong> chaque module en utilisant un format reconnu pour générer la documentation (ex: Javadoc)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/outils.png" alt="">
+                                    <img class="img-preview optional" src="assets/images/methode_debogage.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Outils et débogage</h4>
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Outils de programmation</span>
+                                           
+                                            <ul class="bare-list">
+                                                <li><strong>IDE</strong>: Environnement combinant tous les outils nécessaires pour le développement.</li>
+                                                <li><strong>Éditeur</strong>: Outil pour écrire et explorer du code. Peut être augmenté (via extensions, <em>pluggins</em>).</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Débogage</span>
+                                           
+                                            <ul class="bare-list">
+                                                <li><strong>Assertions</strong>: Vérifier une condition lors de l'éxecution (<code>if-else</code>). Utiliser des tests unitaires.</li>
+                                                <li><strong>Exceptions</strong>: Détecter une errer logique ou un cas extrèmes (<code>try-catch</code>)</li>
+                                                <li><strong>Traçage</strong>: Produire la <strong>trace d'appels</strong> (<em>stack trace</em>) retraçant l'historique d'exécution du programme</li>
+                                                <li><strong>Log manuel</strong>: Afficher l'information sur <strong>l'état</strong> du programme dans un log (ex: fichier texte)</li>
+                                                <li>
+                                                    <strong>Débogueur interactif</strong>: Contrôler l'exécution avec des breakpoints et suivre l'état du programme pas à pas. 
+                                                    <a class="bare-link youtube-link" href="https://youtu.be/9gAjIQc4bPU">
+                                                        <img class="youtube-link-icon" src="assets/images/youtube_social_icon_red.png" alt="">
+                                                        Eclipse debugger
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <strong>Débogage en direct</strong>: Modifier le comportement sans quitter le flux d'exécution 
+                                                    <a class="bare-link youtube-link" href="https://youtu.be/EGqwXt90ZqA?t=642">
+                                                        <img class="youtube-link-icon" src="assets/images/youtube_social_icon_red.png" alt="">
+                                                        Démo
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Tests</h3>
+                            L'erreur est humaine, <strong>les programmes sont développés par des humains</strong>
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides optional">
+                                    <img class="img-preview" src="assets/images/iso25010.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Qualités du logiciel</h4>
+                                            
+                                    <ul class="bare-list">
+                                        <li><strong>Pertinence fonctionnelle</strong>: Fonctionnalités du logiciel correspondent aux besoins exprimés et tacites du client et des utilisateurs.</li>
+                                        <li><strong>Performance</strong>: Logiciel présente des performances relatives aux ressources utilisées.</li>
+                                        <li><strong>Compatibilité</strong>: Deux modules peuvent échanger des informations et/ou effectuer leurs tâches, tout en partageant le même environnement (matériel ou logiciel).</li>
+                                        <li><strong>Utilisabilité</strong>: Logiciel peut être utilisé de manière efficace et efficiente par ces utilisateurs (humain), en procurant une expérience satisfaisante.</li>
+                                        <li><strong>Fiabilité</strong>: Logiciel performe des fonctionnalités attendues dans des conditions attendues sur une durée attendue.</li>
+                                        <li><strong>Sécurité</strong>: Logiciel protège l'information pour que les utilisateurs aient les accès requis conformément à leur type/rôle et niveau d'autorisation.</li>
+                                        <li><strong>Maintenabilité</strong>: Logiciel peut être modifié efficacement pour l'adapter aux changements dans l'environnement et dans les exigences.</li>
+                                        <li><strong>Transférabilité</strong>: Logiciel peut être transféré d'un environnement (logiciel ou matériel) à un autre.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/verification_validation.png" alt="">
+                                    <img class="img-preview" src="assets/images/boite_noire_blanche.png" alt="">
+                                    <img class="img-preview optional" src="assets/images/type_test.svg" alt="">
+                                </div>
+                                <div class="preview-description">        
+                                    <h4 class="preview-description-subtitle">Techniques de vérification</h4>
+    
+                                    <h5 class="list-title">Inspections</h5>
+                                    <ul class="bare-list">
+                                        <li>Tester le logiciel sans exécuter de cas de test.</li>
+                                        <li><strong>Révision du logiciel</strong>: lire attentivement</li>
+                                        <li><strong>Métriques d'inspection</strong>: Taux d'inspection, densité de fautes, taux de détection de fautes</li>
+                                        <li><strong>Revue de code (<em>code review</em>)</strong></li>
+                                    </ul>
+        
+                                    <h5 class="list-title">Méthodes formelles</h5>
+                                    <ul class="bare-list">
+                                        <li><strong>Prouver que le code est correct</strong></li>
+                                        <li><strong>Graphe de flux de controle</strong>: Exécution symbolique du programme</li>
+                                        <li>Démonstration automatique de théorèmes</li>
+                                    </ul>
+        
+                                    <h5 class="list-title">Boite noire vs Boite blanche</h5>
+                                    <ul class="bare-list">
+                                        <li><strong>Boite noire</strong> (test fonctionnel): Vérifie si le comportement externe du logiciel est conforme aux exigences.</li>
+                                        <li><strong>Boite blanche</strong> (test structurel): Vérifie si l'implémentation du logiciel est correcte</li>
+                                    </ul>
+        
+                                    <h5 class="list-title">Type de tests</h5>    
+                                    <ul class="bare-list">
+                                        <li><strong>Unitaire</strong>: Chaque composant implémenté doit être testé individuellement, dès que complété.</li>
+                                        <li><strong>Intégration</strong>: Après chaque itération, combiner les composants et les tester ensemble.</li>
+                                        <li><strong>Système</strong>: Tester le système au complet (par développeur)</li>
+                                        <li><strong>Acceptation</strong>: Tester l'application à chaque livraison (par client)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>                    
+                    </li>
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Déploiement</h3>
+                            Transition de l'application d'un environnement à un autre. <br>
+                            Activités: Assemblage et configuration, Livraison, Transfert, Installation,
+                            Activation, Mise à jour
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/release_period.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Phases d'un logiciel</h4>
+                                     
+                                    <ul class="bare-list">
+                                        <li><strong>Pré-alpha</strong>: Encore en développement, avant les tests formels.</li>
+                                        <li><strong>Alpha</strong>: En mode tests fonctionnels (boite noire et boite blanche).</li>
+                                        <li><strong>Beta</strong>: Logiciel fonctionnel, testé, dans les mains d'un groupe d'utilisateurs controlé.</li>
+                                        <li><strong>Candidat à la livraison</strong>: Potentiellement la version finale à moins d'autres défauts. Code source figé.</li>
+                                        <li><strong>En production</strong>: Disponible au public. Version commercialisée.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/environmen.png" alt="">
+                                    <img class="img-preview" src="assets/images/virtualisation.png" alt="">
+                                </div>
+                                <div class="preview-description">        
+                                    <h4 class="preview-description-subtitle">Stratégie et environnements</h4>
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Stratégie de versionnement</span>
+                                            Suivre un standard (MAJOR.MINOR.PATCH) comme le <a class="inline-link" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Environnements</span>
+                                           
+                                           <ul class="bare-list">
+                                               <li><strong>Développement</strong>: Ordinateur personnel du développeur contenant tout le nécessaire pour le développement.</li>
+                                               <li><strong>Test (staging)</strong>: Simule l'environnement de production. <strong>Roule souvent sur une machine virtuelle</strong></li>
+                                               <li><strong>Production</strong>: Vrai environnement où le logiciel est installé</li>
+                                           </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Virtualisation</span>
+                                           
+                                           <ul class="bare-list">
+                                               <li><strong>Machine virtuelle</strong>: <strong>Abstraction complète</strong> de la machine. Interagit avec <strong>composantes physiques de l'ordinateur</strong> via hyperviseurs.</li>
+                                               <li><strong>Conteneur</strong>: 
+                                                    <strong>Contient toutes les dépendances nécessaires</strong> (services, librairies&hellip;) pour exécuter une application. 
+                                                    Utilise les <strong>fonctionnalités de l'OS hote</strong> pour en simuler un autre.
+                                                </li>
+                                           </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/devops.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">DevOps</h4>
+
+                                    <ul class="bare-list">
+                                        <li class="dash">Inclure les Ops <strong>tout au long du processus de développement</strong></li>
+                                        <li class="dash">Instaurer un processus (automatisé) de déploiement en continu suivi par tous</li>
+                                        <li>
+                                            <span class="list-title">Intégration continue et Livraison continue (CI/CD)</span>
+                                        
+                                            <ul class="bare-list">
+                                                <li>Utiliser des scripts pour automatiser certaines taches</li>
+                                                <li>
+                                                    <strong>Intégration continue (CI)</strong>: 
+                                                    Chacun commit son code fréquemment. Des tests automatisés sont utilisés pour 
+                                                    éviter l'introduction de fautes (bugs) ou d'une incompatibilité entre le 
+                                                    nouveau code (branche) et le code principal (main).
+                                                </li>
+                                                <li>
+                                                    <strong>Livraison continue (CD)</strong>: 
+                                                    Infrastructure d'automatisation du déploiement/publication ciblant un ou plusieurs environnements.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>      
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Maintenance</h3>
+                            <strong>Tout changement</strong> de n'importe quel artéfact du logiciel <strong>une fois déployé</strong>. <br>
+                            Maintenabilité doit être <strong>pensée dès le début</strong>
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides optional">
+                                    <img class="img-preview" src="assets/images/type_changement.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Type de changements</h4>
+                                           
+                                    <ul class="bare-list">
+                                        <li><strong>Perfectif</strong>: Accroître la valeur du logiciel suite à des changements demandés par le client.</li>
+                                        <li><strong>Adaptif</strong>: Préserver la valeur du logiciel en répondant aux changements de l'environnement</li>
+                                        <li><strong>Correctif</strong>: Corriger les défauts restants</li>
+                                        <li><strong>Préventif</strong>: Protège le logiciel en facilitant les changements futurs par anticipation</li>
+                                    </ul>
+        
+                                    <span class="list-title">Logiciels de suivi de défauts</span>
+                                    <em>Exemples: Bugzilla, Backlog, BugHerd</em>
+                                    <ul class="bare-list">
+                                        <li><strong>Création de tickets, assignation et suivi de la résolution</strong></li>
+                                        <li><strong>Rapport de défauts</strong>: Doit inclure assez d'information pour permettre au programmeur de maintenance de recréer le problème pour l'investiguer</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/etapes_maintenance.svg" alt="">
+                                    <img class="img-preview" src="assets/images/refactoring.svg" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Étapes clés pour effectuer un changement</h4>
+        
+                                    <span class="list-title">Recherche des modules cibles</span>
+                                           
+                                    <ul class="bare-list">
+                                        <li><strong>Recherche textuelle</strong>: Indépendant de la structure du programme, mais dépend des conventions de nommage. Applicable à des concepts explicites seulement</li>
+                                        <li><strong>Graphe par dépendance (graphe)</strong>: Utilise la structure des classes du programme et nécessite la compréhension des fonctionnalités locales et composites. Applicable aux concepts implicites et explicites</li>
+                                    </ul>
+        
+                                    <span class="list-title">Refactoring</span>
+                                           
+                                    <ul class="bare-list">
+                                        <li><strong>Modifie la structure du code sans affecter la fonctionnalité</strong></li>
+                                        <li>Certains changements sont apportés afin de <strong>minimiser l'impact</strong> des changements</li>
+                                        <li>Consiste en une séquence de <strong>transformations qui préservent le comportement</strong></li>
+                                    </ul>
+        
+                                    <span class="list-title">Test de régression</span>
+                                           
+                                    <ul class="bare-list">
+                                        <li><strong>Garantir que le changement est correct</strong>. Après un changement, le programmeur re-teste tout le code.</li>
+                                        <li>Cas de <strong>test antérieurs font partie du test de régression</strong>. La suite de tests augmente</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item"><strong>Exigences: </strong>Élaboration des besoins du client et compréhension du domaine</li>
+                        <li class="section-summary-list-item"><strong>Analyse: </strong>Analyse des exigences et définition des contraintes physiques et conceptuelles</li>
+                        <li class="section-summary-list-item"><strong>Conception: </strong>Choix d'architecture et modélisation d'une solution implémentable</li>
+                        <li class="section-summary-list-item"><strong>Implémentation: </strong>Traduction du design en code exécutable</li>
+                        <li class="section-summary-list-item"><strong>Tests: </strong>Vérification et validation des artéfacts produits</li>
+                        <li class="section-summary-list-item"><strong>Déploiement: </strong>Installation du logiciel et livraison des artéfacts au client</li>
+                        <li class="section-summary-list-item"><strong>Maintenance: </strong>Tout changement de n'importe quel artéfact du logiciel une fois déployé</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Architecture + Conception</h2>
+                </div>
+                
+                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Principes de conception</h3>
+                            <strong>Couplage</strong> d'un module: Degré d'interaction entre les modules. <br>
+                            <strong>Cohésion</strong> d'un module: Degré d'interaction au sein du module
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview optional" src="assets/images/coupling_cohesion.png" alt="">
+                                    <img class="img-preview" src="assets/images/modularity-benefits-application-design-example.png" alt="">
+                                    <img class="img-preview" src="assets/images/modularity-benefits-module-reuse.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Caractéristique</h4>
+        
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Bonne conception 👍</span>
+                                            <ul class="bare-list pros">
+                                                <li class="pro"><strong>Faible couplage et forte cohésion</strong></li>
+                                                <li class="pro"><strong>Réutilisation:</strong> Réutilisation d'un composant d'un produit pour faciliter le développement d'un autre produit ayant des fonctionnalités différentes</li>
+                                                <li class="pro"><strong>Conception modulaire:</strong> Décomposition en modules indépendants et interchangeables qui contiennent tout ce qui leur est nécessaire pour exécuter un aspect d'une fonctionnalité</li>
+                                                <li class="pro"><strong>Conception évolutive:</strong> Minimiser l'effort d'apporter des modifications au logiciel après le développement initial</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title red">Mauvaise conception 👎</span>
+                                            <ul class="bare-list cons">
+                                                <li class="con"><strong>Rigidité:</strong> Logiciel difficile à modifier car chaque changement impacte beaucoup trop de parties du système</li>
+                                                <li class="con"><strong>Fragilité:</strong> Quand on effectue une modification, des parties imprévues du système ne fonctionnent plus</li>
+                                                <li class="con"><strong>Immobilité:</strong> Difficile de réutiliser un composant dans une autre application car on ne peut la démêler de l'application courante</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="preview-description-subtitle">Conception modulaire vs. monolithique</h4>
+                                    <ul class="bare-list">
+                                        <li>Les deux designs sont équivalent d'un point de vue fonctionnel</li>
+                                        <li>
+                                            <span class="list-title red">Design monolithique</span>
+                                            <ul class="bare-list cons">
+                                                <li class="con">Difficile à comprendre</li>
+                                                <li class="con">Difficile à étendre ou améliorer</li>
+                                                <li class="con">Difficile à réutiliser dans un autre produit</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Design modulaire</span>
+                                            <ul class="bare-list pros">
+                                                <li class="pro"><strong>Maximiser</strong> les relations <strong>au sein</strong> du module</li>
+                                                <li class="pro"><strong>Minimiser</strong> les relations <strong>entre</strong> les modules</li>
+                                                <li class="pro">Facilite la modification d'un système</li>
+                                                <li class="pro">Favorise la réutilisation d'un module</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/libraire_framework.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Réutilisation</h4>
+        
+                                    <ul class="bare-list"> 
+                                        <li>
+                                            <strong>Librairie</strong>: Ensemble de <strong>programmes/modules cohésifs et réutilisables</strong>. Utilisateur de la librairie est responsable de la logique de contrôle.
+                                        </li>
+                                        <li>
+                                            <strong>Framework</strong>: La plateforme incorpore la <strong>logique de contrôle générique</strong>. Utilisateur personnalise les fonctionnalités génériques pour les besoins de l'application.
+                                        </li>
+                                        <li>
+                                            <strong>Programmation orientée composant</strong>: Combine les deux approches. Mise en place d'une plateforme applicative et identification des librairies réutilisables que la plateforme peut invoquer.
+                                        </li>               
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>                        
+                    </li>
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Styles d'architecture</h3>
+                            <strong>Design conceptuel</strong> du système définissant la <strong>structure</strong> (haut-niveau), 
+                            les mécanismes de <strong>communication</strong> (entre composantes) et tenant compte des 
+                            <strong>besoins non-fonctionnels</strong>. <br>
+                            Les choix architecturaux (styles) sont <strong>critiques pour produire un système adéquat</strong> et 
+                            sont <strong>difficiles à changer</strong> une fois le système créé.
+                        </div>
+
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/pipeline.png" alt="">
+                                    <img class="img-preview" src="assets/images/MVC3.png" alt="">
+                                    <img class="img-preview" src="assets/images/p2p-vs-client-server-architecture.jpg" alt="">
+                                    <img class="img-preview" src="assets/images/microservice.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Pipes et filtres</span>
+                                            
+                                            <ul class="bare-list">
+                                                <li class="dash">Modules organisés en filtres communiquant via des pipes.</li>
+                                                <li class="dash">Traitement batch en plusieurs étapes</li>
+                                                <li class="dash">Exécution concurrente de filtres, synchronisation des flux parfois nécessaire</li>
+                                                <li><em>Usages: Compilateur, Traitement d'image, Lignes de déploiement</em> </li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li>
+                                            <span class="list-title">En couche (ex: 3-tier)</span>
+                                            
+                                            <ul class="bare-list">
+                                                <li class="dash">Système organisé en couches hiérarchiques.</li>
+                                                <li class="dash">Chaque couche fournit un service à la couche supérieur et en reçoit de la couche inférieure</li>
+                                                <li><em>Usages: Réseaux, Application Web</em> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">MVC (Model-View-Controller)</span>
+                                            Divise une application en trois composant: Modèle, Vue et Controleur.
+                                            <ul class="bare-list">
+                                                <li class="dash"><strong>Modèle:</strong> encapsule l'état de l'application et répond aux demandes d'état</li>
+                                                <li class="dash"><strong>Vue:</strong> fait le rendu du modèle et affiche l'information à l'utilisateur</li>
+                                                <li class="dash"><strong>Controleur:</strong> définit le comportement de l'application et traite les requêtes.</li>
+                                                <li><em>Usages: Majorité des applications web, Framework</em> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Client-serveur</span>
+                                            Divise le système en deux parties: Serveur et Clients
+                                            <ul class="bare-list">
+                                                <li class="dash"><strong>Clients:</strong> reçoivent des services des serveurs et doivent pouvoir contacter les serveurs</li>
+                                                <li class="dash"><strong>Serveurs:</strong> fournissent des services aux clients et autres serveurs</li>
+                                                <li><em>Usages: Email, Système bancaire</em> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Peer-to-peer</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Chaque nœud (<em>peer</em>) joue à la fois le rôle du client et du serveur</li>
+                                                <li class="check">Favorise la fiabilité du système (tolérance aux pannes)</li>
+                                                <li class="check">Mise à l'échelle facile (grandit avec le nombre de pairs)</li>
+                                                <li><em>Usages: Blockchain, BitTorrent</em> </li>
+                                            </ul>    
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Microservice</span>
+                                            <ul class="bare-list">
+                                                <li class="dash">Collection de petits services autonomes, indépendants et restraints à une fonction</li>
+                                                <li class="dash">Service accessible via une API (fournisseur de service), accessible par internet</li>
+                                                <li><em>Usages: Amazon web services (AWS), Azure</em> </li>
+                                            </ul>   
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Paradigme orienté-objet (OOP)</h3>
+                            Style de programmation basé sur le concept <em>d'objets</em> encapsulant les caractéristiques 
+                            (attributs) et comportements (méthodes) de l'entité cible à programmer.
+                        </div>
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides optional">
+                                    <img class="img-preview" src="assets/images/java-oops.png" alt="">
+                                </div>
+                                <div class="preview-description">
+                                    <h4 class="preview-description-subtitle">Caractéristiques</h4>
+
+                                    <ul class="bare-list">
+                                        <li><strong>Objet:</strong> Représente une entité réelle ou conceptuelle, singulière et identifiable avec un rôle bien défini dans le domaine du problème</li>
+                                        <li><strong>Classe:</strong> Représentation d'un ensemble d'objets qui partagent une structure, un comportement et une sémantique en commun</li>
+                                        <li><strong>Héritage:</strong> Relation de partage de la structure et du comportement</li>
+                                        <li><strong>Polymorphisme:</strong> Une opération définie dans plus d'une classe qui prend différentes implémentations</li>
+                                        <li><strong>Encapsulation:</strong> Regroupement de concepts reliés en une seule unité référée par un seul nom</li>
+                                        <li><strong>Abstraction:</strong> Utilisation de l'encapsulation pour restreindre la perception depuis l'extérieur sur les mécanismes internes au logiciel</li>
+                                        <li><strong>Généricité:</strong> Mécanisme pour que les clients décident du type d'objets dans une classe à travers des paramètres passé lors de la déclaration et qui est évalué lors de la compilation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                        <div class="preview-section-header" data-collapsible-header="">
+                            <h3 class="preview-section-title">Patrons de conception</h3>
+                            Un patron décrit et nomme une <strong>solution (abstraite) à un problème commun</strong>. <br>
+                            La solution proposée par un patron peut être modifiée ou adaptée selon les besoins du logiciel.
+                        </div>
+                        <div class="preview-content collapsible-content" data-collapsible-content="">
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/singleton.png" alt="">
+                                    <img class="img-preview" src="assets/images/patron_fabrique.png" alt="">
+                                </div>
+                                <div class="preview-description">    
+                                    <h4 class="preview-description-subtitle">Patron de création</h4>
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Singleton</span>
+                                            <strong>Garantir qu'une classe n'a qu'une seule instance et offre un point d'accès global</strong>
+                                            <ul class="bare-list">
+                                                <li class="check">Contrôle l'accès à l'instance</li>
+                                                <li class="check">Accès global sans utiliser de variable globale</li>
+                                                <li class="check">Facilite le raffinement des opérations et représentations</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Fabrique</span>
+                                            Permet de <strong>dissimuler comment créer les objets</strong>.
+        
+                                            <ul class="bare-list">
+                                                <li class="check">Définir une <strong>interface</strong> pour créer un objet, mais en laissant les <strong>sous-classes</strong> décider quelle classe instancier</li>
+                                                <li class="check">Permet au code d'être indépendant de comment les objets sont créés, composés et représentés</li>
+                                                <li class="check">Délègue l'instanciation à une sous-classe</li>
+                                            </ul>
+                                        </li>                           
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/composite_pattern.png" alt="">
+                                    <img class="img-preview" src="assets/images/patron_adapteur.png" alt="">
+                                </div>
+                                <div class="preview-description">            
+                                    <h4 class="preview-description-subtitle">Patron de structure</h4>
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Composite</span>
+                                            Compose les objets en structures d'arborescence pour représenter des hiérarchies d'ensemble/partie.
+                                            
+                                            <ul class="bare-list">
+                                                <li class="check">Permet au client de traiter les objets et les compositions de façon uniforme</li>
+                                                <li class="check">Définit une <strong>hiérarchie claire</strong> des objets</li>
+                                                <li class="check"><strong>Composition récursive</strong> d'objets simples et complexes</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Adapteur</span>
+                                            Communication entre deux objets ayant leurs implémentations <strong>incompatibles</strong>
+                                            <ul class="bare-list">
+                                                <li class="check">Donne accès à son implémentation interne sans pour autant <strong>coupler</strong> les clients à son implémentation interne</li>
+                                                <li class="check">Adaptateur fournit tous les avantages de la <strong>dissimulation de l'information</strong> sans avoir à cacher ses détails d'implémentation</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="preview">
+                                <div class="preview-slides">
+                                    <img class="img-preview" src="assets/images/methode.png" alt="">
+                                    <img class="img-preview" src="assets/images/strategie.png" alt="">
+                                </div>
+                                <div class="preview-description">    
+                                    <h4 class="preview-description-subtitle">Patron de comportement</h4>
+                                    <ul class="bare-list">
+                                        <li>
+                                            <span class="list-title">Patron de méthode</span>
+                                            Définit le <strong>squelette</strong> d'un algorithme dans une opération en <strong>reportant</strong> certaines étapes à des sous-classes.
+                                            <ul class="bare-list">
+                                                <li class="check">Permet d'<strong>affiner</strong> certaines étapes d'un algorithme sans changer sa structure</li>
+                                                <li class="check">Implémente les <strong>parties invariantes</strong> d'un algorithme et laisse les sous-classes implémenter le comportement qui va varier</li>
+                                                <li class="check">Évite la <strong>duplication de code</strong> en factorisant le comportement commun des sous-classes</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="list-title">Stratégie</span>
+                                            Définit une <strong>famille d'algorithmes</strong>, encapsule chacun et rend-les interchangeables.
+                                            <ul class="bare-list">
+                                                <li class="check">Algorithme varie indépendamment du client qui l'utilise</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item"><strong>Principes de conception: </strong>Couplage, cohésion, module</li>
+                        <li class="section-summary-list-item"><strong>Architecutre: </strong>Pipes et filtres, En couche, MVC, Client-serveur, Peer-to-peer, Microservices</li>
+                        <li class="section-summary-list-item"><strong>Paradigme orienté-objet: </strong>Encapsulation, Classes et objets, Héritage, Polymorphisme</li>
+                        <li class="section-summary-list-item"><strong>Patrons de conception: </strong>Singleton, Fabrique, Composite, Patron de méthode, Stratégie, Adapteur</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="content-wrapper">
+            <p>&copy; 2021 &ndash; Louis-Edouard LAFONTANT</p>
+        </div>
+    </footer>
+
+    <script src="dist/main.js"></script>
+</body>
+
+</html>
