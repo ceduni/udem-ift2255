@@ -394,6 +394,10 @@
     color: #222;
 }
 
+.card-link {
+    color: #006aff;
+}
+
 .card-role { margin: 0; color: #555; font-weight: 500;}
 
 .card-address {
