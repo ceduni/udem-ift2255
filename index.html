@@ -8,10 +8,10 @@
     <title>IFT2255</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <meta name="desciption" content="Page du cours IFT2255 (Génie logiciel), enseigné par Louis-Edouard LAFONTANT à l'Université de Montréal">
-    <link rel="stylesheet" href="dist/style.min.css?v=02">
-    <!-- <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="dist/style.min.css?v=03">
+    <!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/base.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 </head>
 
 <body>
@@ -271,14 +271,20 @@
                             <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Linéaire (Cascade, V)</li>
                                 <li class="week-content-detail">Itératif (Prototypage)</li>
-                                <!-- <li class="week-content-detail">Incrémental (Phase)</li> -->
+                                <li class="week-content-detail">Incrémental (Phase)</li>
                                 <!-- <li class="week-content-detail">Itératif & Incrémental (Unifié)</li> -->
                             </ul>
                         </li>
                         <li class="week-content-item">
-                            <strong>📖Lecture</strong>
-                            Ch.1, Rajlich ch.1 <br>
-                            <!-- Vie de logiciel (StudiUM) -->
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Ch.1</strong> (<em>OO and classical SE</em>, Schach)
+                                </li>
+                                <li class="lecture">
+                                    📖 <strong>Ch.1</strong> (<em>SE practice</em>, Rajlich)
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <ul class="bare-list week-content tp">
@@ -300,12 +306,12 @@
                 </li>
                 <li class="week">
                     <h4 class="week-title">Semaine 02 (09 Mai)</h4>
-                    <ul class="bare-list week-content th hidden">
+                    <ul class="bare-list week-content th">
                         <li class="week-content-item">
                             <span class="week-content-title">Modèle de développement</span>
                             <ul class="bare-list week-content-details">
-                                <li class="week-content-detail">Incrémental (Phase)</li>
-                                <li class="week-content-detail">Itératif & Incrémental (Unifié)</li>
+                                <li class="week-content-detail">Itératif & Incrémental</li>
+                                <li class="week-content-detail">Modèle Unifié</li>
                             </ul>
                         </li>
                         <li class="week-content-item">
@@ -315,16 +321,24 @@
                                 <li class="week-content-detail">Flux de travail (<em>workflow</em>)</li>
                             </ul>
                         </li>
-                        <li class="week-content-item">
-                            <strong>🎬Capsule</strong>
-                            <a href="https://classe.iro.umontreal.ca/w/xcGaFixKbbtACEyi9UcYJn">Introduction + Processus de développement</a>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Capsule</span>
+                            <a class="bare-link week-content-video" title="Introduction et Processus de développement" 
+                                href="https://classe.iro.umontreal.ca/w/xcGaFixKbbtACEyi9UcYJn">🎬 Intro + Processus de dével.</a>
                         </li>
-                        <li class="week-content-item">
-                            <strong>📖Lecture</strong>
-                            Ch.2-3, Rajlich ch.2-3 <br>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Ch.2-3</strong> (<em>OO and classical SE</em>, Schach)
+                                </li>
+                                <li class="lecture">
+                                    📖 <strong>Ch.2-3</strong> (<em>SE practice</em>, Rajlich)
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                    <ul class="bare-list week-content tp hidden">
+                    <ul class="bare-list week-content tp">
                         <li class="week-content-item">
                             <span class="week-content-title">Formation des équipes</span>
                             <ul class="bare-list week-content-details">
@@ -343,11 +357,11 @@
                             <span class="week-content-title">Exercices</span>
                         </li>
                     </ul>
-                    <strong>DM1 disponible (13 Mai)</strong> 🎯
+                    <strong style="margin-top: 6px; font-size: 1.1em;">DM1 disponible (13 Mai) 📅</strong>
                 </li>
                 <li class="week">
                     <h4 class="week-title">Semaine 03 (16 Mai)</h4>
-                    <ul class="bare-list hidden week-content th">
+                    <ul class="bare-list week-content th hidden">
                         <li class="week-content-item">
                             <span class="week-content-title">Exigences</span>
                             <ul class="bare-list week-content-details">
@@ -368,15 +382,20 @@
                                 <li class="week-content-detail">Cas d'étude: #GYM</li>
                             </ul>
                         </li>
-                        <li class="week-content-item">
-                            <strong>🎬Capsule</strong>
-                            <a href="https://classe.iro.umontreal.ca/w/jtaQZa6E2B2tTgigkUNN36">Exigences: Glossaire + Cas d'utilisation</a>
-                            <a href="https://classe.iro.umontreal.ca/w/3H2v9eb5tRk8VUDUBwS5qm">Analyse fonctionnelle: Scénarios des CUs</a>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Capsule</span>
+                            <a class="bare-link week-content-video" title="Exigences: Glossaire + Cas d'utilisation"
+                                href="https://classe.iro.umontreal.ca/w/jtaQZa6E2B2tTgigkUNN36">🎬 Exigences</a>
+                            <a class="bare-link week-content-video" title="Analyse fonctionnelle: Scénarios des CUs"
+                                href="https://classe.iro.umontreal.ca/w/3H2v9eb5tRk8VUDUBwS5qm">🎬 Analyse fonctionnelle</a>
                         </li>
-                        <li class="week-content-item">
-                            <strong>📖Lecture</strong>
-                            Ch.11 <br>
-                            Versionnement de logiciel (StudiUM)
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Ch.11</strong> (<em>OO and classical SE</em>, Schach)
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <ul class="bare-list hidden week-content tp">
@@ -487,10 +506,10 @@
                             </ul>
                         </li>
                     </ul>
-                    <strong>Remise DM1 (5 Juin)</strong> 🎯
+                    <strong style="margin-top: 6px; font-size: 1.1em">Remise DM1 (5 Juin)</strong> 🎯
                 </li>
                 <li class="week">
-                    <h4 class="week-title">Semaine 06 (06 Juin) 🔔</h4>
+                    <h4 class="week-title">Semaine 06 (06 Juin)</h4>
                     <ul class="bare-list hidden week-content th">
                         <li class="week-content-item">
                             <span class="week-content-title">Architecture</span> 
@@ -535,8 +554,8 @@
                 <li class="week">
                     <h4 class="week-title">Semaine 07 (13 Juin)</h4>
                     <ul class="bare-list">
-                        <li>Révision</li>
-                        <li><strong>Intra (17 Juin)</strong> 📅</li>
+                        <!-- <li>Révision</li> -->
+                        <li><strong style="font-size: 1.1em">Intra (17 Juin)</strong> 📅</li>
                     </ul> 
                 </li>
                 <!-- <li class="week break">
@@ -619,7 +638,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <strong>Remise DM2 (3 Juillet)</strong> 🎯
+                    <strong style="margin-top: 6px; font-size: 1.1em">Remise DM2 (3 Juillet)</strong> 🎯
                 </li>
                 <li class="week">
                     <h4 class="week-title">Semaine 10 (04 Juil.)</h4>
@@ -738,8 +757,8 @@
                         </li>
                     </ul>
                       <ul class="bare-list">
-                        <li><strong>Final (22 Juillet)</strong> 📅</li>
-                        <li><strong>Remise DM3 (31 Juillet)</strong> 🎯</li>
+                        <li><strong style="font-size: 1.1em">Final (22 Juillet)</strong> 📅</li>
+                        <li><strong style="font-size: 1.1em">Remise DM3 (31 Juillet)</strong> 🎯</li>
                     </ul> 
                 </li>
                 <li class="week hidden">
@@ -868,13 +887,13 @@
                 </div>
             </section>
 
-            <section class="body-content-section collapsible" data-collapsible="collapsed">
+            <section class="body-content-section collapsible" data-collapsible="expanded">
                 <div class="body-content-section-header" data-collapsible-header="">
                     <h2 class="body-content-title">Outils + Méthodologie</h2>
                 </div>
 
                 <ul class="bare-list previews collapsible-content" data-collapsible-content="">
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    <li class="preview-section collapsible" data-collapsible="expanded">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Modèle de développement</h3>
                             Manière d'organiser et mettre en oeuvre les activités amenant à la réalisation du logiciel. <br>
@@ -1096,7 +1115,7 @@
                         </ul>
                     </li>
 
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Agile</h3>
     
@@ -1152,9 +1171,9 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
 
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Gestion de versions (VC)</h3>
                             Gérer l'ensemble des versions (états) de plusieurs fichiers. Les stratégies employées permettent
@@ -1232,9 +1251,9 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
 
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">UML</h3>
                             UML (Unified Modeling language) est un de <strong>langage de modélisation</strong> composé de
@@ -1397,7 +1416,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <div class="section-summary collapsible-preview">
@@ -1495,7 +1514,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Analyse</h3>
                             Produire un modèle d'analyse du système qui soit correct, complet, cohérent et vérifiable. <br>
@@ -1551,8 +1570,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    </li> -->
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Conception</h3>
                             Détermine la <strong>structure interne</strong> du logiciel: <strong>comment</strong> il va atteindre ses buts. <br>
@@ -1641,8 +1660,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    </li> -->
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Implémentation</h3>
                             Traduire la conception détaillée en code exécutable par une machine. L'implémentation et la
@@ -1729,8 +1748,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    </li> -->
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Tests</h3>
                             L'erreur est humaine, <strong>les programmes sont développés par des humains</strong>
@@ -1797,8 +1816,8 @@
                                 </div>
                             </div>
                         </div>                    
-                    </li>
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    </li> -->
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Déploiement</h3>
                             Transition de l'application d'un environnement à un autre. <br>
@@ -1891,8 +1910,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>      
-                    <li class="preview-section collapsible" data-collapsible="collapsed">
+                    </li>       -->
+                    <!-- <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
                             <h3 class="preview-section-title">Maintenance</h3>
                             <strong>Tout changement</strong> de n'importe quel artéfact du logiciel <strong>une fois déployé</strong>. <br>
@@ -1955,7 +1974,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <div class="section-summary collapsible-preview">
@@ -1973,10 +1992,10 @@
             </section>
 
             <section class="body-content-section collapsible" data-collapsible="collapsed">
-                <div class="body-content-section-header" data-collapsible-header="">
+                <div class="body-content-section-header ignore" data-collapsible-header="">
                     <h2 class="body-content-title">Architecture + Conception</h2>
                 </div>
-                
+<!--                 
                 <ul class="bare-list previews collapsible-content" data-collapsible-content="">
                     <li class="preview-section collapsible" data-collapsible="collapsed">
                         <div class="preview-section-header" data-collapsible-header="">
@@ -2266,7 +2285,7 @@
                             </div>
                         </div>
                     </li>
-                </ul>
+                </ul> -->
 
                 <div class="section-summary collapsible-preview">
                     <h3 class="section-summary-title">Contenu</h3>
