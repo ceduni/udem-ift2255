@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT2255 | Rapport DM1</title>
+    <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./../assets/css/normalize.css">
+    <link rel="stylesheet" href="./../assets/css/base.css?v=02">
+    <style>
+        .report-header {
+            padding-top: 24px; padding-bottom: 24px;
+            background-color: #fff;
+        }
+
+        .title-section {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        .report-title {
+            color: royalblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .report-summary {
+            max-width: 800px;
+            font-size: 1.4em;
+            color: #555;
+        }
+        
+        .section-title {
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            font-size: 2.4em; font-weight: 300;
+        }
+
+        .team-section {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+            .team-title {
+                font-weight: 500;
+                margin-bottom: 12px;
+                color: #1C3A94;
+            }
+
+            .members {
+                display: flex; flex-direction: row;
+            }
+
+            .member {
+                display: flex; flex-direction: column;
+            }
+                .member:not(:last-child) {
+                    margin-right: 12px;
+                }
+
+                .member-pic {
+                    display: block;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                }
+
+                .member-role {
+                    font-size: 0.9em; font-weight: 500;
+                    color: #555;
+                }
+
+        .report-body {
+            display: flex;
+        }
+
+        .report-aside {
+            padding-top: 24px;
+            padding-right: 12px;
+            padding-left: 5vw;
+            box-shadow: 1px 0 1px #999;
+        }
+
+        .report-main {
+            padding-left: 12px;
+            padding-right: 5vw;
+            padding-top: 24px;
+        }
+
+        .nav {
+            color: #E87429;
+        }
+
+        .nav-item__link {
+            display: block;
+            padding: 6px;
+            text-decoration: none;
+        }
+
+        .glossary {
+            font-size: 1.4em;
+        }
+
+        .preview-img {
+            width: 600px;
+            height: 400px;
+        }
+
+        .report-footer {
+            background-color: #2C5EB4;
+            padding: 12px 5vw 24px;
+        }
+
+        .report-footer p {
+            margin: 0;
+        }
+
+        .report-footer__link {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="report-header">
+        <div class="title-section">
+            <h1 class="report-title">Rapport du livrable X</h1>
+            <p class="report-summary">
+                <em>Court résumé du rapport</em> &ndash; Ce livrable se concentre sur... 
+                lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia distinctio tempora quam nulla quod enim. 
+                Odit eius dolores repellendus incidunt doloribus delectus at ex sunt error, iste dicta, maiores blanditiis.
+            </p>
+        </div>
+
+        <div class="team-section">
+            <h2 class="team-title">Notre équipe</h2>
+            <ul class="bare-list members">
+                <li class="member">
+                    <img class="member-pic" src="" alt="" >
+                    <div class="member-identification">
+                        <span class="member-name">Francois LABONTE</span>
+                        <span class="member-id">2014069</span>
+                    </div> 
+                    <a href="mailto:prenom.nom@umontreal.ca">prenom.nom@umontreal.ca</a>
+                    <span class="member-role">Chargé de...</span>
+                </li>
+                <li class="member">
+                    <img class="member-pic" src="" alt="" >
+                    <div class="member-identification">
+                        <span class="member-name">Lola MONTENEGRO</span>
+                        <span class="member-id">1034870</span>
+                    </div> 
+                    <a href="mailto:prenom.nom@umontreal.ca">prenom.nom@umontreal.ca</a>
+                    <span class="member-role">Chargé de...</span>
+                </li>
+                <li class="member">
+                    <img class="member-pic" src="" alt="" >
+                    <div class="member-identification">
+                        <span class="member-name">Tien NGUYEN</span>
+                        <span class="member-id">2046973</span>
+                    </div> 
+                    <a href="mailto:prenom.nom@umontreal.ca">prenom.nom@umontreal.ca</a>
+                    <span class="member-role">Chargé de...</span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="report-body">
+        <aside class="report-aside">
+            <nav>
+                <ul class="bare-list nav">
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#plan">Plannification</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#domain">Compréhension du domaine</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#model">Modélisation du domaine</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#analysis">Analyse</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#prototype">Prototype</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#annex">Annexe</a> 
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="report-main">
+            <section>
+                <h2 id="plan" class="section-title">Plannification</h2>
+                <p>Description brève du domaine et du problème</p>
+                <p>Présentation de l'échéancier et la distribution des taches</p>
+                <p>Présentation des hypothèses</p>
+            </section>
+
+            <section>
+                <h2 id="domain" class="section-title">Compréhension du domaine</h2>
+                <p>
+                    Après de nombreuses rencontres et une familiarisation avec l'activité VaxTodo, nous avons préparé un glossaire 
+                    rassemblant les termes et expressions clés caractérisant l'environnement.
+                </p>
+                <h3>Glossaire</h3>
+                <dl class="glossary">
+                    <dt class="glossary-term">Terme 1</dt>
+                    <dd class="glossary-def">Definition Debitis vel incidunt quaerat vitae iure, amet voluptatem commodi neque perferendis, asperiores facilis fugit! Dicta possimus aperiam officiis recusandae ipsum magni dignissimos?</dd>
+                    <dt class="glossary-term">Terme 2</dt>
+                    <dd class="glossary-def">Definition Culpa assumenda pariatur doloremque accusamus obcaecati reiciendis saepe sapiente, nihil adipisci quo architecto amet veniam vero delectus ullam dolorem unde quidem? Debitis.</dd>
+                    <dt class="glossary-term">Terme 3</dt>
+                    <dd class="glossary-def">Definition Alias sequi officia tempore maiores placeat omnis eum quo totam quia fuga? Officia repellendus odio ducimus dolores error dolorem hic a beatae.</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h2 id="model" class="section-title">Modélisation du domaine</h2>
+                <p>Cas d'utilisation</p>
+                <a href="lien-vers-fichier.vpp">
+                    <img src="url-du-cu.png" alt="">
+                </a>
+
+                <p>Scénarios</p>
+            </section>
+
+            <section>
+                <h2 id="analysis" class="section-title">Analyse</h2>
+                <p>Notre analyse préliminaire nous a permet de...</p>
+                <div>
+                    <h3>Risques</h3>
+                    <ol class="risks">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>Exigences non-fonctionnelles</h3>
+                    <ul class="nf-requirements">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="prototype" class="section-title">Prototype</h2>
+                <ul class="bare-list previews">
+                    <li class="preview">
+                        <img class="preview-img" src="url-du-prototype" alt="">
+                        Description du prototype.
+                    </li>
+                    <li class="preview">
+                        <img class="preview-img" src="url-du-prototype" alt="">
+                        Description du prototype.
+                    </li>
+                    <li class="preview">
+                        <img class="preview-img" src="url-du-prototype" alt="">
+                        Description du prototype.
+                    </li>
+                </li>
+            </section>
+        </div>
+    </main>
+    <footer class="report-footer">
+        <p>
+            <a class="link report-footer__link" href="bitbucket.com"> Lien vers répertoire GitHub</a></p>
+        <p>
+           <a class="link report-footer__link" href="fichier-dm1.vpp">Lien vers ressource externe (fichiers VPP)</a></p>
+    </footer>
+</body>
+
+</html>

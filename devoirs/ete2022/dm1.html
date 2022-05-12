@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT2255 | DM1</title>
+    <link rel="shortcut icon" href="./../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./../../assets/css/normalize.css">
+    <link rel="stylesheet" href="./../../assets/css/base.css?v=08">
+    <link rel="stylesheet" href="./../../assets/css/teams.css?v=08">
+    <style>
+        .content-wrapper { position: relative; padding: 10px 5%; }
+
+        .page-header {
+            position: relative;
+            padding-bottom: 12px;
+            background-color: #fff;
+        }
+
+        .page-header .content-wrapper {
+            padding-top: 24px;
+            display: flex; justify-content: center;
+        }
+                
+        .teaching {
+            display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between;
+            padding: 24px 5vw 0;
+            margin-bottom: 18px;
+        }
+
+        .teaching-header {
+            display: flex;
+        }
+
+        .teaching-logo {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            width: 96px; min-width: 96px;
+            height: 96px;
+            background-color: #fff;
+            box-shadow: inset 0 1px 1px #999;
+            border: 6px solid #5E8EE4;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+            .teaching-logo-name {
+                display: flex;
+                font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
+                font-size: 2.2em;
+            }
+                .teaching-logo-code {
+                    color: #333;
+                    letter-spacing: -1px;
+                }
+                .teaching-logo-number {
+                    margin-left: 2px;
+                    color: #2C5EB4;
+                    letter-spacing: -1px;
+                }
+
+            .teaching-logo-type {
+                font-size: 1.3em; font-weight: 800;
+                color: #555; 
+            }
+
+                    
+        .teaching-info {
+            flex-grow: 2;
+        }
+
+        .teaching-term {
+            margin: 0;
+            margin-bottom: 4px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .teaching-schedule {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .teaching-title {
+            margin: 0;
+            font-size: 2.8em; font-weight: 300;
+        }
+        
+            .teaching-links {
+                display: flex; flex-direction: row;
+            }
+
+            .teaching-link {
+                color: #555;
+            }
+            .teaching-link:not(:last-child) {
+                margin-right: 12px;
+            }
+
+            .teaching-link__link {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 10px 18px 12px;
+                font-size: 1.6rem; font-weight: 500;
+                border-radius: 2px;
+                text-align: center; 
+                border: 2px solid currentColor;
+                color: #fff;
+            }
+
+            .teaching-link__link--video {
+                background-color: #e87429;
+                background-color: #5F4B8B;
+            }
+
+            .teaching-link__link--plan {
+                background-color: #2C5EB4;
+            }
+
+
+        .teaching-header {
+            align-items: center;
+        }
+
+        .page-body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+                
+        .section-title {
+            margin-bottom: 12px;
+            font-weight: 300; font-size: 2.6em;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        .problem-section {
+            display: flex;
+        }
+
+        .problem-section p {
+            line-height: 1.5;
+            margin-top: 0;
+        }
+
+        .problem-section-aside {
+            flex: 1 1;
+            display: flex; flex-direction: column;
+            padding-top: 24px;
+            padding-left: 5vw;
+            padding-right: 24px;
+            min-width: 300px;
+            color: #fff;
+            background-color: #33302B;
+        }
+
+            .problem-section-aside .section-title {
+                color: #f5f5f5;
+            }
+
+        .problem-section-content {
+            flex-grow: 2;
+            display: flex; flex-direction: column;
+            padding-top: 24px; padding-left: 24px; padding-right: 5vw;
+            background-color: #f5f5f5;
+            width: 100%;z-index: 50;
+        }
+
+        .project-name {
+            position: absolute;
+            top: -100px; left: calc(50% - 120px);
+            text-align: center;
+            padding-top: 48px;
+            font-weight: 800;
+            color: #fff;
+            width: 240px;
+            border-radius: 50%;
+            height: 240px;
+            background-color: #6667AB;
+            margin-bottom: 12px;
+        }
+
+        .project-intro {
+            display: flex; flex-wrap: wrap;
+        }
+
+        .project-intro-logo {
+            display: block;
+            text-align: center;
+        }
+
+        .project-intro-logo-img {
+            height: 48px; width: auto;
+        }
+
+        .project-intro-group {
+            display: flex; flex-direction: column;
+            margin-top: 12px;
+        }
+
+        .project-intro-title {
+            margin: 0; margin-bottom: 6px;
+            font-size: 1.8em;
+            color: #0d0d0d;
+        }
+
+        .project-intro-stat {
+            flex: 1 1;
+        }
+
+        .project-intro-desc {
+            flex: 1 1;
+            margin-left: 24px;
+            padding-top: 6px;
+            display: flex; flex-direction: column;
+        }
+
+        .project-intro-desc-title {
+            text-transform: uppercase;
+            color: #0d0d0d;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        
+        .project-intro__btn-link {
+            align-self: flex-end; justify-self: flex-end;
+            padding: 8px 12px 10px;
+            margin-top: 12px;
+            color: #fff;
+            font-size: 1.4em; font-weight: 500;
+            border-radius: 1px;
+            background-color: #3573DD;
+        }
+
+            .project-intro__btn-link:hover {
+                background-color: #f32357;
+            }
+
+        .research-areas {
+            display: flex;
+        }
+
+        .stat-numbers {
+            display: flex;
+        }
+
+        .stat-number {
+            margin-right: 6px;
+            padding: 4px 8px;
+            border-radius: 180px;
+            color: #fff;
+            background-color: #343533;
+        }
+
+        .research-area {
+            flex: 1 1;
+            padding-right: 6px;
+        }
+
+        .research-area-title {
+            font-weight: 500;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 3px;
+        }
+
+            .tag {
+                margin-right: 4px; margin-bottom: 2px;
+                padding: 3px;
+                font-size: 1.3rem;
+                color: #555;
+                border-radius: 2px;
+                background-color: #d5d5d5;
+            }
+
+        .teachers {
+            display: flex;
+        }
+
+            .teacher {
+                flex: 1 1;
+                display: flex; flex-direction: column;
+                font-size: 1.3rem;
+            }
+
+            .teacher + .teacher {
+                margin-left: 12px;
+            }
+
+            .teacher-photo {
+                width: 80px;
+                height: auto;
+                border-radius: 50%;
+            }
+
+            .teacher-name {
+                font-size: 1.1em;
+                font-weight: 500;
+                text-decoration: none;
+                color: #3573DD;
+            }
+
+            .member-stats {
+                display: flex;
+                justify-content: center;
+                margin-top: 12px;
+            }
+
+            .member-stat {
+                display: flex; flex-direction: column;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                font-size: 1.3em;
+                margin-right: 12px;
+                border-radius: 50%;
+                color: #fff;
+            }
+
+            .member-stat.ico-msc {
+                background-color: #5865F2;
+            }
+
+            .member-stat.ico-phd {
+                background-color: #f36523;
+            }
+
+            .member-stat.ico-postdoc {
+                background-color: #f32357;
+            }
+
+            .member-stat.ico-visit {
+                background-color: #5F4B8B;
+            }
+
+            .member-stat-value {
+                margin-top: 6px;
+                font-size: 1.3em; font-weight: 300;
+            }
+
+            .member-stat-name {
+                font-size: 0.9em;
+                font-weight: 500;
+            }
+
+
+            .students {
+                display: flex;
+                margin-top: 2px;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+
+            .student {
+                flex: 1 1 ;
+                height: 8px;
+            }
+
+            .student.msc {
+                background-color: #5865F2;
+            }
+
+            .student.phd {
+                background-color: #f36523;
+            }
+
+            .student.postdoc {
+                background-color: #f32357;
+            }
+
+        .activities {
+            display: flex;
+        }
+
+        .activity {
+            flex: 1 1;
+            padding: 12px 18px 6px;
+            border-radius: 1px;
+            margin-right: 12px;
+        }
+
+        .activity--publications {
+            background-color: #FF984F;
+        }
+
+        .activity--projects {
+            background-color: #F24738;
+        }
+
+        .activity--tools {
+            color: #fff;
+            background-color: #333;
+        }
+
+        .activity-title {
+            margin-top: 0; margin-bottom: 6px;
+            font-size: 1.7em;
+        }
+        
+
+        .subsection-title {
+            margin-bottom: 12px;
+            font-size: 3em; font-weight: 300;
+            color: #EF4E36;
+        }
+
+        .paragraph-title {
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .title {
+            margin-bottom: 2px;
+        }
+
+        .rule-section {
+            padding: 24px 5vw;
+            background-color: #fff;
+        }
+
+        .requirements {
+            display: flex; flex-direction: column;
+        }
+
+        .requirement:before {
+            content: " - ";
+            font-weight: bold;
+        }
+
+        .task-section {
+            padding: 24px 5vw;
+            color: #fff;
+            background-color: #3573DD;
+        }
+
+            .task-section .section-title {
+                color: #fff;
+            }
+
+        .evaluation-section {
+            padding: 24px 5vw;
+            color: #000;
+            background-color: #FF9147;
+        }
+            .evaluation-section .section-title {
+                color: #000;
+            }
+
+        .template-link {
+            display: block;
+            margin-top: 24px;
+            padding: 6px 12px;
+            width: 100%; max-width: 300px;
+            font-weight: 500; font-size: 1.5rem;
+            text-align: center;
+            color: #3573DD;
+            border-radius: 1px;
+            background-color: #fff;
+            transition: .2s;
+        }
+            .template-link:hover {
+                color: #fff;
+                background-color: #E87429;
+            }
+
+        .contact-discord {
+            color: #5865F2
+        }
+
+        table, tr, td {
+            border: 0 none;
+        }
+
+        ins {
+            text-decoration: none;
+            background-color: rgb(255, 234, 112);
+        }
+
+        .tasks {
+            margin-top: -12px;
+        }
+
+        .marking-scheme {
+            display: flex; flex-direction: column;
+            width: 100%; max-width: 300px;
+        }
+
+        .marking-scheme-title {
+            margin-top: 0;
+        }
+
+
+        .tbl-evaluation {
+            font-weight: 500;
+            
+            font-size: 1.1em;
+            
+        }
+
+        .tbl-evaluation td {
+            padding: 4px 6px;
+        }
+
+        .tbl-evaluation td:last-child {
+            font-weight: bold;
+            background-color: #f36523;
+        }
+
+        .tbl-evaluation-row {
+            background-color: #FFA061;
+        }
+
+        .tbl-evaluation-row {
+            border-bottom: 3px solid #ff9147;
+        }
+
+            .tbl-evaluation-row:last-child {
+                border-bottom: 0 none;
+            }
+
+            .tbl-evaluation-row--bonus {
+                border-top: 9px solid #ff9147;
+            }
+
+        
+    .page-footer {
+        padding-top: 24px;
+        color: #fff;
+        background-color: #5F4B8B;
+        background-color: #292723;
+    }
+
+        @media only screen and (max-width: 40em)     {
+            .problem-section-aside {
+                display: none;
+            }    
+        }
+
+        @media only screen and (min-width: 30em) {
+            .problem-section-aside {
+                min-width: 200px;
+                padding-left: 2vw;
+                padding-right: 12px;
+            }
+
+            .problem-section-content {
+                padding-left: 12px; padding-right: 2vw;
+            }
+                
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 2vw;
+            }
+
+            .team-count  {
+                width: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 60em) {
+            .problem-section-aside {
+                min-width: 300px;
+                padding-left: 3vw;
+                padding-right: 18px;
+            }
+
+            .problem-section-content {
+                padding-left: 18px; padding-right: 3vw;
+            }
+                
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 3vw;
+            }
+
+            .team-count  {
+                width: auto;
+            }
+        }
+
+        @media only screen and (min-width: 80em) {
+            .problem-section-aside {
+                padding-left: 5vw;
+                padding-right: 24px;
+            }
+
+            .problem-section-content {
+                padding-left: 24px; padding-right: 5vw;
+            }
+                
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 5vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page-header">
+        <section class="teaching">
+            <div class="teaching-header">
+                <div class="teaching-logo">
+                    <a href="./../index.html" class="bare-link teaching-logo-name">
+                        <span class="teaching-logo-code">IFT</span>
+                        <span class="teaching-logo-number">2255</span>
+                    </a>
+                </div>
+                <div class="teaching-info teaching-info--large">
+                    <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Devoir 1</h1>
+                    <p class="teaching-term">Été 2022</p>
+                </div>
+            </div>
+            
+            <ul class="bare-list teaching-links">
+                <li class="teaching-link">
+                    <a class="bare-link teaching-link__link teaching-link__link--plan"
+                        href="https://studium.umontreal.ca/course/view.php?id=217266" target="_blank">
+                        StudiUM
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </header>
+
+    <main class="page-body">
+        <section class="problem-section">
+            <h2 class="project-name">Roundtable</h2>
+            <aside class="problem-section-aside">
+                <h2 class="section-title">Équipes (<i class="output" data-value="length"></i>) </h2>
+                <ul class="bare-list teams">
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 1</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 2</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 3</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 4</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 5</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 6</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 7</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 8</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 9</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 10</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 11</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 12</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 13</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 14</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 15</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 16</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 17</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 18</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 19</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                    <li class="team">
+                        <div class="team-info">
+                            <span class="team-name">Équipe 20</span>
+                            <span class="team-count fit-content">3 membres</span>
+                        </div>
+                        <div class="team-group">
+                            <i class="icon icon-person"></i>
+                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                        </div>
+                        <ul class="bare-list questions">
+                            <li class="question"></li>
+                            <li class="question"></li>
+                            <li class="question"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="problem-section-content">
+                <div class="project-intro">
+                    <div class="project-intro-stat">
+                        <a class="project-intro-logo" href="https://geodes.iro.umontreal.ca/" target="_blank">
+                            <img class="project-intro-logo-img" src="../../assets/images/geodes.png" alt="">
+                        </a>
+
+                        <div class="project-intro-group">
+                            <h4 class="project-intro-title">Champs d'intéret</h4> 
+                            <ul class="bare-list research-areas">
+                                <li class="research-area">
+                                    <span class="research-area-title">Modélisation et conception des besoins</span> 
+                                    <ul class="bare-list tags">
+                                        <li class="tag">Goal modeling</li>
+                                        <li class="tag">Design-time uncertainty</li>
+                                        <li class="tag">Product lines</li>
+                                    </ul>
+                                </li>
+                                <li class="research-area">
+                                    <span class="research-area-title">Conception dirigé par les modèles et Simulation</span>
+                                    <ul class="bare-list tags">
+                                        <li class="tag">Domain-specific modeling</li>
+                                        <li class="tag">Collaborative modeling</li>
+                                        <li class="tag">Model transformations</li>
+                                    </ul>
+                                </li>
+                                <li class="research-area">
+                                    <span class="research-area-title">Apprentissage machine et Optimization</span>
+                                    <ul class="bare-list tags">
+                                        <li class="tag">Code synthesis</li>
+                                        <li class="tag">AI-powered assistance</li>
+                                        <li class="tag">Pattern mining</li>
+                                    </ul>
+                                </li>
+                            </ul> 
+                        </div>
+
+                        <div class="project-intro-group">
+                            <h4 class="project-intro-title">Membres</h4> 
+                            <ul class="bare-list teachers">
+                                <li class="teacher">
+                                    <img class="teacher-photo" src="https://geodes.iro.umontreal.ca/images/people/faculty/michalis.jpg" alt="">
+                                    <a class="teacher-name" href="https://michalis.famelis.info/">Michalis FAMELIS</a>
+                                    <span class="teacher-office fit-content"><strong>2343</strong>, Pav. André-Aisenstadt</span> 
+                                    <a class="teacher-email" href="famelis@iro.umontreal.ca"></a>
+                                    <ul class="bare-list students">
+                                        <li class="student postdoc"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student msc"></li>
+                                    </ul>
+                                </li>
+                                <li class="teacher">
+                                    <img class="teacher-photo" src="https://geodes.iro.umontreal.ca/images/people/faculty/eugene.jpg" alt="">
+                                    <a class="teacher-name" href="http://www-ens.iro.umontreal.ca/~syriani/">Eugene SYRIANI</a> 
+                                    <span class="teacher-office fit-content"><strong>2345</strong>, Pav. André-Aisenstadt</span> 
+                                    <a class="teacher-email" href="syriani@iro.umontreal.ca"></a>
+                                    <ul class="bare-list students">
+                                        <li class="student postdoc"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student msc"></li>
+                                        <li class="student msc"></li>
+                                    </ul>
+                                </li>
+                                <li class="teacher">
+                                    <img class="teacher-photo" src="https://geodes.iro.umontreal.ca/images/people/faculty/houari.jpg" alt="">
+                                    <a class="teacher-name" href="http://www.iro.umontreal.ca/~sahraouh/">Houari SAHRAOUI</a>
+                                    <span class="teacher-office fit-content"><strong>2359</strong>, Pav. André-Aisenstadt</span> 
+                                    <a class="teacher-email" href="sahraouh@iro.umontreal.ca"></a>
+                                    <ul class="bare-list students">
+                                        <li class="student postdoc"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student msc"></li>
+                                        <li class="student msc"></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="bare-list member-stats">
+                                <li class="member-stat ico-postdoc">
+                                    <span class="member-stat-value">3</span>
+                                    <span class="member-stat-name">PostDoc</span>
+                                </li>
+                                <li class="member-stat ico-phd">
+                                    <span class="member-stat-value">9</span>
+                                    <span class="member-stat-name">PhD</span>
+                                </li>
+                                <li class="member-stat ico-msc">
+                                    <span class="member-stat-value">12</span>
+                                    <span class="member-stat-name">Msc</span>
+                                </li>
+                                <li class="member-stat ico-visit">
+                                    <span class="member-stat-value">4</span>
+                                    <span class="member-stat-name">Visiteur</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-intro-desc">
+                        <p> 
+                            Le <strong>GEODES</strong> est un groupe de recherche du <abbr title="Département d'informatique et recherche opérationnelle">DIRO</abbr> dédié au <em>Génie Logiciel</em>.
+                            Le GEODES s'intéresse à toutes les activités liées au développement de logiciel (de la formalisation des exigences à la génération du code),
+                            à l'évaluation du logiciel (qualités, métriques, méthodes formelles), à la modélisation des domaines d'affaires et
+                            à l'application de techniques d'intelligence artificielle pour comprendre les artéfacts produits et faciliter le développement.
+                       </p>
+
+                        <p>
+                            Le groupe est présentement en plein essor. Dirigé par <strong>3 professeurs</strong>, le GEODES comptent plus de <strong>25 membres</strong>
+                            et accueillent de plus en plus de chercheurs (en visite).
+                            Le GEODES est un groupe très actif avec plus de <strong>20 publications par année</strong> et de fréquentes collaborations avec des groupes industriels sur des projets 
+                            d'envergures comme le <a class="project-intro__link inline" href="https://nouvelles.umontreal.ca/article/2022/03/16/l-ia-a-la-ferme-une-nouvelle-voie-vers-l-autonomie-alimentaire/">projet agricole de ferme verticale</a>.
+                            Devenu un pôle dans le domaine du Génie logiciel, le GEODES a récemment organisé la 23<sup>e</sup> édition de la Conférence MODELS (ACM/IEEE International Conference on Model Driven Engineering Languages and Systems)
+                            et organisera cette année la 25<sup>e</sup> édition.
+                        </p>
+                        
+                        <a class="project-intro__btn-link btn" target="_blank" href="https://geodes.iro.umontreal.ca/">En apprendre plus</a> 
+                    </div>
+                </div>
+
+                <section class="problem-subsection problem-subsection--problem">
+                    <h3 class="subsection-title">Problème</h3>
+                    <div>
+                        <p>
+                            La croissance du GEODES n'est cependant pas sans conséquence sur la cohésion et la synergie du groupe. 
+                            Malgré certaines collaborations et l'usage d'outils de communication comme Discord, il est difficile 
+                            pour un membre d'avoir une vue d'ensemble des activités de chacun, de faire le suivi des travaux ou
+                            trouver des points d'intersection entre les multiples intérêts de recherche et leurs produits. 
+                            La plupart des échanges restent informel et la mise en commun hebdomadaire ne permet pas un véritable suivi.
+                        </p>
+    
+                        <h4 class="project-intro-desc-title">Proposition (solution)</h4>
+                        <p>
+                            Pour résoudre ce problème, nous proposons la création d'un outil, <strong>Roundtable</strong>, permettant aux membres du GEODES
+                            de faire le <strong>suivi des membres et des activités de recherche du groupe</strong>.
+                            L'outil permettra aux membres de <strong>visualiser les informations de ces entités</strong>,
+                            <strong>se souscrire à divers intérêts ou sujets particuliers</strong> et supportera <strong>quelques requêtes pour explorer et manipuler ces relations</strong>.
+                            <br>
+                            L'implémentation de la solution se limitera à une <strong>interaction en ligne de commande</strong>.
+                        </p>
+                    </div>
+                </section>
+
+               <section class="problem-subsection problem-subsection--activity">
+                   <h3 class="subsection-title">Activités</h3>
+                   
+                   <ul class="bare-list activities">
+                       <li class="activity activity--publications">
+                           <h4 class="activity-title">Publications</h4>
+                           <p>
+                               Les membres du GEODES publient fréquemment des publications (plus de 20 par année) dans des journaux comme
+                               <i class="journal">IEEE Transactions on Software Engineering</i>, 
+                               <i class="journal">Software and Systems Modeling (SoSyM)</i>, à propos de sujets diverses liés aux thèmes de recherche du laboratoire.
+                           </p>
+                       </li>
+                       <li class="activity activity--tools">
+                        <h4 class="activity-title">Projets et Outils</h4>
+                        <p>
+                            Le GEODES recoit régulièrement des subventions pour travailler sur diverses projets (programmes) de recherche comme 
+                            <i class="journal">From domain-specific languages to domain-specific environments</i> 
+                            (financé par le <a style="color: inherit;" href="https://www.nserc-crsng.gc.ca/professors-professeurs/grants-subs/dgigp-psigp_fra.asp">CRSNG</a>).
+                            Certains travaux de recherche nécessitent parfois des démonstrations pratique résultant sur la création d'outils
+                            comme <i class="journal">AtoMPM</i>, <i class="journal">Gentleman</i> et <i class="journal">ReLiS</i>. 
+                            Ces outils sont ensuite exploiter et modifier par les membres du GEODES.
+                        </p>
+                    </li>
+                       <li class="activity activity--projects">
+                           <h4 class="activity-title">Évènements</h4>
+                           <p>
+                               Le GEODES organise et participe à de nombreux évenements liés au Génie Logiciel tels que des <strong>conférences</strong>  
+                               (ex: <a style="color: #000;" href="https://conf.researchr.org/home/models-2022">MODELS2022</a>), 
+                               <strong>séminaires</strong> (ex: <a style="color: #000;" href="https://geodes.iro.umontreal.ca/events/seminar">GEODES Seminar</a>) et 
+                               <strong>ateliers</strong>  (ex: <i class="eg">Évaluer un article scientifique et rédiger une critique</i>).
+                               Les membres y présentent leurs travaux de recherche, discutent sur des thèmes du génie logiciel.
+                            </p>
+                       </li>
+                   </ul> 
+               </section>
+
+                <section class="problem-subsection">
+                    <h3 class="subsection-title">Fonctionnement actuel</h3>
+                    <p>
+                        Présentement, pour faire le suivi des membres et des activités, chaque vendredi l'équipe se réunit pour faire un tour de table.
+                        Chacun présente l'avancement dans ces travaux ou partage un intérêt de recherche particulier. Cette rencontre est aussi utilisée
+                        pour transmettre des annonces diverses (événements à venir, concours de bourse, soumission de publications en cours...).
+                        Quoique la présence de tous est requise à cette réunion, ceci est souvent difficile à réaliser dû à divers conflits d'horaires.
+                    </p>
+
+                    <p>
+                        Certaines annoncent sont aussi partagé sur le serveur Discord du GEODES qui sert de canal principal d'échange principal entre les membres. 
+                        Les chaines du serveur sont regroupées selon divers volets de discussions (ex: Administration, Projets, Labos) pour organiser et contrôler les échanges.
+                        Cependant, étant avant tout un outil de messagerie, il n'est pas pratique pour offrir les mécanismes de suivi recherché.
+                    </p>
+
+                    <p>
+                        Une vue générale des membres et activités du GEODES est présentée sur le <a href="https://geodes.iro.umontreal.ca/">site web</a>. 
+                        Le site présente la liste des membres (passés et présents), les activités de recherche (publications, projets et outils), les
+                        événements organisés par le GEODES et la liste des cours enseignées par les membres du groupe de recherche.
+                        Ces informations sont mises à jour régulièrement par les membres du GEODES. Le site web est principalement destiné au grand public
+                        et n'offre pas suffisamment de détails et d'actions pour faire un suivi et formuler des requêtes.
+                    </p>
+                </section>
+
+                <section class="hidden">
+                    <h3 class="subsection-title">Liste de souhaits</h3>
+                    
+                    <p>
+                        La plateforme Roundtable permettrait aux membres d'une unité de ternir les autres membres informés des activités/travaux en cours, 
+                        passés ou projetés et signaler diverses formes de propositions et requêtes invitant un soutien mutuel entre les membres. 
+                        Bien entendu, il faudra pouvoir y faire la gestion des membres et chacun aura un profil. 
+                    </p>
+
+                    <h4 class="paragraph-title">Activités a faire avec le système</h4>
+
+                    <ul class="bare-list requirements">
+                        <li class="requirement">
+                            Lors de la prise de rendez-vous (par téléphone), l'employé utilise le système pour accéder au
+                            calendrier et vérifier les disponibilités. Afin de garantir notre logistique, 
+                            <strong>un rendez-vous doit être pris au minimum 72 heures à l'avance</strong>. Lorsque la personne
+                            confirme le choix à l'employé, il effectue la réservation dans le système qui produit un numéro de
+                            réservation unique. Les détails suivants sont sauvegardés pour <strong>chaque rendez-vous pris</strong>
+                            <!-- <ul>
+                                <li>Numéro de réservation</li>
+                                <li>Prénom (du visiteur)</li>
+                                <li>Nom (du visiteur)</li>
+                                <li>Date de la visite (YYYY-MM-DD)</li>
+                                <li>Heure de la visite (HH:MM)</li>
+                                <li>Type de dose (1, 2)</li>
+                            </ul> -->
+                            <!-- <ins>Ces informations sont envoyées par courriel au visiteur</ins>, qui pourra les utiliser lors de sa -->
+                        </li>
+                        <li class="requirement">
+                            Lors d'une première visite, l'employé doit créer un compte pour le visiteur qui sera rattaché à toutes ces activités: 
+                            vaccins et réservations.
+                            Afin d'éviter d'avoir des comptes fantomes, nous attendons la visite  pour créer un compte.
+                            Le compte du visiteur aura un numéro unique à douze chiffres et sera rattaché à une adresse courriel unique.
+                            Il présentera aussi les informations personnelles du visiteur: nom, prénom, date de naissance adresse et numéro de téléphone.
+                            Ces données étant sensible, nous attendons vos propositions pour éviter tout mauvais usage.
+                        </li>
+                        <li class="requirement">
+                            Le traitement d'une visite se déroule comme avant, sauf que dans ce cas l'employé utilise le système
+                            pour la confirmation, l'entrevue et la planification d'une autre visite.
+                        </li>
+                        <li class="requirement">
+                            Le suivi aussi est effectué via le système qui produit sur demande le rapport de vaccination 
+                            d'une visite. Le système pourra optionnellement envoyer le rapport de vaccination par courriel au visiteur concerné.
+                            L'employé utilise le système pour envoyer une notification par courriel, rappelant à un visiteur son rendez-vous prochain.
+                        </li>
+                        <li class="requirement">
+                            Un bénévole est identifié par som nom, prénom, adresse, numéro de téléphone et adresse courriel; il présente 
+                            aussi une liste de jours où il est disponible pour venir au local. Un employé est identifié avec 
+                            les mêmes attributs, mais possède en plus un code d'employé à 9 chiffres et un mot de passe qui seront utilisés pour accéder 
+                            au système. Le mot de passe devra être composé d'au moins 8 caractères contenant
+                            au moins 1 chiffre, 1 majuscule, 1 minuscule et 1 caractère spécial.
+                        </li>
+                        <li class="requirement">
+                            Le système doit avoir un profil de vaccination pour chaque compte visiteur qui
+                            regroupe les informations liées aux vaccins reçus: type de dose, identification du vaccin, date et heure de vaccination.
+                            Un vaccin est identifié par un nom, un code et un lot.
+                        </li>
+                        <li class="requirement">
+                            La sécurité étant de mise aujourd'hui, nous envisageons la solution suivante proposée par un consultant.
+                            Nous utiliserons un de nos ordinateurs comme serveur pour y stocker nos données, conservant ainsi toutes les données chez nous.
+                            Ce serveur sera mis en réseau pour y être accédé par les autres ordinateurs, utilisés par les employés.
+                            Notre budget étant présentement limité, les enregistrements seront stockés sur disque en fichier texte. 
+                            Par la suite, nous pourrons migrer vers une solution plus robuste.
+                        </li>
+                        <!-- <li class="requirement">Le bénévole pourra utiliser le système pour confirmer la présence d'un visiteur</li> -->
+                    </ul>
+                </section>
+
+                <p style="margin-top: 12px;">
+                    Votre équipe a été octroyée le contrat de développer <strong>la plateforme Roundtable</strong>. <br>
+                    L'interface sera en ligne de commande dans un premier temps et si nous avons le budget, nous ferons une interface graphique par la suite.
+                </p>
+            </div>
+        </section>
+
+        <section class="rule-section">
+            <h2 class="section-title">Règles du jeu</h2>
+
+            <p>
+                Vous avez droit à <strong>3 rencontres avec le client (1 rencontre par semaine)</strong> (communication via Discord ou courriel)
+                pour demander des informations additionnelles et comprendre leur besoin. <br>
+                La semaine commence le lundi et se termine le samedi. Les questions doivent être communiquées <strong>au moins 48 heures avant la fin de la semaine</strong>.
+                Passez ce délai, elles seront attribuées à la prochaine semaine.
+                Les réponses aux questions seront ajoutées au corps du texte plus haut. <br>
+                <strong>Jusqu'au 27 mai, des précisions peuvent être rajoutées au texte.</strong>
+            </p>
+            <h3>Quota sur les quesions</h3>
+            <ul>
+                <li>Rencontre 1: <strong>3 questions max</strong></li>
+                <li>Rencontre 2: <strong>2 questions max</strong></li>
+                <li>Rencontre 3: <strong>1 question max</strong></li>
+            </ul>
+            <p>
+                Envoyez-les à notre responsable, Louis-Edouard LAFONTANT.
+            </p>
+            <ul class="bare-list contacts">
+                <li class="contact contact--discord">Discord: <strong>L-E#2545</strong></li>
+                <li class="contact contact--mail">Courriel: <a
+                        href="mailto:louis.edouard.lafontant@umontreal.ca">louis.edouard.lafontant@umontreal.ca</a></li>
+            </ul>
+        </section>
+
+        <section class="task-section">
+            <h2 class="section-title">Tâches</h2>
+
+            <p>
+                Pour ce premier jalon, vous devez produire un rapport en HTML (recommandé) ou PDF présentant votre
+                compréhension du domaine et votre première analyse du problème. <br>
+                Il devra aussi introduire le cadre du projet et vos échanges avec le client.
+            </p>
+
+            <h3>Cadre du projet</h3>
+            <ul class="tasks">
+                <li class="task">Description du projet: Contexte, Problèmes à résoudre, Portée</li>
+                <li class="task">Équipe, Répartition des tâches: Coordonnées des membres et la répartition des tâches</li>
+                <li class="task">Échéancier: Planification hebdomadaire des taches montrant la répartition dans l'équipe</li>
+                <li class="task">Priorisation: Description de l'ordre de priorités choisi</li>
+                <li class="task">Échanges avec client: Questions posées et réponses trouvées</li>
+            </ul>
+
+            <h3>Définition du domaine</h3>
+            <ul class="tasks">
+                <li class="task">Hypothèses: Hypothèses émises dans l'élaboration des exigences</li>
+                <li class="task">Glossaire: Liste des termes et expressions clés caractérisant le domaine</li>
+                <li class="task">Besoins fonctionnels: Fonctionnalité du logiciel à offrir traduit par des Cus et scénarios</li>
+                <li class="task">Besoins non fonctionnels: Attributs du logiciel recherchés affectant l'expérience utilisateur (avec justification)</li>
+            </ul>
+
+            <h3>Analyse</h3>
+            <ul class="tasks">
+                <li class="task">Risques: 5 risques associés au projet (avec justification)</li>
+                <li class="task">Besoins matériels: Partie à informatiser, matériels nécessaires, solutions de stockage</li>
+                <li class="task">Contraintes physiques et conceptuelles</li>
+                <li class="task">Prototype: 5 dessins illustrant différentes vues/interactions avec la plateforme</li>
+            </ul>
+
+            <h3>Livrables</h3>
+            <ul class="tasks">
+                <li class="task">Rapport</li>
+                <li class="task">CUs et scénarios</li>
+                <li class="task">Prototype</li>
+            </ul>
+
+            <!-- <a class="bare-link template-link" target="_blank" href="../template.html">Template pour le rapport</a> -->
+        </section>
+
+        <section class="evaluation-section">
+            <h2 class="section-title">Évaluation</h2>
+            <p>
+                Ce devoir compte pour <strong>10% de la note final</strong>. <br>
+                Le rapport et tous les artéfacts produits sont à <strong>remettre au plus tard le dimanche 5 juin</strong> par le responsable d'équipe. <br>
+                Des <strong> pénalités de 10% par jour de retard </strong> seront accordées <strong>jusqu'au 7 juin</strong>.
+                Au-delà de cette date, la moitié des points sera transférée au prochain devoir.
+            </p>
+
+            <div class="marking-scheme">
+            <h3 class="marking-scheme-title">Barème</h3>
+            <table class="tbl-evaluation">
+                <tr class="tbl-evaluation-row">
+                    <td>Glossaire</td>
+                    <td>5%</td>
+                </tr>
+                <tr class="tbl-evaluation-row" title="Besoins non-fonctionnel">
+                    <td>Besoins non-fonctionnel</td>
+                    <td>10%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Cas d'utilisation</td>
+                    <td>25%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Scénarios</td>
+                    <td>25%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Analyse</td>
+                    <td>15%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Prototype</td>
+                    <td>10%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Git</td>
+                    <td>5%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Rapports</td>
+                    <td>5%</td>
+                </tr>
+                <tr class="tbl-evaluation-row tbl-evaluation-row--bonus">
+                    <td><strong> Bonus:</strong> Prototype fonctionnel</td>
+                    <td>10%</td>
+                </tr>
+            </table>
+        </div>
+            <p>
+                Le <em>Bonus</em> consiste en un <strong>prototype interactif</strong> en ligne de console où l'on peut accéder
+                au menu et réaliser les CUs. <br> Étant un prototype, les réponses peuvent être préprogrammées; c'est surtout l'interaction
+                qui nous intéresse à ce niveau.
+            </p>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="content-wrapper">
+            <p>
+                IFT2255 &ndash; Génie logiciel <br>
+                Devoir 1
+            </p>
+            <p>&copy; 2022 &ndash; Louis-Edouard LAFONTANT</p>
+        </div>
+    </footer>
+
+    <script>
+        let outValue = document.querySelector("[data-value]");
+        let teamList = document.querySelectorAll(".team");
+        outValue.textContent = teamList.length;
+    </script>
+</body>
+
+</html>
