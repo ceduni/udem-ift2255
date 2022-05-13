@@ -129,6 +129,22 @@
             flex-direction: column;
         }
                 
+        .dash:before { 
+            content: '-'; 
+            margin-left: 4px;
+            margin-right: 8px; 
+            font-weight: bold;
+            color: currentColor;
+        } 
+
+        .check:before {
+            margin-left: 2px;
+            margin-right: 4px; 
+            font-weight: bold;
+            content: '🗸'; 
+            color: #11b334;
+        }
+       
         .section-title {
             margin-bottom: 12px;
             font-weight: 300; font-size: 2.6em;
@@ -205,6 +221,21 @@
             font-size: 1.8em;
             color: #0d0d0d;
         }
+
+        .project-intro__link {
+            padding: 1px 3px 2px;
+            color: #3573DD;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: .2s;
+        }
+            .project-intro__link:visited {
+                color: #EF4E36;
+            }
+            .project-intro__link:hover {
+                color: #fff;
+                background-color: #3573DD;
+            }      
 
         .project-intro-stat {
             flex: 1 1;
@@ -639,12 +670,12 @@
                 <ul class="bare-list teams">
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 1</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">Castlevania</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Jean-Yves Grenier">Jean-Yves Grenier</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -654,12 +685,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 2</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">Vacuum</span>
+                            <span class="team-count fit-content hidden">4 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Mathieu Morin">Mathieu Morin</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -669,12 +700,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 3</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">A+</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Hanz Schepens">Hanz Schepens</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -684,12 +715,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 4</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">Équipe_11</span>
+                            <span class="team-count fit-content hidden">4 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Patrick Lanoie">Patrick Lanoie</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -699,12 +730,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 5</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">Big G</span>
+                            <span class="team-count fit-content hidden">4 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Mingze Li">Mingze Li</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -714,12 +745,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 6</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">Raptors</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Mériadec Finoude">Mériadec Finoude</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -729,12 +760,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 7</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">Coders5</span>
+                            <span class="team-count fit-content hidden">4 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Athavan Pathmanathan">Athavan Pathmanathan</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -744,12 +775,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 8</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">Omega</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Xavier Dontigny">Xavier Dontigny</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -759,12 +790,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 9</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">123Prog</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Patrick Symenouh">Patrick Symenouh</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -774,12 +805,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 10</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">Trinary Tree Traversal</span>
+                            <span class="team-count fit-content hidden">4 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Samy Rasmy">Samy Rasmy</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -789,12 +820,12 @@
                     </li>
                     <li class="team">
                         <div class="team-info">
-                            <span class="team-name">Équipe 11</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-name">HMF</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
+                            <span class="team-captain fit-content" title="Hatim Zakaria">Hatim Zakaria</span>
                         </div>
                         <ul class="bare-list questions">
                             <li class="question"></li>
@@ -805,7 +836,7 @@
                     <li class="team">
                         <div class="team-info">
                             <span class="team-name">Équipe 12</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
@@ -820,7 +851,7 @@
                     <li class="team">
                         <div class="team-info">
                             <span class="team-name">Équipe 13</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
@@ -835,7 +866,7 @@
                     <li class="team">
                         <div class="team-info">
                             <span class="team-name">Équipe 14</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
@@ -850,7 +881,7 @@
                     <li class="team">
                         <div class="team-info">
                             <span class="team-name">Équipe 15</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
@@ -865,67 +896,7 @@
                     <li class="team">
                         <div class="team-info">
                             <span class="team-name">Équipe 16</span>
-                            <span class="team-count fit-content">3 membres</span>
-                        </div>
-                        <div class="team-group">
-                            <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
-                        </div>
-                        <ul class="bare-list questions">
-                            <li class="question"></li>
-                            <li class="question"></li>
-                            <li class="question"></li>
-                        </ul>
-                    </li>
-                    <li class="team">
-                        <div class="team-info">
-                            <span class="team-name">Équipe 17</span>
-                            <span class="team-count fit-content">3 membres</span>
-                        </div>
-                        <div class="team-group">
-                            <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
-                        </div>
-                        <ul class="bare-list questions">
-                            <li class="question"></li>
-                            <li class="question"></li>
-                            <li class="question"></li>
-                        </ul>
-                    </li>
-                    <li class="team">
-                        <div class="team-info">
-                            <span class="team-name">Équipe 18</span>
-                            <span class="team-count fit-content">3 membres</span>
-                        </div>
-                        <div class="team-group">
-                            <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
-                        </div>
-                        <ul class="bare-list questions">
-                            <li class="question"></li>
-                            <li class="question"></li>
-                            <li class="question"></li>
-                        </ul>
-                    </li>
-                    <li class="team">
-                        <div class="team-info">
-                            <span class="team-name">Équipe 19</span>
-                            <span class="team-count fit-content">3 membres</span>
-                        </div>
-                        <div class="team-group">
-                            <i class="icon icon-person"></i>
-                            <span class="team-captain fit-content" title="Nom du Responsable">Nom du Responsable</span>
-                        </div>
-                        <ul class="bare-list questions">
-                            <li class="question"></li>
-                            <li class="question"></li>
-                            <li class="question"></li>
-                        </ul>
-                    </li>
-                    <li class="team">
-                        <div class="team-info">
-                            <span class="team-name">Équipe 20</span>
-                            <span class="team-count fit-content">3 membres</span>
+                            <span class="team-count fit-content hidden">3 membres</span>
                         </div>
                         <div class="team-group">
                             <i class="icon icon-person"></i>
@@ -1042,16 +1013,16 @@
                     <div class="project-intro-desc">
                         <p> 
                             Le <strong>GEODES</strong> est un groupe de recherche du <abbr title="Département d'informatique et recherche opérationnelle">DIRO</abbr> dédié au <em>Génie Logiciel</em>.
-                            Le GEODES s'intéresse à toutes les activités liées au développement de logiciel (de la formalisation des exigences à la génération du code),
-                            à l'évaluation du logiciel (qualités, métriques, méthodes formelles), à la modélisation des domaines d'affaires et
+                            Le groupe s'intéresse à toutes les activités liées au développement de logiciel (de la formalisation des exigences à la génération du code),
+                            à l'évaluation du logiciel (qualités du logiciel, méthodes formelles), à la modélisation des domaines d'affaires et
                             à l'application de techniques d'intelligence artificielle pour comprendre les artéfacts produits et faciliter le développement.
                        </p>
 
                         <p>
-                            Le groupe est présentement en plein essor. Dirigé par <strong>3 professeurs</strong>, le GEODES comptent plus de <strong>25 membres</strong>
-                            et accueillent de plus en plus de chercheurs (en visite).
-                            Le GEODES est un groupe très actif avec plus de <strong>20 publications par année</strong> et de fréquentes collaborations avec des groupes industriels sur des projets 
-                            d'envergures comme le <a class="project-intro__link inline" href="https://nouvelles.umontreal.ca/article/2022/03/16/l-ia-a-la-ferme-une-nouvelle-voie-vers-l-autonomie-alimentaire/">projet agricole de ferme verticale</a>.
+                            Dirigé par <strong>3 professeurs</strong>, le GEODES comptent plus de 25 membres
+                            et accueillent de plus en plus de chercheurs et d'étudiants (sous la supervision des professeurs).
+                            Le GEODES est un groupe très actif avec plus de 20 publications par année et de fréquentes collaborations avec des groupes industriels sur des projets 
+                            d'envergures comme le <a class="bare-link project-intro__link inline" href="https://nouvelles.umontreal.ca/article/2022/03/16/l-ia-a-la-ferme-une-nouvelle-voie-vers-l-autonomie-alimentaire/">projet agricole de ferme verticale</a>.
                             Devenu un pôle dans le domaine du Génie logiciel, le GEODES a récemment organisé la 23<sup>e</sup> édition de la Conférence MODELS (ACM/IEEE International Conference on Model Driven Engineering Languages and Systems)
                             et organisera cette année la 25<sup>e</sup> édition.
                         </p>
@@ -1065,19 +1036,24 @@
                     <div>
                         <p>
                             La croissance du GEODES n'est cependant pas sans conséquence sur la cohésion et la synergie du groupe. 
-                            Malgré certaines collaborations et l'usage d'outils de communication comme Discord, il est difficile 
-                            pour un membre d'avoir une vue d'ensemble des activités de chacun, de faire le suivi des travaux ou
-                            trouver des points d'intersection entre les multiples intérêts de recherche et leurs produits. 
+                            Malgré certaines collaborations et l'usage d'outils de communication, il est difficile 
+                            pour un membre d'avoir une vue d'ensemble des activités au sein du groupe, de faire le suivi des travaux 
+                            d'un collègue ou trouver des points d'intersection entre les intérêts de recherche de chacun.
                             La plupart des échanges restent informel et la mise en commun hebdomadaire ne permet pas un véritable suivi.
                         </p>
     
-                        <h4 class="project-intro-desc-title">Proposition (solution)</h4>
+                        <h4 class="project-intro-desc-title">Proposition</h4>
                         <p>
-                            Pour résoudre ce problème, nous proposons la création d'un outil, <strong>Roundtable</strong>, permettant aux membres du GEODES
-                            de faire le <strong>suivi des membres et des activités de recherche du groupe</strong>.
-                            L'outil permettra aux membres de <strong>visualiser les informations de ces entités</strong>,
-                            <strong>se souscrire à divers intérêts ou sujets particuliers</strong> et supportera <strong>quelques requêtes pour explorer et manipuler ces relations</strong>.
-                            <br>
+                            <em>“La plateforme <b>Roundtable</b>”</em> &ndash; Pour résoudre ce problème, nous proposons la création d'un outil permettant aux membres du GEODES de:
+                        </p>
+                        <ul class="bare-list">
+                            <li class="dash">Faire le suivi des membres et des activités de recherche du groupe</li>
+                            <li class="dash">Visualiser les informations de ces entités</li>
+                            <li class="dash">Se souscrire à de multiples intérêts de recherche ou sujets particuliers</li>
+                            <li class="dash">Formuler quelques requêtes pour explorer et manipuler ces relations</li>
+                        </ul>
+
+                        <p style="margin-top: 12px;">
                             L'implémentation de la solution se limitera à une <strong>interaction en ligne de commande</strong>.
                         </p>
                     </div>
@@ -1093,12 +1069,13 @@
                                Les membres du GEODES publient fréquemment des publications (plus de 20 par année) dans des journaux comme
                                <i class="journal">IEEE Transactions on Software Engineering</i>, 
                                <i class="journal">Software and Systems Modeling (SoSyM)</i>, à propos de sujets diverses liés aux thèmes de recherche du laboratoire.
+                               Plusieurs membres peuvent intervenir dans une publication, à titre d'auteur, participant, consultant ou évaluateur.
                            </p>
                        </li>
                        <li class="activity activity--tools">
                         <h4 class="activity-title">Projets et Outils</h4>
                         <p>
-                            Le GEODES recoit régulièrement des subventions pour travailler sur diverses projets (programmes) de recherche comme 
+                            Le GEODES reçoit régulièrement des subventions pour travailler sur diverses projets (programmes) de recherche comme 
                             <i class="journal">From domain-specific languages to domain-specific environments</i> 
                             (financé par le <a style="color: inherit;" href="https://www.nserc-crsng.gc.ca/professors-professeurs/grants-subs/dgigp-psigp_fra.asp">CRSNG</a>).
                             Certains travaux de recherche nécessitent parfois des démonstrations pratique résultant sur la création d'outils
@@ -1129,7 +1106,7 @@
                     </p>
 
                     <p>
-                        Certaines annoncent sont aussi partagé sur le serveur Discord du GEODES qui sert de canal principal d'échange principal entre les membres. 
+                        Certaines annonces sont aussi partagées sur le serveur Discord du GEODES qui sert de canal principal d'échange principal entre les membres. 
                         Les chaines du serveur sont regroupées selon divers volets de discussions (ex: Administration, Projets, Labos) pour organiser et contrôler les échanges.
                         Cependant, étant avant tout un outil de messagerie, il n'est pas pratique pour offrir les mécanismes de suivi recherché.
                     </p>
