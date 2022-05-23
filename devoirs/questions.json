@@ -2,7 +2,7 @@
     {
         "team": 1,
         "questions": [
-            { "week": 1, "used": false }, 
+            { "week": 1, "used": true }, 
             { "week": 2, "used": false },
             { "week": 3, "used": false }
         ]
@@ -10,7 +10,7 @@
     {
         "team": 2,
         "questions": [
-            { "week": 1, "used": false }, 
+            { "week": 1, "used": true }, 
             { "week": 2, "used": false },
             { "week": 3, "used": false }
         ]
@@ -18,7 +18,7 @@
     {
         "team": 3,
         "questions": [
-            { "week": 1, "used": false }, 
+            { "week": 1, "used": true }, 
             { "week": 2, "used": false },
             { "week": 3, "used": false }
         ]
@@ -26,7 +26,7 @@
     {
         "team": 4,
         "questions": [
-            { "week": 1, "used": false }, 
+            { "week": 1, "used": true }, 
             { "week": 2, "used": false },
             { "week": 3, "used": false }
         ]
@@ -42,7 +42,7 @@
     {
         "team": 6,
         "questions": [
-            { "week": 1, "used": false }, 
+            { "week": 1, "used": true }, 
             { "week": 2, "used": false },
             { "week": 3, "used": false }
         ]
@@ -50,7 +50,7 @@
     {
         "team": 7,
         "questions": [
-            { "week": 1, "used": false }, 
+            { "week": 1, "used": true }, 
             { "week": 2, "used": false },
             { "week": 3, "used": false }
         ]
@@ -66,7 +66,7 @@
     {
         "team": 9,
         "questions": [
-            { "week": 1, "used": false }, 
+            { "week": 1, "used": true }, 
             { "week": 2, "used": false },
             { "week": 3, "used": false }
         ]
@@ -90,7 +90,7 @@
     {
         "team": 12,
         "questions": [
-            { "week": 1, "used": false }, 
+            { "week": 1, "used": true }, 
             { "week": 2, "used": false },
             { "week": 3, "used": false }
         ]
