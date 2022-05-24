@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFT2255 | DM1</title>
-    <link rel="shortcut icon" href="./../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./../../assets/css/normalize.css">
-    <link rel="stylesheet" href="./../../assets/css/base.css?v=10">
-    <link rel="stylesheet" href="./../../assets/css/teams.css?v=10">
+    <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./../assets/css/normalize.css">
+    <link rel="stylesheet" href="./../assets/css/base.css?v=10">
+    <link rel="stylesheet" href="./../assets/css/teams.css?v=10">
     <style>
         .content-wrapper { position: relative; padding: 10px 5%; }
 
@@ -412,7 +412,6 @@
             flex: 1 1;
             padding: 12px 18px 6px;
             border-radius: 1px;
-            margin-right: 12px;
         }
 
         .activity--publications {
@@ -453,14 +452,50 @@
             padding: 24px 5vw;
             background-color: #fff;
         }
-
-        .requirements {
-            display: flex; flex-direction: column;
+        
+        .definitions {
+            display: flex; flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .definition {
+            flex: 1 1 ;
+            margin-bottom: 6px; margin-right: 6px;
+            padding: 4px 12px 8px;
+            font-weight: 500;
+            color: #fff;
+            background-color: #6667AB;
+            border-radius: 1px;
         }
 
-        .requirement:before {
-            content: " - ";
-            font-weight: bold;
+        .requirements {
+            display: flex; flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .requirements--admin .requirement {
+            border-color: #F24738;
+        }
+
+        .requirement {
+            margin-bottom: 6px;
+            margin-right: 6px;
+            padding: 6px 8px;
+            color: #333;
+            line-height: 1.5;
+            width: calc(50% - 12px);
+            background-color: #fff;
+            border-radius: 2px;
+            border-bottom: 4px solid #6667AB;
+        }
+
+        .requirement-title {
+            display: block;
+            font-size: 1.1em; font-weight: 300;
+        }
+
+        .requirement .label {
+            color: #555;
         }
 
         .task-section {
@@ -566,22 +601,77 @@
         background-color: #292723;
     }
 
-        @media only screen and (max-width: 40em)     {
-            .problem-section-aside {
-                display: none;
-            }    
+    @media only screen and (min-width: 0em) {
+        .problem-section-aside {
+            display: none;
+        }   
+        
+        .project-intro {
+            display: flex; flex-direction: column;
         }
 
-        @media only screen and (min-width: 30em) {
+        
+        .project-name {
+            position: absolute;
+            top: -60px; left: calc(50% - 75px);
+            padding-top: 24px;
+            width: 150px;
+            height: 150px;
+            font-size: 2em; font-weight: 800;
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+            background-color: #6667AB;
+        }
+
+        .project-intro-logo-img {
+            height: 40px; width: auto;
+        } 
+
+        .project-intro-group {
+            display: none;
+        }
+
+        .project-intro-desc {
+            margin-left: 0;
+        }
+
+        .activities {
+            flex-direction: column;
+        }
+
+        .activity {
+            margin-bottom: 12px;
+        }
+
+        .definitions {
+            flex-direction: column;
+        }
+
+        .requirements {
+            display: flex; flex-direction: column;
+        }
+
+        .requirement {
+            width: 100%;
+        }
+    }
+
+        @media only screen and (min-width: 40em) {
             .problem-section-aside {
-                min-width: 200px;
+                min-width: 300px;
                 padding-left: 2vw;
                 padding-right: 12px;
             }
 
             .problem-section-content {
+                flex-direction: column;
                 padding-left: 12px; padding-right: 2vw;
             }
+
+            .project-intro-group {
+                display: flex;
+            }           
                 
             .rule-section,
             .task-section,
@@ -592,17 +682,47 @@
             .team-count  {
                 width: 20px;
             }
+            
+           
+
+            .definitions {
+                flex-direction: row;
+            }
         }
 
-        @media only screen and (min-width: 60em) {
+        @media only screen and (min-width: 56em) {
             .problem-section-aside {
+                display: flex;
                 min-width: 320px;
                 padding-left: 3vw;
                 padding-right: 18px;
             }
+            
+            .project-name {
+                position: absolute;
+                top: -100px; left: calc(50% - 120px);
+                text-align: center;
+                padding-top: 48px;
+                font-size: 2.6em; font-weight: 800;
+                color: #fff;
+                width: 240px;
+                border-radius: 50%;
+                height: 240px;
+                background-color: #6667AB;
+                margin-bottom: 12px;
+            }
+
+            .project-intro-logo-img {
+                height: 48px; width: auto;
+            } 
 
             .problem-section-content {
                 padding-left: 18px; padding-right: 3vw;
+            }
+            
+            .project-intro-desc {
+                margin-left: 0;
+                margin-top: 6px;
             }
                 
             .rule-section,
@@ -614,6 +734,23 @@
             .team-count  {
                 width: auto;
             }
+
+
+            .definitions {
+                display: flex; flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .definition {
+                flex: 1 1 ;
+                margin-bottom: 6px; margin-right: 6px;
+                padding: 4px 12px 8px;
+                font-weight: 500;
+                color: #fff;
+                background-color: #6667AB;
+                border-radius: 1px;
+            }
+
         }
 
         @media only screen and (min-width: 80em) {
@@ -625,11 +762,59 @@
             .problem-section-content {
                 padding-left: 24px; padding-right: 5vw;
             }
-                
+
+            .project-intro {
+                display: flex; flex-direction: row;
+            }
+            
+            .project-intro-desc {
+                margin-left: 24px;
+            }
+
             .rule-section,
             .task-section,
             .evaluation-section {
                 padding: 24px 5vw;
+            }
+            
+            .activities {
+                flex-direction: row;
+            }
+
+            .activity {
+                margin-right: 12px;
+            }
+
+            .definitions {
+                display: flex; flex-direction: row;
+                flex-wrap: wrap;
+            }
+        
+            .definition {
+                flex: 1 1 ;
+                margin-bottom: 6px; margin-right: 6px;
+                padding: 4px 12px 8px;
+                font-weight: 500;
+                color: #fff;
+                background-color: #6667AB;
+                border-radius: 1px;
+            }
+
+            .requirements {
+                display: flex; flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .requirement {
+                margin-bottom: 6px;
+                margin-right: 6px;
+                padding: 6px 8px;
+                color: #333;
+                line-height: 1.5;
+                width: calc(50% - 12px);
+                background-color: #fff;
+                border-radius: 2px;
+                border-bottom: 4px solid #6667AB;
             }
         }
     </style>
@@ -908,18 +1093,18 @@
                         Par défaut, une activité est publique.
                     </p>
 
-                    <ul class="bare-list requirements">
-                        <li class="requirement">
+                    <ul class="bare-list definitions">
+                        <li class="definition">
                             Un article est identifié par un titre, un résumé et une date de publication. Il présente aussi une liste d'auteurs et de collaborateurs. 
                             Si un membre est présent dans l'une de ces listes, il a automatiquement accès à l'article même si celui-ci est privé. 
                             Finalement, un article a aussi un statut (brouillon, prêt, soumis, publié). 
                             Lorsque l'article est publié, il devient automatiquement public et il devient possible d'ajouter un lien vers la publication (Ex: lien du PDF).
                         </li>
-                        <li class="requirement">
+                        <li class="definition">
                             Un projet est identifié par un titre, une description et une période (date de début, date de fin). Il présente aussi une liste de partenaires et un responsable (professeur).
                             Le responsable peut associer le projet à une liste de membres qui y auront accès même si celui-ci est privé.
                         </li>
-                        <li class="requirement">
+                        <li class="definition">
                             Un outil est identifié par un nom, une description et une version. Il doit avoir au moins un lien pointant vers le répertoire du code source (Ex: lien d'un répertoire sur GitHub).
                             Des liens additionnels peuvent être ajoutés pour d'autres ressources comme la documentation ou des vidéos.
                             Un outil a un responsable et une liste de collaborateurs qui y auront accès même si celui-ci est privé.
@@ -942,14 +1127,14 @@
                         la validation du compte. Si l'administrateur valide le compte, il passe au statut <em>VALIDE</em> et le membre peut accéder à la plateforme.
                     </p>
 
-                    <ul class="bare-list requirements">
-                        <li class="requirement">
+                    <ul class="bare-list definitions">
+                        <li class="definition">
                             Un membre est identifié par son prénom, nom de famille, numéro de téléphone et adresse courriel et un mot de passe.
                             Il peut aussi présenter des liens pour y asssocier diverses ressources (site web, réseaux sociaux, blog). <br>
                             Le mot de passe devra être composé d'au moins 8 caractères contenant au moins 1 chiffre, 1 majuscule, 1 minuscule et 1 caractère spécial.
                         </li>
-                        <li class="requirement">
-                            Un membre doit être associé à un des rôles suivants: <em>PROFESSEUR</em>, <em>ADMINISTRATEUR</em>, <em>MEMBRE</em>. Par défaut, un membre a le rôle MEMBRE. 
+                        <li class="definition">
+                            Un membre doit être associé à un des rôles suivants: <em>PROFESSEUR</em>, <em>ADMINISTRATEUR</em>, <em>MEMBRE</em>. Par défaut, un membre a le rôle MEMBRE. <br>
                             Un rôle est défini par un nom unique (PROFESSEUR, ADMINISTRATEUR, MEMBRE) et un descriptif.
                         </li>
                     </ul>
@@ -960,68 +1145,81 @@
                         Une fois connecté à la plateforme, un membre peut envoyer diverses requêtes pour obtenir de l'information sur un membre ou une activité.
                     </p>
 
+                    <h5 style="margin-bottom: 8px;">Requêtes publiques (accessible à tout membre)</h5>
+
                     <ul class="bare-list requirements">
                         <li class="requirement">
-                            Tout membre peut faire afficher la liste des membres ou chercher un membre en utilisant le nom et prénom. 
-                            La liste présente pour chaque membre: nom complet, adresse courriel et intérêts.
-                        </li>
-                        <li>
-                            Tout membre peut faire afficher le profil complet d'un membre. Le profil comprend le nom complet du membre, 
-                            son adresse courriel, son numéro de téléphone, ses intérêts, ses 5 derniers articles (uniquement ceux où il fait partie des auteurs), 
-                            ses projets et ses outils, en tenant compte de la visibilité de l'activité.
+                            <span class="requirement-title dash">Afficher la liste des membres</span>
+                            <span class="requirement-title dash">Chercher un membre en utilisant le nom et prénom</span>
+                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel et intérêts.
                         </li>
                         <li class="requirement">
-                            Tout membre peut faire afficher la liste des articles publics en cours ou récemment publiés. 
-                            La liste des articles présente pour chaque article: le titre, les auteurs et la date de publication.
-                            Un membre peut chercher un article par titre, auteur ou mot-clé.
+                            <span class="requirement-title dash">Afficher le profil complet d'un membre</span>
+                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel, numéro de téléphone, intérêts, 
+                            5 derniers articles (uniquement ceux où il fait partie des auteurs), projets publics et outils publics.
                         </li>
                         <li class="requirement">
-                            Tout membre peut faire afficher la fiche complète d'un article. La fiche comprend le titre, le résumé,
-                            la liste des auteurs, la liste des collaborateurs, la date de publication et le lien de la publication.
+                            <span class="requirement-title dash">Afficher la liste des articles publics en cours ou récemment publiés</span>
+                            <span class="requirement-title dash">Chercher un article par titre, auteur ou mot-clé</span>
+                            <strong class="label">Informations présentées:</strong> titre, auteurs et date de publication.
                         </li>
                         <li class="requirement">
-                            Tout membre peut faire afficher la liste des projets publics. La liste présente pour chaque projet les informations suivantes: nom du projet et responsable.
-                            Un membre peut aussi chercher un projet par responsable.
+                            <span class="requirement-title dash">Afficher la fiche complète d'un article</span>
+                            <strong class="label">Informations présentées:</strong> titre, résumé, auteurs, collaborateurs, date de publication et lien de la publication.
                         </li>
                         <li class="requirement">
-                            Tout membre peut faire afficher la fiche complète d'un projet. La fiche comprend le titre, la description du projet,
-                            la période, la liste des partenaires et le responsable.
+                            <span class="requirement-title dash">Afficher la liste des projets publics</span>
+                            <span class="requirement-title dash">Chercher un projet par responsable</span>
+                            <strong class="label">Informations présentées:</strong> titre et responsable.
                         </li>
                         <li class="requirement">
-                            Tout membre peut faire afficher la liste des outils publiques. 
-                            La liste présente pour chaque outil les informations suivantes: nom, version, responsable et liste des collaborateurs.
+                            <span class="requirement-title dash">Afficher la fiche complète d'un projet</span>
+                            <strong class="label">Informations présentées:</strong> titre, description, période, partenaires et responsable.
                         </li>
                         <li class="requirement">
-                            Tout membre peut faire afficher la fiche complète d'un outil. La fiche comprend le nom, la description, la version,
-                            la liste des collaborateurs, les liens associés à l'outil et la liste des articles liés à l'outil.
+                            <span class="requirement-title dash">Afficher la liste des outils publiques</span>
+                            <strong class="label">Informations présentées:</strong> nom, version, responsable et collaborateurs.
                         </li>
                         <li class="requirement">
-                            Tout membre peut faire afficher la liste des activités associées à un intérêt. 
-                            La liste présente pour chaque activité les informations suivantes: nom ou titre, professeur assigné, créateur ou responsable.
+                            <span class="requirement-title dash">Afficher la fiche complète d'un outil</span> 
+                            <strong class="label">Informations présentées:</strong> nom, description, version, collaborateurs, liens associés à l'outil et
+                            la liste des articles liés à l'outil.
                         </li>
                         <li class="requirement">
-                            Tout membre peut faire afficher la liste des membres associées à un intérêt. 
-                            La liste présente pour chaque membre les informations suivantes: nom complet, adresse courriel et intérêts.
+                            <span class="requirement-title dash">Afficher la liste des activités associées à un intérêt</span> 
+                            <strong class="label">Informations présentées:</strong> nom ou titre, professeur assigné, créateur ou responsable.
                         </li>
                         <li class="requirement">
-                            Tout membre peut modifier son profil et la liste des activités et intérêts auxquels il est souscrit. 
+                            <span class="requirement-title dash">Afficher la liste des membres associées à un intérêt</span> 
+                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel et intérêts.
+                        </li>
+                    </ul>
+
+                    <h5 style="margin-bottom: 8px;">Requêtes administratives</h5>
+
+                    <ul class="bare-list requirements requirements--admin">
+                        <li class="requirement">
+                            <strong>Tout membre</strong> peut modifier son profil et la liste des activités et intérêts auxquels il est souscrit. <br>
                             Il peut aussi vérifier s'il a reçu des notifications.
                         </li>
                         <li class="requirement">
-                            Tout membre peut créer une activité et souscrire à une activité à laquelle il a accès ou à un intérêt. 
+                            <strong>Tout membre</strong> peut créer une activité et souscrire à une activité à laquelle il a accès ou à un intérêt. 
                             Lorsqu'un membre est souscrit à un intérêt, toutes les activités liées à cet intérêt sont visées.
                         </li>
                         <li class="requirement">
-                            Seul un administrateur (utilisateur avec le rôle <em>ADMINISTRATEUR</em>) peut assigner ou modifier un rôle.
+                            <strong>Seul un administrateur</strong> (utilisateur avec le rôle <em>ADMINISTRATEUR</em>) peut assigner ou modifier un rôle.
                         </li>
                         <li class="requirement">
-                            Seul un administrateur peut suspendre (statut: <em>SUSPENDU</em>) ou réactiver (statut: <em>VALIDE</em>) un compte en tout temps.
+                            <strong>Seul un administrateur</strong> peut suspendre (statut: <em>SUSPENDU</em>) ou réactiver (statut: <em>VALIDE</em>) un compte.
                         </li>
                         <li class="requirement">
-                            Seuls les responsables (créateur et professeur) d'une activité peuvent la modifier et seul un administrateur peut la supprimer.
+                            <strong>Seuls les responsables</strong> (créateur et professeur) d'une activité peuvent la modifier.
                         </li>
                         <li class="requirement">
-                            Seul un professeur peut ajouter, modifier ou supprimer un intérêt.
+                            <strong>Seul un administrateur</strong> peut supprimer une activité.
+                        </li>
+                        <li class="requirement">
+                            <strong>Seul un professeur</strong> peut ajouter, modifier ou supprimer un intérêt. <br>
                             Un intérêt est défini par un titre et un descriptif.
                         </li>
                     </ul>
@@ -1102,7 +1300,7 @@
                 <li class="task">Prototype</li>
             </ul>
 
-            <a class="bare-link template-link" target="_blank" href="../template.html">Template pour le rapport</a>
+            <a class="bare-link template-link" target="_blank" href="template.html">Template pour le rapport</a>
         </section>
 
         <section class="evaluation-section">
@@ -1173,7 +1371,7 @@
         </div>
     </footer>
 
-    <script src="../../dist/data.js"></script>
+    <script src="../dist/data.js"></script>
 </body>
 
 </html>
