@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -467,6 +467,10 @@
             background-color: #6667AB;
             border-radius: 1px;
         }
+
+            .definition ins {
+                color: #000;
+            }
 
         .requirements {
             display: flex; flex-direction: row;
@@ -997,7 +1001,8 @@
     
                         <h4 class="project-intro-desc-title">Proposition</h4>
                         <p>
-                            <em>“La plateforme <b>Roundtable</b>”</em> &ndash; Pour résoudre ce problème, nous proposons la création d'un outil permettant aux membres du GEODES de:
+                            <em>“La plateforme <b>Roundtable</b>”</em> &ndash; Pour résoudre ce problème, 
+                            nous proposons la création d'un outil permettant aux membres du GEODES de:
                         </p>
                         <ul class="bare-list">
                             <li class="dash">Faire le suivi des membres et des activités de recherche du groupe</li>
@@ -1005,8 +1010,12 @@
                             <li class="dash">Se souscrire à de multiples intérêts de recherche ou sujets particuliers</li>
                             <li class="dash">Formuler quelques requêtes pour explorer et manipuler ces relations</li>
                         </ul>
-                        <p>
-                            <ins>Pour le moment, nous ne prévoyons pas rendre la plateforme accessible au grand public.</ins>
+
+                        <p style="margin-top: 12px;">
+                            <ins>
+                                La plateforme ne remplacera pas les outils existants (Site web, Discord), elle est complémentaire. <br>
+                                Nous n'envisageons pas de l'utiliser comme système de messagerie (Discord), ou comme moyen de communication avec le grand public (Site web); la plateforme sera accessible uniquement aux membres du GEODES.
+                            </ins>
                         </p>
 
                         <p style="margin-top: 12px;">
@@ -1077,7 +1086,7 @@
                 </section>
 
                 <section>
-                    <h3 class="subsection-title"><ins>Liste de souhaits</ins></h3>
+                    <h3 class="subsection-title">Liste de souhaits</h3>
                     
                     <p>
                         Roundtable devrait permettre aux membres du GEODES de se ternir au courant des divers activités du groupe de recherche.
@@ -1124,7 +1133,11 @@
                         Pour créer un compte, un membre doit choisir un superviseur (professeur) et fournir son nom, prénom, adresse courriel et créer un mot de passe. 
                         Si les informations sont valides, le compte est créé dans le système avec le statut <em>EN_ATTENTE</em>.
                         Une confirmation est envoyée à l'adresse courriel et une notification est envoyée aux administrateurs pour effectuer 
-                        la validation du compte. Si l'administrateur valide le compte, il passe au statut <em>VALIDE</em> et le membre peut accéder à la plateforme.
+                        la validation du compte. Si un administrateur valide le compte, celui-ci passe au statut <em>VALIDE</em> et le membre peut accéder à la plateforme.
+                    </p>
+                    
+                    <p>
+                        <ins>Si un membre quitte le groupe, il n'a aucune action à prendre dans la plateforme. Les administrateurs seront chargés de désactiver son compte.</ins>
                     </p>
 
                     <ul class="bare-list definitions">
@@ -1134,10 +1147,15 @@
                             Le mot de passe devra être composé d'au moins 8 caractères contenant au moins 1 chiffre, 1 majuscule, 1 minuscule et 1 caractère spécial.
                         </li>
                         <li class="definition">
-                            Un membre doit être associé à un des rôles suivants: <em>PROFESSEUR</em>, <em>ADMINISTRATEUR</em>, <em>MEMBRE</em>. Par défaut, un membre a le rôle MEMBRE. <br>
-                            Un rôle est défini par un nom unique (PROFESSEUR, ADMINISTRATEUR, MEMBRE) et un descriptif.
+                            Un membre doit être associé à un des rôles suivants: <em>PROFESSEUR</em>, <em>ADMINISTRATEUR</em>, <em>MEMBRE</em>. 
+                            Par défaut, un membre a le rôle MEMBRE.
+                            <ins>Un membre ne peut être associé qu'à un seul rôle, mais le rôle peut être modifié par un administrateur.</ins>  <br>
+                            Un rôle est défini par un nom unique (PROFESSEUR, ADMINISTRATEUR, MEMBRE) et un descriptif. <br>
+                            <ins>Un ADMINISTRATEUR peut faire tout ce qu'un MEMBRE peut faire.</ins> <br>
+                            <ins>Un PROFESSEUR peut faire tout ce qu'un MEMBRE peut faire.</ins>
                         </li>
                     </ul>
+
                     
                     <h4 class="paragraph-title">Requêtes</h4>
 
@@ -1223,11 +1241,40 @@
                             Un intérêt est défini par un titre et un descriptif.
                         </li>
                     </ul>
+
+                    <h4 class="paragraph-title"><ins>Prototype</ins></h4>
+
+                    <p>
+                        Suite à l'authentification, l'application devrait afficher un menu principal présentant uniquement les actions possibles pour l'utilisateur connecté. <br>
+                        Les actions peuvent être imbriquées (Ex: <code style="font-weight: bold;">Gestion Membre > Modifier membre</code>) pour éviter d'afficher trop d'options à l'utilisateur. 
+                        Cependant, le menu ne devrait pas avoir plus de 3 niveaux d'imbrication. Bien entendu, il devrait toujours être possible de retourner au menu principal sans quitter l'application.
+                    </p>
+
+                    <h4 class="paragraph-title"><ins>Données prédéfinies</ins></h4>
+
+                    <p>
+                        L'application devrait être initialisée avec certaines données comme la liste des professeurs et les administrateurs.
+                    </p>
+
+                    <h5 style="margin-bottom: 6px;">Professeurs (utilisateurs avec le role PROFESSEUR)</h5>
+
+                    <ul class="bare-list">
+                        <li class="dash">Michalis FAMELIS</li>
+                        <li class="dash">Eugène SYRIANI</li>
+                        <li class="dash">Houari SAHRAOUI</li>
+                    </ul>
+
+                    <h5 style="margin-bottom: 6px;">Administrateurs (utilisateurs avec le role ADMINISTRATEUR)</h5>
+
+                    <ul class="bare-list">
+                        <li class="dash">Istvan DAVID</li>
+                        <li class="dash">Louis-Edouard LAFONTANT</li>
+                    </ul>
                 </section>
 
                 <p style="margin-top: 12px;">
                     Votre équipe a été octroyée le contrat de développer <strong>la plateforme Roundtable</strong>. <br>
-                    L'interface sera en ligne de commande dans un premier temps et si nous avons le budget, nous ferons une interface graphique par la suite.
+                    L'interface sera en ligne de commande dans un premier temps et si nous avons le temps et l'énergie, nous ferons une interface graphique par la suite.
                 </p>
             </div>
         </section>
@@ -1241,7 +1288,7 @@
                 La semaine commence le lundi et se termine le samedi. Les questions doivent être communiquées <strong>au moins 48 heures avant la fin de la semaine</strong>.
                 Passez ce délai, elles seront attribuées à la prochaine semaine.
                 Les réponses aux questions seront ajoutées au corps du texte plus haut. <br>
-                <strong>Jusqu'au 27 mai, des précisions peuvent être rajoutées au texte.</strong>
+                <strong>Jusqu'au 29 mai, des précisions peuvent être rajoutées au texte.</strong>
             </p>
             <h3>Quota sur les quesions</h3>
             <ul>

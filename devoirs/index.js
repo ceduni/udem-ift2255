@@ -18,7 +18,7 @@ const fullName = (fName, lName) => fName + " " + lName.toUpperCase();
  */
 const getFullName = (person) => fullName(person.firstName, person.lastName);
 
-const CURRENT_WEEK = 2;
+const CURRENT_WEEK = 3;
 
 let teamsSection = getElement(`[data-display="teams"]`);
 
