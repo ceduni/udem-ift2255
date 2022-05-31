@@ -1,7 +1,11 @@
-import { createDiv, createI, createListItem, createSpan, createUnorderedList, getElement } from 'zenkai'
+import { 
+    createDiv, createI, createListItem, createSpan, createUnorderedList,
+    getElements, getElement, isEmpty, shortDate 
+} from 'zenkai'
 const DATA_TEAMS = require(`./teams.json`);
-const DATA_QUESTIONS = require(`./questions.json`);
 
+
+const { id } = document.body.dataset;
 
 /**
  * Concat of first name and last name
@@ -18,7 +22,10 @@ const fullName = (fName, lName) => fName + " " + lName.toUpperCase();
  */
 const getFullName = (person) => fullName(person.firstName, person.lastName);
 
-const CURRENT_WEEK = 3;
+const CURRENT_WEEK = Math.ceil((Date.now() - new Date(2022, 4, 13).getTime()) / (60 * 60 * 24 * 1000) / 7);
+
+const WEEK_END = shortDate(new Date(new Date(2022, 4, 15).getTime() + 60 * 60 * 24 * 1000 * CURRENT_WEEK * 7));
+
 
 let teamsSection = getElement(`[data-display="teams"]`);
 
@@ -27,7 +34,7 @@ let teamsList = createUnorderedList({
 });
 DATA_TEAMS.forEach(team => {
     let responsable = team.members.find(e => e.matricule === team.responsable);
-    let teamQuestions = DATA_QUESTIONS.find(q => q.team === team.id).questions;
+    const { meetings } = team[id];
 
     let item = createListItem({
         class: ["team"]
@@ -38,7 +45,8 @@ DATA_TEAMS.forEach(team => {
     });
 
     let name = createSpan({
-        class: ["team-name"]
+        class: ["team-name"],
+        title: team.name
     }, team.name);
 
     info.append(name);
@@ -50,7 +58,8 @@ DATA_TEAMS.forEach(team => {
         class: ["icon", "icon-person"]
     });
     let groupResponsable = createSpan({
-        class: ["team-captain", "fit-content"]
+        class: ["team-captain", "fit-content"],
+        title: getFullName(responsable)
     }, getFullName(responsable));
 
     group.append(icon, groupResponsable);
@@ -58,18 +67,22 @@ DATA_TEAMS.forEach(team => {
     let questions = createUnorderedList({
         class: ["bare-list", "questions"]
     });
-    teamQuestions.forEach(tq => {
-        let questionItem = createListItem({
-            class: ["question"]
-        });
-        if (tq.used) {
-            questionItem.classList.add("used")
-        } else if (tq.week < CURRENT_WEEK) {
-            questionItem.classList.add("missed")
-        }
 
-        questions.append(questionItem);
-    })
+    if (Array.isArray(meetings) && !isEmpty(meetings)) {
+        meetings.forEach(qq => {
+            let questionItem = createListItem({
+                class: ["question"]
+            });
+            if (qq.used) {
+                questionItem.classList.add("used")
+            } else if (qq.week < CURRENT_WEEK) {
+                questionItem.classList.add("missed")
+            }
+
+            questions.append(questionItem);
+        })
+    }
+
 
     item.append(info, group, questions);
 
@@ -78,7 +91,14 @@ DATA_TEAMS.forEach(team => {
 
 teamsSection.append(teamsList);
 
-let outValue = getElement("[data-value]");
-if(outValue.dataset.value === "CURRENT_WEEK") {
-    outValue.textContent = CURRENT_WEEK;
+let outValues = getElements("[data-value]");
+
+outValues.forEach(val => {
+    
+if (val.dataset.value === "CURRENT_WEEK") {
+    val.textContent = CURRENT_WEEK;
 }
+if (val.dataset.value === "WEEK_END") {
+    val.textContent = WEEK_END;
+}
+});
