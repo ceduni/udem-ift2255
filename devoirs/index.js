@@ -1,6 +1,6 @@
-import { 
+import {
     createDiv, createI, createListItem, createSpan, createUnorderedList,
-    getElements, getElement, isEmpty, shortDate 
+    getElements, getElement, isEmpty, shortDate
 } from 'zenkai'
 const DATA_TEAMS = require(`./teams.json`);
 
@@ -23,9 +23,6 @@ const fullName = (fName, lName) => fName + " " + lName.toUpperCase();
 const getFullName = (person) => fullName(person.firstName, person.lastName);
 
 const CURRENT_WEEK = Math.ceil((Date.now() - new Date(2022, 4, 13).getTime()) / (60 * 60 * 24 * 1000) / 7);
-
-const WEEK_END = shortDate(new Date(new Date(2022, 4, 15).getTime() + 60 * 60 * 24 * 1000 * CURRENT_WEEK * 7));
-
 
 let teamsSection = getElement(`[data-display="teams"]`);
 
@@ -91,14 +88,30 @@ DATA_TEAMS.forEach(team => {
 
 teamsSection.append(teamsList);
 
-let outValues = getElements("[data-value]");
+let outValues = getElements("[data-ruleng]");
+
+/**
+ * 
+ * @param {string} match 
+ * @param {string} string 
+ * @param {string} offset 
+ * @returns {string}
+ */
+function upperToHyphenLower(match, string, offset) {
+    let prop = match.substring(1).trim();
+    
+    if (prop === "CURRENT_WEEK") {
+        return CURRENT_WEEK;
+    }
+    if (prop === "WEEK_END") {
+        return WEEK_END;
+    }
+
+    return prop;
+}
 
 outValues.forEach(val => {
-    
-if (val.dataset.value === "CURRENT_WEEK") {
-    val.textContent = CURRENT_WEEK;
-}
-if (val.dataset.value === "WEEK_END") {
-    val.textContent = WEEK_END;
-}
+    let content = val.textContent;
+
+    val.textContent = content.replace(/\$\w+/g, upperToHyphenLower);
 });

@@ -118,7 +118,6 @@
                 background-color: #2C5EB4;
             }
 
-
         .teaching-header {
             align-items: center;
         }
@@ -142,7 +141,7 @@
             margin-right: 4px; 
             font-weight: bold;
             content: '🗸'; 
-            color: #11b334;
+            color: currentColor;
         }
        
         .section-title {
@@ -379,7 +378,6 @@
                 font-weight: 500;
             }
 
-
             .students {
                 display: flex;
                 margin-top: 2px;
@@ -434,6 +432,7 @@
         
 
         .subsection-title {
+            width: 100%;
             margin-bottom: 12px;
             font-size: 3em; font-weight: 300;
             color: #EF4E36;
@@ -444,6 +443,26 @@
             margin-bottom: 6px;
         }
 
+        .spec-section {
+            display: flex; flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .subsection-group {
+            margin-bottom: 12px;
+            width: calc(50% - 6px);
+            padding: 12px;
+            background-color: #fff;
+            box-shadow: 2px 3px 0 #6667AB;
+            border-radius: 2px;
+        }
+
+        .subsection-group-title {
+            margin: 0; margin-bottom: 6px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
         .title {
             margin-bottom: 2px;
         }
@@ -452,24 +471,32 @@
             padding: 24px 5vw;
             background-color: #fff;
         }
+
+        .section-content {
+            max-width: 1000px;
+        }
         
         .definitions {
-            display: flex; flex-direction: row;
-            flex-wrap: wrap;
+            display: flex; flex-direction: column;
         }
         
         .definition {
-            flex: 1 1 ;
+            flex: 1 1;
             margin-bottom: 6px; margin-right: 6px;
-            padding: 4px 12px 8px;
-            font-weight: 500;
-            color: #fff;
-            background-color: #6667AB;
+            font-weight: 400;
             border-radius: 1px;
         }
 
-            .definition ins {
-                color: #000;
+            .def-label {
+                font-weight: 500;
+                color: #004c94;
+            }
+                .def-label:after {
+                    content: ": ";
+                }
+
+            .def-value {
+                color: #222;
             }
 
         .requirements {
@@ -564,7 +591,6 @@
             margin-top: 0;
         }
 
-
         .tbl-evaluation {
             font-weight: 500;
             
@@ -597,69 +623,72 @@
                 border-top: 9px solid #ff9147;
             }
 
-        
-    .page-footer {
-        padding-top: 24px;
-        color: #fff;
-        background-color: #5F4B8B;
-        background-color: #292723;
-    }
-
-    @media only screen and (min-width: 0em) {
-        .problem-section-aside {
-            display: none;
-        }   
-        
-        .project-intro {
-            display: flex; flex-direction: column;
-        }
-
-        
-        .project-name {
-            position: absolute;
-            top: -60px; left: calc(50% - 75px);
+            
+        .page-footer {
             padding-top: 24px;
-            width: 150px;
-            height: 150px;
-            font-size: 2em; font-weight: 800;
-            text-align: center;
             color: #fff;
-            border-radius: 50%;
-            background-color: #6667AB;
+            background-color: #5F4B8B;
+            background-color: #292723;
         }
 
-        .project-intro-logo-img {
-            height: 40px; width: auto;
-        } 
+        @media only screen and (min-width: 0em) {
+            .problem-section-aside {
+                display: none;
+            }   
+            
+            .project-intro {
+                display: flex; flex-direction: column;
+            }
 
-        .project-intro-group {
-            display: none;
-        }
+            
+            .project-name {
+                position: absolute;
+                top: -60px; left: calc(50% - 75px);
+                padding-top: 24px;
+                width: 150px;
+                height: 150px;
+                font-size: 2em; font-weight: 800;
+                text-align: center;
+                color: #fff;
+                border-radius: 50%;
+                background-color: #6667AB;
+            }
 
-        .project-intro-desc {
-            margin-left: 0;
-        }
+            .project-intro-logo-img {
+                height: 40px; width: auto;
+            } 
 
-        .activities {
-            flex-direction: column;
-        }
+            .project-intro-group {
+                display: none;
+            }
 
-        .activity {
-            margin-bottom: 12px;
-        }
+            .project-intro-desc {
+                margin-left: 0;
+            }
 
-        .definitions {
-            flex-direction: column;
-        }
+            .activities {
+                flex-direction: column;
+            }
 
-        .requirements {
-            display: flex; flex-direction: column;
-        }
+            .activity {
+                margin-bottom: 12px;
+            }
 
-        .requirement {
-            width: 100%;
+            
+            .subsection-group {
+                margin-bottom: 12px;
+                width: 100%;
+                padding: 12px;
+            }
+
+            .requirements {
+                display: flex; flex-direction: column;
+            }
+
+            .requirement {
+                width: 100%;
+            }
         }
-    }
 
         @media only screen and (min-width: 40em) {
             .problem-section-aside {
@@ -685,12 +714,6 @@
 
             .team-count  {
                 width: 20px;
-            }
-            
-           
-
-            .definitions {
-                flex-direction: row;
             }
         }
 
@@ -739,20 +762,10 @@
                 width: auto;
             }
 
-
-            .definitions {
-                display: flex; flex-direction: row;
-                flex-wrap: wrap;
-            }
             
-            .definition {
-                flex: 1 1 ;
-                margin-bottom: 6px; margin-right: 6px;
-                padding: 4px 12px 8px;
-                font-weight: 500;
-                color: #fff;
-                background-color: #6667AB;
-                border-radius: 1px;
+            .subsection-group {
+                margin-bottom: 12px;
+                width: calc(50% - 6px);
             }
 
         }
@@ -787,21 +800,6 @@
 
             .activity {
                 margin-right: 12px;
-            }
-
-            .definitions {
-                display: flex; flex-direction: row;
-                flex-wrap: wrap;
-            }
-        
-            .definition {
-                flex: 1 1 ;
-                margin-bottom: 6px; margin-right: 6px;
-                padding: 4px 12px 8px;
-                font-weight: 500;
-                color: #fff;
-                background-color: #6667AB;
-                border-radius: 1px;
             }
 
             .requirements {
@@ -860,10 +858,7 @@
 
                 <h2 class="section-title" style="margin-top: 12px;">Calendrier</h2>
                 <p>
-                    Semaine: <strong class="output" data-value="CURRENT_WEEK"></strong> <br>
-                    Fin de la semaine: <strong>2022-06-05</strong>
-                </p> 
-                <p>
+                    Semaine: <strong class="output" data-ruleng="" data-op="$">$CURRENT_WEEK / 12</strong> <br>
                     Fin du jalon: <strong>2022-06-05</strong>
                 </p>
             </aside>
@@ -1007,13 +1002,14 @@
                         <ul class="bare-list">
                             <li class="dash">Faire le suivi des membres et des activités de recherche du groupe</li>
                             <li class="dash">Visualiser les informations de ces entités</li>
-                            <li class="dash">Se souscrire à de multiples intérêts de recherche ou sujets particuliers</li>
+                            <li class="dash">S'inscrire à de multiples intérêts de recherche ou sujets particuliers</li>
                             <li class="dash">Formuler quelques requêtes pour explorer et manipuler ces relations</li>
                         </ul>
 
                         <p style="margin-top: 12px;">
                             La plateforme ne remplacera pas les outils existants (Site web, Discord), elle est complémentaire. <br>
-                            Nous n'envisageons pas de l'utiliser comme système de messagerie (Discord), ou comme moyen de communication avec le grand public (Site web); la plateforme sera accessible uniquement aux membres du GEODES.
+                            Nous n'envisageons pas de l'utiliser comme système de messagerie (Discord), ou comme moyen de communication avec le grand public (Site web). <br>
+                            Roundtable sera accessible uniquement aux membres du GEODES.
                         </p>
 
                         <p style="margin-top: 12px;">
@@ -1023,7 +1019,7 @@
                 </section>
 
                 <section>
-                    <h3 class="subsection-title">Solution</h3>
+                    <h3 class="subsection-title">Besoins</h3>
                     
                     <p>
                         Roundtable devrait permettre aux membres du GEODES de se ternir au courant des divers activités du groupe de recherche.
@@ -1033,33 +1029,16 @@
 
                     <p>
                         La plateforme devrait supporter l'ajout, la modification et la suppression des activités suivantes: <strong>Article</strong>, <strong>Projet</strong> et <strong>Outil</strong>.  <br>
-                        Lors de la création d'une activité, il faut l'associer à un professeur et l'assigner 1 à 5 intérêts, un niveau de visibilité (privé ou publique) et des mots-clés. <br>
-                        Les intérêts sont regroupés dans une liste modifiable uniquement par les professeurs, mais les mots-clés peuvent être définis ou réutilisés lors de la création d'une activité.
-                        Un niveau de visibilité publique permet à tous les membres de visualiser l'activité, alors qu'un niveau privé permet uniquement aux membres directement associés à l'activité de la visualiser.
-                        Par défaut, une activité est publique.
+                        Tout membre peut s'inscrire (ou désinscrire) à une activité. Ainsi, lorsqu'une activité est créée, modifiée ou supprimée, les membres inscrits reçoivent une notification. <br>
+                        Un membre peut aussi s'inscrire (ou désinscrire) à un intérêt de recherche. Dans ce cas, toutes les activités liées à cet intérêt sont visées.
                     </p>
 
-                    <ul class="bare-list definitions">
-                        <li class="definition">
-                            Un article est identifié par un titre, un résumé et une date de publication. Il présente aussi une liste d'auteurs et de collaborateurs. 
-                            Si un membre est présent dans l'une de ces listes, il a automatiquement accès à l'article même si celui-ci est privé. 
-                            Finalement, un article a aussi un statut (brouillon, prêt, soumis, publié). 
-                            Lorsque l'article est publié, il devient automatiquement public et il devient possible d'ajouter un lien vers la publication (Ex: lien du PDF).
-                        </li>
-                        <li class="definition">
-                            Un projet est identifié par un titre, une description et une période (date de début, date de fin). Il présente aussi une liste de partenaires et un responsable (professeur).
-                            Le responsable peut associer le projet à une liste de membres qui y auront accès même si celui-ci est privé.
-                        </li>
-                        <li class="definition">
-                            Un outil est identifié par un nom, une description et une version. Il doit avoir au moins un lien pointant vers le répertoire du code source (Ex: lien d'un répertoire sur GitHub).
-                            Des liens additionnels peuvent être ajoutés pour d'autres ressources comme la documentation ou des vidéos.
-                            Un outil a un responsable et une liste de collaborateurs qui y auront accès même si celui-ci est privé.
-                            Finalement, un outil peut être associé à un ou plusieurs articles.
-                        </li>
-                    </ul>
+                    <h4 class="paragraph-title">Notifications</h4>
 
-                    <p style="margin-top: 6px">
-                        Lorsqu'une activité est créée, modifiée ou supprimée, les membres souscrits reçoivent une notification.
+                    <p>
+                        Par défaut les notifications sont accessibles uniquement sur la plateforme. Cependant, un membre peut choisir de recevoir ces notifications par courriel. <br>
+                        Une notification comprend le nom ou le titre de l'activité, la date de l'action (création, modification, suppression), l'auteur de l'action et un descriptif. <br>
+                        À la fin de toute action portée sur une activité, le membre est invité à inscrire un court descriptif décrivant l'action.
                     </p>
 
                     <h4 class="paragraph-title">Membres et Accès</h4>
@@ -1067,40 +1046,16 @@
                     <p>
                         Pour se connecter à la plateforme, un membre utilise son adresse courriel et son mot de passe. 
                         Si son statut est valide et que l'authentification réussie, il accède au menu principal de la plateforme. <br>
-                        Pour créer un compte, un membre doit choisir un superviseur (professeur) et fournir son nom, prénom, adresse courriel et créer un mot de passe. 
+                        Pour créer un compte, un membre doit choisir un superviseur et fournir son nom, prénom, adresse courriel et créer un mot de passe. 
                         Si les informations sont valides, le compte est créé dans le système avec le statut <em>EN_ATTENTE</em>.
                         Une confirmation est envoyée à l'adresse courriel et une notification est envoyée aux administrateurs pour effectuer 
                         la validation du compte. Si un administrateur valide le compte, celui-ci passe au statut <em>VALIDE</em> et le membre peut accéder à la plateforme.
-                    </p>
-                    
-                    <p>
                         Si un membre quitte le groupe, il n'a aucune action à prendre dans la plateforme. Les administrateurs seront chargés de désactiver son compte.
                     </p>
-
-                    <ul class="bare-list definitions">
-                        <li class="definition">
-                            Un membre est identifié par son prénom, nom de famille, numéro de téléphone et adresse courriel et un mot de passe.
-                            Il peut aussi présenter des liens pour y asssocier diverses ressources (site web, réseaux sociaux, blog). <br>
-                            Le mot de passe devra être composé d'au moins 8 caractères contenant au moins 1 chiffre, 1 majuscule, 1 minuscule et 1 caractère spécial.
-                        </li>
-                        <li class="definition">
-                            Un membre doit être associé à un des rôles suivants: <em>PROFESSEUR</em>, <em>ADMINISTRATEUR</em>, <em>MEMBRE</em>. 
-                            Par défaut, un membre a le rôle MEMBRE.
-                            Un membre ne peut être associé qu'à un seul rôle, mais le rôle peut être modifié par un administrateur.  <br>
-                            Un rôle est défini par un nom unique (PROFESSEUR, ADMINISTRATEUR, MEMBRE) et un descriptif. <br>
-                            Un ADMINISTRATEUR peut faire tout ce qu'un MEMBRE peut faire. <br>
-                            Un PROFESSEUR peut faire tout ce qu'un MEMBRE peut faire.
-                        </li>
-                    </ul>
-
                     
                     <h4 class="paragraph-title">Requêtes</h4>
 
-                    <p>
-                        Une fois connecté à la plateforme, un membre peut envoyer diverses requêtes pour obtenir de l'information sur un membre ou une activité.
-                    </p>
-
-                    <h5 style="margin-bottom: 8px;">Requêtes publiques (accessible à tout membre)</h5>
+                    <h5 style="margin-bottom: 6px;">Requêtes publiques</h5>
 
                     <ul class="bare-list requirements">
                         <li class="requirement">
@@ -1129,20 +1084,20 @@
                         </li>
                         <li class="requirement">
                             <span class="requirement-title dash">Afficher la fiche complète d'un projet</span>
-                            <strong class="label">Informations présentées:</strong> titre, description, période, partenaires et responsable.
+                            <strong class="label">Informations présentées:</strong> titre, description, période et responsable.
                         </li>
                         <li class="requirement">
-                            <span class="requirement-title dash">Afficher la liste des outils publiques</span>
+                            <span class="requirement-title dash">Afficher la liste des outils</span>
                             <strong class="label">Informations présentées:</strong> nom, version, responsable et collaborateurs.
                         </li>
                         <li class="requirement">
                             <span class="requirement-title dash">Afficher la fiche complète d'un outil</span> 
-                            <strong class="label">Informations présentées:</strong> nom, description, version, collaborateurs, liens associés à l'outil et
-                            la liste des articles liés à l'outil.
+                            <strong class="label">Informations présentées:</strong> nom, description, version, collaborateurs, liens du répertoire et
+                            liste des articles liés à l'outil.
                         </li>
                         <li class="requirement">
                             <span class="requirement-title dash">Afficher la liste des activités associées à un intérêt</span> 
-                            <strong class="label">Informations présentées:</strong> nom ou titre, professeur assigné, créateur ou responsable.
+                            <strong class="label">Informations présentées:</strong> nom ou titre, créateur ou responsable.
                         </li>
                         <li class="requirement">
                             <span class="requirement-title dash">Afficher la liste des membres associées à un intérêt</span> 
@@ -1150,16 +1105,17 @@
                         </li>
                     </ul>
 
-                    <h5 style="margin-bottom: 8px;">Requêtes administratives</h5>
+                    <h5 style="margin-bottom: 6px;">Requêtes administratives</h5>
 
                     <ul class="bare-list requirements requirements--admin">
                         <li class="requirement">
-                            <strong>Tout membre</strong> peut modifier son profil et la liste des activités et intérêts auxquels il est souscrit. <br>
-                            Il peut aussi vérifier s'il a reçu des notifications.
+                            <strong>Tout membre</strong> peut modifier son profil et la liste des activités et intérêts auxquels il est inscrit.
                         </li>
                         <li class="requirement">
-                            <strong>Tout membre</strong> peut créer une activité et souscrire à une activité à laquelle il a accès ou à un intérêt. 
-                            Lorsqu'un membre est souscrit à un intérêt, toutes les activités liées à cet intérêt sont visées.
+                            <strong>Tout membre</strong> peut vérifier s'il a des notifications. <br>
+                        </li>
+                        <li class="requirement">
+                            <strong>Tout membre</strong> peut créer une activité et s'inscrire à une activité à laquelle il a accès ou à un intérêt. 
                         </li>
                         <li class="requirement">
                             <strong>Seul un administrateur</strong> (utilisateur avec le rôle <em>ADMINISTRATEUR</em>) peut assigner ou modifier un rôle.
@@ -1168,14 +1124,13 @@
                             <strong>Seul un administrateur</strong> peut suspendre (statut: <em>SUSPENDU</em>) ou réactiver (statut: <em>VALIDE</em>) un compte.
                         </li>
                         <li class="requirement">
-                            <strong>Seuls les responsables</strong> (créateur et professeur) d'une activité peuvent la modifier.
+                            <strong>Seuls les responsables</strong> (créateur et superviseur) d'une activité peuvent la modifier.
                         </li>
                         <li class="requirement">
                             <strong>Seul un administrateur</strong> peut supprimer une activité.
                         </li>
                         <li class="requirement">
-                            <strong>Seul un professeur</strong> peut ajouter, modifier ou supprimer un intérêt. <br>
-                            Un intérêt est défini par un titre et un descriptif.
+                            <strong>Seul un superviseur</strong> peut ajouter, modifier ou supprimer un intérêt.
                         </li>
                     </ul>
 
@@ -1190,10 +1145,10 @@
                     <h4 class="paragraph-title">Données prédéfinies</h4>
 
                     <p>
-                        L'application devrait être initialisée avec certaines données comme la liste des professeurs et les administrateurs.
+                        L'application devrait être initialisée avec certaines données comme les superviseurs et les administrateurs.
                     </p>
 
-                    <h5 style="margin-bottom: 6px;">Professeurs (utilisateurs avec le role PROFESSEUR)</h5>
+                    <h5 style="margin-bottom: 6px;">Superviseurs</h5>
 
                     <ul class="bare-list">
                         <li class="dash">Michalis FAMELIS</li>
@@ -1201,12 +1156,274 @@
                         <li class="dash">Houari SAHRAOUI</li>
                     </ul>
 
-                    <h5 style="margin-bottom: 6px;">Administrateurs (utilisateurs avec le role ADMINISTRATEUR)</h5>
+                    <h5 style="margin-bottom: 6px;">Administrateurs</h5>
 
                     <ul class="bare-list">
                         <li class="dash">Istvan DAVID</li>
                         <li class="dash">Louis-Edouard LAFONTANT</li>
                     </ul>
+                </section>
+
+                <section class="spec-section">
+                    <h3 class="subsection-title">Spécification</h3>
+        
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Article</h4>
+
+                        <p>
+                            Les membres du GEODES publient fréquemment des articles traitant de sujets liés aux thèmes de recherche du laboratoire.
+                            Si un membre fait partie des auteurs ou collaborateurs, il est automatiquement inscrit à l'article. 
+                            Lorsque l'article est publié, il devient possible d'ajouter un lien vers la publication.
+                        </p>
+
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Résumé</span>
+                                <span class="def-value">Texte de moins de 500 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Lien article</span>
+                                <span class="def-value">URL</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Date de publication</span>
+                                <span class="def-value">YYYY-MM-DD</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Lien publication</span>
+                                <span class="def-value">URL</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Statut</span>
+                                <span class="def-value">Brouillon, Prêt, Soumis, Publié</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Auteurs</span>            
+                                <span class="def-value">Liste d'auteurs (membre)</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Collaborateurs</span>            
+                                <span class="def-value">Liste de collaborateurs (membre)</span>
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Mots-clés</span>
+                                <span class="def-value">Liste de termes (mot sans espace, moins de 40 caractères)</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Intérêts liés</span>
+                                <span class="def-value">Liste d'intérêts (1 à 5)</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Outil</h4>
+
+                        <p>
+                            Certains travaux de recherche nécessitent parfois des démonstrations pratique résultant sur la création et l'exploitation d'outils. 
+                            Si un membre fait partie des collaborateurs, il est automatiquement inscrit à l'outil. 
+                        </p>
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Description</span>
+                                <span class="def-value">Texte de moins de 500 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Version</span>
+                                <span class="def-value">Nombre décimal</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Lien répertoire</span>
+                                <span class="def-value">URL du répertoire du code source</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Responsable</span>
+                                <span class="def-value">Un membre</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Collaborateurs</span>            
+                                <span class="def-value">Liste de collaborateurs (membre)</span>
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Articles liés</span>
+                                <span class="def-value">Liste d'articles</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Mots-clés</span>
+                                <span class="def-value">Liste de termes (mot sans espace, moins de 40 caractères)</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Intérêts liés</span>
+                                <span class="def-value">Liste d'intérêts (1 à 5)</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Projet</h4>
+
+                        <p>
+                            Le GEODES reçoit régulièrement des subventions pour travailler sur diverses projets de recherche.
+                        </p>
+
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Description</span>
+                                <span class="def-value">Texte de moins de 500 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Date de début</span>
+                                <span class="def-value">YYYY-MM-DD</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Date de fin</span>
+                                <span class="def-value">YYYY-MM-DD</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Responsable</span>
+                                <span class="def-value">Doit être un professeur</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Intérêts liés</span>
+                                <span class="def-value">Liste d'intérêts (1 à 5)</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Membre</h4>
+                        
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Prénom</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Nom de famille</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Numéro de téléphone</span>
+                                <span class="def-value">Texte de 10 à 15 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Adresse courriel</span>
+                                <span class="def-value">Adresse courriel personnelle</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Lien web</span>
+                                <span class="def-value">URL d'une page web</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Maitrise, Doctorat, PostDoc, Professeur</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Superviseur</span>
+                                <span class="def-value">Doit être un professeur</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Intérets</span>
+                                <span class="def-value">Liste d'intérêts auxquels le membre est inscrit</span> 
+                            </li>
+                        </ul>
+                    </div>
+                    
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Compte</h4>
+                        
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">Adresse courriel</span>
+                                <span class="def-value">Adresse courriel universitaire</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Mot de passe</span>
+                                <span class="def-value">Au moins 8 caractères contenant au moins 1 chiffre, 1 majuscule, 1 minuscule et 1 caractère spécial</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Statut</span>
+                                <span class="def-value">EN ATTENTE, VALIDE, SUSPENDU</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Membre</span>
+                                <span class="def-value">Membre associé au compte</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Role</span>
+                                <span class="def-value">Role associé au compte (défaut: MEMBRE)</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Role</h4>
+                        
+                        <p>
+                            L'application est chargé avec les roles suivants: SUPERVISEUR, ADMINISTRATEUR, MEMBRE. <br>
+                            Un ADMINISTRATEUR peut faire tout ce qu'un MEMBRE peut faire. 
+                            Un SUPERVISEUR peut faire tout ce qu'un MEMBRE peut faire.
+                        </p>
+
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">Code</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Description</span>
+                                <span class="def-value">Texte de moins de 100 caractères</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Intérêt</h4>
+                 
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Description</span>
+                                <span class="def-value">Texte de moins de 250 caractères</span> 
+                            </li>
+                        </ul>
+                    </div>
                 </section>
 
                 <p style="margin-top: 12px;">
@@ -1218,92 +1435,103 @@
 
         <section class="rule-section">
             <h2 class="section-title">Règles du jeu</h2>
-
-            <p>
-                Vous avez droit à <strong>2 rencontres avec le client (1 rencontre par semaine)</strong> (communication via Discord ou courriel)
-                pour demander des informations additionnelles et comprendre leur besoin. <br>
-                La semaine commence le lundi et se termine le samedi. Les questions doivent être communiquées <strong>au moins 24 heures avant la fin de la semaine</strong>.
-                Passez ce délai, elles seront attribuées à la prochaine semaine.
-                Les réponses aux questions seront ajoutées au corps du texte plus haut.
-                Jusqu'au 23 juin, des précisions peuvent être rajoutées au texte. <br>
-                À noter qu' <strong>une équipe qui n'a jamais rencontré le client sera pénalisée.</strong>
-            </p>
-
-            <p>
-                Envoyez-les à notre responsable, Louis-Edouard LAFONTANT.
-            </p>
-            <ul class="bare-list contacts">
-                <li class="contact contact--discord">Discord: <strong>L-E#2545</strong></li>
-                <li class="contact contact--mail">Courriel: <a
-                        href="mailto:louis.edouard.lafontant@umontreal.ca">louis.edouard.lafontant@umontreal.ca</a></li>
-            </ul>
+            <div class="section-content">
+                <p>
+                    Vous avez droit à <strong>2 rencontres avec le client (1 rencontre par semaine)</strong>. <br>
+                    La semaine commence le lundi et se termine le samedi. Les questions reçues samedi ou dimanche seront attribuées à la prochaine semaine.
+                    Les réponses aux questions (générales) seront ajoutées au corps du texte plus haut. <br>
+                    Jusqu'au 23 juin, des précisions peuvent être rajoutées au texte. 
+                    À noter qu' <strong>une équipe qui n'a jamais rencontré le client sera pénalisée.</strong>
+                </p>
+    
+                <p>
+                    Pour plannifier une rencontre ou soumettre vos questions, communiquez avec notre responsable, Louis-Edouard LAFONTANT.
+                </p>
+                <ul class="bare-list contacts">
+                    <li class="contact contact--discord">Calendrier: <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation" title="Période de consultation">Période de consultation</a></li>
+                    <li class="contact contact--discord">Discord: <strong>L-E#2545</strong></li>
+                    <li class="contact contact--mail">Courriel: <a href="mailto:louis.edouard.lafontant@umontreal.ca">louis.edouard.lafontant@umontreal.ca</a></li>
+                </ul>
+            </div>
         </section>
 
         <section class="task-section">
             <h2 class="section-title">Tâches</h2>
 
-            <p>
-                Pour ce second jalon, vous devez produire un rapport en HTML (recommandé) ou PDF présentant votre analyse
-                approfondie du problème, votre conception détaillée et une première implémentation. <br>
-                Il devra aussi présenter les éléments du premier jalon (DM1) mis à jour.
-            </p>
-
-            
-            <div class="task-milestone">
-                <h3 class="task-subsection-title">Cadre du projet</h3>
-                <ul class="tasks">
-                    <li class="task">Description du projet: Contexte, Problèmes à résoudre, Portée</li>
-                    <li class="task">Équipe, Répartition des tâches: Coordonnées des membres et la répartition des tâches</li>
-                    <li class="task">Échéancier: Planification hebdomadaire des taches montrant la répartition dans l'équipe</li>
-                    <li class="task">Priorisation: Description de l'ordre de priorités choisi</li>
-                    <li class="task">Échanges avec client: Questions posées et réponses trouvées</li>
-                </ul>
-
-                <h3 class="task-subsection-title">Définition du domaine</h3>
-                <ul class="tasks">
-                    <li class="task">Hypothèses: Hypothèses émises dans l'élaboration des exigences</li>
-                    <li class="task">Glossaire: Liste des termes et expressions clés caractérisant le domaine</li>
-                    <li class="task">Besoins fonctionnels: Fonctionnalité du logiciel à offrir traduit par des Cus et scénarios</li>
-                    <li class="task">Besoins non fonctionnels: Attributs du logiciel recherchés affectant l'expérience utilisateur (avec justification)</li>
-                </ul>
-
+            <div class="section-content">
                 <p>
-                    Les hypothèses regroupent toutes les considérations faites pour réaliser le travail en dehors des échanges avec le client et des exigences/contraintes explicites décrites dans l'énoncé.
-                    Bien entendu, une hypothèse ne peut pas contredire un fait ou une exigence/contrainte explicite. Elles permettent donc d'être rigoureux en stipulant clairement les suppositions additionnelles faites par votre équipe, et ainsi éviter toute confusion dans la lecture du rapport.
+                    Pour ce second jalon, vous devez produire un rapport en HTML présentant votre analyse approfondie du problème, 
+                    votre conception et une première implémentation. <br>
+                    Il devra aussi présenter les éléments du premier jalon (DM1) mis à jour.
                 </p>
+    
+                
+                <div class="task-milestone">
+                    <h3 class="task-subsection-title">Cadre du projet</h3>
+                    <ul class="tasks">
+                        <li class="task">Description du projet: Contexte, Problèmes à résoudre, Portée</li>
+                        <li class="task">Équipe, Répartition des tâches: Coordonnées des membres et la répartition des tâches</li>
+                        <li class="task">Échéancier: Planification hebdomadaire des taches montrant la répartition dans l'équipe</li>
+                        <li class="task">Priorisation: Description de l'ordre de priorités choisi</li>
+                        <li class="task">Échanges avec client: Questions posées et réponses trouvées</li>
+                    </ul>
+    
+                    <h3 class="task-subsection-title">Définition du domaine</h3>
+                    <ul class="tasks">
+                        <li class="task">Hypothèses: Hypothèses émises dans l'élaboration des exigences</li>
+                        <li class="task">Glossaire: Liste des termes et expressions clés caractérisant le domaine</li>
+                        <li class="task">Besoins fonctionnels: Fonctionnalité du logiciel à offrir traduit par des Cus et scénarios</li>
+                        <li class="task">Besoins non fonctionnels: Attributs du logiciel recherchés affectant l'expérience utilisateur (avec justification)</li>
+                    </ul>
+    
+                    <p>
+                        Les hypothèses regroupent toutes les considérations faites pour réaliser le travail en dehors des échanges avec le client et des exigences/contraintes explicites décrites dans l'énoncé.
+                        Bien entendu, une hypothèse ne peut pas contredire un fait ou une exigence/contrainte explicite. Elles permettent donc d'être rigoureux en stipulant clairement les suppositions additionnelles faites par votre équipe, et ainsi éviter toute confusion dans la lecture du rapport.
+                    </p>
+                </div>
+                
+                <h3 class="task-subsection-title">Analyse</h3>
+                <ul class="tasks">
+                    <li class="task">Risques: 5 risques associés au projet (avec justification)</li>
+                    <li class="task">Contraintes physiques et conceptuelles</li>
+                    <li class="task">Modèle dynamique: Diagrammes d'activités</li>
+                    <li class="task">Modèle d'objets: Diagramme de classes participantes (ECB) &ndash; <em>Optionnel</em> (facilite la construction du diagramme de classe du design)</li>
+                </ul>
+    
+                <h3 class="task-subsection-title">Conception</h3>
+                <ul class="tasks">
+                    <li class="task">Justification des choix du design: Abstraction, couplage et cohésion </li>
+                    <li class="task">Design détaillé: Diagramme de classes, Diagramme de séquences</li>
+                </ul>
+    
+                <h3 class="task-subsection-title">Implémentation</h3>
+                <ul class="tasks">
+                    <li class="task">Implémentation du design: Prototype fonctionnel</li>
+                    <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
+                </ul>
+    
+                <h3 class="task-subsection-title task-subsection-title--document">Livrables</h3>
+                <ul class="task-documents bare-list">
+                    <li class="task-document check check--color-inherit">Cas d'utilisation (en priorité) et scénarios mis à jour</li>
+                    <li class="task-document check check--color-inherit">Diagramme d'activités: 
+                        <ul class="bare-list" style="padding-left: 12px;">
+                            <li class="dash">Couvre les CUs des membres uniquement</li>
+                            <li class="dash">Pas besoin de montrer l'inscription à la plateforme</li>
+                        </ul>
+                    </li>
+                    <li class="task-document check check--color-inherit">Diagramme de classes</li>
+                    <li class="task-document check check--color-inherit">Diagramme de séquence: 
+                        <ul class="bare-list" style="padding-left: 12px;">
+                            <li class="dash">Rechercher un article et afficher la fiche complète</li>
+                            <li class="dash">Afficher la liste des activités associées à un intérêt</li>
+                            <li class="dash">Modifier le statut d'un article</li>
+                        </ul>
+                    </li>
+                    <li class="task-document check check--color-inherit">Prototype fonctionnel: application démontrant les fonctionnalités du logiciel</li>
+                </ul>
+    
+                <a class="bare-link template-link" target="_blank" href="template.html">Template pour le rapport</a>
             </div>
-            
-            <h3 class="task-subsection-title">Analyse</h3>
-            <ul class="tasks">
-                <li class="task">Risques: 5 risques associés au projet (avec justification)</li>
-                <li class="task">Besoins matériels: Partie à informatiser, matériels nécessaires, solutions de stockage</li>
-                <li class="task">Contraintes physiques et conceptuelles</li>
-                <li class="task">Modèle dynamique: Diagrammes d'activités</li>
-                <li class="task">Modèle d'objets: Diagramme de classes participantes (ECB) &ndash; <em>Optionnel</em> (facilite la construction du diagramme de classe du design)</li>
-            </ul>
-
-            <h3 class="task-subsection-title">Conception</h3>
-            <ul class="tasks">
-                <li class="task">Justification des choix du design: Abstraction, couplage et cohésion </li>
-                <li class="task">Design détaillé: Diagramme de classes, Diagramme de séquences</li>
-            </ul>
-
-            <h3 class="task-subsection-title">Implémentation</h3>
-            <ul class="tasks">
-                <li class="task">Implémentation du design: Prototype fonctionnel</li>
-                <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
-            </ul>
-
-            <h3 class="task-subsection-title task-subsection-title--document">Livrables</h3>
-            <ul class="task-documents bare-list">
-                <li class="task-document check check--color-inherit">Cas d'utilisation (en priorité) et scénarios mis à jour</li>
-                <li class="task-document check check--color-inherit">Diagramme d'activités: couvrant tous les CUs</li>
-                <li class="task-document check check--color-inherit">Diagramme de classes</li>
-                <li class="task-document check check--color-inherit">Diagramme de séquence: Gestion des visiteurs (3 diagrammes), Réservation d'une période (1 diagramme), Mise à jour du profil de vaccination (1 diagramme)</li>
-                <li class="task-document check check--color-inherit">Prototype fonctionnel: application démontrant les fonctionnalités du logiciel</li>
-            </ul>
-
-            <a class="bare-link template-link" target="_blank" href="template.html">Template pour le rapport</a>
         </section>
 
         <section class="evaluation-section">
