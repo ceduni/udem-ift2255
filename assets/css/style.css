@@ -508,6 +508,32 @@
         z-index: 1;
     }
 
+    .week-content.ex:before {
+        content: "EX";
+        position: absolute; left: 0;
+        display: inline-flex; justify-content: center; align-items: center;
+        margin-right: 6px;
+        width: 20px; height: 20px; 
+        font: bold 0.9em Consolas, 'Courier New', Courier, monospace;;
+        color: #E0462A;
+        border-radius: 50%;
+        background-color: #fff;
+        z-index: 2;
+    }
+
+    .week-content.ex:after {
+        content: "";
+        position: absolute; 
+        top: 2px; bottom: 0; left: 7px;
+        width: 4px;
+        background-color: #fff;
+        z-index: 1;
+    }
+
+    .week-content.ex .week-content-title {
+        font-weight: 800;
+    }
+
     .week-content:last-child:after {
         border-radius: 180px;
     }
