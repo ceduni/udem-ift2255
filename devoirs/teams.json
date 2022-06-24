@@ -160,7 +160,7 @@
         },
         "dm2": {
             "meetings": [
-                { "week": 6, "used": false }, 
+                { "week": 6, "used": true }, 
                 { "week": 7, "used": false }
             ]
         },
@@ -189,7 +189,7 @@
         },
         "dm2": {
             "meetings": [
-                { "week": 6, "used": false }, 
+                { "week": 6, "used": true }, 
                 { "week": 7, "used": false }
             ]
         },
@@ -246,7 +246,7 @@
         },
         "dm2": {
             "meetings": [
-                { "week": 6, "used": false }, 
+                { "week": 6, "used": true }, 
                 { "week": 7, "used": false }
             ]
         },
@@ -332,7 +332,7 @@
         },
         "dm2": {
             "meetings": [
-                { "week": 6, "used": false }, 
+                { "week": 6, "used": true }, 
                 { "week": 7, "used": false }
             ]
         },
