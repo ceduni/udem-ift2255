@@ -23,7 +23,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -52,7 +52,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -80,7 +80,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -104,12 +104,12 @@
         "dm2": {
             "meetings": [
                 { "week": 6, "used": false }, 
-                { "week": 7, "used": false }
+                { "week": 7, "used": true }
             ]
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -133,12 +133,12 @@
         "dm2": {
             "meetings": [
                 { "week": 6, "used": true }, 
-                { "week": 7, "used": false }
+                { "week": 7, "used": true }
             ]
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -166,7 +166,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -190,12 +190,12 @@
         "dm2": {
             "meetings": [
                 { "week": 6, "used": true }, 
-                { "week": 7, "used": false }
+                { "week": 7, "used": true }
             ]
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -223,7 +223,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -247,12 +247,12 @@
         "dm2": {
             "meetings": [
                 { "week": 6, "used": true }, 
-                { "week": 7, "used": false }
+                { "week": 7, "used": true }
             ]
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -281,7 +281,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -309,7 +309,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -338,7 +338,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     },
@@ -367,7 +367,7 @@
         },
         "dm3": {
             "meetings": [
-                
+                { "week": 10, "used": false }
             ]
         }
     }

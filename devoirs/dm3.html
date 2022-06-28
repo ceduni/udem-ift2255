@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT2255 | DM3</title>
+    <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./../assets/css/normalize.css">
+    <link rel="stylesheet" href="./../assets/css/base.css?v=10">
+    <link rel="stylesheet" href="./../assets/css/teams.css?v=10">
+    <style>
+        .content-wrapper { position: relative; padding: 10px 5%; }
+
+        .page-header {
+            position: relative;
+            padding-bottom: 12px;
+            background-color: #fff;
+        }
+
+        .page-header .content-wrapper {
+            padding-top: 24px;
+            display: flex; justify-content: center;
+        }
+                
+        .teaching {
+            display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between;
+            padding: 24px 5vw 0;
+            margin-bottom: 18px;
+        }
+
+        .teaching-header {
+            display: flex;
+        }
+
+        .teaching-logo {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            width: 96px; min-width: 96px;
+            height: 96px;
+            background-color: #fff;
+            box-shadow: inset 0 1px 1px #999;
+            border: 6px solid #5E8EE4;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+            .teaching-logo-name {
+                display: flex;
+                font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
+                font-size: 2.2em;
+            }
+                .teaching-logo-code {
+                    color: #333;
+                    letter-spacing: -1px;
+                }
+                .teaching-logo-number {
+                    margin-left: 2px;
+                    color: #2C5EB4;
+                    letter-spacing: -1px;
+                }
+
+            .teaching-logo-type {
+                font-size: 1.3em; font-weight: 800;
+                color: #555; 
+            }
+
+                    
+        .teaching-info {
+            flex-grow: 2;
+        }
+
+        .teaching-term {
+            margin: 0;
+            margin-bottom: 4px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .teaching-schedule {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .teaching-title {
+            margin: 0;
+            font-size: 2.8em; font-weight: 300;
+        }
+        
+            .teaching-links {
+                display: flex; flex-direction: row;
+            }
+
+            .teaching-link {
+                color: #555;
+            }
+            .teaching-link:not(:last-child) {
+                margin-right: 12px;
+            }
+
+            .teaching-link__link {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 10px 18px 12px;
+                font-size: 1.6rem; font-weight: 500;
+                border-radius: 2px;
+                text-align: center; 
+                border: 2px solid currentColor;
+                color: #fff;
+            }
+
+            .teaching-link__link--video {
+                background-color: #e87429;
+                background-color: #5F4B8B;
+            }
+
+            .teaching-link__link--plan {
+                background-color: #2C5EB4;
+            }
+
+        .teaching-header {
+            align-items: center;
+        }
+
+        .page-body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+                
+        .dash:before { 
+            content: '-'; 
+            margin-left: 4px;
+            margin-right: 8px; 
+            font-weight: bold;
+            color: currentColor;
+        } 
+
+        .check:before {
+            margin-left: 2px;
+            margin-right: 4px; 
+            font-weight: bold;
+            content: '🗸'; 
+            color: currentColor;
+        }
+       
+        .section-title {
+            margin-bottom: 12px;
+            font-weight: 300; font-size: 2.6em;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        .problem-section {
+            display: flex;
+        }
+
+        .problem-section p {
+            line-height: 1.5;
+            margin-top: 0;
+        }
+
+        .problem-section-aside {
+            flex: 1 1;
+            display: flex; flex-direction: column;
+            padding-top: 24px;
+            padding-left: 5vw;
+            padding-right: 24px;
+            min-width: 300px;
+            color: #fff;
+            background-color: #33302B;
+        }
+
+            .problem-section-aside .section-title {
+                color: #f5f5f5;
+            }
+
+        .problem-section-content {
+            flex-grow: 2;
+            display: flex; flex-direction: column;
+            padding-top: 24px; padding-left: 24px; padding-right: 5vw;
+            background-color: #f5f5f5;
+            width: 100%;z-index: 50;
+        }
+
+        .project-name {
+            position: absolute;
+            top: -100px; left: calc(50% - 120px);
+            text-align: center;
+            padding-top: 48px;
+            font-weight: 800;
+            color: #fff;
+            width: 240px;
+            border-radius: 50%;
+            height: 240px;
+            background-color: #6667AB;
+            margin-bottom: 12px;
+        }
+
+        .project-intro {
+            display: flex; flex-wrap: wrap;
+        }
+
+        .project-intro-logo {
+            display: block;
+            text-align: center;
+        }
+
+        .project-intro-logo-img {
+            height: 48px; width: auto;
+        }
+
+        .project-intro-group {
+            display: flex; flex-direction: column;
+            margin-top: 12px;
+        }
+
+        .project-intro-title {
+            margin: 0; margin-bottom: 6px;
+            font-size: 1.8em;
+            color: #0d0d0d;
+        }
+
+        .project-intro__link {
+            padding: 1px 3px 2px;
+            color: #3573DD;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: .2s;
+        }
+            .project-intro__link:visited {
+                color: #EF4E36;
+            }
+            .project-intro__link:hover {
+                color: #fff;
+                background-color: #3573DD;
+            }      
+
+        .project-intro-stat {
+            flex: 1 1;
+        }
+
+        .project-intro-desc {
+            flex: 1 1;
+            margin-left: 24px;
+            padding-top: 6px;
+            display: flex; flex-direction: column;
+        }
+
+        .project-intro-desc-title {
+            text-transform: uppercase;
+            color: #0d0d0d;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        
+        .project-intro__btn-link {
+            align-self: flex-end; justify-self: flex-end;
+            padding: 8px 12px 10px;
+            margin-top: 12px;
+            color: #fff;
+            font-size: 1.4em; font-weight: 500;
+            border-radius: 1px;
+            background-color: #3573DD;
+        }
+
+            .project-intro__btn-link:hover {
+                background-color: #f32357;
+            }
+
+        .research-areas {
+            display: flex;
+        }
+
+        .stat-numbers {
+            display: flex;
+        }
+
+        .stat-number {
+            margin-right: 6px;
+            padding: 4px 8px;
+            border-radius: 180px;
+            color: #fff;
+            background-color: #343533;
+        }
+
+        .research-area {
+            flex: 1 1;
+            padding-right: 6px;
+        }
+
+        .research-area-title {
+            font-weight: 500;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 3px;
+        }
+
+            .tag {
+                margin-right: 4px; margin-bottom: 2px;
+                padding: 3px;
+                font-size: 1.3rem;
+                color: #555;
+                border-radius: 2px;
+                background-color: #d5d5d5;
+            }
+
+        .teachers {
+            display: flex;
+        }
+
+            .teacher {
+                flex: 1 1;
+                display: flex; flex-direction: column;
+                font-size: 1.3rem;
+            }
+
+            .teacher + .teacher {
+                margin-left: 12px;
+            }
+
+            .teacher-photo {
+                width: 80px;
+                height: auto;
+                border-radius: 50%;
+            }
+
+            .teacher-name {
+                font-size: 1.1em;
+                font-weight: 500;
+                text-decoration: none;
+                color: #3573DD;
+            }
+
+            .member-stats {
+                display: flex;
+                justify-content: center;
+                margin-top: 12px;
+            }
+
+            .member-stat {
+                display: flex; flex-direction: column;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                font-size: 1.3em;
+                margin-right: 12px;
+                border-radius: 50%;
+                color: #fff;
+            }
+
+            .member-stat.ico-msc {
+                background-color: #5865F2;
+            }
+
+            .member-stat.ico-phd {
+                background-color: #f36523;
+            }
+
+            .member-stat.ico-postdoc {
+                background-color: #f32357;
+            }
+
+            .member-stat.ico-visit {
+                background-color: #5F4B8B;
+            }
+
+            .member-stat-value {
+                margin-top: 6px;
+                font-size: 1.3em; font-weight: 300;
+            }
+
+            .member-stat-name {
+                font-size: 0.9em;
+                font-weight: 500;
+            }
+
+            .students {
+                display: flex;
+                margin-top: 2px;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+
+            .student {
+                flex: 1 1 ;
+                height: 8px;
+            }
+
+            .student.msc {
+                background-color: #5865F2;
+            }
+
+            .student.phd {
+                background-color: #f36523;
+            }
+
+            .student.postdoc {
+                background-color: #f32357;
+            }
+
+        .activities {
+            display: flex;
+        }
+
+        .activity {
+            flex: 1 1;
+            padding: 12px 18px 6px;
+            border-radius: 1px;
+        }
+
+        .activity--publications {
+            background-color: #FF984F;
+        }
+
+        .activity--projects {
+            background-color: #F24738;
+        }
+
+        .activity--tools {
+            color: #fff;
+            background-color: #333;
+        }
+
+        .activity-title {
+            margin-top: 0; margin-bottom: 6px;
+            font-size: 1.7em;
+        }
+        
+
+        .subsection-title {
+            width: 100%;
+            margin-bottom: 12px;
+            font-size: 3em; font-weight: 300;
+            color: #EF4E36;
+        }
+
+        .paragraph-title {
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .spec-section {
+            display: flex; flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .subsection-group {
+            margin-bottom: 12px;
+            width: calc(50% - 6px);
+            padding: 12px;
+            background-color: #fff;
+            box-shadow: 2px 3px 0 #6667AB;
+            border-radius: 2px;
+        }
+
+        .subsection-group-title {
+            margin: 0; margin-bottom: 6px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .title {
+            margin-bottom: 2px;
+        }
+
+        .rule-section {
+            padding: 24px 5vw;
+            background-color: #fff;
+        }
+
+        .section-content {
+            max-width: 1000px;
+        }
+        
+        .definitions {
+            display: flex; flex-direction: column;
+        }
+        
+        .definition {
+            flex: 1 1;
+            margin-bottom: 6px; margin-right: 6px;
+            font-weight: 400;
+            border-radius: 1px;
+        }
+
+            .def-label {
+                font-weight: 500;
+                color: #004c94;
+            }
+                .def-label:after {
+                    content: ": ";
+                }
+
+            .def-value {
+                color: #222;
+            }
+
+        .requirements {
+            display: flex; flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .requirements--admin .requirement {
+            border-color: #F24738;
+        }
+
+        .requirement {
+            margin-bottom: 6px;
+            margin-right: 6px;
+            padding: 6px 8px;
+            color: #333;
+            line-height: 1.5;
+            width: calc(50% - 12px);
+            background-color: #fff;
+            border-radius: 2px;
+            border-bottom: 4px solid #6667AB;
+        }
+
+        .requirement-title {
+            display: block;
+            font-size: 1.1em; font-weight: 300;
+        }
+
+        .requirement .label {
+            color: #555;
+        }
+
+
+        .problem-spec-section {
+    display: flex; flex-direction: column;
+    width: 100%; max-width: 1200px;
+}
+
+    .problem-spec-section-group {
+        display: flex; flex-direction: row;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 0 1px #555;
+    }
+
+    .spec-group {
+        display: flex; flex-direction: column;
+        background-color: #fff;
+        padding: 8px 12px 4px;
+    }
+
+        .spec-group--main {
+            width: 100%;
+        }
+
+        .spec-group--aside {
+            min-width: 300px;
+            background-color: #d5d5d5;
+        }     
+
+    .spec-group-title {
+        color: #222;
+        margin: 0; margin-bottom: 6px;
+        font-weight: 800;
+    }
+        .spec-group-title:not(:first-child) {
+            margin-top: 6px;
+        }
+
+    .spec-group-subtitle {
+        color: #555;
+        font-weight: 600;
+        margin-top: 6px; margin-bottom: 2px;
+    }
+
+
+    .spec-func-list {
+        display: flex; flex-direction: column;
+    }
+
+        .spec-func {
+            position: relative;
+            display: flex;
+            font-size: 1.6em;
+            font-weight: 400;
+            padding: 6px 0px;
+        }
+         
+            .spec-func:before {
+                content: "";
+                display: block;
+                margin-right: 8px;
+                background-color: #2C9C63;
+                box-shadow: 4px 4px 0 #555;
+                border-radius: 2px;
+                width: 16px; height: 16px;
+            }
+
+            .spec-func-users {
+                display: inline-flex; flex-direction: row;
+                margin-left: 4px;
+            }
+
+            .spec-func-user .user-icon {
+                width: 16px;
+                height: 16px;
+            }
+
+    .spec-user-list {
+        display: flex; flex-direction: column;
+    }
+
+        .spec-user {
+            display: flex; flex-direction: column;
+            padding: 3px 0;
+        }
+            
+            .spec-user-id {
+                display: inline-flex; align-items: center;
+                font-weight: 500;
+            }
+                .user-icon {
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    margin-right: 3px;
+                }
+
+                .user-icon--volunteer {
+                    background-color: #e87429;
+                }
+
+                .user-icon--employee {
+                    background-color: #006aff;
+                }
+
+                .user-icon--admin {
+                    background-color: #f32357;
+                }
+
+            .spec-user-desc {
+                font-size: 0.9em;
+                color: #555;
+            }
+
+        .spec-actor-list {
+            display: flex; flex-direction: column;
+        }
+    
+            .spec-actor {
+                display: flex; flex-direction: column;
+                padding: 3px 0;
+            }
+                .spec-actor-id {
+                    display: inline-flex; align-items: center;
+                    font-weight: 500;
+                }
+                .spec-actor-desc {
+                    font-size: 0.9em;
+                    color: #555;
+                }
+
+
+    .spec-constraint-list {
+        display: flex; flex-direction: column;
+    }
+
+        .spec-constraint {
+            position: relative;
+            padding: 3px 0;
+        }
+                    
+            .spec-constraint:before {
+                margin-left: 2px;
+                margin-right: 4px; 
+                font-weight: bold;
+                content: '[⛓]'; 
+                font-family: Consolas 'Courier New', Courier, monospace;
+                color: #7166D9;
+            }
+
+
+        .task-section {
+            padding: 24px 5vw;
+            color: #fff;
+            background-color: #3573DD;
+        }
+
+            .task-section .section-title {
+                color: #fff;
+            }
+
+        .evaluation-section {
+            padding: 24px 5vw;
+            color: #000;
+            background-color: #FF9147;
+        }
+            .evaluation-section .section-title {
+                color: #000;
+            }
+
+        .template-link {
+            display: block;
+            margin-top: 24px;
+            padding: 6px 12px;
+            width: 100%; max-width: 300px;
+            font-weight: 500; font-size: 1.5rem;
+            text-align: center;
+            color: #3573DD;
+            border-radius: 1px;
+            background-color: #fff;
+            transition: .2s;
+        }
+            .template-link:hover {
+                color: #fff;
+                background-color: #E87429;
+            }
+
+        .contact-discord {
+            color: #5865F2
+        }
+
+        table, tr, td {
+            border: 0 none;
+        }
+
+        ins {
+            text-decoration: none;
+            background-color: rgb(255, 234, 112);
+        }
+
+        .tasks {
+            margin-top: -12px;
+        }
+
+        .marking-scheme {
+            display: flex; flex-direction: column;
+            width: 100%; max-width: 300px;
+        }
+
+        .marking-scheme-title {
+            margin-top: 0;
+        }
+
+        .tbl-evaluation {
+            font-weight: 500;
+            
+            font-size: 1.1em;
+            
+        }
+
+        .tbl-evaluation td {
+            padding: 4px 6px;
+        }
+
+        .tbl-evaluation td:last-child {
+            font-weight: bold;
+            background-color: #f36523;
+        }
+
+        .tbl-evaluation-row {
+            background-color: #FFA061;
+        }
+
+        .tbl-evaluation-row {
+            border-bottom: 3px solid #ff9147;
+        }
+
+            .tbl-evaluation-row:last-child {
+                border-bottom: 0 none;
+            }
+
+            .tbl-evaluation-row--bonus {
+                border-top: 9px solid #ff9147;
+            }
+
+            
+        .page-footer {
+            padding-top: 24px;
+            color: #fff;
+            background-color: #5F4B8B;
+            background-color: #292723;
+        }
+
+        @media only screen and (min-width: 0em) {
+            .problem-section-aside {
+                display: none;
+            }   
+            
+            .project-intro {
+                display: flex; flex-direction: column;
+            }
+
+            
+            .project-name {
+                position: absolute;
+                top: -60px; left: calc(50% - 75px);
+                padding-top: 24px;
+                width: 150px;
+                height: 150px;
+                font-size: 2em; font-weight: 800;
+                text-align: center;
+                color: #fff;
+                border-radius: 50%;
+                background-color: #6667AB;
+            }
+
+            .project-intro-logo-img {
+                height: 40px; width: auto;
+            } 
+
+            .project-intro-group {
+                display: none;
+            }
+
+            .project-intro-desc {
+                margin-left: 0;
+            }
+
+            .activities {
+                flex-direction: column;
+            }
+
+            .activity {
+                margin-bottom: 12px;
+            }
+
+            
+            .subsection-group {
+                margin-bottom: 12px;
+                width: 100%;
+                padding: 12px;
+            }
+
+            .requirements {
+                display: flex; flex-direction: column;
+            }
+
+            .requirement {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 40em) {
+            .problem-section-aside {
+                min-width: 300px;
+                padding-left: 2vw;
+                padding-right: 12px;
+            }
+
+            .problem-section-content {
+                flex-direction: column;
+                padding-left: 12px; padding-right: 2vw;
+            }
+
+            .project-intro-group {
+                display: flex;
+            }           
+                
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 2vw;
+            }
+
+            .team-count  {
+                width: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 56em) {
+            .problem-section-aside {
+                display: flex;
+                min-width: 320px;
+                padding-left: 3vw;
+                padding-right: 18px;
+            }
+            
+            .project-name {
+                position: absolute;
+                top: -100px; left: calc(50% - 120px);
+                text-align: center;
+                padding-top: 48px;
+                font-size: 2.6em; font-weight: 800;
+                color: #fff;
+                width: 240px;
+                border-radius: 50%;
+                height: 240px;
+                background-color: #6667AB;
+                margin-bottom: 12px;
+            }
+
+            .project-intro-logo-img {
+                height: 48px; width: auto;
+            } 
+
+            .problem-section-content {
+                padding-left: 18px; padding-right: 3vw;
+            }
+            
+            .project-intro-desc {
+                margin-left: 0;
+                margin-top: 6px;
+            }
+                
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 3vw;
+            }
+
+            .team-count  {
+                width: auto;
+            }
+
+            
+            .subsection-group {
+                margin-bottom: 12px;
+                width: calc(50% - 6px);
+            }
+
+        }
+
+        @media only screen and (min-width: 80em) {
+            .problem-section-aside {
+                padding-left: 5vw;
+                padding-right: 24px;
+            }
+
+            .problem-section-content {
+                padding-left: 24px; padding-right: 5vw;
+            }
+
+            .project-intro {
+                display: flex; flex-direction: row;
+            }
+            
+            .project-intro-desc {
+                margin-left: 24px;
+            }
+
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 5vw;
+            }
+            
+            .activities {
+                flex-direction: row;
+            }
+
+            .activity {
+                margin-right: 12px;
+            }
+
+            .requirements {
+                display: flex; flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .requirement {
+                margin-bottom: 6px;
+                margin-right: 6px;
+                padding: 6px 8px;
+                color: #333;
+                line-height: 1.5;
+                width: calc(50% - 12px);
+                background-color: #fff;
+                border-radius: 2px;
+                border-bottom: 4px solid #6667AB;
+            }
+        }
+    </style>
+</head>
+
+<body data-id="dm3">
+    <header class="page-header">
+        <section class="teaching">
+            <div class="teaching-header">
+                <div class="teaching-logo">
+                    <a href="./../index.html" class="bare-link teaching-logo-name">
+                        <span class="teaching-logo-code">IFT</span>
+                        <span class="teaching-logo-number">2255</span>
+                    </a>
+                </div>
+                <div class="teaching-info teaching-info--large">
+                    <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Devoir 3</h1>
+                    <p class="teaching-term">Été 2022</p>
+                </div>
+            </div>
+            
+            <ul class="bare-list teaching-links">
+                <li class="teaching-link">
+                    <a class="bare-link teaching-link__link teaching-link__link--plan"
+                        href="https://studium.umontreal.ca/course/view.php?id=217266" target="_blank">
+                        StudiUM
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </header>
+
+    <main class="page-body">
+        <section class="problem-section">
+            <h2 class="project-name">Roundtable</h2>
+            <aside class="problem-section-aside">
+                <h2 class="section-title">Équipes</h2>
+                <div data-display="teams"></div>
+
+                <h2 class="section-title" style="margin-top: 12px;">Calendrier</h2>
+                <p>
+                    Semaine: <strong class="output" data-ruleng="" data-op="$">$CURRENT_WEEK / 12</strong> <br>
+                    Fin du jalon: <strong>2022-06-05</strong>
+                </p>
+            </aside>
+
+            <div class="problem-section-content">
+                <div class="project-intro">
+                    <div class="project-intro-stat">
+                        <a class="project-intro-logo" href="https://geodes.iro.umontreal.ca/" target="_blank">
+                            <img class="project-intro-logo-img" src="../../assets/images/geodes.png" alt="">
+                        </a>
+
+                        <div class="project-intro-group">
+                            <h4 class="project-intro-title">Champs d'intéret</h4> 
+                            <ul class="bare-list research-areas">
+                                <li class="research-area">
+                                    <span class="research-area-title">Modélisation et conception des besoins</span> 
+                                    <ul class="bare-list tags">
+                                        <li class="tag">Goal modeling</li>
+                                        <li class="tag">Design-time uncertainty</li>
+                                        <li class="tag">Product lines</li>
+                                    </ul>
+                                </li>
+                                <li class="research-area">
+                                    <span class="research-area-title">Conception dirigé par les modèles et Simulation</span>
+                                    <ul class="bare-list tags">
+                                        <li class="tag">Domain-specific modeling</li>
+                                        <li class="tag">Collaborative modeling</li>
+                                        <li class="tag">Model transformations</li>
+                                    </ul>
+                                </li>
+                                <li class="research-area">
+                                    <span class="research-area-title">Apprentissage machine et Optimization</span>
+                                    <ul class="bare-list tags">
+                                        <li class="tag">Code synthesis</li>
+                                        <li class="tag">AI-powered assistance</li>
+                                        <li class="tag">Pattern mining</li>
+                                    </ul>
+                                </li>
+                            </ul> 
+                        </div>
+
+                        <div class="project-intro-group">
+                            <h4 class="project-intro-title">Membres</h4> 
+                            <ul class="bare-list teachers">
+                                <li class="teacher">
+                                    <img class="teacher-photo" src="https://geodes.iro.umontreal.ca/images/people/faculty/michalis.jpg" alt="">
+                                    <a class="teacher-name" href="https://michalis.famelis.info/">Michalis FAMELIS</a>
+                                    <span class="teacher-office fit-content"><strong>2343</strong>, Pav. André-Aisenstadt</span> 
+                                    <a class="teacher-email" href="famelis@iro.umontreal.ca"></a>
+                                    <ul class="bare-list students">
+                                        <li class="student postdoc"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student msc"></li>
+                                    </ul>
+                                </li>
+                                <li class="teacher">
+                                    <img class="teacher-photo" src="https://geodes.iro.umontreal.ca/images/people/faculty/eugene.jpg" alt="">
+                                    <a class="teacher-name" href="http://www-ens.iro.umontreal.ca/~syriani/">Eugene SYRIANI</a> 
+                                    <span class="teacher-office fit-content"><strong>2345</strong>, Pav. André-Aisenstadt</span> 
+                                    <a class="teacher-email" href="syriani@iro.umontreal.ca"></a>
+                                    <ul class="bare-list students">
+                                        <li class="student postdoc"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student msc"></li>
+                                        <li class="student msc"></li>
+                                    </ul>
+                                </li>
+                                <li class="teacher">
+                                    <img class="teacher-photo" src="https://geodes.iro.umontreal.ca/images/people/faculty/houari.jpg" alt="">
+                                    <a class="teacher-name" href="http://www.iro.umontreal.ca/~sahraouh/">Houari SAHRAOUI</a>
+                                    <span class="teacher-office fit-content"><strong>2359</strong>, Pav. André-Aisenstadt</span> 
+                                    <a class="teacher-email" href="sahraouh@iro.umontreal.ca"></a>
+                                    <ul class="bare-list students">
+                                        <li class="student postdoc"></li>
+                                        <li class="student phd"></li>
+                                        <li class="student msc"></li>
+                                        <li class="student msc"></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="bare-list member-stats">
+                                <li class="member-stat ico-postdoc">
+                                    <span class="member-stat-value">3</span>
+                                    <span class="member-stat-name">PostDoc</span>
+                                </li>
+                                <li class="member-stat ico-phd">
+                                    <span class="member-stat-value">9</span>
+                                    <span class="member-stat-name">PhD</span>
+                                </li>
+                                <li class="member-stat ico-msc">
+                                    <span class="member-stat-value">12</span>
+                                    <span class="member-stat-name">Msc</span>
+                                </li>
+                                <li class="member-stat ico-visit">
+                                    <span class="member-stat-value">4</span>
+                                    <span class="member-stat-name">Visiteur</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-intro-desc">
+                        <p> 
+                            Le <strong>GEODES</strong> est un groupe de recherche du <abbr title="Département d'informatique et recherche opérationnelle">DIRO</abbr> dédié au <em>Génie Logiciel</em>.
+                            Le groupe s'intéresse à toutes les activités liées au développement de logiciel (de la formalisation des exigences à la génération du code),
+                            à l'évaluation du logiciel (qualités du logiciel, méthodes formelles), à la modélisation des domaines d'affaires et
+                            à l'application de techniques d'intelligence artificielle pour comprendre les artéfacts produits et faciliter le développement.
+                       </p>
+
+                        <p>
+                            Dirigé par <strong>3 professeurs</strong>, le GEODES comptent plus de 25 membres
+                            et accueillent de plus en plus de chercheurs et d'étudiants (sous la supervision des professeurs).
+                            Le GEODES est un groupe très actif avec plus de 20 publications par année et de fréquentes collaborations avec des groupes industriels sur des projets 
+                            d'envergures comme le <a class="bare-link project-intro__link inline" href="https://nouvelles.umontreal.ca/article/2022/03/16/l-ia-a-la-ferme-une-nouvelle-voie-vers-l-autonomie-alimentaire/">projet agricole de ferme verticale</a>.
+                            Devenu un pôle dans le domaine du Génie logiciel, le GEODES a récemment organisé la 23<sup>e</sup> édition de la Conférence MODELS (ACM/IEEE International Conference on Model Driven Engineering Languages and Systems)
+                            et organisera cette année la 25<sup>e</sup> édition.
+                        </p>
+                        
+                        <a class="project-intro__btn-link btn" target="_blank" href="https://geodes.iro.umontreal.ca/">En apprendre plus</a> 
+                    </div>
+                </div>
+
+                <section class="problem-subsection problem-subsection--problem">
+                    <h3 class="subsection-title">Problème</h3>
+                    <div>
+                        <p>
+                            La croissance du GEODES n'est cependant pas sans conséquence sur la cohésion et la synergie du groupe. 
+                            Malgré certaines collaborations et l'usage d'outils de communication, il est difficile 
+                            pour un membre d'avoir une vue d'ensemble des activités au sein du groupe, de faire le suivi des travaux 
+                            d'un collègue ou trouver des points d'intersection entre les intérêts de recherche de chacun.
+                            La plupart des échanges restent informel et la mise en commun hebdomadaire ne permet pas un véritable suivi.
+                        </p>
+    
+                        <h4 class="project-intro-desc-title">Proposition</h4>
+                        <p>
+                            <em>“La plateforme <b>Roundtable</b>”</em> &ndash; Pour résoudre ce problème, 
+                            nous proposons la création d'un outil permettant aux membres du GEODES de:
+                        </p>
+                        <ul class="bare-list">
+                            <li class="dash">Faire le suivi des membres et des activités de recherche du groupe</li>
+                            <li class="dash">Visualiser les informations de ces entités</li>
+                            <li class="dash">S'inscrire à de multiples intérêts de recherche ou sujets particuliers</li>
+                            <li class="dash">Formuler quelques requêtes pour explorer et manipuler ces relations</li>
+                        </ul>
+
+                        <p style="margin-top: 12px;">
+                            La plateforme ne remplacera pas les outils existants (Site web, Discord), elle est complémentaire. <br>
+                            Nous n'envisageons pas de l'utiliser comme système de messagerie (Discord), ou comme moyen de communication avec le grand public (Site web). <br>
+                            Roundtable sera accessible uniquement aux membres du GEODES.
+                        </p>
+
+                        <p style="margin-top: 12px;">
+                            L'implémentation de la solution se limitera à une <strong>interaction en ligne de commande</strong>.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="subsection-title">Fonctionnalités</h3>
+
+                    <div class="problem-spec-section-group">
+                        <div class="spec-group spec-group--main">
+                            <h3 class="spec-group-title">Fonctionnalités</h3>
+
+                            <ul class="bare-list spec-func-list">
+                                <li class="spec-func">
+                                    Se connecter à l'application
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--volunteer"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--admin"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Afficher la liste des membres
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--volunteer"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Chercher un membre en utilisant le nom et prénom
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--volunteer"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Afficher la liste des articles publics en cours ou récemment publiés
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--volunteer"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Créer/Modifier/Supprimer un compte visiteur
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter et modifier le profil de vaccination d'un visiteur
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter la liste des bénévoles
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Créer/Modifier/Supprimer un compte bénévole
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                              
+                             
+                                <li class="spec-func">
+                                    Remplir et sauvegarder un formulaire d'identification
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Récupérer et imprimer un formulaire d'identification
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Envoyer un rapport de vaccination
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Envoyer une notification de rappel
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="spec-group spec-group--aside">
+                            <h3 class="spec-group-title">Utilisateurs</h3>
+
+                            <ul class="bare-list spec-user-list">
+                                <li class="spec-user spec-user--volunteer">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--volunteer"></i> Membre</span>
+                                    <span class="spec-user-desc">Responsable d'accueillir une personne et les acheminer aux employés</span>
+                                </li>
+                                <li class="spec-user spec-user--employee">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--employee"></i> Superviseur</span>
+                                    <span class="spec-user-desc">Responsable du traitement du dossier et le choix du vaccin avec la personne</span>
+                                </li>
+                                <li class="spec-user spec-user--admin">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--admin"></i> Administrateur</span>
+                                    <span class="spec-user-desc">Responsable du traitement du dossier et le choix du vaccin avec la personne</span>
+                                </li>
+                            </ul>
+
+                            <h3 class="spec-group-title">Contraintes</h3>
+
+                            <ul class="bare-list spec-constraint-list">
+                                <li class="spec-constraint">
+                                    <strong>Calendrier</strong>: Pas plus de 15 entrées/visites par période (plage horaire - 8h, 9h, 10h...17h)
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Horaire</strong>: Lundi au vendredi de 8h à 18h.</li>
+                                <li class="spec-constraint">
+                                    <strong>Rendez-vous</strong>: Minimum 72 heures à l'avance et Maximum 2 personnes.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="subsection-title">Besoins</h3>
+                    
+                    <p>
+                        Roundtable devrait permettre aux membres du GEODES de se ternir au courant des divers activités du groupe de recherche.
+                    </p>
+
+                    <h4 class="paragraph-title">Suivi des activités</h4>
+
+                    <p>
+                        La plateforme devrait supporter l'ajout, la modification et la suppression des activités suivantes: <strong>Article</strong>, <strong>Projet</strong> et <strong>Outil</strong>.  <br>
+                        Tout membre peut s'inscrire (ou désinscrire) à une activité. Ainsi, lorsqu'une activité est créée, modifiée ou supprimée, les membres inscrits reçoivent une notification. <br>
+                        Un membre peut aussi s'inscrire (ou désinscrire) à un intérêt de recherche. Dans ce cas, toutes les activités liées à cet intérêt sont visées.
+                    </p>
+
+                    <h4 class="paragraph-title">Notifications</h4>
+
+                    <p>
+                        Par défaut les notifications sont accessibles uniquement sur la plateforme. Cependant, un membre peut choisir de recevoir ces notifications par courriel. <br>
+                        Une notification comprend le nom ou le titre de l'activité, la date de l'action (création, modification, suppression), l'auteur de l'action et un descriptif. <br>
+                        À la fin de toute action portée sur une activité, le membre est invité à inscrire un court descriptif décrivant l'action.
+                    </p>
+
+                    <h4 class="paragraph-title">Membres et Accès</h4>
+
+                    <p>
+                        Pour se connecter à la plateforme, un membre utilise son adresse courriel et son mot de passe. 
+                        Si son statut est valide et que l'authentification réussie, il accède au menu principal de la plateforme. <br>
+                        Pour créer un compte, un membre doit choisir un superviseur et fournir son nom, prénom, adresse courriel et créer un mot de passe. 
+                        Si les informations sont valides, le compte est créé dans le système avec le statut <em>EN_ATTENTE</em>.
+                        Une confirmation est envoyée à l'adresse courriel et une notification est envoyée aux administrateurs pour effectuer 
+                        la validation du compte. Si un administrateur valide le compte, celui-ci passe au statut <em>VALIDE</em> et le membre peut accéder à la plateforme.
+                        Si un membre quitte le groupe, il n'a aucune action à prendre dans la plateforme. Les administrateurs seront chargés de désactiver son compte.
+                    </p>
+                    
+                    <h4 class="paragraph-title">Requêtes</h4>
+
+                    <h5 style="margin-bottom: 6px;">Requêtes publiques</h5>
+
+                    <ul class="bare-list requirements">
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la liste des membres</span>
+                            <span class="requirement-title dash">Chercher un membre en utilisant le nom et prénom</span>
+                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel et intérêts.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher le profil complet d'un membre</span>
+                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel, numéro de téléphone, intérêts, 
+                            5 derniers articles (uniquement ceux où il fait partie des auteurs), projets publics et outils publics.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la liste des articles publics en cours ou récemment publiés</span>
+                            <span class="requirement-title dash">Chercher un article par titre, auteur ou mot-clé</span>
+                            <strong class="label">Informations présentées:</strong> titre, auteurs et date de publication.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la fiche complète d'un article</span>
+                            <strong class="label">Informations présentées:</strong> titre, résumé, auteurs, collaborateurs, date de publication et lien de la publication.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la liste des projets publics</span>
+                            <span class="requirement-title dash">Chercher un projet par responsable</span>
+                            <strong class="label">Informations présentées:</strong> titre et responsable.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la fiche complète d'un projet</span>
+                            <strong class="label">Informations présentées:</strong> titre, description, période et responsable.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la liste des outils</span>
+                            <strong class="label">Informations présentées:</strong> nom, version, responsable et collaborateurs.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la fiche complète d'un outil</span> 
+                            <strong class="label">Informations présentées:</strong> nom, description, version, collaborateurs, liens du répertoire et
+                            liste des articles liés à l'outil.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la liste des activités associées à un intérêt</span> 
+                            <strong class="label">Informations présentées:</strong> nom ou titre, créateur ou responsable.
+                        </li>
+                        <li class="requirement">
+                            <span class="requirement-title dash">Afficher la liste des membres associées à un intérêt</span> 
+                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel et intérêts.
+                        </li>
+                    </ul>
+
+                    <h5 style="margin-bottom: 6px;">Requêtes administratives</h5>
+
+                    <ul class="bare-list requirements requirements--admin">
+                        <li class="requirement">
+                            <strong>Tout membre</strong> peut modifier son profil et la liste des activités et intérêts auxquels il est inscrit.
+                        </li>
+                        <li class="requirement">
+                            <strong>Tout membre</strong> peut vérifier s'il a des notifications. <br>
+                        </li>
+                        <li class="requirement">
+                            <strong>Tout membre</strong> peut créer une activité et s'inscrire à une activité à laquelle il a accès ou à un intérêt. 
+                        </li>
+                        <li class="requirement">
+                            <strong>Seul un administrateur</strong> (utilisateur avec le rôle <em>ADMINISTRATEUR</em>) peut assigner ou modifier un rôle.
+                        </li>
+                        <li class="requirement">
+                            <strong>Seul un administrateur</strong> peut suspendre (statut: <em>SUSPENDU</em>) ou réactiver (statut: <em>VALIDE</em>) un compte.
+                        </li>
+                        <li class="requirement">
+                            <strong>Seuls les responsables</strong> (créateur et superviseur) d'une activité peuvent la modifier.
+                        </li>
+                        <li class="requirement">
+                            <strong>Seul un administrateur</strong> peut supprimer une activité.
+                        </li>
+                        <li class="requirement">
+                            <strong>Seul un superviseur</strong> peut ajouter, modifier ou supprimer un intérêt.
+                        </li>
+                    </ul>
+
+                    <h4 class="paragraph-title">Prototype</h4>
+
+                    <p>
+                        Suite à l'authentification, l'application devrait afficher un menu principal présentant uniquement les actions possibles pour l'utilisateur connecté. <br>
+                        Les actions peuvent être imbriquées (Ex: <code style="font-weight: bold;">Gestion Membre > Modifier membre</code>) pour éviter d'afficher trop d'options à l'utilisateur. 
+                        Cependant, le menu ne devrait pas avoir plus de 3 niveaux d'imbrication. Bien entendu, il devrait toujours être possible de retourner au menu principal sans quitter l'application.
+                    </p>
+
+                    <h4 class="paragraph-title">Données prédéfinies</h4>
+
+                    <p>
+                        L'application devrait être initialisée avec certaines données comme les superviseurs et les administrateurs.
+                    </p>
+
+                    <h5 style="margin-bottom: 6px;">Superviseurs</h5>
+
+                    <ul class="bare-list">
+                        <li class="dash">Michalis FAMELIS</li>
+                        <li class="dash">Eugène SYRIANI</li>
+                        <li class="dash">Houari SAHRAOUI</li>
+                    </ul>
+
+                    <h5 style="margin-bottom: 6px;">Administrateurs</h5>
+
+                    <ul class="bare-list">
+                        <li class="dash">Istvan DAVID</li>
+                        <li class="dash">Louis-Edouard LAFONTANT</li>
+                    </ul>
+                </section>
+
+                <section class="spec-section">
+                    <h3 class="subsection-title">Spécification</h3>
+        
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Article</h4>
+
+                        <p>
+                            Les membres du GEODES publient fréquemment des articles traitant de sujets liés aux thèmes de recherche du laboratoire.
+                            Si un membre fait partie des auteurs ou collaborateurs, il est automatiquement inscrit à l'article. 
+                            Lorsque l'article est publié, il devient possible d'ajouter un lien vers la publication.
+                        </p>
+
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Résumé</span>
+                                <span class="def-value">Texte de moins de 500 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Lien article</span>
+                                <span class="def-value">URL</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Date de publication</span>
+                                <span class="def-value">YYYY-MM-DD</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Lien publication</span>
+                                <span class="def-value">URL</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Statut</span>
+                                <span class="def-value">Brouillon, Prêt, Soumis, Publié</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Auteurs</span>            
+                                <span class="def-value">Liste d'auteurs (membre)</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Collaborateurs</span>            
+                                <span class="def-value">Liste de collaborateurs (membre)</span>
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Mots-clés</span>
+                                <span class="def-value">Liste de termes (mot sans espace, moins de 40 caractères)</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Intérêts liés</span>
+                                <span class="def-value">Liste d'intérêts (1 à 5)</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Outil</h4>
+
+                        <p>
+                            Certains travaux de recherche nécessitent parfois des démonstrations pratique résultant sur la création et l'exploitation d'outils. 
+                            Si un membre fait partie des collaborateurs, il est automatiquement inscrit à l'outil. 
+                        </p>
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Description</span>
+                                <span class="def-value">Texte de moins de 500 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Version</span>
+                                <span class="def-value">Nombre décimal</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Lien répertoire</span>
+                                <span class="def-value">URL du répertoire du code source</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Responsable</span>
+                                <span class="def-value">Un membre</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Collaborateurs</span>            
+                                <span class="def-value">Liste de collaborateurs (membre)</span>
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Articles liés</span>
+                                <span class="def-value">Liste d'articles</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Mots-clés</span>
+                                <span class="def-value">Liste de termes (mot sans espace, moins de 40 caractères)</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Intérêts liés</span>
+                                <span class="def-value">Liste d'intérêts (1 à 5)</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Projet</h4>
+
+                        <p>
+                            Le GEODES reçoit régulièrement des subventions pour travailler sur diverses projets de recherche.
+                        </p>
+
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Description</span>
+                                <span class="def-value">Texte de moins de 500 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Date de début</span>
+                                <span class="def-value">YYYY-MM-DD</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Date de fin</span>
+                                <span class="def-value">YYYY-MM-DD</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Responsable</span>
+                                <span class="def-value">Doit être un professeur</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Intérêts liés</span>
+                                <span class="def-value">Liste d'intérêts (1 à 5)</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Membre</h4>
+                        
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Prénom</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Nom de famille</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Numéro de téléphone</span>
+                                <span class="def-value">Texte de 10 à 15 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Adresse courriel</span>
+                                <span class="def-value">Adresse courriel personnelle</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Lien web</span>
+                                <span class="def-value">URL d'une page web</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Maitrise, Doctorat, PostDoc, Professeur</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Superviseur</span>
+                                <span class="def-value">Doit être un professeur</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Intérets</span>
+                                <span class="def-value">Liste d'intérêts auxquels le membre est inscrit</span> 
+                            </li>
+                        </ul>
+                    </div>
+                    
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Compte</h4>
+                        
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">Adresse courriel</span>
+                                <span class="def-value">Adresse courriel universitaire</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Mot de passe</span>
+                                <span class="def-value">Au moins 8 caractères contenant au moins 1 chiffre, 1 majuscule, 1 minuscule et 1 caractère spécial</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Statut</span>
+                                <span class="def-value">EN ATTENTE, VALIDE, SUSPENDU</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Membre</span>
+                                <span class="def-value">Membre associé au compte</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Role</span>
+                                <span class="def-value">Role associé au compte (défaut: MEMBRE)</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Role</h4>
+                        
+                        <p>
+                            L'application est chargé avec les roles suivants: SUPERVISEUR, ADMINISTRATEUR, MEMBRE. <br>
+                            Un ADMINISTRATEUR peut faire tout ce qu'un MEMBRE peut faire. 
+                            Un SUPERVISEUR peut faire tout ce qu'un MEMBRE peut faire.
+                        </p>
+
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">Code</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Description</span>
+                                <span class="def-value">Texte de moins de 100 caractères</span> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Intérêt</h4>
+                 
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">ID</span>
+                                <span class="def-value">Identifiant unique</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Titre</span>
+                                <span class="def-value">Texte de moins de 50 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Description</span>
+                                <span class="def-value">Texte de moins de 250 caractères</span> 
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <p style="margin-top: 12px;">
+                    Votre équipe a été octroyée le contrat de développer <strong>la plateforme Roundtable</strong>. <br>
+                    L'interface sera en ligne de commande dans un premier temps et si nous avons le temps et l'énergie, nous ferons une interface graphique par la suite.
+                </p>
+            </div>
+        </section>
+
+        <section class="rule-section">
+            <h2 class="section-title">Règles du jeu</h2>
+            <div class="section-content">
+                <p>
+                    Vous avez droit à <strong>2 rencontres avec le client (1 rencontre par semaine)</strong>. <br>
+                    La semaine commence le lundi et se termine le samedi. Les questions reçues samedi ou dimanche seront attribuées à la prochaine semaine.
+                    Les réponses aux questions (générales) seront ajoutées au corps du texte plus haut. <br>
+                    Jusqu'au 23 juin, des précisions peuvent être rajoutées au texte. 
+                </p>
+    
+                <p>
+                    Pour plannifier une rencontre ou soumettre vos questions, communiquez avec notre responsable, Louis-Edouard LAFONTANT.
+                </p>
+                <ul class="bare-list contacts">
+                    <li class="contact contact--discord">Calendrier: <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation" title="Période de consultation">Période de consultation</a></li>
+                    <li class="contact contact--discord">Discord: <strong>L-E#2545</strong></li>
+                    <li class="contact contact--mail">Courriel: <a href="mailto:louis.edouard.lafontant@umontreal.ca">louis.edouard.lafontant@umontreal.ca</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2 class="section-title">Tâches</h2>
+
+            <div class="section-content">
+                <p>
+                    Pour ce second jalon, vous devez produire un rapport en HTML présentant votre analyse approfondie du problème, 
+                    votre conception et une première implémentation. <br>
+                    Il devra aussi présenter les éléments du premier jalon (DM1) mis à jour.
+                </p>
+    
+                
+                <div class="task-milestone">
+                    <h3 class="task-subsection-title">Cadre du projet</h3>
+                    <ul class="tasks">
+                        <li class="task">Description du projet: Contexte, Problèmes à résoudre, Portée</li>
+                        <li class="task">Équipe, Répartition des tâches: Coordonnées des membres et la répartition des tâches</li>
+                        <li class="task">Échéancier: Planification hebdomadaire des taches montrant la répartition dans l'équipe</li>
+                        <li class="task">Priorisation: Description de l'ordre de priorités choisi</li>
+                        <li class="task">Échanges avec client: Questions posées et réponses trouvées</li>
+                    </ul>
+    
+                    <h3 class="task-subsection-title">Définition du domaine</h3>
+                    <ul class="tasks">
+                        <li class="task">Hypothèses: Hypothèses émises dans l'élaboration des exigences</li>
+                        <li class="task">Glossaire: Liste des termes et expressions clés caractérisant le domaine</li>
+                        <li class="task">Besoins fonctionnels: Fonctionnalité du logiciel à offrir traduit par des Cus et scénarios</li>
+                        <li class="task">Besoins non fonctionnels: Attributs du logiciel recherchés affectant l'expérience utilisateur (avec justification)</li>
+                    </ul>
+    
+                    <p>
+                        Les hypothèses regroupent toutes les considérations faites pour réaliser le travail en dehors des échanges avec le client et des exigences/contraintes explicites décrites dans l'énoncé.
+                        Bien entendu, une hypothèse ne peut pas contredire un fait ou une exigence/contrainte explicite. Elles permettent donc d'être rigoureux en stipulant clairement les suppositions additionnelles faites par votre équipe, et ainsi éviter toute confusion dans la lecture du rapport.
+                    </p>
+                </div>
+                
+                <h3 class="task-subsection-title">Analyse</h3>
+                <ul class="tasks">
+                    <li class="task">Risques: 5 risques associés au projet (avec justification)</li>
+                    <li class="task">Contraintes physiques et conceptuelles</li>
+                    <li class="task">Modèle dynamique: Diagrammes d'activités</li>
+                    <li class="task">Modèle d'objets: Diagramme de classes participantes (ECB) &ndash; <em>Optionnel</em> (facilite la construction du diagramme de classe du design)</li>
+                </ul>
+    
+                <h3 class="task-subsection-title">Conception</h3>
+                <ul class="tasks">
+                    <li class="task">Justification des choix du design: Abstraction, couplage et cohésion </li>
+                    <li class="task">Design détaillé: Diagramme de classes, Diagramme de séquences</li>
+                </ul>
+    
+                <h3 class="task-subsection-title">Implémentation</h3>
+                <ul class="tasks">
+                    <li class="task">Implémentation du design: Prototype fonctionnel</li>
+                    <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
+                </ul>
+    
+                <h3 class="task-subsection-title task-subsection-title--document">Livrables</h3>
+                <ul class="task-documents bare-list">
+                    <li class="task-document check check--color-inherit">Cas d'utilisation (en priorité) et scénarios mis à jour</li>
+                    <li class="task-document check check--color-inherit">Diagramme d'activités: 
+                        <ul class="bare-list" style="padding-left: 12px;">
+                            <li class="dash">Couvre les CUs des membres uniquement</li>
+                            <li class="dash">Pas besoin de montrer l'inscription à la plateforme</li>
+                        </ul>
+                    </li>
+                    <li class="task-document check check--color-inherit">Diagramme de classes</li>
+                    <li class="task-document check check--color-inherit">Diagramme de séquence: 
+                        <ul class="bare-list" style="padding-left: 12px;">
+                            <li class="dash">Rechercher un article et afficher la fiche complète</li>
+                            <li class="dash">Afficher la liste des activités associées à un intérêt</li>
+                            <li class="dash">Modifier le statut d'un article</li>
+                        </ul>
+                    </li>
+                    <li class="task-document check check--color-inherit">Prototype fonctionnel: application démontrant les fonctionnalités du logiciel</li>
+                </ul>
+    
+                <a class="bare-link template-link" target="_blank" href="template.html">Template pour le rapport</a>
+            </div>
+        </section>
+
+        <section class="evaluation-section">
+            <h2 class="section-title">Évaluation</h2>
+            <p>
+                Ce devoir compte pour <strong>20% de la note final</strong>. <br>
+                Le rapport et tous les artéfacts produits sont à <strong>remettre au plus tard le dimanche 31 juillet</strong> par le responsable d'équipe. <br>
+                <strong>Au-delà de cette date, la note de 0 sera attribuée au devoir.</strong>.
+            </p>
+
+            <div class="marking-scheme">
+            <h3 class="marking-scheme-title">Barème</h3>
+            <table class="tbl-evaluation">
+                <tr class="tbl-evaluation-row">
+                    <td>Révision</td>
+                    <td>5%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Analyse</td>
+                    <td>5%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Conception</td>
+                    <td>15%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Application</td>
+                    <td>20%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Code</td>
+                    <td>15%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Tests</td>
+                    <td>20%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Documentation</td>
+                    <td>15%</td>
+                </tr>
+                <tr class="tbl-evaluation-row">
+                    <td>Config</td>
+                    <td>5%</td>
+                </tr>
+                <tr class="tbl-evaluation-row tbl-evaluation-row--bonus">
+                    <td><strong>Bonus:</strong> Interface graphique</td>
+                    <td>5%</td>
+                </tr>
+            </table>
+        </div>
+            <p>
+                Le <em>Bonus</em> consiste en un usage accru et efficace de Git, démontrant une bonne maitrise.
+            </p>
+            <ul class="bare-list">
+                <li class="check check--color-inherit">Commits réguliers et descriptifs de chaque membre.</li>
+                <li class="check check--color-inherit">Usage de branches pour le développement du code source.</li>
+                <li class="check check--color-inherit">Gestion de projet par les tiquets.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="content-wrapper">
+            <p>
+                IFT2255 &ndash; Génie logiciel <br>
+                Devoir 3
+            </p>
+            <p>&copy; 2022 &ndash; Louis-Edouard LAFONTANT</p>
+        </div>
+    </footer>
+
+    <script src="../dist/data.js"></script>
+</body>
+
+</html>
