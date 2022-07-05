@@ -222,7 +222,7 @@
         }
 
         .project-intro__link {
-            padding: 1px 3px 2px;
+            padding: 1px 3px;
             color: #3573DD;
             font-weight: 500;
             border-radius: 2px;
@@ -550,10 +550,11 @@
 
         .spec-group--main {
             width: 100%;
+            flex-grow: 2;
         }
 
         .spec-group--aside {
-            min-width: 300px;
+            min-width: 300px; max-width: 40%;
             background-color: #d5d5d5;
         }     
 
@@ -579,7 +580,7 @@
 
         .spec-func {
             position: relative;
-            display: flex;
+            display: flex; flex-wrap: wrap;
             font-size: 1.6em;
             font-weight: 400;
             padding: 6px 0px;
@@ -605,6 +606,22 @@
                 height: 16px;
             }
 
+            .spec-func-desc {
+                width: 100%;
+                padding-left: 24px;
+                font-size: 0.9em;
+            }
+
+            .ico-info  {
+                display: inline-block;
+                width: 15px; height: 15px;
+                text-align: center;
+                font-size: 1.1rem;
+                color: #555;
+                background-color: #d5d5d5;
+                border-radius: 50%;
+            }
+
     .spec-user-list {
         display: flex; flex-direction: column;
     }
@@ -626,11 +643,11 @@
                     margin-right: 3px;
                 }
 
-                .user-icon--volunteer {
+                .user-icon--member {
                     background-color: #e87429;
                 }
 
-                .user-icon--employee {
+                .user-icon--supervisor {
                     background-color: #006aff;
                 }
 
@@ -679,6 +696,22 @@
                 color: #7166D9;
             }
 
+    .data-section {
+        display: flex;
+    }
+
+    .data-list {
+        display: flex; flex-direction: column;
+        background-color: #292723;
+        padding: 12px;
+        font-family: Consolas, 'Courier New', Courier, monospace;
+        color: #f5f5f5;
+        width: 100%; max-width: 600px;
+        border-radius: 4px;
+    }
+    .data-item {
+        padding-top: 2px; padding-bottom: 2px;
+    }
 
         .task-section {
             padding: 24px 5vw;
@@ -1009,8 +1042,8 @@
 
                 <h2 class="section-title" style="margin-top: 12px;">Calendrier</h2>
                 <p>
-                    Semaine: <strong class="output" data-ruleng="" data-op="$">$CURRENT_WEEK / 12</strong> <br>
-                    Fin du jalon: <strong>2022-06-05</strong>
+                    Semaine: <strong class="output" data-ruleng="" data-op="$">$CURRENT_WEEK / 11</strong> <br>
+                    Date de remise: <strong>2022-07-31</strong>
                 </p>
             </aside>
 
@@ -1114,35 +1147,26 @@
                     </div>
 
                     <div class="project-intro-desc">
-                        <!-- <p> 
-                            Le <strong>GEODES</strong> est un groupe de recherche du <abbr title="Département d'informatique et recherche opérationnelle">DIRO</abbr> dédié au <em>Génie Logiciel</em>.
-                            Le groupe s'intéresse à toutes les activités liées au développement de logiciel (de la formalisation des exigences à la génération du code),
-                            à l'évaluation du logiciel (qualités du logiciel, méthodes formelles), à la modélisation des domaines d'affaires et
-                            à l'application de techniques d'intelligence artificielle pour comprendre les artéfacts produits et faciliter le développement.
-                       </p> -->
-
-                        <!-- <p>
-                            Dirigé par <strong>3 professeurs</strong>, le GEODES comptent plus de 25 membres
-                            et accueillent de plus en plus de chercheurs et d'étudiants (sous la supervision des professeurs).
-                            Le GEODES est un groupe très actif avec plus de 20 publications par année et de fréquentes collaborations avec des groupes industriels sur des projets 
-                            d'envergures comme le <a class="bare-link project-intro__link inline" href="https://nouvelles.umontreal.ca/article/2022/03/16/l-ia-a-la-ferme-une-nouvelle-voie-vers-l-autonomie-alimentaire/">projet agricole de ferme verticale</a>.
-                            Devenu un pôle dans le domaine du Génie logiciel, le GEODES a récemment organisé la 23<sup>e</sup> édition de la Conférence MODELS (ACM/IEEE International Conference on Model Driven Engineering Languages and Systems)
-                            et organisera cette année la 25<sup>e</sup> édition.
-                        </p> -->
-
                         <p>
-                            <em>“La plateforme <b>Roundtable</b>”</em> &ndash; Pour résoudre ce problème, 
-                            nous proposons la création d'un outil permettant aux membres du GEODES de:
+                            Le <a class="bare-link project-intro__link inline" href="https://geodes.iro.umontreal.ca/"><strong>GEODES</strong></a> est un groupe de recherche du <abbr title="Département d'informatique et recherche opérationnelle">DIRO</abbr>
+                            dédié au <em>Génie Logiciel</em>, en pleine croissance. 
+                            Cette croissance rapide n'est cependant pas sans conséquence sur la cohésion du groupe. 
+                            Il est difficile pour un membre d'avoir une vue d'ensemble des activités du GEODES, de faire le suivi des travaux ou
+                            trouver des points d'intersection entre les intérêts de recherche de chacun.
+                        </p>
+
+                        <p style="margin-bottom: 2px">
+                            Pour faciliter le suivi des travaux et intérêts de recherche du GEODES, nous proposons la plateforme <b>Roundtable</b>.
+                            Elle permet aux membres du GEODES de:
                         </p>
                         <ul class="bare-list">
                             <li class="dash">Faire le suivi des membres et des activités de recherche du groupe</li>
-                            <li class="dash">Visualiser les informations de ces entités</li>
                             <li class="dash">S'inscrire à de multiples intérêts de recherche ou sujets particuliers</li>
                             <li class="dash">Formuler quelques requêtes pour explorer et manipuler ces relations</li>
                         </ul>
 
                         <p style="margin-top: 12px;">
-                            La plateforme ne remplacera pas les outils existants (Site web, Discord), elle est complémentaire. <br>
+                            La plateforme est complémentaire aux outils d'échanges et communication existants tels que le site web et Discord.
                             Nous n'envisageons pas de l'utiliser comme système de messagerie (Discord), ou comme moyen de communication avec le grand public (Site web). <br>
                             Roundtable sera accessible uniquement aux membres du GEODES.
                         </p>
@@ -1150,48 +1174,11 @@
                         <p style="margin-top: 12px;">
                             L'implémentation de la solution se limitera à une <strong>interaction en ligne de commande</strong>.
                         </p>
-                        
-                        <a class="project-intro__btn-link btn" target="_blank" href="https://geodes.iro.umontreal.ca/">En apprendre plus</a> 
                     </div>
                 </div>
 
-                <section class="problem-subsection problem-subsection--problem">
-                    <h3 class="subsection-title">Problème</h3>
-                    <div>
-                        <p>
-                            La croissance du GEODES n'est cependant pas sans conséquence sur la cohésion et la synergie du groupe. 
-                            Malgré certaines collaborations et l'usage d'outils de communication, il est difficile 
-                            pour un membre d'avoir une vue d'ensemble des activités au sein du groupe, de faire le suivi des travaux 
-                            d'un collègue ou trouver des points d'intersection entre les intérêts de recherche de chacun.
-                            La plupart des échanges restent informel et la mise en commun hebdomadaire ne permet pas un véritable suivi.
-                        </p>
-    
-                        <h4 class="project-intro-desc-title">Proposition</h4>
-                        <p>
-                            <em>“La plateforme <b>Roundtable</b>”</em> &ndash; Pour résoudre ce problème, 
-                            nous proposons la création d'un outil permettant aux membres du GEODES de:
-                        </p>
-                        <ul class="bare-list">
-                            <li class="dash">Faire le suivi des membres et des activités de recherche du groupe</li>
-                            <li class="dash">Visualiser les informations de ces entités</li>
-                            <li class="dash">S'inscrire à de multiples intérêts de recherche ou sujets particuliers</li>
-                            <li class="dash">Formuler quelques requêtes pour explorer et manipuler ces relations</li>
-                        </ul>
-
-                        <p style="margin-top: 12px;">
-                            La plateforme ne remplacera pas les outils existants (Site web, Discord), elle est complémentaire. <br>
-                            Nous n'envisageons pas de l'utiliser comme système de messagerie (Discord), ou comme moyen de communication avec le grand public (Site web). <br>
-                            Roundtable sera accessible uniquement aux membres du GEODES.
-                        </p>
-
-                        <p style="margin-top: 12px;">
-                            L'implémentation de la solution se limitera à une <strong>interaction en ligne de commande</strong>.
-                        </p>
-                    </div>
-                </section>
-
                 <section>
-                    <h3 class="subsection-title">Fonctionnalités</h3>
+                    <h3 class="subsection-title">Exigences</h3>
 
                     <div class="problem-spec-section-group">
                         <div class="spec-group spec-group--main">
@@ -1199,117 +1186,159 @@
 
                             <ul class="bare-list spec-func-list">
                                 <li class="spec-func">
-                                    Se connecter à l'application
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--volunteer"></i>
-                                        </li>
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--admin"></i>
-                                        </li>
-                                    </ul>
+                                    Se connecter
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Afficher la liste des membres
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--volunteer"></i>
-                                        </li>
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    Parcourir l'ensemble des membres
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste/Recherche:</strong> nom complet, adresse courriel et numéro de téléphone.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> nom complet, adresse courriel, numéro de téléphone, intérêts, 
+                                        5 derniers articles (où il fait partie des auteurs).
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Chercher un membre en utilisant le nom et prénom
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--volunteer"></i>
-                                        </li>
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    Parcourir l'ensemble des articles
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste/Recherche:</strong> titre, auteurs, statut et date de publication.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> titre, résumé, statut, responsable, auteurs, collaborateurs, date de publication et lien de la publication.
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Afficher la liste des articles publics en cours ou récemment publiés
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--volunteer"></i>
-                                        </li>
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    Parcourir l'ensemble des outils
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> nom, version, responsable et collaborateurs.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> nom, description, version, responsable, collaborateurs, liens du répertoire
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Créer/Modifier/Supprimer un compte visiteur
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    Parcourir l'ensemble des projets
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> titre et responsable.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> titre, description, période et responsable.
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Consulter et modifier le profil de vaccination d'un visiteur
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    Consulter ses notifications
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> nom/titre de l'activité, date de l'action (création, modification, suppression), auteur et descriptif
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Consulter la liste des bénévoles
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    S'inscrire ou se désinscrire à un intérêt
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Créer/Modifier/Supprimer un compte bénévole
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
-                                </li>
-                              
-                             
-                                <li class="spec-func">
-                                    Remplir et sauvegarder un formulaire d'identification
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    S'inscrire ou se désinscrire à une activité
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Récupérer et imprimer un formulaire d'identification
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    Modifier la liste des intérêts suivis
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Envoyer un rapport de vaccination
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    Créer une activité (article/outil/projet)
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                    </div>
                                 </li>
                                 <li class="spec-func">
-                                    Envoyer une notification de rappel
-                                    <ul class="bare-list spec-func-users">
-                                        <li class="spec-func-user">
-                                            <i class="user-icon user-icon--employee"></i>
-                                        </li>
-                                    </ul>
+                                    Modifier une activité (article/outil/projet)
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                    </div>
+                                </li>
+
+                                
+                                <li class="spec-func">
+                                    Créer un intérêt
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Modifier un intérêt
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Supprimer un intérêt
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                            
+                                <li class="spec-func">
+                                    Supprimer une activité (article/outil/projet)
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Changer le statut d'un compte
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--admin"></i>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -1318,180 +1347,61 @@
                             <h3 class="spec-group-title">Utilisateurs</h3>
 
                             <ul class="bare-list spec-user-list">
-                                <li class="spec-user spec-user--volunteer">
-                                    <span class="spec-user-id"><i class="user-icon user-icon--volunteer"></i> Membre</span>
-                                    <span class="spec-user-desc">Responsable d'accueillir une personne et les acheminer aux employés</span>
+                                <li class="spec-user spec-user--member">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--member"></i> Membre</span>
+                                    <span class="spec-user-desc">Role de base attribué à tout nouveau compte pour utiliser l'application. </span>
                                 </li>
-                                <li class="spec-user spec-user--employee">
-                                    <span class="spec-user-id"><i class="user-icon user-icon--employee"></i> Superviseur</span>
-                                    <span class="spec-user-desc">Responsable du traitement du dossier et le choix du vaccin avec la personne</span>
+                                <li class="spec-user spec-user--supervisor">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--supervisor"></i> Superviseur</span>
+                                    <span class="spec-user-desc">Ce role permet à l'utilisateur de gérer les intérêts de recherche et lui donne accès aux fonctionnalités des membres.</span>
                                 </li>
                                 <li class="spec-user spec-user--admin">
                                     <span class="spec-user-id"><i class="user-icon user-icon--admin"></i> Administrateur</span>
-                                    <span class="spec-user-desc">Responsable du traitement du dossier et le choix du vaccin avec la personne</span>
+                                    <span class="spec-user-desc">Ce role permet à l'utilisateur de gérer les comptes et lui donne accès aux fonctionnalités des membres.</span>
                                 </li>
                             </ul>
 
-                            <h3 class="spec-group-title">Contraintes</h3>
+                            <h3 class="spec-group-title">Notes</h3>
 
                             <ul class="bare-list spec-constraint-list">
                                 <li class="spec-constraint">
-                                    <strong>Calendrier</strong>: Pas plus de 15 entrées/visites par période (plage horaire - 8h, 9h, 10h...17h)
+                                    <strong>Connexion</strong>
+                                    Pour se connecter à la plateforme, un membre utilise son adresse courriel et son mot de passe. 
+                                    Il accède au menu principal si son statut est <em>VALIDE</em>.
                                 </li>
                                 <li class="spec-constraint">
-                                    <strong>Horaire</strong>: Lundi au vendredi de 8h à 18h.</li>
+                                    <strong>Statut</strong>
+                                    Lorsqu'un compte est créé, il a un statut <em>EN_ATTENTE</em>.
+                                    Si un administrateur valide le compte, celui-ci passe au statut <em>VALIDE</em>.
+                                </li>
                                 <li class="spec-constraint">
-                                    <strong>Rendez-vous</strong>: Minimum 72 heures à l'avance et Maximum 2 personnes.
+                                    <strong>Recherche membre</strong>
+                                    La recherche d'un membre peut se faire par nom, prénom ou intérêt. Les accents ne sont pas pris en considération.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Recherche article</strong>
+                                    La recherche d'un article peut se faire par titre ou mot-clé. Les accents ne sont pas pris en considération.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Modification d'une activité</strong>
+                                    Seuls les responsables (créateur et superviseur) d'une activité peuvent la modifier.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Article</strong>
+                                    Si un membre fait partie des auteurs ou collaborateurs, il est automatiquement inscrit à l'article.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Outil</strong>
+                                    Si un membre fait partie des collaborateurs, il est automatiquement inscrit à l'outil. 
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Notification</strong>
+                                    Un membre peut choisir de recevoir ces notifications par courriel. À la fin de toute action portée sur une activité, 
+                                    le membre est invité à inscrire un court descriptif décrivant l'action.
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </section>
-
-                <section>
-                    <h3 class="subsection-title">Besoins</h3>
-                    
-                    <p>
-                        Roundtable devrait permettre aux membres du GEODES de se ternir au courant des divers activités du groupe de recherche.
-                    </p>
-
-                    <h4 class="paragraph-title">Suivi des activités</h4>
-
-                    <p>
-                        La plateforme devrait supporter l'ajout, la modification et la suppression des activités suivantes: <strong>Article</strong>, <strong>Projet</strong> et <strong>Outil</strong>.  <br>
-                        Tout membre peut s'inscrire (ou désinscrire) à une activité. Ainsi, lorsqu'une activité est créée, modifiée ou supprimée, les membres inscrits reçoivent une notification. <br>
-                        Un membre peut aussi s'inscrire (ou désinscrire) à un intérêt de recherche. Dans ce cas, toutes les activités liées à cet intérêt sont visées.
-                    </p>
-
-                    <h4 class="paragraph-title">Notifications</h4>
-
-                    <p>
-                        Par défaut les notifications sont accessibles uniquement sur la plateforme. Cependant, un membre peut choisir de recevoir ces notifications par courriel. <br>
-                        Une notification comprend le nom ou le titre de l'activité, la date de l'action (création, modification, suppression), l'auteur de l'action et un descriptif. <br>
-                        À la fin de toute action portée sur une activité, le membre est invité à inscrire un court descriptif décrivant l'action.
-                    </p>
-
-                    <h4 class="paragraph-title">Membres et Accès</h4>
-
-                    <p>
-                        Pour se connecter à la plateforme, un membre utilise son adresse courriel et son mot de passe. 
-                        Si son statut est valide et que l'authentification réussie, il accède au menu principal de la plateforme. <br>
-                        Pour créer un compte, un membre doit choisir un superviseur et fournir son nom, prénom, adresse courriel et créer un mot de passe. 
-                        Si les informations sont valides, le compte est créé dans le système avec le statut <em>EN_ATTENTE</em>.
-                        Une confirmation est envoyée à l'adresse courriel et une notification est envoyée aux administrateurs pour effectuer 
-                        la validation du compte. Si un administrateur valide le compte, celui-ci passe au statut <em>VALIDE</em> et le membre peut accéder à la plateforme.
-                        Si un membre quitte le groupe, il n'a aucune action à prendre dans la plateforme. Les administrateurs seront chargés de désactiver son compte.
-                    </p>
-                    
-                    <h4 class="paragraph-title">Requêtes</h4>
-
-                    <h5 style="margin-bottom: 6px;">Requêtes publiques</h5>
-
-                    <ul class="bare-list requirements">
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la liste des membres</span>
-                            <span class="requirement-title dash">Chercher un membre en utilisant le nom et prénom</span>
-                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel et intérêts.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher le profil complet d'un membre</span>
-                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel, numéro de téléphone, intérêts, 
-                            5 derniers articles (uniquement ceux où il fait partie des auteurs), projets publics et outils publics.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la liste des articles publics en cours ou récemment publiés</span>
-                            <span class="requirement-title dash">Chercher un article par titre, auteur ou mot-clé</span>
-                            <strong class="label">Informations présentées:</strong> titre, auteurs et date de publication.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la fiche complète d'un article</span>
-                            <strong class="label">Informations présentées:</strong> titre, résumé, auteurs, collaborateurs, date de publication et lien de la publication.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la liste des projets publics</span>
-                            <span class="requirement-title dash">Chercher un projet par responsable</span>
-                            <strong class="label">Informations présentées:</strong> titre et responsable.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la fiche complète d'un projet</span>
-                            <strong class="label">Informations présentées:</strong> titre, description, période et responsable.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la liste des outils</span>
-                            <strong class="label">Informations présentées:</strong> nom, version, responsable et collaborateurs.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la fiche complète d'un outil</span> 
-                            <strong class="label">Informations présentées:</strong> nom, description, version, collaborateurs, liens du répertoire et
-                            liste des articles liés à l'outil.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la liste des activités associées à un intérêt</span> 
-                            <strong class="label">Informations présentées:</strong> nom ou titre, créateur ou responsable.
-                        </li>
-                        <li class="requirement">
-                            <span class="requirement-title dash">Afficher la liste des membres associées à un intérêt</span> 
-                            <strong class="label">Informations présentées:</strong> nom complet, adresse courriel et intérêts.
-                        </li>
-                    </ul>
-
-                    <h5 style="margin-bottom: 6px;">Requêtes administratives</h5>
-
-                    <ul class="bare-list requirements requirements--admin">
-                        <li class="requirement">
-                            <strong>Tout membre</strong> peut modifier son profil et la liste des activités et intérêts auxquels il est inscrit.
-                        </li>
-                        <li class="requirement">
-                            <strong>Tout membre</strong> peut vérifier s'il a des notifications. <br>
-                        </li>
-                        <li class="requirement">
-                            <strong>Tout membre</strong> peut créer une activité et s'inscrire à une activité à laquelle il a accès ou à un intérêt. 
-                        </li>
-                        <li class="requirement">
-                            <strong>Seul un administrateur</strong> (utilisateur avec le rôle <em>ADMINISTRATEUR</em>) peut assigner ou modifier un rôle.
-                        </li>
-                        <li class="requirement">
-                            <strong>Seul un administrateur</strong> peut suspendre (statut: <em>SUSPENDU</em>) ou réactiver (statut: <em>VALIDE</em>) un compte.
-                        </li>
-                        <li class="requirement">
-                            <strong>Seuls les responsables</strong> (créateur et superviseur) d'une activité peuvent la modifier.
-                        </li>
-                        <li class="requirement">
-                            <strong>Seul un administrateur</strong> peut supprimer une activité.
-                        </li>
-                        <li class="requirement">
-                            <strong>Seul un superviseur</strong> peut ajouter, modifier ou supprimer un intérêt.
-                        </li>
-                    </ul>
-
-                    <h4 class="paragraph-title">Prototype</h4>
-
-                    <p>
-                        Suite à l'authentification, l'application devrait afficher un menu principal présentant uniquement les actions possibles pour l'utilisateur connecté. <br>
-                        Les actions peuvent être imbriquées (Ex: <code style="font-weight: bold;">Gestion Membre > Modifier membre</code>) pour éviter d'afficher trop d'options à l'utilisateur. 
-                        Cependant, le menu ne devrait pas avoir plus de 3 niveaux d'imbrication. Bien entendu, il devrait toujours être possible de retourner au menu principal sans quitter l'application.
-                    </p>
-
-                    <h4 class="paragraph-title">Données prédéfinies</h4>
-
-                    <p>
-                        L'application devrait être initialisée avec certaines données comme les superviseurs et les administrateurs.
-                    </p>
-
-                    <h5 style="margin-bottom: 6px;">Superviseurs</h5>
-
-                    <ul class="bare-list">
-                        <li class="dash">Michalis FAMELIS</li>
-                        <li class="dash">Eugène SYRIANI</li>
-                        <li class="dash">Houari SAHRAOUI</li>
-                    </ul>
-
-                    <h5 style="margin-bottom: 6px;">Administrateurs</h5>
-
-                    <ul class="bare-list">
-                        <li class="dash">Istvan DAVID</li>
-                        <li class="dash">Louis-Edouard LAFONTANT</li>
-                    </ul>
                 </section>
 
                 <section class="spec-section">
@@ -1502,8 +1412,6 @@
 
                         <p>
                             Les membres du GEODES publient fréquemment des articles traitant de sujets liés aux thèmes de recherche du laboratoire.
-                            Si un membre fait partie des auteurs ou collaborateurs, il est automatiquement inscrit à l'article. 
-                            Lorsque l'article est publié, il devient possible d'ajouter un lien vers la publication.
                         </p>
 
                         <ul class="bare-list definitions">
@@ -1536,6 +1444,10 @@
                                 <span class="def-value">Brouillon, Prêt, Soumis, Publié</span> 
                             </li>
                             <li class="definition">
+                                <span class="def-label">Responsable</span>
+                                <span class="def-value">Un membre (défaut: créateur)</span> 
+                            </li>
+                            <li class="definition">
                                 <span class="def-label">Auteurs</span>            
                                 <span class="def-value">Liste d'auteurs (membre)</span> 
                             </li>
@@ -1559,7 +1471,6 @@
 
                         <p>
                             Certains travaux de recherche nécessitent parfois des démonstrations pratique résultant sur la création et l'exploitation d'outils. 
-                            Si un membre fait partie des collaborateurs, il est automatiquement inscrit à l'outil. 
                         </p>
                         <ul class="bare-list definitions">
                             <li class="definition">
@@ -1567,7 +1478,7 @@
                                 <span class="def-value">Identifiant unique</span> 
                             </li>
                             <li class="definition">
-                                <span class="def-label">Titre</span>
+                                <span class="def-label">Nom</span>
                                 <span class="def-value">Texte de moins de 50 caractères</span> 
                             </li>
                             <li class="definition">
@@ -1589,10 +1500,6 @@
                             <li class="definition">
                                 <span class="def-label">Collaborateurs</span>            
                                 <span class="def-value">Liste de collaborateurs (membre)</span>
-                            </li>
-                            <li class="definition">
-                                <span class="def-label">Articles liés</span>
-                                <span class="def-value">Liste d'articles</span> 
                             </li>
                             <li class="definition">
                                 <span class="def-label">Mots-clés</span>
@@ -1687,7 +1594,6 @@
                         </ul>
                     </div>
                     
-
                     <div class="subsection-group">
                         <h4 class="subsection-group-title">Compte</h4>
                         
@@ -1719,7 +1625,6 @@
                         <h4 class="subsection-group-title">Role</h4>
                         
                         <p>
-                            L'application est chargé avec les roles suivants: SUPERVISEUR, ADMINISTRATEUR, MEMBRE. <br>
                             Un ADMINISTRATEUR peut faire tout ce qu'un MEMBRE peut faire. 
                             Un SUPERVISEUR peut faire tout ce qu'un MEMBRE peut faire.
                         </p>
@@ -1754,12 +1659,71 @@
                             </li>
                         </ul>
                     </div>
+
+                    <div class="subsection-group">
+                        <h4 class="subsection-group-title">Notification</h4>
+                 
+                        <ul class="bare-list definitions">
+                            <li class="definition">
+                                <span class="def-label">Activité</span>
+                                <span class="def-value">Activité liée à la notification</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Auteur</span>
+                                <span class="def-value">Un membre</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Descriptif</span>
+                                <span class="def-value">Texte de moins de 200 caractères</span> 
+                            </li>
+                            <li class="definition">
+                                <span class="def-label">Date de création</span>
+                                <span class="def-value">YYYY-MM-DD</span> 
+                            </li>
+                        </ul>
+                    </div>
                 </section>
 
-                <p style="margin-top: 12px;">
-                    Votre équipe a été octroyée le contrat de développer <strong>la plateforme Roundtable</strong>. <br>
-                    L'interface sera en ligne de commande dans un premier temps et si nous avons le temps et l'énergie, nous ferons une interface graphique par la suite.
-                </p>
+                <section style="padding-bottom: 12px;">
+                    <h3 class="subsection-title">Données</h3>
+
+                    <p>
+                        L'application devrait être initialisée avec la configuration minimale suivante:
+                    </p>
+
+                    <ul class="bare-list data-list font-code">
+                        <li class="data-item dash">
+                            Rôles: MEMBRE, SUPERVISEUR, ADMINISTRATEUR
+                        </li>
+                        <li class="data-item dash">
+                            5 comptes avec le rôle MEMBRE
+                        </li>
+                        <li class="data-item dash">
+                            2 comptes avec le rôle SUPERVISEUR
+                        </li>
+                        <li class="data-item dash">
+                            1 compte avec le rôle ADMINISTRATEUR
+                        </li>
+                        <li class="data-item dash">
+                            2 comptes avec le statut EN_ATTENTE
+                        </li>
+                        <li class="data-item dash">
+                            1 compte avec le statut SUSPENDU
+                        </li>
+                        <li class="data-item dash">
+                            5 articles avec mots-clés
+                        </li>
+                        <li class="data-item dash">
+                            5 outils
+                        </li>
+                        <li class="data-item dash">
+                            5 projets
+                        </li>
+                        <li class="data-item dash">
+                            5 intérêts utilisés par les activités
+                        </li>
+                    </ul>
+                </section>
             </div>
         </section>
 
@@ -1767,10 +1731,8 @@
             <h2 class="section-title">Règles du jeu</h2>
             <div class="section-content">
                 <p>
-                    Vous avez droit à <strong>2 rencontres avec le client (1 rencontre par semaine)</strong>. <br>
+                    Vous avez droit à <strong>1 rencontre avec le client</strong>. <br>
                     La semaine commence le lundi et se termine le samedi. Les questions reçues samedi ou dimanche seront attribuées à la prochaine semaine.
-                    Les réponses aux questions (générales) seront ajoutées au corps du texte plus haut. <br>
-                    Jusqu'au 23 juin, des précisions peuvent être rajoutées au texte. 
                 </p>
     
                 <p>
@@ -1789,12 +1751,10 @@
 
             <div class="section-content">
                 <p>
-                    Pour ce second jalon, vous devez produire un rapport en HTML présentant votre analyse approfondie du problème, 
-                    votre conception et une première implémentation. <br>
-                    Il devra aussi présenter les éléments du premier jalon (DM1) mis à jour.
+                    Pour ce troisième et dernier jalon, vous devez produire un rapport en HTML présentant votre conception détaillée et livrer l'application complète et documentée.<br>
+                    Il devra présenter tous les éléments produits durant le projet, <strong>mis à jour</strong>.
                 </p>
     
-                
                 <div class="task-milestone">
                     <h3 class="task-subsection-title">Cadre du projet</h3>
                     <ul class="tasks">
@@ -1817,16 +1777,16 @@
                         Les hypothèses regroupent toutes les considérations faites pour réaliser le travail en dehors des échanges avec le client et des exigences/contraintes explicites décrites dans l'énoncé.
                         Bien entendu, une hypothèse ne peut pas contredire un fait ou une exigence/contrainte explicite. Elles permettent donc d'être rigoureux en stipulant clairement les suppositions additionnelles faites par votre équipe, et ainsi éviter toute confusion dans la lecture du rapport.
                     </p>
+
+                    <h3 class="task-subsection-title">Analyse</h3>
+                    <ul class="tasks">
+                        <li class="task">Risques: 5 risques associés au projet (avec justification)</li>
+                        <li class="task">Contraintes physiques et conceptuelles</li>
+                        <li class="task"><strong>Suggestions pour la suite</strong></li>
+                        <li class="task">Modèle dynamique: Diagrammes d'activités</li>
+                    </ul>
                 </div>
                 
-                <h3 class="task-subsection-title">Analyse</h3>
-                <ul class="tasks">
-                    <li class="task">Risques: 5 risques associés au projet (avec justification)</li>
-                    <li class="task">Contraintes physiques et conceptuelles</li>
-                    <li class="task">Modèle dynamique: Diagrammes d'activités</li>
-                    <li class="task">Modèle d'objets: Diagramme de classes participantes (ECB) &ndash; <em>Optionnel</em> (facilite la construction du diagramme de classe du design)</li>
-                </ul>
-    
                 <h3 class="task-subsection-title">Conception</h3>
                 <ul class="tasks">
                     <li class="task">Justification des choix du design: Abstraction, couplage et cohésion </li>
@@ -1835,17 +1795,23 @@
     
                 <h3 class="task-subsection-title">Implémentation</h3>
                 <ul class="tasks">
-                    <li class="task">Implémentation du design: Prototype fonctionnel</li>
+                    <li class="task">Implémentation du design: Application fonctionnel</li>
                     <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
+                    <li class="task">Documentation: Documentation technique du code source (JavaDoc)</li>
+                </ul>
+
+                <h3 class="task-subsection-title">Tests</h3>
+                <ul class="tasks">
+                    <li class="task">Rapport de tests unitaires (JUnit)</li>
                 </ul>
     
                 <h3 class="task-subsection-title task-subsection-title--document">Livrables</h3>
                 <ul class="task-documents bare-list">
-                    <li class="task-document check check--color-inherit">Cas d'utilisation (en priorité) et scénarios mis à jour</li>
+                    <li class="task-document check check--color-inherit">Cas d'utilisation</li>
                     <li class="task-document check check--color-inherit">Diagramme d'activités: 
                         <ul class="bare-list" style="padding-left: 12px;">
                             <li class="dash">Couvre les CUs des membres uniquement</li>
-                            <li class="dash">Pas besoin de montrer l'inscription à la plateforme</li>
+                            <li class="dash">Ignorer l'inscription à la plateforme</li>
                         </ul>
                     </li>
                     <li class="task-document check check--color-inherit">Diagramme de classes</li>
@@ -1856,10 +1822,12 @@
                             <li class="dash">Modifier le statut d'un article</li>
                         </ul>
                     </li>
-                    <li class="task-document check check--color-inherit">Prototype fonctionnel: application démontrant les fonctionnalités du logiciel</li>
+                    <li class="task-document check check--color-inherit">Application: Exécutable JAR et config ANT</li>
+                    <li class="task-document check check--color-inherit">Tests: 3 tests unitaires par membre</li>
+                    <li class="task-document check check--color-inherit">Documentation: Javadoc généré et README</li>
                 </ul>
     
-                <a class="bare-link template-link" target="_blank" href="template.html">Template pour le rapport</a>
+                <a class="bare-link template-link" target="_blank" href="README.md">Template pour le README</a>
             </div>
         </section>
 
@@ -1868,7 +1836,7 @@
             <p>
                 Ce devoir compte pour <strong>20% de la note final</strong>. <br>
                 Le rapport et tous les artéfacts produits sont à <strong>remettre au plus tard le dimanche 31 juillet</strong> par le responsable d'équipe. <br>
-                <strong>Au-delà de cette date, la note de 0 sera attribuée au devoir.</strong>.
+                <strong>Au-delà de cette date, la note de 0 sera attribuée au devoir</strong>.
             </p>
 
             <div class="marking-scheme">
@@ -1884,7 +1852,7 @@
                 </tr>
                 <tr class="tbl-evaluation-row">
                     <td>Conception</td>
-                    <td>15%</td>
+                    <td>20%</td>
                 </tr>
                 <tr class="tbl-evaluation-row">
                     <td>Application</td>
@@ -1900,26 +1868,21 @@
                 </tr>
                 <tr class="tbl-evaluation-row">
                     <td>Documentation</td>
-                    <td>15%</td>
+                    <td>10%</td>
                 </tr>
                 <tr class="tbl-evaluation-row">
                     <td>Config</td>
                     <td>5%</td>
                 </tr>
                 <tr class="tbl-evaluation-row tbl-evaluation-row--bonus">
-                    <td><strong>Bonus:</strong> Interface graphique</td>
+                    <td><strong>Bonus:</strong> Démonstration</td>
                     <td>5%</td>
                 </tr>
             </table>
         </div>
             <p>
-                Le <em>Bonus</em> consiste en un usage accru et efficace de Git, démontrant une bonne maitrise.
+                Le <em>Bonus</em> s'obtient en fournissant une vidéo de 5 minutes qui introduit l'application et démontre ces fonctionnalités.
             </p>
-            <ul class="bare-list">
-                <li class="check check--color-inherit">Commits réguliers et descriptifs de chaque membre.</li>
-                <li class="check check--color-inherit">Usage de branches pour le développement du code source.</li>
-                <li class="check check--color-inherit">Gestion de projet par les tiquets.</li>
-            </ul>
         </section>
     </main>
 
