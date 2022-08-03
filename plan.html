@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT2255 - Génie logiciel</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="desciption" content="Page du cours IFT2255 (Génie logiciel), enseigné par Louis-Edouard LAFONTANT à l'Université de Montréal">
+    <meta property="og:title" content="IFT2255 - Génie logiciel">
+    <meta property="og:description" content="Page du cours IFT2255 (Génie logiciel), enseigné par Louis-Edouard LAFONTANT à l'Université de Montréal">
+    <meta property="og:url" content="https://ceduni.github.io/udem-ift2255/">
+    <meta property="og:site_name" content="IFT2255">
+    <meta property="og:image" content="https://ceduni.github.io/udem-ift2255/assets/images/logo_ift2255.png">
+    
+    <link rel="stylesheet" href="dist/style.min.css?v=04">
+    <!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/base.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+</head>
+
+<body>
+    <header class="page-header">
+        <section class="teaching">
+            <div class="teaching-header">
+                <div class="teaching-logo">
+                    <div class="teaching-logo-name">
+                        <span class="teaching-logo-code">IFT</span>
+                        <span class="teaching-logo-number">2255</span>
+                    </div>
+                </div>
+                <div class="teaching-info teaching-info--large">
+                    <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Génie Logiciel</h1>
+                    <p class="teaching-term">Automne 2022</p>
+                    <p class="teaching-schedule">
+                        <strong>Cours:</strong>
+
+                        Mardi 12:00 &ndash; 14:00 @
+                        1355 Pav. André-Aisenstadt
+                        <strong>&</strong>
+                        Vendredi 12:00 &ndash; 13:00
+                        1355 Pav. André-Aisenstadt
+                    </p>
+                    <p class="teaching-schedule">
+                        <strong>Démos:</strong>
+                        Vendredi 13:00 &ndash; 15:00
+                        1355 Pav. André-Aisenstadt
+                    </p>
+                </div>
+            </div>
+
+            <ul class="bare-list teaching-links">
+                <li class="teaching-link">
+                    <a class="bare-link teaching-link__link teaching-link__link--plan"
+                        href="https://studium.umontreal.ca/course/view.php?id=217266" target="_blank">
+                        StudiUM
+                    </a>
+                </li>
+                <li class="teaching-link">
+                    <a class="bare-link teaching-link__link teaching-link__link--video"
+                        href="https://youtube.com/playlist?list=PLBnP9-c2cRL98ZybPY1DVgSvRvjI_4sFc" target="_blank">
+                        Vidéos
+                    </a>
+                </li>
+            </ul>
+
+            <div class="teaching-info teaching-info--small">
+                <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Génie Logiciel</h1>
+                <p class="teaching-term">Été 2022</p>
+                <p class="teaching-schedule">
+                    <strong>Cours:</strong>
+
+                    Mardi 12:00 &ndash; 14:00 @
+                    1355 Pav. André-Aisenstadt
+                    <strong>&</strong>
+                    Vendredi 12:00 &ndash; 13:00
+                    1355 Pav. André-Aisenstadt
+                </p>
+                <p class="teaching-schedule">
+                    <strong>Démos:</strong>
+                    Vendredi 13:00 &ndash; 15:00
+                    1355 Pav. André-Aisenstadt
+                </p>
+            </div>
+        </section>
+
+        <section class="teacher-section">
+            <h2 class="teacher-section-title">Enseignants</h2>
+            <ul class="bare-list teachers">
+                <li class="teacher teacher--instructor card">
+                    <img class="card-img" src="./assets/images/photo_louis_edouard_lafontant.jpeg" alt="Photo de Louis-Edouard LAFONTANT">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link card-link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">Louis-Edouard LAFONTANT</a>
+                        </p>
+                        <p class="card-role">
+                            Chargé de cours <br>
+                            <span class="card-address">Bureau 2352 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via StudiUM.
+                            Pour plannifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
+                        </p>
+                    </div>
+                </li>
+                <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="" alt="Photo de auxiliaire 1">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link card-link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">Auxiliaire 1</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire d'enseignement <br>
+                            <span class="card-address">Bureau 2352 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:">courriel</a> ou via StudiUM.
+                            Pour plannifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
+                        </p>
+                    </div>
+                </li>
+                <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="" alt="Photo de auxiliaire 2">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link card-link" href="https://github.com/an-li/" target="_blank">Auxiliaire 2</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire d'enseignement <br>
+                            <span class="card-address">Bureau 2352 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:an.li@umontreal.ca">courriel</a> ou via StudiUM.
+                            <span class="card-availability">Disponible le vendredi de 15h à 17h</span>.
+                        </p>
+                    </div>
+                </li>
+                <!-- <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="./assets/images/photo_oussama.jpg" alt="Photo de Aurélien DUCOIN">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="https://www.linkedin.com/in/oussama-ben-sghaier/">Oussama BEN
+                                SGHAIER</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire <br>
+                            <span class="card-address">Bureau 2238 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:oussamasghaier1995@gmail.com">courriel</a> ou
+                            via StudiUM.
+                            <span class="card-availability">Disponible le mercredi entre 13h00 et 15h00</span>.
+                        </p>
+                    </div>
+                </li> -->
+            </ul>
+        </section>
+
+        <section class="plan">
+            <h2 class="plan-section-title">Plan de cours</h2>
+            <p class="teaching-content">
+                Le but du cours est de vous introduire au génie logicel en mettant l'emphase sur les techniques
+                et méthodologies. <br>
+                Les sujets couverts sont: les processus de développement, les activités de génie logiciel (analyse des
+                besoins, conception, implémentation, vérification et maintenance)
+                et la modélisation de logiciel en UML. <br>
+                Le cours vous donne aussi une expérience pratique du développement collaboratif d'un logiciel.
+            </p>
+
+            <div class="plan-parts">
+                <div class="plan-part plan-part--goal">
+                    <h3 class="plan-part-title">Objectifs</h3>
+                    <ul class="plan-goals">
+                        <li class="plan-goal">Comprendre le <strong>processus de développement</strong> d'un logiciel</li>
+                        <li class="plan-goal">Cueillir et documenter les <strong>besoins</strong> d'un client et les
+                            <strong>spécifications</strong> d'un produit logiciel
+                        </li>
+                        <li class="plan-goal">Concevoir un système orienté objet en <strong>UML</strong></li>
+                        <li class="plan-goal">Implémenter un logicel en programmation <strong>orienté objet</strong></li>
+                        <li class="plan-goal">Être capable de <strong>tester</strong> un logiciel</li>
+                        <li class="plan-goal">Développer un logiciel en <strong>équipe</strong></li>
+                    </ul>
+                </div>
+
+                <div class="plan-part plan-part--evaluation">
+                    <h3 class="plan-part-title">Évaluations</h3>
+                    <ul class="bare-list plan-evaluations">
+                        <li class="plan-evaluation">
+                            <h4 class="plan-evaluation-title">Examens</h4>
+                            Intra (20%), Final (35%)
+                        </li>
+                        <li class="plan-evaluation">
+                            <h4 class="plan-evaluation-title">Devoirs</h4>
+                            <ul class="bare-list plan-eval-assignments">
+                                <li class="plan-eval-assignment">
+                                    DM1 (<strong>10%</strong>)
+                                    <a class="plan-evaluation__link" href="devoirs/dm1.html">Énoncé DM1</a>
+                                </li>
+                                <li class="plan-eval-assignment">
+                                    DM2 (<strong>15%</strong>)
+                                    <a class="plan-evaluation__link" href="devoirs/dm2.html">Énoncé DM2</a>
+                                </li>
+                                <li class="plan-eval-assignment">
+                                    DM3 (<strong>20%</strong>)
+                                    <a class="plan-evaluation__link" href="devoirs/dm3.html">Énoncé DM3</a>
+                                </li>
+                            </ul>
+                            <h5 style="font-size: 1.1em; margin: 0;">Paramètres</h5>
+                            <ul class="plan-eval-details bare-list">
+                                <li class="plan-eval-detail">En groupe de 3-4</li>
+                                <li class="plan-eval-detail">Langage de programmation: <strong>Java</strong></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="plan-part plan-part--resource">
+                    <h3 class="plan-part-title">Matériels</h3>
+
+                    <ul class="bare-list plan-resources">
+                        <li class="plan-resource plan-resource--book">
+                            <h4 class="plan-resource-title">Livre</h4>
+                            Schach, S. R. (2010). <em>Object-oriented and classical software engineering</em>,
+                            8<sup>th</sup> edition. <br>
+                            Rajlich, V. (2011). <em>Software engineering: The current practice.</em> Chapman and
+                            Hall/CRC.
+                        </li>
+                        <li class="plan-resource plan-resource--tool">
+                            <h4 class="plan-resource-title">Logiciel</h4>
+                            Visual Paradigm
+                        </li>
+                        <li class="plan-resource plan-resource--web">
+                            <h4 class="plan-resource-title">Ressource</h4>
+                            <a class="plan-evaluation__link" href="https://laurent-audibert.developpez.com/Cours-UML/" target="_blank">Cours
+                                UML de Laurent AUDIBERT</a>
+                        </li>
+                    </ul>
+                    <p>
+                        Tout le matériel, supports et communications sont disponibles dans
+                        <a class="bare-link inline-link" href="https://studium.umontreal.ca/course/view.php?id=199083"
+                            target="_blank">StudiUM</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="page-body">
+        <aside class="body-navigation">
+            <ul class="bare-list weeks">
+                <li class="week">
+                    <h4 class="week-title">Semaine 01 (05 Septembre)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Présentation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Enseignant</li>
+                                <li class="week-content-detail">Plan de cours</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Introduction</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Génie Logiciel</li>
+                                <li class="week-content-detail">Vie du logiciel</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modèle de développement</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Linéaire (Cascade, V)</li>
+                                <li class="week-content-detail">Itératif (Prototypage)</li>
+                                <li class="week-content-detail">Incrémental (Phase)</li>
+                                <!-- <li class="week-content-detail">Itératif & Incrémental (Unifié)</li> -->
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Ch.1</strong> (<em>OO and classical SE</em>, Schach)
+                                </li>
+                                <li class="lecture">
+                                    📖 <strong>Ch.1</strong> (<em>SE practice</em>, Rajlich)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Présentation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Auxiliaire</li>
+                                <li class="week-content-detail">Disponibilités</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Formation des équipes</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Discord</li>
+                                <li class="week-content-detail">StudiUM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 02 (09 Mai)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modèle de développement</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Itératif & Incrémental</li>
+                                <li class="week-content-detail">Modèle Unifié</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Processus de développement</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Phase</li>
+                                <li class="week-content-detail">Flux de travail (<em>workflow</em>)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exigences</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cueillette des besoins</li>
+                                <li class="week-content-detail">Glossaire</li>
+                                <li class="week-content-detail">Échéancier</li>
+                                <li class="week-content-detail">Prototypage</li>
+                                <li class="week-content-detail">Besoin fonctionnel</li>
+                                <li class="week-content-detail">Besoin non-fonctionnel</li>
+                                <li class="week-content-detail">Priorisation</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Capsule</span>
+                            <a class="bare-link week-content-video" title="Introduction et Processus de développement" 
+                                href="https://classe.iro.umontreal.ca/w/xcGaFixKbbtACEyi9UcYJn">🎬 Intro + Processus de dével.</a>
+                        </li>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Ch.2-3</strong> (<em>OO and classical SE</em>, Schach)
+                                </li>
+                                <li class="lecture">
+                                    📖 <strong>Ch.2-3</strong> (<em>SE practice</em>, Rajlich)
+                                </li>
+                                <li class="lecture">
+                                    📖 <strong>Vie de logiciel</strong> (StudiUM)
+                                </li>
+                                <li class="lecture">
+                                    📖 <strong>Équipe de développement</strong> (StudiUM)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Outils nécessaires</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Discord</li>
+                                <li class="week-content-detail">GitHub</li>
+                                <li class="week-content-detail">Visual Paradigm</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Introduction DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Questions-réponses</li>
+                                <li class="week-content-detail">Formation des groupes</li>
+                                <li class="week-content-detail">Initiation à GIT</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                        </li>
+                    </ul>
+                    <strong style="margin-top: 6px; font-size: 1.1em;">DM1 disponible (13 Mai) 📅</strong>
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 03 (16 Mai)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exigences</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Besoin fonctionnel</li>
+                                <li class="week-content-detail">Besoin non-fonctionnel</li>
+                                <li class="week-content-detail">Priorisation</li>
+                                <li class="week-content-detail">Cahier des charges</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Cas d'utilisation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme UML</li>
+                                <li class="week-content-detail">Acteurs</li>
+                                <li class="week-content-detail">Scénario</li>
+                                <li class="week-content-detail">Cas d'étude: MSG</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Analyse</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Partie à informatiser</li>
+                                <li class="week-content-detail">Exigences conceptuelles</li>
+                                <li class="week-content-detail">Exigences matérielles</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Capsule</span>
+                            <a class="bare-link week-content-video" title="Exigences: Glossaire + Cas d'utilisation"
+                                href="https://classe.iro.umontreal.ca/w/jtaQZa6E2B2tTgigkUNN36">🎬 Exigences</a>
+                            <a class="bare-link week-content-video" title="Analyse fonctionnelle: Scénarios des CUs"
+                                href="https://classe.iro.umontreal.ca/w/3H2v9eb5tRk8VUDUBwS5qm">🎬 Analyse fonctionnelle</a>
+                        </li>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Ch.11</strong> (<em>OO and classical SE</em>, Schach)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Suivi DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Questions-réponses</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Git + GitHub</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Commandes de base</li>
+                                <li class="week-content-detail">Branches</li>
+                                <li class="week-content-detail">Tiquets</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme de cas d'utilisation</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Quiz</li>
+                                <li class="week-content-detail">Flux des exigences</li>
+                                <li class="week-content-detail">Risques</li>
+                                <li class="week-content-detail">Exigences non-fonctionnelles</li>
+                                <li class="week-content-detail">Cas d'étude: #GYM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 04 (23 Mai)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modèle d'analyse</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme d'activités</li>
+                                <li class="week-content-detail">Diagramme ECB</li>
+                                <li class="week-content-detail">Cas d'étude: MSG</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Conception</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Vue architecturale</li>
+                                <li class="week-content-detail">Vue détaillée</li>
+                                <li class="week-content-detail">Décomposition</li>
+                                <li class="week-content-detail">Modules</li>
+                                <li class="week-content-detail" title="Conception orientée-objet">Conception OO</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Capsule</span>
+                            <a class="bare-link week-content-video" title="Révision CUs, Exigences matérielles, Modèle" 
+                                href="https://classe.iro.umontreal.ca/w/tfgyF2yePfo3A7JUtiLhRT">Révision CUs + Besoins matériels</a>
+                            <a class="bare-link week-content-video" title="Diagramme d'activités (Modèle dynamique)" 
+                                href="https://classe.iro.umontreal.ca/w/hN4mwRvWxsDz5ZFvFfJ4Tw">Diagramme d'activités</a>
+                        </li>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Ch.17.4,17.5 + Ch.13</strong> (<em>OO and classical SE</em>, Schach)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Suivi DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Questions-réponses</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme d'activités</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Quiz</li>
+                                <li class="week-content-detail">Analyse</li>
+                                <li class="week-content-detail">Scénario</li>
+                                <li class="week-content-detail">Cas d'étude: #GYM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 05 (30 Mai)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Conception</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Décomposition</li>
+                                <li class="week-content-detail">Modules</li>
+                                <li class="week-content-detail" title="Conception orientée-objet">Conception OO</li>
+                                <li class="week-content-detail">Diagramme de classe</li>
+                                <li class="week-content-detail">Diagramme de séquence</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modélisation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">UML</li>
+                                <li class="week-content-detail">Diagramme de classe</li>
+                                <li class="week-content-detail">Diagramme de séquence</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Capsule</span>
+                            <a class="bare-link week-content-video" title="Diagramme de classes participantes (Modèle d'objet)" 
+                                href="https://youtu.be/9MkYczLkFJE">Diagramme de classes participantes</a>
+                        </li>
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Ch.14</strong> (<em>OO and classical SE</em>, Schach)
+                                </li>
+                                <li class="lecture">
+                                    📖 <strong>Modélisation UML</strong> (StudiUM)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Suivi DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Questions-réponses</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme d'activités</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cas d'étude: #GYM</li>
+                                <li class="week-content-detail">Diagramme d'activités</li>
+                                <li class="week-content-detail">Diagramme ECB</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong style="margin-top: 6px; font-size: 1.1em">Remise DM1 (5 Juin)</strong> 🎯
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 06 (06 Juin)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modélisation: Diagramme de classe</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Représentation</li>
+                                <li class="week-content-detail">Visibilité</li>
+                                <li class="week-content-detail">Association</li>
+                                <li class="week-content-detail">Cardinalité</li>
+                                <li class="week-content-detail">Navigabilité</li>
+                                <li class="week-content-detail">Composition</li>
+                                <li class="week-content-detail">Généralisation</li>
+                                <li class="week-content-detail">Correspondance Java</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modélisation: Diagramme de séquence</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Dimensions</li>
+                                <li class="week-content-detail">Éléments graphiques</li>
+                                <li class="week-content-detail">Acteurs et Objets</li>
+                                <li class="week-content-detail">Messages</li>
+                                <li class="week-content-detail">Fragments</li>
+                                <li class="week-content-detail">Cohérence avec diagramme de classe</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Introduction DM2</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Retour DM1</li>
+                                <li class="week-content-detail">Questions-réponses</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Modélisation</li>
+                                <li class="week-content-detail">Cas d'utilisation</li>
+                                <li class="week-content-detail">Diagramme de classes</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong style="margin-top: 6px; font-size: 1.1em;">DM2 disponible (6 Juin) 📅</strong>
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 07 (13 Juin)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Révision</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Architecture</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Couplage & Cohésion</li>
+                                <li class="week-content-detail">Réutilisation</li>
+                                <li class="week-content-detail">Libraire</li>
+                                <li class="week-content-detail">Framework</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content ex">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Examen intra (17 Juin) 📅</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Modèle de développement</li>
+                                <li class="week-content-detail">Processus de développement</li>
+                                <li class="week-content-detail">Exigences</li>
+                                <li class="week-content-detail">Cas d'utilisation</li>
+                                <li class="week-content-detail">Analyse</li>
+                                <li class="week-content-detail">Conception</li>
+                                <li class="week-content-detail">Modélisation</li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 08 (20 Juin)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Architecture</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Pipes et filtres</li>
+                                <li class="week-content-detail">En couche</li>
+                                <li class="week-content-detail">MVC</li>
+                                <li class="week-content-detail">Client-serveur</li>
+                                <li class="week-content-detail">Peer-to-peer</li>
+                                <li class="week-content-detail">Microservices</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Paradigme OO</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Objets & classes</li>
+                                <li class="week-content-detail">Héritage</li>
+                                <li class="week-content-detail">Polymorphisme</li>
+                                <li class="week-content-detail">Encapsulation</li>
+                                <li class="week-content-detail">Abstraction</li>
+                                <li class="week-content-detail">Généricité</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 09 (27 Juin)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Patrons de conception</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Types de patrons</li>
+                                <li class="week-content-detail">Adapteur</li>
+                                <li class="week-content-detail">Singleton</li>
+                                <li class="week-content-detail">Délégation</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">patron-adapteur</li>
+                                <li class="week-content-detail">patron-stratégie</li>
+                                <li class="week-content-detail">patron-composite</li>
+                                <li class="week-content-detail">patron-méthode</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong style="margin-top: 6px; font-size: 1.1em">Remise DM2 (5 Juillet)</strong> 🎯
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 10 (04 Juil.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Patrons de conception</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Proxy</li>
+                                <li class="week-content-detail">Composite</li>
+                                <li class="week-content-detail">Observateur</li>
+                                <li class="week-content-detail">Fabrique</li>
+                                <li class="week-content-detail">Stratégie</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Implémentation</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Langages</li>
+                                <li class="week-content-detail">Normes</li>
+                                <li class="week-content-detail">Documentation</li>
+                                <li class="week-content-detail">Débogage</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Qualités du logiciel (ISO)</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Pertinence fonctionnelle</li>
+                                <li class="week-content-detail">Performance</li>
+                                <li class="week-content-detail">Utilisabilité</li>
+                                <li class="week-content-detail">Fiabilité</li>
+                                <li class="week-content-detail">Maintenabilité</li>
+                                <li class="week-content-detail">Transférabilité</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Introduction DM3</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Retour DM2</li>
+                                <li class="week-content-detail">Questions-réponses</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Modélisation</li>
+                                <li class="week-content-detail">Patrons de conception</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong style="margin-top: 6px; font-size: 1.1em;">DM3 disponible (5 Juillet) 📅</strong>
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 11 (11 Juil.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Tests unitaires</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">succès</li>
+                                <li class="week-content-detail">échec</li>
+                                <li class="week-content-detail">sanitaire</li>
+                                <li class="week-content-detail">JUnit</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Vérification & Validation</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Inspections</li>
+                                <li class="week-content-detail">Méthodes formelles</li>
+                                <li class="week-content-detail">Tests</li>
+                                <li class="week-content-detail">Boite noire</li>
+                                <li class="week-content-detail">Boite blanche</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Types de test</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">unitaire</li>
+                                <li class="week-content-detail">intégration</li>
+                                <li class="week-content-detail">système</li>
+                                <li class="week-content-detail">acceptation</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Déploiement</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">versionnement</li>
+                                <li class="week-content-detail">environnement</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Déploiement</strong> (StudiUM)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Suivi DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Questions-réponses</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">JUnit</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Syntaxe</li>
+                                <li class="week-content-detail">Démo Eclipse</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Documentation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">JavaDoc</li>
+                                <li class="week-content-detail">ANT</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">DevOps</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">CI/CD</li>
+                                <li class="week-content-detail">Demo-Github Actions</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 12 (18 Juil.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Maintenance</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Correctif</li>
+                                <li class="week-content-detail">Adaptif</li>
+                                <li class="week-content-detail">Préventif</li>
+                                <li class="week-content-detail">Perfectif</li>
+                                <li class="week-content-detail">Logiciel suivi</li>
+                                <li class="week-content-detail">Test regression</li>
+                                <li class="week-content-detail">Recherche texuel</li>
+                                <li class="week-content-detail">Recherche graphique</li>
+                                <li class="week-content-detail">Refactoring</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Conclusion</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Bilan</li>
+                                <li class="week-content-detail">Feedback</li>
+                                <li class="week-content-detail">La suite</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title week-content-title--video">Lecture</span>
+                            <ul class="bare-list lectures">
+                                <li class="lecture">
+                                    📖 <strong>Éthiques et Licenses</strong> (StudiUM)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content ex">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Examen final (22 Juillet) 📅</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Modèle de développement</li>
+                                <li class="week-content-detail">Gestion des versions</li>
+                                <li class="week-content-detail">Diagrammes UML</li>
+                                <li class="week-content-detail">Exigences</li>
+                                <li class="week-content-detail">Analyse</li>
+                                <li class="week-content-detail">Conception</li>
+                                <li class="week-content-detail">Modélisation</li>
+                                <li class="week-content-detail">Paradigme OO</li>
+                                <li class="week-content-detail">Architecture</li>
+                                <li class="week-content-detail">Patrons de conception</li>
+                                <li class="week-content-detail">Vérification et validation</li>
+                                <li class="week-content-detail">Tests</li>
+                                <li class="week-content-detail">Déploiement</li>
+                                <li class="week-content-detail">Maintenance</li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </li>
+                <li class="week hidden">
+                    <h4 class="week-title">Semaine 13 et plus</h4>
+                    <strong style="font-size: 1.1em;">Remise DM3 (31 Juillet) 🎯</strong>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="body-content">
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 1</h2>
+                </div>
+
+                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                    <li class="preview">
+                        <div class="preview-slides">
+                            <img class="img-preview" src="assets/images/photo_introduction.png" alt="Caractéristique du génie">
+                        </div>
+                        <div class="preview-description">
+                            <h3 class="preview-description-title">Génie</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
+                                </li>
+                                <li>
+                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
+                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
+                                </li>
+                                <li>
+                                    Utilise des outils et une méthodologie de travail
+                                </li>
+                            </ul>
+
+                            <h3 class="preview-description-title">Logiciel</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
+                                </li>
+                                <li>
+                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
+                                </li>
+                                <li>
+                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item"><strong>Génie: </strong>Qualités de l'ingénieur</li>
+                        <li class="section-summary-list-item"><strong>Logiciel: </strong>Caractéristiques du logicel</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 2</h2>
+                </div>
+
+                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                    <li class="preview">
+                        <div class="preview-slides">
+                            <img class="img-preview" src="assets/images/modele_cascade.png" alt="Modèle en cascade">
+                            <img class="img-preview" src="assets/images/modele_v.png" alt="Modèle en V">
+                        </div>
+                        <div class="preview-description">
+                            <h3 class="preview-description-title">Génie</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
+                                </li>
+                                <li>
+                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
+                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
+                                </li>
+                                <li>
+                                    Utilise des outils et une méthodologie de travail
+                                </li>
+                            </ul>
+
+                            <h3 class="preview-description-title">Logiciel</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
+                                </li>
+                                <li>
+                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
+                                </li>
+                                <li>
+                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="preview">
+                        <div class="preview-slides">
+                            <img class="img-preview" src="assets/images/modele_prototypage.png" alt="Processus itératif">
+                        </div>
+                        <div class="preview-description">
+                            <h3 class="preview-description-title">Génie</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
+                                </li>
+                                <li>
+                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
+                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
+                                </li>
+                                <li>
+                                    Utilise des outils et une méthodologie de travail
+                                </li>
+                            </ul>
+
+                            <h3 class="preview-description-title">Logiciel</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
+                                </li>
+                                <li>
+                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
+                                </li>
+                                <li>
+                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="preview">
+                        <div class="preview-slides">
+                            <img class="img-preview" src="assets/images/modele_increment.png" alt="Modèle incrémental">
+                            <img class="img-preview" src="assets/images/modele_i.png" alt="Modèle incrémental">
+                        </div>
+                        <div class="preview-description">
+                            <h3 class="preview-description-title">Génie</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
+                                </li>
+                                <li>
+                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
+                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
+                                </li>
+                                <li>
+                                    Utilise des outils et une méthodologie de travail
+                                </li>
+                            </ul>
+
+                            <h3 class="preview-description-title">Logiciel</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
+                                </li>
+                                <li>
+                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
+                                </li>
+                                <li>
+                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item"><strong>Génie: </strong>Qualités de l'ingénieur</li>
+                        <li class="section-summary-list-item"><strong>Logiciel: </strong>Caractéristiques du logicel</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 3</h2>
+                </div>
+
+                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
+                    <li class="preview">
+                        <div class="preview-slides">
+                            <img class="img-preview" src="assets/images/photo_introduction.png" alt="Caractéristique du génie">
+                        </div>
+                        <div class="preview-description">
+                            <h3 class="preview-description-title">Génie</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
+                                </li>
+                                <li>
+                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
+                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
+                                </li>
+                                <li>
+                                    Utilise des outils et une méthodologie de travail
+                                </li>
+                            </ul>
+
+                            <h3 class="preview-description-title">Logiciel</h3>
+
+                            <ul class="bare-list">
+                                <li>
+                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
+                                </li>
+                                <li>
+                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
+                                </li>
+                                <li>
+                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item"><strong>Génie: </strong>Qualités de l'ingénieur</li>
+                        <li class="section-summary-list-item"><strong>Logiciel: </strong>Caractéristiques du logicel</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="content-wrapper">
+            <p>&copy; 2021 &ndash; 2022 Louis-Edouard LAFONTANT</p>
+        </div>
+    </footer>
+
+    <script src="dist/app.js"></script>
+</body>
+
+</html>

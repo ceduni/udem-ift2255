@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT2255</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="desciption" content="Page du cours IFT2255 (Génie logiciel), enseigné par Louis-Edouard LAFONTANT à l'Université de Montréal">
+    <link rel="stylesheet" href="../dist/style.min.css">
+    <style>
+        .section-title {
+            font-size: 2.4em;
+        }
+
+        .teams {
+            display: flex; flex-direction: row; flex-wrap: wrap;
+        }
+
+        .team {
+            display: flex; flex-direction: column;
+            padding: 8px 12px;
+            background-color: #2c5eb4;
+            margin-right: 12px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+
+        .team-info {
+            display: flex; align-items: center; 
+            margin-bottom: 4px;
+        }
+
+            .team-name {
+                margin-right: 6px;
+                font-weight: 300;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+        .team-group {
+            display: flex;
+        }
+
+        .team-captain {
+            font-size: 0.9em;
+            font-weight: 500;
+            width: 100%;
+            color: #d5d5d5;
+        }
+        
+        .icon {
+            display: inline-block;
+            font-style: normal;
+        }
+
+        .icon-person {
+            position: relative;
+            margin-right: 3px;
+            width: 16px; min-width: 16px;
+            height: 16px;
+            font-size: 1rem;
+            z-index: 5;
+        }
+            .icon-person:before {
+                content: "";
+                position: absolute;
+                top: 0; left: calc(50% - 4px);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #FFD300;
+                box-shadow: 0 1px 2px #333;
+                z-index: -1;
+            }
+            
+            .icon-person:after {
+                content: "";
+                position: absolute;
+                top: 6px; bottom: 0; left: 0; right: 0;
+                border-radius: 180px 180px 30px 30px;
+                background-color: #f5f5f5;
+                box-shadow: 0 2px 4px -2px #fff;
+                z-index: -2;
+            }
+
+            .task-section {
+                margin-top: 24px;
+                color: #222;
+            }
+
+                .task-section .section-title {
+                    color: #222;
+                }
+    </style>
+</head>
+
+<body>
+    <header class="page-header">
+        <section class="teaching">
+            <div class="teaching-header">
+                <div class="teaching-logo">
+                    <div class="teaching-logo-name">
+                        <span class="teaching-logo-code">IFT</span>
+                        <span class="teaching-logo-number">2255</span>
+                    </div>
+                </div>
+                <div class="teaching-info teaching-info--large">
+                    <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Génie Logiciel</h1>
+                    <p class="teaching-term">Automne 2021</p>
+                    <p class="teaching-schedule">
+                        <strong>Cours:</strong>
+
+                        Mardi 14:30 &ndash; 16:20 @
+                        B-2325 Pav. 3200 J.-Brillant
+                        <strong>&</strong>
+                        Jeudi 14:30 &ndash; 15:20
+                        1360 Pav. André-Aisenstadt
+                    </p>
+                    <p class="teaching-schedule">
+                        <strong>Démos:</strong>
+                        Jeudi 15:30 &ndash; 17:20
+                        1360 Pav. André-Aisenstadt
+                    </p>
+                </div>
+            </div>
+
+            <div class="teaching-info teaching-info--small">
+                <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Génie Logiciel</h1>
+                <p class="teaching-term">Automne 2021</p>
+                <p class="teaching-schedule">
+                    <strong>Cours:</strong>
+
+                    Mardi 14:30 &ndash; 16:20 @
+                    B-2325 Pav. 3200 J.-Brillant
+                    <strong>&</strong>
+                    Jeudi 14:30 &ndash; 15:20
+                    1360 Pav. André-Aisenstadt
+                </p>
+                <p class="teaching-schedule">
+                    <strong>Démos:</strong>
+                    Jeudi 15:30 &ndash; 17:20
+                    1360 Pav. André-Aisenstadt
+                </p>
+            </div>
+        </section>
+
+        <section class="teacher-section">
+            <h2 class="teacher-section-title">Enseignants</h2>
+            <ul class="bare-list teachers">
+                <li class="teacher teacher--instructor card">
+                    <img class="card-img" src="./../assets/images/photo_louis_edouard_lafontant.jpeg"
+                        alt="Photo de Louis-Edouard LAFONTANT">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="http://www-ens.iro.umontreal.ca/~lafontle/">Louis-Edouard LAFONTANT</a>
+                        </p>
+                        <p class="card-role">
+                            Chargé de cours <br>
+                            <span class="card-address">Bureau 2352 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a
+                                href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via StudiUM.
+                            Pour plannifier une rencontre, utilisez le <a
+                                href="https://calendly.com/lelafontant/30min">calendrier</a>.
+                        </p>
+                    </div>
+                </li>
+                <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="./../assets/images/photo_aurelien_ducoin.png" alt="Photo de Aurélien DUCOIN">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="https://github.com/GreenWallows">Aurélien DUCOIN</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire <br>
+                            <span class="card-address">Bureau 2238 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:aurelien.ducoin@umontreal.ca">courriel</a> ou
+                            via StudiUM.
+                            <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
+                        </p>
+                    </div>
+                </li>
+                <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="./../assets/images/photo_naima.jpg" alt="Photo de Naima ESSADI">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="https://www.linkedin.com/in/naima-essadi/">Naima ESSADI</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire <br>
+                            <span class="card-address">Bureau 2238 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:naimaessadi@gmail.com">courriel</a> ou via
+                            StudiUM.
+                            <span class="card-availability">Disponible le mercredi entre 10h30 et 12h30</span>.
+                        </p>
+                    </div>
+                </li>
+                <li class="teacher teacher--assistant card">
+                    <img class="card-img" src="./../assets/images/photo_oussama.jpg" alt="Photo de Oussama BEN SGHAIER">
+                    <div class="teacher-info">
+                        <p class="card-name">
+                            <a class="bare-link" href="https://www.linkedin.com/in/oussama-ben-sghaier/">Oussama BEN SGHAIER</a>
+                        </p>
+                        <p class="card-role">
+                            Auxiliaire <br>
+                            <span class="card-address">Bureau 2238 Pav. André-Aisenstadt</span>
+                        </p>
+                        <p class="card-description">
+                            Envoyez-moi vos messages par <a href="mailto:oussamasghaier1995@gmail.com">courriel</a> ou
+                            via StudiUM.
+                            <span class="card-availability">Disponible le mercredi entre 13h00 et 15h00</span>.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="plan">
+            <h2 class="plan-section-title">Plan de cours</h2>
+            <p class="teaching-content">
+                Le but du cours est de vous introduire au génie logicel en mettant l'emphase sur les techniques
+                et méthodologies. <br>
+                Les sujets couverts sont: les processus de développement, les activités de génie logiciel (analyse des
+                besoins, conception, implémentation, vérification et maintenance)
+                et la modélisation de logiciel en UML. <br>
+                Le cours porte sur la théorie du génie logiciel, mais vous donne aussi
+                une expérience pratique du développement collaboratif d'un logiciel qu'ils auront à construire.
+            </p>
+
+            <div class="plan-parts">
+                <div class="plan-part plan-part--goal">
+                    <h3 class="plan-part-title">Objectifs</h3>
+                    <ul class="plan-goals">
+                        <li class="plan-goal">Comprendre le <strong>processus de développement</strong> d'un logiciel
+                        </li>
+                        <li class="plan-goal">Cueillir et documenter les <strong>besoins</strong> et les
+                            <strong>spécifications</strong> d'un produit logiciel
+                        </li>
+                        <li class="plan-goal">Concevoir un système orienté objet en <strong>UML</strong></li>
+                        <li class="plan-goal">Implémenter un logicel en programmation <strong>orienté objet</strong>
+                        </li>
+                        <li class="plan-goal">Être capable de <strong>tester</strong> un logiciel</li>
+                        <li class="plan-goal">Pouvoir incorporer des <strong>changements</strong> à un logiciel après sa
+                            <strong>livraison</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="plan-part plan-part--evaluation">
+                    <h3 class="plan-part-title">Évaluations</h3>
+                    <ul class="bare-list plan-evaluations">
+                        <li class="plan-evaluation">
+                            <h4 class="plan-evaluation-title">Examens</h4>
+                            Intra (20%), Final (35%)
+                        </li>
+                        <li class="plan-evaluation">
+                            <h4 class="plan-evaluation-title">Devoirs</h4>
+                            <ul class="bare-list plan-eval-assignments">
+                                <li class="plan-eval-assignment">
+                                    DM1 (<strong>10%</strong>)
+                                </li>
+                                <li class="plan-eval-assignment">
+                                    DM2 (<strong>15%</strong>)
+                                </li>
+                                <li class="plan-eval-assignment">
+                                    DM3 (<strong>20%</strong>)
+                                </li>
+                            </ul>
+                            <h5 style="font-size: 1.1em; margin: 0;">Paramètres</h5>
+                            <ul class="plan-eval-details">
+                                <li class="plan-eval-detail">En groupe (3 idéalement)</li>
+                                <li class="plan-eval-detail">Langage de programmation: Java</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="plan-part plan-part--resource">
+                    <h3 class="plan-part-title">Matériels</h3>
+
+                    <ul class="bare-list plan-resources">
+                        <li class="plan-resource plan-resource--book">
+                            <h4 class="plan-resource-title">Livre</h4>
+                            Schach, S. R. (2010). <em>Object-oriented and classical software engineering</em>,
+                            8<sup>th</sup> edition. <br>
+                            Rajlich, V. (2011). <em>Software engineering: The current practice.</em> Chapman and
+                            Hall/CRC.
+                        </li>
+                        <li class="plan-resource plan-resource--tool">
+                            <h4 class="plan-resource-title">Logiciel</h4>
+                            Visual Paradigm
+                        </li>
+                        <li class="plan-resource plan-resource--web">
+                            <h4 class="plan-resource-title">Ressource</h4>
+                            <a class="plan-evaluation__link" href="https://laurent-audibert.developpez.com/Cours-UML/" target="_blank">Cours
+                                UML de Laurent AUDIBERT</a>
+                        </li>
+                    </ul>
+                    <p>
+                        Tout le matériel, supports et communications sont disponibles dans
+                        <a class="bare-link inline-link" href="https://studium.umontreal.ca/course/view.php?id=199083"
+                            target="_blank">StudiUM</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="page-body">
+        <aside class="body-navigation">
+            <ul class="bare-list weeks">
+                <li class="week">
+                    <h4 class="week-title">Semaine 01 (02 Sep.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Présentation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Enseignant</li>
+                                <li class="week-content-detail">Plan de cours</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Introduction</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Génie</li>
+                                <li class="week-content-detail">Logiciel</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture</strong>
+                            Ch.1, Rajlich ch.1 <br>
+                            Vie de logicel (StudiUM)
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 02 (07 Sep.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modèle de développement</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Linéaire (Cascade, V)</li>
+                                <li class="week-content-detail">Itératif (Prototypage)</li>
+                                <li class="week-content-detail">Incrémental (Phase)</li>
+                                <li class="week-content-detail">Itératif & Incrémental (Unifié)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Processus de développement</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Phase</li>
+                                <li class="week-content-detail">Flux de travail (<em>workflow</em>)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>🎬Capsule</strong>
+                            <a href="https://classe.iro.umontreal.ca/w/xcGaFixKbbtACEyi9UcYJn">Introduction + Processus de développement</a>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture</strong>
+                            Ch.2-3, Rajlich ch.2-3 <br>
+                            Équipe de développement (StudiUM)
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Présentation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Auxiliaire</li>
+                                <li class="week-content-detail">Disponibilités</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Formation des équipes</span>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Outils nécessaires</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Discord (communication) </li>
+                                <li class="week-content-detail">Bitbucket (code)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 03 (14 Sep.) &ndash; <strong>DM1 disponible</strong></h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exigences</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cueillette des besoins</li>
+                                <li class="week-content-detail">Glossaire</li>
+                                <li class="week-content-detail">Échéancier</li>
+                                <li class="week-content-detail">Prototypage</li>
+                                <li class="week-content-detail">Besoin fonctionnel</li>
+                                <li class="week-content-detail">Besoin non-fonctionnel</li>
+                                <li class="week-content-detail">Priorisation</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Cas d'utilisation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme UML</li>
+                                <li class="week-content-detail">Scénario</li>
+                                <li class="week-content-detail">Cas d'étude: #GYM</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>🎬Capsule</strong>
+                            <a href="https://classe.iro.umontreal.ca/w/jtaQZa6E2B2tTgigkUNN36">Exigences: Glossaire + Cas d'utilisation</a>
+                            <a href="https://classe.iro.umontreal.ca/w/3H2v9eb5tRk8VUDUBwS5qm">Analyse fonctionnelle: Scénarios des CUs</a>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture</strong>
+                            Ch.11 <br>
+                            Versionnement de logiciel (StudiUM)
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Introduction DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Questions-réponses</li>
+                                <li class="week-content-detail">Formation des groupes</li>
+                                <li class="week-content-detail">Initiation à GIT</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Flux des exigences</li>
+                                <li class="week-content-detail">Analyse des besoins</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 04 (21 Sep.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Analyse</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Partie à informatiser</li>
+                                <li class="week-content-detail">Exigences conceptuelles</li>
+                                <li class="week-content-detail">Exigences matérielles</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modèle d'analyse</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme d'activités</li>
+                                <li class="week-content-detail">Diagramme ECB</li>
+                                <li class="week-content-detail">Cas d'étude: #GYM</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>🎬Capsule</strong>
+                            
+                            <a href="https://classe.iro.umontreal.ca/w/tfgyF2yePfo3A7JUtiLhRT">Révision CUs, Exigences matérielles, Modèle</a>
+                            <a href="https://classe.iro.umontreal.ca/w/hN4mwRvWxsDz5ZFvFfJ4Tw">Diagramme d'activités (Modèle dynamique)</a>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture:</strong>
+                            Ch.17.4,17.5 + Ch.13
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cas d'étude: ATM</li>
+                                <li class="week-content-detail">Diagramme de cas d'utilisation</li>
+                                <li class="week-content-detail">Diagramme d'activités</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">UML</li>
+                                <li class="week-content-detail">Exigences non-fonctionnelles</li>
+                                <li class="week-content-detail">Scénarios</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 05 (28 Sep.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Conception</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Vue architecturale</li>
+                                <li class="week-content-detail">Vue détaillée</li>
+                                <li class="week-content-detail">Décomposition</li>
+                                <li class="week-content-detail">Modules</li>
+                                <li class="week-content-detail" title="Conception orientée-objet">Conception OO</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modélisation</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme de classe</li>
+                                <li class="week-content-detail">Diagramme de séquence</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <strong>📖Lecture:</strong>
+                            Ch.14 <br>
+                            Modélisation UML (StudiUM)
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cas d'étude: ATM</li>
+                                <li class="week-content-detail">Diagramme de classe</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Jeu vidéo</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 06 (05 Oct.) 🔔</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Architecture</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Couplage & Cohésion</li>
+                                <li class="week-content-detail">Réutilisation</li>
+                                <li class="week-content-detail">Libraire</li>
+                                <li class="week-content-detail">Framework</li>
+                                <li class="week-content-detail">Pipes et filtres</li>
+                                <li class="week-content-detail">En couche</li>
+                                <li class="week-content-detail">MVC</li>
+                                <li class="week-content-detail">Client-serveur</li>
+                                <li class="week-content-detail">Peer-to-peer</li>
+                                <li class="week-content-detail">Microservices</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démo Visual Paradigm</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Cas d'étude: ATM</li>
+                                <li class="week-content-detail">Diagramme de séquence (DS)</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Modélisation</li>
+                                <li class="week-content-detail">Scénario -> DS</li>
+                                <li class="week-content-detail">Énoncé -> DS</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong>Remise DM1 (10 Octobre)</strong> 🎯
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 07 (12 Oct.) &ndash; <strong>DM2 disponible</strong></h4>
+                    <ul class="bare-list">
+                        <li>Révision</li>
+                        <li><strong>Intra (14 Octobre)</strong> 📅</li>
+                    </ul> 
+                </li>
+                <li class="week break">
+                    <h4 class="week-title">Semaine 08 (19 Oct.)</h4>
+                    <strong>RELACHE</strong>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 09 (26 Oct.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Paradigme OO</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Objets & classes</li>
+                                <li class="week-content-detail">Héritage</li>
+                                <li class="week-content-detail">Polymorphisme</li>
+                                <li class="week-content-detail">Encapsulation</li>
+                                <li class="week-content-detail">Abstraction</li>
+                                <li class="week-content-detail">Généricité</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Patrons de conception</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Singleton</li>
+                                <li class="week-content-detail">Composite</li>
+                                <li class="week-content-detail">Patron-methode</li>
+                                <li class="week-content-detail">Stratégie</li>
+                                <li class="week-content-detail">Adapteur</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Correction DM1</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Glossaire</li>
+                                <li class="week-content-detail">CUs</li>
+                                <li class="week-content-detail">Scénarios</li>
+                                <li class="week-content-detail">Remarques générales</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Architecture</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 10 (02 Nov.)</h4>
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Patrons de conception</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">singleton</li>
+                                <li class="week-content-detail">fabrique</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Implémentation</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">langage-programmation</li>
+                                <li class="week-content-detail">normes</li>
+                                <li class="week-content-detail">documentation</li>
+                                <li class="week-content-detail">IDE</li>
+                                <li class="week-content-detail">éditeur</li>
+                                <li class="week-content-detail">débogage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">patron-adapteur</li>
+                                <li class="week-content-detail">patron-stratégie</li>
+                                <li class="week-content-detail">patron-composite</li>
+                                <li class="week-content-detail">patron-méthode</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 11 (09 Nov.) &ndash; <strong>DM3 disponible</strong></h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Qualités du logiciel (ISO)</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Pertinence fonctionnelle</li>
+                                <li class="week-content-detail">Performance</li>
+                                <li class="week-content-detail">Utilisabilité</li>
+                                <li class="week-content-detail">Fiabilité</li>
+                                <li class="week-content-detail">Maintenabilité</li>
+                                <li class="week-content-detail">Transférabilité</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Vérification & Validation</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Inspections</li>
+                                <li class="week-content-detail">Méthodes formelles</li>
+                                <li class="week-content-detail">Tests</li>
+                                <li class="week-content-detail">Boite noire</li>
+                                <li class="week-content-detail">Boite blanche</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Types de test</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">unitaire</li>
+                                <li class="week-content-detail">intégration</li>
+                                <li class="week-content-detail">système</li>
+                                <li class="week-content-detail">acceptation</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Java</li>
+                                <li class="week-content-detail">JavaDoc</li>
+                                <li class="week-content-detail">ANT</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong>Remise DM2 (12 novembre)</strong> 🎯
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 12 (16 Nov.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Tests unitaires</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">succès</li>
+                                <li class="week-content-detail">échec</li>
+                                <li class="week-content-detail">sanitaire</li>
+                                <li class="week-content-detail">JUnit</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Déploiement</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">versionnement</li>
+                                <li class="week-content-detail">environnement</li>
+                                <li class="week-content-detail">machine-virtuelle</li>
+                                <li class="week-content-detail">conteneur</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">JUnit</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Syntaxe</li>
+                                <li class="week-content-detail">Démo Eclipse</li>
+                                <li class="week-content-detail">Exemple ATM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 13 (23 Nov.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">DevOps</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Pratiques</li>
+                                <li class="week-content-detail">Intégration continue (CI)</li>
+                                <li class="week-content-detail">Livraison continue (CD)</li>
+                                <li class="week-content-detail">Demo-Azure</li>
+                                <li class="week-content-detail">Demo-Github Actions</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Maintenance</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Correctif</li>
+                                <li class="week-content-detail">Adaptif</li>
+                                <li class="week-content-detail">Préventif</li>
+                                <li class="week-content-detail">Perfectif</li>
+                                <li class="week-content-detail">Problèmes OO</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Démonstration</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">NPM</li>
+                                <li class="week-content-detail">Webpack</li>
+                                <li class="week-content-detail">Github-conflits</li>
+                                <li class="week-content-detail">Github-branches</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 14 (30 Nov.)</h4>
+
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Maintenance</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Logiciel suivi</li>
+                                <li class="week-content-detail">Test regression</li>
+                                <li class="week-content-detail">Recherche texuel</li>
+                                <li class="week-content-detail">Recherche graphique</li>
+                                <li class="week-content-detail">Refactoring</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Éthiques et Licenses</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Code-ethique</li>
+                                <li class="week-content-detail">EULA</li>
+                                <li class="week-content-detail">Apache</li>
+                                <li class="week-content-detail">MIT</li>
+                                <li class="week-content-detail">GPL</li>
+                                <li class="week-content-detail">Creative-commons</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bare-list week-content tp">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Modélisation du jeu Tétris</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Diagramme de classe</li>
+                                <li class="week-content-detail">Diagramme de séquence</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 15 (07 Dec.)</h4>
+                    
+                    <ul class="bare-list week-content th">
+                        <li class="week-content-item">
+                            <span class="week-content-title">Conclusion</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Bilan</li>
+                                <li class="week-content-detail">Feedback</li>
+                                <li class="week-content-detail">La suite</li>
+                            </ul>
+                        </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Révision</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Trivia</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h4 class="week-title">Semaine 16 (14 Dec.)</h4>
+
+                    <ul class="bare-list">
+                        <li><strong>Final (16 décembre)</strong> 📅</li>
+                        <li><strong>Remise DM3 (19 décembre)</strong> 🎯</li>
+                    </ul> 
+                </li>
+            </ul>
+        </aside>
+
+        <div class="body-content">
+            <div class="problem-section-content">
+                <h2 class="project-name">
+                    Projet &ndash; VaxTodo:re
+                </h2>
+                <p>
+                    Pour prêter main-forte à la campagne de vaccination, en coordination avec le gouvernement
+                    l'organisme à but non lucratif (OBNL) <em>GoodPeople</em> a entrepris l'initiative
+                    <span class="project-name-vax">Vax</span>Todo</span>.
+                    <strong>Cette initiative permet à toute personne majeure agée de 18 ans et plus de prendre un
+                    rendez-vous avec GoodPeople pour se faire vacciner</strong>.
+                    La compagnie assure aussi le suivi pour les futures doses et autres requêtes liées à la vaccination,
+                    telles qu'une demande de preuve de vaccination ou une demande de changement ou d'annulation d'un rendez-vous.
+                </p>
+
+                <section class="problem-spec-section">
+                    <h3 class="section-title">Récapitualif</h3>
+                            
+                    <p>
+                        Pour notre produit final, ci-dessous vous trouverez les spécifications de l'application.
+                    </p>
+
+                    <div class="problem-spec-section-group">
+                        <div class="spec-group spec-group--main">
+                            <h3 class="spec-group-title">Fonctionnalités</h3>
+
+                            <ul class="bare-list spec-func-list">
+                                <li class="spec-func">
+                                    Se connecter à l'application
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--volunteer"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter le calendrier 
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--volunteer"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Ajouter une visite (spontanée ou plannifié)
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--volunteer"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter la liste des visiteurs
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--volunteer"></i>
+                                        </li>
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Créer/Modifier/Supprimer un compte visiteur
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter et modifier le profil de vaccination d'un visiteur
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter la liste des bénévoles
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Créer/Modifier/Supprimer un compte bénévole
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                              
+                             
+                                <li class="spec-func">
+                                    Remplir et sauvegarder un formulaire d'identification
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Récupérer et imprimer un formulaire d'identification
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Envoyer un rapport de vaccination
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="spec-func">
+                                    Envoyer une notification de rappel
+                                    <ul class="bare-list spec-func-users">
+                                        <li class="spec-func-user">
+                                            <i class="user-icon user-icon--employee"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="spec-group spec-group--aside">
+                            <h3 class="spec-group-title">Utilisateurs</h3>
+
+                            <ul class="bare-list spec-user-list">
+                                <li class="spec-user spec-user--volunteer">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--volunteer"></i> Bénévole</span>
+                                    <span class="spec-user-desc">Responsable d'accueillir une personne et les acheminer aux employés</span>
+                                </li>
+                                <li class="spec-user spec-user--employee">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--employee"></i> Employé</span>
+                                    <span class="spec-user-desc">Responsable du traitement du dossier et le choix du vaccin avec la personne</span>
+                                </li>
+                            </ul>
+
+                            <h4 class="spec-group-subtitle">Acteurs importants</h4>
+
+                            <ul class="bare-list spec-actor-list">
+                                <li class="spec-actor">
+                                    <span class="spec-actor-id">Professionnel de la santé</span>
+                                    <span class="spec-actor-desc">Ces professionnels (vaccinateur, chargeur et injecteur) <strong>ne sont pas sous notre charge</strong></span>
+                                </li>
+                            </ul>
+
+                            <h3 class="spec-group-title">Contraintes</h3>
+
+                            <ul class="bare-list spec-constraint-list">
+                                <li class="spec-constraint">
+                                    <strong>Calendrier</strong>: Pas plus de 15 entrées/visites par période (plage horaire - 8h, 9h, 10h...17h)
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Horaire</strong>: Lundi au vendredi de 8h à 18h.</li>
+                                <li class="spec-constraint">
+                                    <strong>Rendez-vous</strong>: Minimum 72 heures à l'avance et Maximum 2 personnes.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="problem-data-section" style="margin-top: 18px;">
+                    <h2 class="section-title">Spécifications</h2>
+
+                    <div class="problem-data-section-group"> 
+                        <div id="schedule-appointment" class="data-group">
+                            <h3 class="data-group-title">Visite</h3>
+                            <p class="data-group-info">
+                                Lorsqu'une personne se présente à l'accueil, un bénévole vérifie si elle a un rendez-vous,
+                        en utilisant son numéro de réservation et en validant son nom et l'heure du rendez-vous 
+                        dans le système. Si elle n'a pas de rendez-vous ou est en retard, le bénévole vérifie dans le
+                        calendrier les périodes disponibles.
+                        Le bénévole confirme la période avec le visiteur et procède à l'ajout du visiteur dans le calendrier à la période 
+                        choisie en indiquant son nom et numéro de téléphone.
+                        Si une personne ayant pris rendez-vous se présente à l'accueil avec plus de 15 minutes de retard, 
+                        le rendez-vous est annulé automatiquement par le système et elle est considérée comme visite spontanée.
+                        Le bénévole procède alors à la sélection d'une période disponible. <br>
+                        Lors de la prise de rendez-vous, l'employé utilise le système pour accéder au
+                        calendrier pour choisir une date et heure avec la personne. Lorsque la personne
+                        confirme le choix à l'employé, il effectue la réservation et rajoute une visite 
+                        plannifiée au calendrier. Les détails du rendez-vous sont envoyés par courriel
+                        au visiteur, qui pourra les utiliser lors de sa visite pour confirmer son rendez-vous.
+                            </p>
+                            <ul class="bare-list data-visit-list">
+                                <li class="data-visit">
+                                    <span class="data-visit-label">Numéro de réservation</span>
+                                    <span class="data-visit-details">6 chiffres</span> 
+                                </li>
+                                <li class="data-visit">
+                                    <span class="data-visit-label">Prénom</span>
+                                    <span class="data-visit-details">Limite de 50 caractères</span> 
+                                </li>
+                                <li class="data-visit">
+                                    <span class="data-visit-label">Nom</span>
+                                    <span class="data-visit-details">Limite de 50 caractères</span> 
+                                </li>
+                                <li class="data-visit">
+                                    <span class="data-visit-label">Date de la visite</span>
+                                    <span class="data-visit-details">Format: YYYY-MM-DD</span> 
+                                </li>
+                                <li class="data-visit">
+                                    <span class="data-visit-label">Heure de la visite</span>
+                                    <span class="data-visit-details">Format: HH:mm</span> 
+                                </li>
+                                <li class="data-visit">
+                                    <span class="data-visit-label">Type de dose</span>
+                                    <span class="data-visit-details">Réponse acceptée: 1, 2</span> 
+                                </li>
+                            </ul>  
+                        </div> 
+                    </div>
+
+                    <div class="problem-data-section-group">
+                        <div class="data-group">
+                            <h3 class="data-group-title">Entrevue et Suivi</h3>
+                            <p class="data-group-info">
+                                Durant l'entrevue avec l'employé, dans le cas d'une visite plannifiée, l'employé lui demande son numéro de réservation
+                                et confirme sa visite dans le système. Dans le cas d'une visite spontanée, l'employé vérifie que son nom et numéro de
+                                téléphone sont présents dans le calendrier à l'heure de passage.
+                                L'employé lui demande ensuite son <em>numéro de compte</em> pour procéder au questionnaire. 
+                                Si le visiteur n'a pas son numéro de compte, il peut fournir son adresse courriel et sa date de naissance pour le retrouver. <br>
+                                L'employé lui demande sa carte d'assurance maladie et remplit avec lui un questionnaire dans le système.
+                                Si le visiteur n'a pas de carte d'assurance maladie ou qu'elle est expirée, la visite est annulée et l'employé l'invite
+                                à prendre un nouveau rendez-vous. <br>
+                            </p>
+
+                            <p class="data-group-info">
+                                En cas de première dose, l'employé lui demande s'il désire planifier une seconde dose. Si oui, l'employé procède à la <a href="#schedule-appointment">prise de rendez-vous</a>.
+                                <strong>Le rendez-vous doit être pris dans un délai minimum d'un mois</strong>. <br>
+                                Suite à cela, l'employé imprime et signe le formulaire qui sera complété par un professionnel de la santé.
+                                Durant la journée, un employé récupère les formulaires complétés et complète le profil de vaccination du visiteur.
+                                Si le visiteur a été vacciné, il lui envoie un courriel contenant la preuve de vaccination sous forme de document PDF.
+                                La preuve de vaccinnation contient son nom, sa date de naissance, un code QR et son profil de vaccination présentant la liste des vaccins administrés.
+                                En fin de journée, l'employé récupère la liste des visites plannifiées pour les prochaines 48 heures et envoie une notification par courriel, 
+                                rappelant à chacun son rendez-vous prochain.
+                            </p>   
+                        </div>
+                        <div class="data-group">
+                            <h3 class="data-group-title">Formulaire</h3>
+                            
+                           
+                            <ul class="bare-list data-form-list">
+                                <li class="data-form">
+                                    <span class="data-form-label">Numéro de compte</span>
+                                    <span class="data-form-details">12 chiffres</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Prénom</span>
+                                    <span class="data-form-details">Limite de 50 caractères</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Nom</span>
+                                    <span class="data-form-details">Limite de 50 caractères</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Date de naissance</span>
+                                    <span class="data-form-details">Format accepté: YYYY-MM-DD</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Numéro carte assurance maladie</span>
+                                    <span class="data-form-details">Entré sans espace</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Date de la visite</span>
+                                    <span class="data-form-details">Format accepté: YYYY-MM-DD</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Avez-vous déjà reçu une première dose?</span>
+                                    <span class="data-form-details">Réponse accepté: Oui, Non</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Avez-vous déjà contracté la COVID?</span>
+                                    <span class="data-form-details">Réponse accepté: Oui, Non</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Avez-vous des symptômes de la COVID?</span>
+                                    <span class="data-form-details">Réponse accepté: Oui, Non</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Avez-vous des allergies?</span>
+                                    <span class="data-form-details">Réponse accepté: Oui, Non</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Quel vaccin souhaitez-vous recevoir?</span>
+                                    <span class="data-form-details">Choix: Moderna, Pfizer, AstraZeneca, Janssen</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Avez-vous procédé à la vaccination?</span>
+                                    <span class="data-form-details">Réponse accepté: Oui, Non</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Nom du vaccin</span>
+                                    <span class="data-form-details">Choix: Moderna, Pfizer, AstraZeneca, Janssen</span> 
+                                </li>
+                                <li class="data-form">
+                                    <span class="data-form-label">Code du vaccin</span>
+                                    <span class="data-form-details">Limite de 24 caractères</span> 
+                                </li>
+                            </ul>
+                        </div>
+                      
+                    </div>
+
+                    <div class="problem-data-section-group">     
+                        <div class="data-group">
+                            <h3 class="data-group-title">Compte utilisateur</h3>
+                            <p class="data-group-info">
+                                Tout bénévole et employé possède un compte utilisateur, utilisé pour se connecter à l'application.
+                            </p>
+                            <ul class="bare-list data-user-list">
+                                <li class="data-user">
+                                    <span class="data-user-label">Code d'identification</span>
+                                    <span class="data-user-details">9 chiffres</span> 
+                                </li>
+                                <li class="data-user">
+                                    <span class="data-user-label">Mot de passe</span>
+                                    <span class="data-user-details">Composé d'au moins 8 caractères contenant au moins 1 chiffre, 1 majuscule, 1 minuscule et 1 caractère spécial.</span> 
+                                </li>
+                            </ul>  
+                        </div>
+                    </div>
+
+                    
+                    <div class="problem-data-section-group">
+                        <div class="data-group">
+                            <h3 class="data-group-title">Visiteur</h3>
+                            <p class="data-group-info">
+                                Lors d'une première visite, l'employé doit créer un compte pour le visiteur qui sera rattaché à toutes ces activités avec <em>VaxTodo</em>.
+                        Une fois créer, le numéro du compte est communiqué au visiteur et un courriel de confirmation lui est envoyé avec le numéro de compte.
+                            </p>
+
+                            <ul class="bare-list data-account-list">
+                                <li class="data-account">
+                                    <span class="data-visit-label">Numéro de compte</span>
+                                    <span class="data-visit-details">12 caractères</span> 
+                                </li>
+                                <li class="data-account">    
+                                    <span class="data-visit-label">Prénom</span>
+                                    <span class="data-visit-details">Limite de 50 caractères</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Nom</span>
+                                    <span class="data-visit-details">Limite de 50 caractères</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Date de naissance</span>
+                                    <span class="data-visit-details">Format: YYYY-MM-DD</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Adresse courriel</span>
+                                    <span class="data-visit-details"></span> 
+                                    
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Numéro de téléphone</span>
+                                    <span class="data-visit-details">10 chiffres</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Adresse (numéro, rue)</span>
+                                    <span class="data-visit-details">100 caractères max</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Code postal</span>
+                                    <span class="data-visit-details">6 caractères</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Ville</span>
+                                    <span class="data-visit-details">50 caractères max</span> 
+                                </li>
+                            </ul>
+
+                            <h4 class="data-group-subtitle">Profil de vaccination</h4>
+                            <p style="padding-left: 12px; margin-bottom: 3px;">Liste des vaccins reçus.</p>
+                            
+                            <ul class="bare-list data-account-vax-list">
+                                <li class="data-account-vax">
+                                    <strong>Date de vaccination</strong> (YYYY-MM-DD)</li>
+                                <li class="data-account-vax">
+                                    <strong>Type de dose</strong> (1, 2)</li>
+                                <li class="data-account-vax">
+                                    <strong>Nom du vaccin</strong>  [Moderna, Pfizer, AstraZeneca, Janssen]</li>
+                                <li class="data-account-vax">
+                                    <strong>Code du vaccin</strong>  (24 caractères max)
+                                </li>
+                            </ul>
+                        </div>
+                            
+                        <div class="data-group">
+                            <h3 class="data-group-title">Bénévole</h3>
+                        
+                            <ul class="bare-list data-account-list">
+                                <li class="data-account">
+                                    <span class="data-visit-label">Numéro de compte</span>
+                                    <span class="data-visit-details">12 caractères</span> 
+                                </li>
+                                <li class="data-account">    
+                                    <span class="data-visit-label">Prénom</span>
+                                    <span class="data-visit-details">Limite de 50 caractères</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Nom</span>
+                                    <span class="data-visit-details">Limite de 50 caractères</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Date de naissance</span>
+                                    <span class="data-visit-details">Format accepté: YYYY-MM-DD</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Adresse courriel</span>
+                                    <span class="data-visit-details"></span>     
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Numéro de téléphone</span>
+                                    <span class="data-visit-details">10 chiffres</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Adresse (numéro, rue)</span>
+                                    <span class="data-visit-details">100 caractères max</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Code postal</span>
+                                    <span class="data-visit-details">6 caractères</span> 
+                                </li>
+                                <li class="data-account">
+                                    <span class="data-visit-label">Ville</span>
+                                    <span class="data-visit-details">50 caractères max</span> 
+                                </li>
+                            </ul>
+                            <p>
+                                Un bénévole a aussi un horaire listant les jours où il est disponible pour venir au local.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <p style="font-size: 1.6em;">
+                    Votre équipe a été octroyée le contrat de développer le <strong>système VaxTodo:re</strong>. <br>
+                    L'interface sera en ligne de commande.
+                </p>
+            </div>
+
+            <section class="task-section">
+                <h2 class="section-title">Tâches</h2>
+    
+                <p>
+                    Vous devez produire un rapport en HTML (recommandé) ou PDF présentant votre analyse, votre
+                    conception détaillée et livrer l'application complète et documentée.
+                </p>
+    
+                <h3 class="task-subsection-title">Cadre du projet</h3>
+                <ul class="tasks">
+                    <li class="task">Description du projet: Contexte, Problèmes à résoudre, Portée</li>
+                    <li class="task">Équipe, Répartition des tâches: Coordonnées des membres et la répartition des tâches</li>
+                    <li class="task">Échéancier: Planification hebdomadaire des taches montrant la répartition dans l'équipe</li>
+                    <li class="task">Priorisation: Description de l'ordre de priorités choisi</li>
+                    <li class="task">Échanges avec client: Questions posées et réponses trouvées</li>
+                </ul>
+
+                <h3 class="task-subsection-title">Définition du domaine</h3>
+                <ul class="tasks">
+                    <li class="task">Hypothèses: Hypothèses émises dans l'élaboration des exigences</li>
+                    <li class="task">Glossaire: Liste des termes et expressions clés caractérisant le domaine</li>
+                    <li class="task">Besoins fonctionnels: Fonctionnalité du logiciel à offrir traduit par des Cus et scénarios</li>
+                    <li class="task">Besoins non fonctionnels: Attributs du logiciel recherchés</li>
+                    <li class="task">Risques: Analyse courte des risques du projet</li>
+                </ul>
+
+                <p>
+                    Les hypothèses regroupent toutes les considérations faites pour réaliser le travail en dehors des échanges avec le client et des exigences/contraintes explicites décrites dans l'énoncé.
+                    Bien entendu, une hypothèse ne peut pas contredire un fait ou une exigence/contrainte explicite. Elles permettent donc d'être rigoureux en stipulant clairement les suppositions additionnelles faites par votre équipe, et ainsi éviter toute confusion dans la lecture du rapport.
+                </p>
+                    
+                <h3 class="task-subsection-title">Analyse</h3>
+                <ul class="tasks">
+                    <li class="task">Besoins matériels: Partie à informatiser, matériels nécessaires, solutions de stockage</li>
+                    <li class="task">Contraintes physiques et conceptuelles</li>
+                    <li class="task">Modèle dynamique: Diagrammes d'activités</li>
+                    <li class="task">Modèle d'objets: Diagramme de classes participantes (ECB) &ndash; <em>Optionnel</em> (facilite la construction du diagramme de classe du design)</li>
+                </ul>
+    
+                <h3 class="task-subsection-title">Conception</h3>
+                <ul class="tasks">
+                    <li class="task">Justification des choix du design: Abstraction, couplage et cohésion </li>
+                    <li class="task">Design détaillé: Diagramme de classes, Diagramme de séquences</li>
+                </ul>
+    
+                <h3 class="task-subsection-title">Implémentation</h3>
+                <ul class="tasks">
+                    <li class="task">Implémentation du design: Application fonctionnel</li>
+                    <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
+                    <li class="task">Documentation: Documentation technique du code source (JavaDoc)</li>
+                </ul>
+    
+                <h3 class="task-subsection-title">Tests</h3>
+                <ul class="tasks">
+                    <li class="task">Rapport de tests unitaires (JUnit)</li>
+                </ul>
+    
+                <h3 class="task-subsection-title task-subsection-title--document">Livrables</h3>
+                <ul class="task-documents bare-list">
+                    <li class="task-document check check--color-inherit">Cas d'utilisation</li>
+                    <li class="task-document check check--color-inherit">Diagramme d'activités: couvrant tous les CUs</li>
+                    <li class="task-document check check--color-inherit">Diagramme de classes <strong>mis à jour</strong></li>
+                    <li class="task-document check check--color-inherit">Diagramme de séquence <strong>mis à jour</strong></li>
+                    <li class="task-document check check--color-inherit">Application: Exécutable JAR et config ANT</li>
+                    <li class="task-document check check--color-inherit">Tests: 2 tests unitaires par membre</li>
+                    <li class="task-document check check--color-inherit">Documentation: Javadoc généré et README <strong>mis à jour</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                
+            <h3 class="section-title">Équipes</h3>
+            <ul class="bare-list teams">
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Les Mandaloriens</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Benjamin Roy">Benjamin ROY</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">mathématrix</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Mathilde Prouvost">Mathilde PROUVOST</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">boopbeep</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Blanche Mongeon">Blanche MONGEON</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Tiananmen Square</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Derrick Chung">Derrick CHUNG</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">FTW</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Kevin Popa">Kevin POPA</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Bread Scrums</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Pierre Janier Dubry">Dubry Pierre JANIER</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">GIT</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Corentin Gouanvic">Corentin GOUANVIC</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Le groupe UML</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Vincent Falardeau">Vincent FALARDEAU</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Groupe UDEM</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Oliver Khayat">Oliver KHAYAT</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">HotChocolate</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Xuan Chen LIU">Xuan Chen LIU</span>
+                    </div>
+                    
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Los Chavoz</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Santiago Gomez Maqueo Anaya">Maqueo Anaya Santiago GOMEZ</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Boat Squad</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Lucky Khounvongsa">Lucky KHOUNVONGSA</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Équipe B</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Francis Boucher">Francis BOUCHER</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">A-Team</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Jia Guo">Jia GUO</span>
+                    </div>
+                    
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">PSV+A</span>
+                    </div>
+                    
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Yuchen Hui">Yuchen HUI</span>
+                    </div>
+                    
+                </li>
+                <li class="team">
+                    <div class="team-info fit-content">
+                        <span class="team-name">BigBoysBigDream</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Mendel Sun">Mendel SUN</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Team CRTL-Z</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Luchino Allix-Lastrego">Luchino ALLIX-LASTREGO</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">GTW</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Gaby Nguyen">Gaby NGUYEN</span>
+                    </div>
+                </li>  
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">kanye east</span>
+                    </div>
+
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title=""></span>
+                    </div>
+                    
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">LA team</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Xavier Lapalme">Xavier LAPALME</span>
+                    </div>
+                </li>
+              
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Team A</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Andrew Clarke">Andrew CLARKE</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Undefined Team</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Christopher Dip">Christopher DIP</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">CaTaLi</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Tassadit Bibi">Tassadit BIBI</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">CoviTech</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Shaula-Cristale Ndikumasabo">Shaula-Cristale NDIKUMASABO</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">JELV.inc</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Emma Gallifet">Emma GALLIFET</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Shrek 5</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Imad Mechmachi">Imad MECHMACHI</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">No Name</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Roman Roman">Roman GILLES-LESAGE</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Sneaky Racers</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Marc-Olivier Morin ">Marc-Olivier MORIN</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Golden Trio</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Christian Lungescu">Christian LUNGESCU</span>
+                    </div>
+                    
+                </li>
+                
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">VaxOverflow</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Frédéric Achard-Groleau">Frédéric ACHARD-GROLEAU</span>
+                    </div>
+                </li>
+                <li class="team">
+                    <div class="team-info">
+                        <span class="team-name">Ye</span>
+                    </div>
+                    <div class="team-group">
+                        <i class="icon icon-person"></i>
+                        <span class="team-captain fit-content" title="Mohamed HAMDAOUI">Mohamed HAMDAOUI</span>
+                    </div>   
+                </li>
+            </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="content-wrapper">
+            <p>&copy; 2021 &ndash; Louis-Edouard LAFONTANT</p>
+        </div>
+    </footer>
+
+    <script src="../dist/app.js"></script>
+</body>
+
+</html>

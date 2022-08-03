@@ -820,18 +820,7 @@
 .project-name {
     font-weight: 300;
     margin-bottom: 12px;
-    width: 180px;
 }
-
-.project-name-vax {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.project-name-icon {
-    font-weight: bold;
-    color: #fff;
-}
-
 
 .assignments {
     display: flex;
@@ -859,10 +848,6 @@
 
 .snippet-comment {
     font-style: normal;
-    color: #f5f5f5;
-}
-
-.task-milestone {
     color: #f5f5f5;
 }
 
