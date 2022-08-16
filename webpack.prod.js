@@ -8,4 +8,12 @@ module.exports = merge(common, {
         app: './index.js',
         data: './devoirs/index.js',
     },
+    module: {
+        rules: [
+            {
+                test: /\.ya?ml$/,
+                use: 'yaml-loader'
+            }
+        ]
+    },
 });

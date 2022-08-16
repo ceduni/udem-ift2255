@@ -120,3 +120,91 @@ th { text-align: center; }
 * {
     box-sizing: border-box;
 }
+
+.helper {
+    position: absolute;
+    top: 100%; left: 0;
+    min-width: 100%;
+    padding: 3px 6px 4px;
+    border-radius: 1px;
+    font-size: 1.3rem; font-weight: 500; font-style: normal;
+    color: #555;
+    background-color: #e5e4e2;
+    box-shadow: 0 1px 2px -1px #999;
+    opacity: 0;
+    transition: .2s;
+    transform: scale(0); transition-property: opacity, transform;
+    z-index: 20;
+}
+
+.ico-helper {
+    display: inline-block;  text-align: center;
+    font-size: 1.2rem; font-weight: bold;
+    height: 18px; width: 18px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #6667AB;
+    font-style: normal;
+}
+
+.has-helper {
+    position: relative;
+}
+
+    .has-helper:hover > .helper {
+        opacity: 1;   
+        transform: scale(1) translateY(2px);
+    }
+    .ico-helper:focus + .helper {
+        opacity: 1;   
+        transform: scale(1) translateY(2px);
+    }
+
+    
+.has-def {
+    position: relative;
+    display: inline-block;
+}
+
+.def-term {
+    position: relative;
+    display: flex; align-items: center;
+    color: #6667AB;
+    padding-left: 2px; padding-right: 2px;
+    border-bottom: 3px solid currentColor;
+    cursor: default;
+    font-style: normal; font-weight: 500;
+}
+    .def-term:after {
+        content: "?";
+        text-align: center;
+        font-weight: bold;
+        margin-left: 3px;
+        height: 18px; width: 18px;
+        font-size: 1.2rem; 
+        border-radius: 50%;
+        background-color: #6667AB;
+        color: #fff;
+    }
+
+
+.def {
+    position: absolute;
+    top: 100%; left: 0;
+    min-width: 300px;
+    padding: 3px 6px 4px;
+    border-radius: 1px;
+    font-size: 1.3rem; font-weight: 500; font-style: normal;
+    color: #fff;
+    background-color: #232425;
+    box-shadow: 0 1px 2px -1px #999;
+    opacity: 0;
+    transform: scale(0); 
+    transition: .2s; transition-property: opacity, transform;
+    z-index: 20;
+}
+
+    .has-def:hover > .def {
+        opacity: 1;   
+        transform: scale(1) translateY(2px);
+    }

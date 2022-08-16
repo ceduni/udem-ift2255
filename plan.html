@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="IFT2255">
     <meta property="og:image" content="https://ceduni.github.io/udem-ift2255/assets/images/logo_ift2255.png">
     
-    <link rel="stylesheet" href="dist/style.min.css?v=04">
+    <link rel="stylesheet" href="dist/style.min.css?v=004">
     <!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
     <!-- <link rel="stylesheet" href="assets/css/base.css"> -->
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
@@ -52,6 +52,12 @@
 
             <ul class="bare-list teaching-links">
                 <li class="teaching-link">
+                    <a class="bare-link teaching-link__link teaching-link__link--course"
+                        href="https://ceduni.github.io/udem-ift2255/index.html" target="_blank">
+                        Cours
+                    </a>
+                </li>
+                <li class="teaching-link">
                     <a class="bare-link teaching-link__link teaching-link__link--plan"
                         href="https://studium.umontreal.ca/course/view.php?id=217266" target="_blank">
                         StudiUM
@@ -87,74 +93,7 @@
 
         <section class="teacher-section">
             <h2 class="teacher-section-title">Enseignants</h2>
-            <ul class="bare-list teachers">
-                <li class="teacher teacher--instructor card">
-                    <img class="card-img" src="./assets/images/photo_louis_edouard_lafontant.jpeg" alt="Photo de Louis-Edouard LAFONTANT">
-                    <div class="teacher-info">
-                        <p class="card-name">
-                            <a class="bare-link card-link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">Louis-Edouard LAFONTANT</a>
-                        </p>
-                        <p class="card-role">
-                            Chargé de cours <br>
-                            <span class="card-address">Bureau 2352 Pav. André-Aisenstadt</span>
-                        </p>
-                        <p class="card-description">
-                            Envoyez-moi vos messages par <a href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via StudiUM.
-                            Pour plannifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
-                        </p>
-                    </div>
-                </li>
-                <li class="teacher teacher--assistant card">
-                    <img class="card-img" src="" alt="Photo de auxiliaire 1">
-                    <div class="teacher-info">
-                        <p class="card-name">
-                            <a class="bare-link card-link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">Auxiliaire 1</a>
-                        </p>
-                        <p class="card-role">
-                            Auxiliaire d'enseignement <br>
-                            <span class="card-address">Bureau 2352 Pav. André-Aisenstadt</span>
-                        </p>
-                        <p class="card-description">
-                            Envoyez-moi vos messages par <a href="mailto:">courriel</a> ou via StudiUM.
-                            Pour plannifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
-                        </p>
-                    </div>
-                </li>
-                <li class="teacher teacher--assistant card">
-                    <img class="card-img" src="" alt="Photo de auxiliaire 2">
-                    <div class="teacher-info">
-                        <p class="card-name">
-                            <a class="bare-link card-link" href="https://github.com/an-li/" target="_blank">Auxiliaire 2</a>
-                        </p>
-                        <p class="card-role">
-                            Auxiliaire d'enseignement <br>
-                            <span class="card-address">Bureau 2352 Pav. André-Aisenstadt</span>
-                        </p>
-                        <p class="card-description">
-                            Envoyez-moi vos messages par <a href="mailto:an.li@umontreal.ca">courriel</a> ou via StudiUM.
-                            <span class="card-availability">Disponible le vendredi de 15h à 17h</span>.
-                        </p>
-                    </div>
-                </li>
-                <!-- <li class="teacher teacher--assistant card">
-                    <img class="card-img" src="./assets/images/photo_oussama.jpg" alt="Photo de Aurélien DUCOIN">
-                    <div class="teacher-info">
-                        <p class="card-name">
-                            <a class="bare-link" href="https://www.linkedin.com/in/oussama-ben-sghaier/">Oussama BEN
-                                SGHAIER</a>
-                        </p>
-                        <p class="card-role">
-                            Auxiliaire <br>
-                            <span class="card-address">Bureau 2238 Pav. André-Aisenstadt</span>
-                        </p>
-                        <p class="card-description">
-                            Envoyez-moi vos messages par <a href="mailto:oussamasghaier1995@gmail.com">courriel</a> ou
-                            via StudiUM.
-                            <span class="card-availability">Disponible le mercredi entre 13h00 et 15h00</span>.
-                        </p>
-                    </div>
-                </li> -->
-            </ul>
+            <ul class="bare-list teachers" data-name="teachers"></ul>
         </section>
 
         <section class="plan">
@@ -188,7 +127,7 @@
                     <ul class="bare-list plan-evaluations">
                         <li class="plan-evaluation">
                             <h4 class="plan-evaluation-title">Examens</h4>
-                            Intra (20%), Final (35%)
+                            Intra (20%), Final (30%)
                         </li>
                         <li class="plan-evaluation">
                             <h4 class="plan-evaluation-title">Devoirs</h4>
@@ -202,7 +141,7 @@
                                     <a class="plan-evaluation__link" href="devoirs/dm2.html">Énoncé DM2</a>
                                 </li>
                                 <li class="plan-eval-assignment">
-                                    DM3 (<strong>20%</strong>)
+                                    DM3 (<strong>25%</strong>)
                                     <a class="plan-evaluation__link" href="devoirs/dm3.html">Énoncé DM3</a>
                                 </li>
                             </ul>
@@ -654,7 +593,7 @@
                     </ul>
                     <ul class="bare-list week-content ex">
                         <li class="week-content-item">
-                            <span class="week-content-title">Examen intra (17 Juin) 📅</span>
+                            <span class="week-content-title">Examen intra (14 Octobre) 📅</span>
                             <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Modèle de développement</li>
                                 <li class="week-content-detail">Processus de développement</li>
@@ -900,7 +839,7 @@
                     </ul>
                     <ul class="bare-list week-content ex">
                         <li class="week-content-item">
-                            <span class="week-content-title">Examen final (22 Juillet) 📅</span>
+                            <span class="week-content-title">Examen final (16 Décembre) 📅</span>
                             <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Modèle de développement</li>
                                 <li class="week-content-detail">Gestion des versions</li>
@@ -980,7 +919,7 @@
                 </div>
             </section>
 
-            <section class="body-content-section collapsible" data-collapsible="expanded">
+            <!-- <section class="body-content-section collapsible" data-collapsible="expanded">
                 <div class="body-content-section-header" data-collapsible-header="">
                     <h2 class="body-content-title">Semaine 2</h2>
                 </div>
@@ -1104,59 +1043,7 @@
                         <li class="section-summary-list-item"><strong>Logiciel: </strong>Caractéristiques du logicel</li>
                     </ul>
                 </div>
-            </section>
-
-            <section class="body-content-section collapsible" data-collapsible="expanded">
-                <div class="body-content-section-header" data-collapsible-header="">
-                    <h2 class="body-content-title">Semaine 3</h2>
-                </div>
-
-                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
-                    <li class="preview">
-                        <div class="preview-slides">
-                            <img class="img-preview" src="assets/images/photo_introduction.png" alt="Caractéristique du génie">
-                        </div>
-                        <div class="preview-description">
-                            <h3 class="preview-description-title">Génie</h3>
-
-                            <ul class="bare-list">
-                                <li>
-                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
-                                </li>
-                                <li>
-                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
-                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
-                                </li>
-                                <li>
-                                    Utilise des outils et une méthodologie de travail
-                                </li>
-                            </ul>
-
-                            <h3 class="preview-description-title">Logiciel</h3>
-
-                            <ul class="bare-list">
-                                <li>
-                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
-                                </li>
-                                <li>
-                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
-                                </li>
-                                <li>
-                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="section-summary collapsible-preview">
-                    <h3 class="section-summary-title">Contenu</h3>
-                    <ul class="bare-list section-summary-list">
-                        <li class="section-summary-list-item"><strong>Génie: </strong>Qualités de l'ingénieur</li>
-                        <li class="section-summary-list-item"><strong>Logiciel: </strong>Caractéristiques du logicel</li>
-                    </ul>
-                </div>
-            </section>
+            </section> -->
         </div>
     </main>
 
@@ -1166,7 +1053,27 @@
         </div>
     </footer>
 
-    <script src="dist/app.js"></script>
+    
+    <template id="tpl-teacher">
+        <li class="teacher teacher--#role card" data-role="#role">
+            <img class="card-img" src="#photo" alt="Photo de #name">
+            <div class="teacher-info">
+                <p class="card-name">
+                    <a class="bare-link card-link" href="#web" target="_blank">#name</a>
+                </p>
+                <p class="card-role">
+                    #title <br>
+                    <span class="card-address">#local</span>
+                </p>
+                <p class="card-description">
+                    #intro
+                </p>
+            </div>
+        </li>
+    </template>
+
+    <!-- <script src="dist/app.js"></script> -->
+    <script src="main.js"></script>
 </body>
 
 </html>

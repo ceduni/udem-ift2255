@@ -1,0 +1,37 @@
+- name: Louis-Edouard LAFONTANT
+  role: instructor
+  title: Chargé de cours
+  local: Bureau 2352 Pav. André-Aisenstadt
+  web: http://www-ens.iro.umontreal.ca/~lafontle/
+  photo: ./assets/images/photo_louis_edouard_lafontant.jpeg
+  email: louis.edouard.lafontant@umontreal.ca
+  intro: 
+    Envoyez-moi vos messages par <a href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via StudiUM. 
+    Pour plannifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
+- name: Meriem BEN CHAABEN
+  role: assistant
+  title: Auxiliaire d'enseignement
+  local: Bureau 2352 Pav. André-Aisenstadt
+  web: https://www.linkedin.com/in/meriem-ben-chaaben/
+  email: meriem.ben.chaaben@umontreal.ca
+  intro: 
+    Envoyez-moi vos messages par <a href="mailto:meriem.ben.chaaben@umontreal.ca@umontreal.ca">courriel</a> ou via StudiUM. 
+    <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
+- name: Auxiliaire Q
+  role: assistant
+  title: Auxiliaire d'enseignement
+  local: Bureau 2352 Pav. André-Aisenstadt
+  web: http://www-ens.iro.umontreal.ca/~lafontle/
+  email: aux.qq@umontreal.ca
+  intro: 
+    Envoyez-moi vos messages par <a href="mailto:aux.qq@umontreal.ca">courriel</a> ou via StudiUM. 
+    <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
+- name: Auxiliaire T
+  role: assistant
+  title: Auxiliaire d'enseignement
+  local: Bureau 2352 Pav. André-Aisenstadt
+  web: http://www-ens.iro.umontreal.ca/~lafontle/
+  email: aux.tbd@umontreal.ca
+  intro: 
+    Envoyez-moi vos messages par <a href="mailto:aux.tbd@umontreal.ca">courriel</a> ou via StudiUM. 
+    <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
