@@ -1,0 +1,32 @@
+teaching:
+- type: th
+  day: Mardi
+  start: 14h30
+  end: 16h30
+  duration: 2h
+  location: Z-330 Pav. Claire-McNicoll
+- type: th
+  day: Jeudi
+  start: 14h30
+  end: 15h30
+  duration: 1h
+  location: 1120 Pav. Fac. Aménagement
+- type: tp
+  day: Jeudi
+  start: 15h30
+  end: 17h30
+  duration: 2h
+  location: 3110_536A Pav. Fac. Aménagement
+exam:
+- type: midterm
+  day: Mardi
+  start: 14h30
+  end: 16h30
+  duration: 2h
+  location: Z-330 Pav. Claire-McNicoll
+- type: final
+  day: Jeudi
+  start: 14h30
+  end: 17h30
+  duration: 3h
+  location: Z-110 Pav. Claire-McNicoll

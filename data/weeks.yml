@@ -1,0 +1,49 @@
+- week: Semaine 01 (05 septembre)
+  th:
+    - title: Présentation
+      details:
+        - Enseignant
+        - Plan de cours
+    - title: Introduction
+      details:
+        - Génie logiciel
+        - Vie du logiciel
+    - title: Modèle de développement
+      details:
+        - Linéaire (Cascade, V)
+        - Itératif (Prototypage)
+        - Incrémental (Phase)
+  tp:
+    - title: Présentation
+      details:
+        - Auxiliaire
+        - Disponibilité
+    - title: Formation des équipes
+      details:
+        - Discord
+        - StudiUM
+
+- week: Semaine 02 (12 septembre)
+  th:
+    - title: Modèle de développement
+      details:
+        - Itératif & Incrémental
+        - Modèle Unifié
+    - title: Processus de développement
+      details:
+        - Phase
+        - Flux de travail
+    - title: Exigences
+      details:
+        - Cueillette des besoins
+        - Glossaire
+        - Incrémental (Phase)
+  tp:
+    - title: Présentation
+      details:
+        - Auxiliaire
+        - Disponibilité
+    - title: Formation des équipes
+      details:
+        - Discord
+        - StudiUM

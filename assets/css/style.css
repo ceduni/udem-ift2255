@@ -11,9 +11,9 @@
 }
 
 .plan {
-    display: flex; justify-content: space-between;
+    display: flex; flex-direction: column; justify-content: space-between;
     padding: 0;
-    background-color: #292723; 
+    background-color: #3573dd; 
     color: #fff;
 }
 
@@ -34,11 +34,32 @@
         flex-grow: 2;
     }
 
+    .plan-section-goal-title {
+        margin: 0;
+        margin-bottom: 3px;
+    }
+
+    .goal {
+        color: #fff;
+        line-height: 1.5;
+        margin-bottom: 6px;
+    }
+
+    .goal.check:before {
+        color: #fff;
+    }
+
     .plan-part-title {
         margin-top: 0;
         margin-bottom: 6px;
         font-weight: 800;
         text-transform: uppercase;
+    }
+
+    .plan-part-subtitle {
+        margin-top: 0;
+        margin-bottom: 4px;
+        font-weight: 500;
     }
 
     .plan-goal {
@@ -47,11 +68,15 @@
     }
 
     .plan-eval-assignments {
-        display: flex; flex-direction: column;
+        display: flex;
+        margin-top: 6px;
     }
 
     .plan-eval-assignment {
-        margin-bottom: 6px;
+        margin-right: 6px;
+        background-color: #4187E0;
+        padding: 5px 8px 6px;
+        border-radius: 180px;
     }
 
     .plan-evaluation__link {
@@ -79,6 +104,10 @@
 
     .plan-evaluation:not(:last-child) {
         margin-bottom: 6px;
+    }
+
+    .plan-resource {
+        display: flex; flex-direction: column;
     }
 
     .plan-resource-title {
@@ -467,6 +496,7 @@
     .teaching-info {
         flex-grow: 2;
         margin-left: 6px;
+        margin-top: 12px;
     }
 
     .teaching-term {
@@ -544,7 +574,7 @@
 
 .teaching-content {
     margin-top: 12px;
-    font-size: 1.4em;
+    font-size: 1.5em;
     line-height: 1.5;
 }
 
@@ -558,6 +588,10 @@
         display: flex; flex-wrap: wrap;
     }
 
+    .schedule-type {
+        font-style: normal;
+        text-transform: uppercase;
+    }
 
 
 .card { 
@@ -1484,10 +1518,6 @@
         margin-top: 12px;
     }
 
-    .plan-part--resource {
-        flex-grow: 3;
-        width: 100%;
-    }
 
     .weeks {
         flex-direction: row;
@@ -1701,9 +1731,6 @@
         margin-top: 0;
     }
 
-    .plan-part--resource {
-        width: 100%;
-    }
 
     .body-navigation {
         padding: 24px 0 12px;
@@ -1781,10 +1808,6 @@
     .plan {
         padding: 12px 5vw;
     }
-    
-    .teacher-section {
-        padding: 12px 5vw 24px;
-    }
 
     .teachers {
         display: flex; flex-direction: row;  flex-wrap: wrap;
@@ -1803,11 +1826,6 @@
         background-color: #3573DD11;
         /* box-shadow: 0 0 0 1px #d200ad; */
         border-bottom: 6px solid #3573DD;
-    }
-
-    .plan-part--resource {
-        flex-grow: 2;
-        margin-top: 0;
     }
 
     .body-content {

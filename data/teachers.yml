@@ -8,30 +8,41 @@
   intro: 
     Envoyez-moi vos messages par <a href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via StudiUM. 
     Pour plannifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
-- name: Meriem BEN CHAABEN
+# - name: Meriem BEN CHAABEN
+#   role: assistant
+#   title: Auxiliaire d'enseignement
+#   local: Bureau 2352 Pav. André-Aisenstadt
+#   web: https://www.linkedin.com/in/meriem-ben-chaaben/
+#   photo: https://media-exp1.licdn.com/dms/image/C4D03AQGxxwJbhmDN4g/profile-displayphoto-shrink_800_800/0/1517524884066?e=1666224000&v=beta&t=i33A8FynSQD2cXSWDpFfdwXTCiZqKeEC_NPLkzIpfLE
+#   email: meriem.ben.chaaben@umontreal.ca
+#   intro: 
+#     Envoyez-moi vos messages par <a href="mailto:meriem.ben.chaaben@umontreal.ca@umontreal.ca">courriel</a> ou via StudiUM. 
+#     <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
+- name: À venir
   role: assistant
   title: Auxiliaire d'enseignement
   local: Bureau 2352 Pav. André-Aisenstadt
-  web: https://www.linkedin.com/in/meriem-ben-chaaben/
-  email: meriem.ben.chaaben@umontreal.ca
+  web: https://umontreal.academia.edu/RabahAhmedImedEddine
+  photo: https://media2.giphy.com/media/xUOxfjsW9fWPqEWouI/200.gif
+  email: louis.edouard.lafontant@umontreal.ca
   intro: 
-    Envoyez-moi vos messages par <a href="mailto:meriem.ben.chaaben@umontreal.ca@umontreal.ca">courriel</a> ou via StudiUM. 
-    <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
-- name: Auxiliaire Q
+    Disponibilités à venir.
+# - name: Ahmed Imed EDDINE RABAH
+#   role: assistant
+#   title: Auxiliaire d'enseignement
+#   local: Bureau 2352 Pav. André-Aisenstadt
+#   web: https://umontreal.academia.edu/RabahAhmedImedEddine
+#   photo: https://0.academia-photos.com/70104681/58991193/47229847/s200_rabah.imado.jpg
+#   email: ahmed.imed.eddine.rabah@umontreal.ca
+#   intro: 
+#     Envoyez-moi vos messages par <a href="mailto:ahmed.imed.eddine.rabah@umontreal.ca">courriel</a> ou via StudiUM. 
+#     <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
+- name: Hanfia BARRY
   role: assistant
   title: Auxiliaire d'enseignement
   local: Bureau 2352 Pav. André-Aisenstadt
-  web: http://www-ens.iro.umontreal.ca/~lafontle/
-  email: aux.qq@umontreal.ca
+  web: hanifa.barry@umontreal.ca
+  photo: https://media4.giphy.com/media/Swytr5ngUDfDwtXKOz/200w.gif?cid=82a1493bh5pey8l8kq11ngz3d4b2lois62rm93qtdmvkq05h&rid=200w.gif&ct=g
+  email: hanifa.barry@umontreal.ca
   intro: 
-    Envoyez-moi vos messages par <a href="mailto:aux.qq@umontreal.ca">courriel</a> ou via StudiUM. 
-    <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
-- name: Auxiliaire T
-  role: assistant
-  title: Auxiliaire d'enseignement
-  local: Bureau 2352 Pav. André-Aisenstadt
-  web: http://www-ens.iro.umontreal.ca/~lafontle/
-  email: aux.tbd@umontreal.ca
-  intro: 
-    Envoyez-moi vos messages par <a href="mailto:aux.tbd@umontreal.ca">courriel</a> ou via StudiUM. 
-    <span class="card-availability">Disponible le mardi et vendredi entre 12h30 et 14h30</span>.
+    Disponibilités à venir.
