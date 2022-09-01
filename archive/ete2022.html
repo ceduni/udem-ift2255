@@ -39,36 +39,6 @@
             display: flex;
         }
 
-        .teaching-logo {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            width: 96px; min-width: 96px;
-            height: 96px;
-            background-color: #fff;
-            box-shadow: inset 0 1px 1px #999;
-            border: 6px solid #5E8EE4;
-            border-radius: 50%;
-            margin-right: 6px;
-        }
-            .teaching-logo-name {
-                display: flex;
-                font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
-                font-size: 2.2em;
-            }
-                .teaching-logo-code {
-                    color: #333;
-                    letter-spacing: -1px;
-                }
-                .teaching-logo-number {
-                    margin-left: 2px;
-                    color: #2C5EB4;
-                    letter-spacing: -1px;
-                }
-
-            .teaching-logo-type {
-                font-size: 1.3em; font-weight: 800;
-                color: #555; 
-            }
-
                     
         .teaching-info {
             flex-grow: 2;
@@ -993,28 +963,14 @@
         <section class="teaching">
             <div class="teaching-header">
                 <div class="teaching-logo">
-                    <a class="bare-link teaching-logo-name" href="../index.html">
+                    <div class="teaching-logo-name">
                         <span class="teaching-logo-code">IFT</span>
                         <span class="teaching-logo-number">2255</span>
-                    </a>
+                    </div>
                 </div>
-                <div class="teaching-info teaching-info--large">
+                <div class="teaching-info">
                     <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Génie Logiciel</h1>
                     <p class="teaching-term">Été 2022</p>
-                    <p class="teaching-schedule">
-                        <strong>Cours:</strong>
-
-                        Mardi 12:00 &ndash; 14:00 @
-                        1355 Pav. André-Aisenstadt
-                        <strong>&</strong>
-                        Vendredi 12:00 &ndash; 13:00
-                        1355 Pav. André-Aisenstadt
-                    </p>
-                    <p class="teaching-schedule">
-                        <strong>Démos:</strong>
-                        Vendredi 13:00 &ndash; 15:00
-                        1355 Pav. André-Aisenstadt
-                    </p>
                 </div>
             </div>
         </section>
@@ -2591,6 +2547,20 @@
 
     <footer class="page-footer">
         <div class="content-wrapper">
+            <div class="footer-archive">
+                <p>
+                    Session actuelle: <a class="bare-link inline-link footer__link" href="../aut2022.html">Automne 2022</a> 
+                </p>
+                <h3 class="footer-archive-title">Archive</h3>
+                <ul class="bare-list archive-plans">
+                    <li class="archive-plan">
+                        <a class="bare-link archive-plan-link" href="aut2021.html">Automne 2021</a> 
+                    </li>
+                    <li class="archive-plan current">
+                        <span class="bare-link archive-plan-link">Été 2022</span> 
+                    </li>
+                </ul>
+            </div>
             <p class="copyright">&copy; 2021 &ndash; 2022 Ceduni</p>
         </div>
     </footer>
