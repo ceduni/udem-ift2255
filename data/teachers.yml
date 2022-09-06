@@ -9,16 +9,6 @@
     Envoyez-moi vos messages par <a href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via Discord (#LE2545). 
     Pour plannifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
 
-- name: Ahmed Imed EDDINE RABAH
-  role: assistant
-  title: Auxiliaire d'enseignement
-  local: Local à venir
-  web: https://umontreal.academia.edu/RabahAhmedImedEddine
-  photo: https://0.academia-photos.com/70104681/58991193/47229847/s200_rabah.imado.jpg
-  email: ahmed.imed.eddine.rabah@umontreal.ca
-  intro: 
-    Disponibilités à venir.
-
 - name: Hanfia BARRY
   role: assistant
   title: Auxiliaire d'enseignement
@@ -26,6 +16,16 @@
   web: hanifa.barry@umontreal.ca
   photo: ./assets/images/photo_Hanifa_Barry.jpeg
   email: hanifa.barry@umontreal.ca
+  intro: 
+    Disponibilités à venir.
+
+- name: À venir
+  role: assistant
+  title: Auxiliaire d'enseignement
+  local: "???"
+  web: "#"
+  photo: https://media2.giphy.com/media/xUOxfjsW9fWPqEWouI/200.gif
+  email: "#"
   intro: 
     Disponibilités à venir.
 
