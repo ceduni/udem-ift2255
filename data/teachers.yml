@@ -19,13 +19,13 @@
   intro: 
     Disponibilités à venir.
 
-- name: À venir
+- name: Arian KHORASANI
   role: assistant
   title: Auxiliaire d'enseignement
-  local: "???"
+  local: Local à venir
   web: "#"
-  photo: https://media2.giphy.com/media/xUOxfjsW9fWPqEWouI/200.gif
-  email: "#"
+  photo: ./assets/images/photo_Arian_Khorasani.jpg
+  email: arian.khorasani@umontreal.ca
   intro: 
     Disponibilités à venir.
 
