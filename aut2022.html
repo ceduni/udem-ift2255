@@ -15,6 +15,48 @@
     <meta property="og:image" content="https://ceduni.github.io/udem-ift2255/assets/images/logo_ift2255.png">
     
     <link rel="stylesheet" href="dist/style.min.css?v=005">
+    <style>
+        .week-section-header {
+            display: flex;
+            margin-bottom: 6px;
+        }
+
+        .week-section-title {
+            margin-top: 0; 
+            font-size: 2em;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .week-section-doc {
+            margin-left: 6px;
+        }
+
+        .week-section-doc-icon {
+            height: 36px;
+            width: auto;
+        }
+
+        .week-section-parts {
+            display: flex;
+        }
+
+        .week-section-part {
+            display: flex; flex-direction: column;
+            margin-right: 12px;
+            flex: 1 1;
+        }
+
+        .week-section-images {
+            display: flex;
+        }
+
+        .week-section-image {
+            width: 100%; height: auto;
+            border-radius: 3px;
+            box-shadow: 1px 2px 1px -1px #999;
+        }
+    </style>
 </head>
 
 <body>
@@ -174,7 +216,12 @@
                                 <li class="week-content-detail">Itératif & Incrémental (Unifié)</li>
                             </ul>
                         </li>
-                        <!-- <li class="week-content-item">
+                        <li class="week-content-item week-content-item--video">
+                            <span class="week-content-title week-content-title--video">Capsule</span>
+                            <a class="bare-link week-content-video" title="Introduction et Processus de développement" 
+                                href="https://classe.iro.umontreal.ca/w/xcGaFixKbbtACEyi9UcYJn">🎬 Intro + Processus de dével.</a>
+                        </li>
+                        <li class="week-content-item">
                             <span class="week-content-title week-content-title--video">Lecture</span>
                             <ul class="bare-list lectures">
                                 <li class="lecture">
@@ -184,7 +231,7 @@
                                     📖 <strong>Ch.1</strong> (<em>SE practice</em>, Rajlich)
                                 </li>
                             </ul>
-                        </li> -->
+                        </li>
                     </ul>
                     <ul class="bare-list week-content tp">
                         <li class="week-content-item">
@@ -203,14 +250,14 @@
                         </li>
                     </ul>
                 </li>
-                <li class="week hidden">
+                <li class="week">
                     <h4 class="week-title">Semaine 02 (12 Septembre)</h4>
                     <ul class="bare-list week-content th">
                         <li class="week-content-item">
                             <span class="week-content-title">Modèle de développement</span>
                             <ul class="bare-list week-content-details">
-                                <li class="week-content-detail">Itératif & Incrémental</li>
                                 <li class="week-content-detail">Modèle Unifié</li>
+                                <li class="week-content-detail">Agile</li>
                             </ul>
                         </li>
                         <li class="week-content-item">
@@ -259,7 +306,6 @@
                         <li class="week-content-item">
                             <span class="week-content-title">Outils nécessaires</span>
                             <ul class="bare-list week-content-details">
-                                <li class="week-content-detail">Discord</li>
                                 <li class="week-content-detail">GitHub</li>
                                 <li class="week-content-detail">Visual Paradigm</li>
                             </ul>
@@ -269,14 +315,14 @@
                             <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Questions-réponses</li>
                                 <li class="week-content-detail">Formation des groupes</li>
-                                <li class="week-content-detail">Initiation à GIT</li>
+                                <li class="week-content-detail">Initiation à Git</li>
                             </ul>
                         </li>
                         <li class="week-content-item">
                             <span class="week-content-title">Exercices</span>
                         </li>
                     </ul>
-                    <strong style="margin-top: 6px; font-size: 1.1em;">DM1 disponible (13 Mai) 📅</strong>
+                    <strong style="margin-top: 6px; font-size: 1.1em;">DM1 disponible (16 Septembre) 📅</strong>
                 </li>
                 <li class="week hidden">
                     <h4 class="week-title">Semaine 03 (19 Septembre)</h4>
@@ -832,54 +878,60 @@
                     <h2 class="body-content-title">Semaine 1: Introduction + Modèle de développement</h2>
                 </div>
 
-                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
-                    <li class="preview">
-                        <!-- <div class="preview-slides">
-                            <a class="bare-link video-link" href="https://youtu.be/Eq_FN9XTo3Q" target="_blank">
-                                <img class="img-preview" src="http://img.youtube.com/vi/Eq_FN9XTo3Q/mqdefault.jpg" alt="Caractéristique du génie">
-                            </a>
-                        </div> -->
-                        <div class="preview-description">
-                            <h3 class="preview-description-title">Présentation du cours</h3>
+                <div class="week-section-body collapsible-content" data-collapsible-content="">
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Introduction</h3>
+                        <a class="week-section-doc" href="./assets/docs/01-introduction.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a>
+                    </div>
 
-                            <ul class="bare-list">
-                                <li>
-                                    Présentation des enseignants (roles et disponibilités)
-                                </li>
-                                <li>
-                                    Présentation du plan de cours (déroulement de la session)
-                                </li>
-                                <li>
-                                    Outils de communication (StudiUM, Discord)
-                                </li>
-                            </ul>
-
-                            <h3 class="preview-description-title" style="margin-top: 6px;">Introduction au génie logiciel</h3>
-
-                            <ul class="bare-list">
-                                <li>
-                                    Qualités d'un ingénieur (rigueur, recherche de garantie, méthodologie de travail)
-                                </li>
-                                <li>
-                                    Propriétés du logiciel (adaptabilité, versatilité, invisibilité)
-                                </li>
-                                <li>
-                                    Modèle de développement (linéaire, itératif, incrémental)
-                                </li>
-                            </ul>
-
-                            <h3 class="preview-description-title">Présentations</h3>
-                            <ul class="bare-list">
-                                <li>
-                                    <a href="./assets/docs/01-introduction.pdf">Introduction</a>
-                                </li>
-                                <li>
-                                    <a href="./assets/docs/02-modele_developpement.pdf">Modèle de développement</a>
-                                </li>
-                            </ul>
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/01-introduction_genie.svg" alt="Qu'entends on par génie">
+                            <p>
+                                L'ingénieur conçoit des solutions innovatrices, durables et adaptées à l'environnement.
+                                Il est guidé par la <strong>rigueur et la recherche de garantie</strong>.
+                                Un ingénieur utilise des outils précis et une méthodologie de travail.
+                            </p>
                         </div>
-                    </li>
-                </ul>
+
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/01-introduction_logiciel.svg" alt="Qu'entends on par logiciel">
+                            <p>
+                                Le logiciel est fondamentalement de nature conceptuelle. Il décrit un ensemble de programmes (chemins). <br>
+                                Propriétés inhérentes du logiciel: Complexité, Versatilité, Invisibilité, Discontinuité
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="week-section-header">
+                        <h3 class="week-section-title" style="margin-top: 6px;">Modèle de développement</h3>
+                        <a class="week-section-doc" href="./assets/docs/02-modele_developpement.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a>
+                    </div>
+                    
+
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/02-modele_developpement_facteurs.svg" alt="Qu'entends on par génie">
+                            <p>
+                                Si <em>Distance<sub>acteurs</sub></em> est élevé le modèle présentera peu d'interactions entre les acteurs <code>=></code> linéaire ou incrémental. Sinon, il sera itératif. <br>
+                                Si <em>Cout<sub>ressources</sub></em> est élevé le modèle minimisera les activités d'implémentation et de déploiement <code>=></code> linéaire ou itératif. Sinon, il sera incrémental.
+                            </p>
+                        </div>
+
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/02-modele_developpement_trio.svg" alt="Qu'entends on par logiciel">
+                            <p>
+                                Le modèle linéaire met l'emphase sur la documentation et la conception. Pratique pour des projets où les exigences sont fixes.
+                                Le modèle itératif permet d'inclure les autres parties durant tout le projet.
+                                Le modèle incrémental permet de développer de manière modulaire, suivant les priorités du client.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="section-summary collapsible-preview">
                     <h3 class="section-summary-title">Contenu</h3>
@@ -894,131 +946,55 @@
                 </div>
             </section>
 
-            <!-- <section class="body-content-section collapsible" data-collapsible="expanded">
+            <section class="body-content-section collapsible" data-collapsible="expanded">
                 <div class="body-content-section-header" data-collapsible-header="">
-                    <h2 class="body-content-title">Semaine 2</h2>
+                    <h2 class="body-content-title">Semaine 2: Processus de développement + Exigences</h2>
                 </div>
 
-                <ul class="bare-list previews collapsible-content" data-collapsible-content="">
-                    <li class="preview">
-                        <div class="preview-slides">
-                            <img class="img-preview" src="assets/images/modele_cascade.png" alt="Modèle en cascade">
-                            <img class="img-preview" src="assets/images/modele_v.png" alt="Modèle en V">
-                        </div>
-                        <div class="preview-description">
-                            <h3 class="preview-description-title">Génie</h3>
+                <div class="week-section-body collapsible-content" data-collapsible-content="">
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Méthode Agile</h3>
+                    </div>
 
-                            <ul class="bare-list">
-                                <li>
-                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
-                                </li>
-                                <li>
-                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
-                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
-                                </li>
-                                <li>
-                                    Utilise des outils et une méthodologie de travail
-                                </li>
-                            </ul>
+                    <ul class="bare-list">
+                        <li class="dash">TDD</li>
+                        <li class="dash">XP</li>
+                        <li class="dash">Scrum</li>
+                    </ul>
 
-                            <h3 class="preview-description-title">Logiciel</h3>
+                    <h3 class="week-section-title" style="margin-top: 6px;">Processus de développement</h3>
+                    <ul class="bare-list">
+                        <li class="dash">Exigences</li>
+                        <li class="dash">Analyse</li>
+                        <li class="dash">Conception</li>
+                        <li class="dash">Implémentation</li>
+                        <li class="dash">Vérification</li>
+                        <li class="dash">Déploiement</li>
+                    </ul>
 
-                            <ul class="bare-list">
-                                <li>
-                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
-                                </li>
-                                <li>
-                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
-                                </li>
-                                <li>
-                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    
-                    <li class="preview">
-                        <div class="preview-slides">
-                            <img class="img-preview" src="assets/images/modele_prototypage.png" alt="Processus itératif">
-                        </div>
-                        <div class="preview-description">
-                            <h3 class="preview-description-title">Génie</h3>
-
-                            <ul class="bare-list">
-                                <li>
-                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
-                                </li>
-                                <li>
-                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
-                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
-                                </li>
-                                <li>
-                                    Utilise des outils et une méthodologie de travail
-                                </li>
-                            </ul>
-
-                            <h3 class="preview-description-title">Logiciel</h3>
-
-                            <ul class="bare-list">
-                                <li>
-                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
-                                </li>
-                                <li>
-                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
-                                </li>
-                                <li>
-                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    
-                    <li class="preview">
-                        <div class="preview-slides">
-                            <img class="img-preview" src="assets/images/modele_increment.png" alt="Modèle incrémental">
-                            <img class="img-preview" src="assets/images/modele_i.png" alt="Modèle incrémental">
-                        </div>
-                        <div class="preview-description">
-                            <h3 class="preview-description-title">Génie</h3>
-
-                            <ul class="bare-list">
-                                <li>
-                                    L'ingénieur est guidé par la <strong>rigueur</strong> et la <strong>recherche de garantie</strong>
-                                </li>
-                                <li>
-                                    Capacité de <strong>répondre aux besoins d'une personne</strong> en proposant des 
-                                    <strong>solutions innovatrices, durables et adaptées à l'environnement</strong>.
-                                </li>
-                                <li>
-                                    Utilise des outils et une méthodologie de travail
-                                </li>
-                            </ul>
-
-                            <h3 class="preview-description-title">Logiciel</h3>
-
-                            <ul class="bare-list">
-                                <li>
-                                    Un logiciel est de nature <strong>très complexe</strong> et représente un <strong>ensemble de comportements</strong>.
-                                </li>
-                                <li>
-                                    <strong>Contrainte accidentelle</strong>: limite des outils, imprévus, problèmes transitoires
-                                </li>
-                                <li>
-                                    <strong>Contrainte inhérente</strong>: complexité, conformité, invisibilité, discontinuité
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                    <h3 class="week-section-title">Exigences</h3>
+                    <ul class="bare-list">
+                        <li class="dash">Objectifs</li>
+                        <li class="dash">Techniques</li>
+                        <li class="dash">Livrables</li>
+                    </ul>
+                </div>
 
                 <div class="section-summary collapsible-preview">
                     <h3 class="section-summary-title">Contenu</h3>
                     <ul class="bare-list section-summary-list">
-                        <li class="section-summary-list-item"><strong>Génie: </strong>Qualités de l'ingénieur</li>
-                        <li class="section-summary-list-item"><strong>Logiciel: </strong>Caractéristiques du logicel</li>
+                        <li class="section-summary-list-item">
+                            Méthode agile
+                        </li>                      
+                        <li class="section-summary-list-item">
+                            Processus de développement
+                        </li>
+                        <li class="section-summary-list-item">
+                            Exigences
+                        </li>
                     </ul>
                 </div>
-            </section> -->
+            </section>
         </div>
     </main>
 
