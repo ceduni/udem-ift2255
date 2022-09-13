@@ -583,6 +583,14 @@
     background-color: #2C5EB4;
 }
 
+.teaching-link__link--discord {
+    background-color: #5865F2;
+}
+
+    .teaching-link__link:hover {
+        background-color: #111;
+    }
+
 .teaching-content {
     margin-top: 12px;
     font-size: 1.5em;
