@@ -12,29 +12,29 @@
 - name: Hanfia BARRY
   role: assistant
   title: Auxiliaire d'enseignement
-  local: Local à venir
+  local: Bureau 2238 Pav. André-Aisenstadt
   web: hanifa.barry@umontreal.ca
   photo: ./assets/images/photo_Hanifa_Barry.jpeg
   email: hanifa.barry@umontreal.ca
   intro: 
     Disponibilités à venir.
 
-- name: Arian KHORASANI
+- name: Mohammadamin ZAHERI
   role: assistant
   title: Auxiliaire d'enseignement
-  local: Local à venir
-  web: "#"
-  photo: ./assets/images/photo_Arian_Khorasani.jpg
-  email: arian.khorasani@umontreal.ca
+  local: Bureau 2352 Pav. André-Aisenstadt
+  web: http://zaheri.info/
+  photo: https://geodes.iro.umontreal.ca/images/people/people/mohammadamin.png
+  email: mohammadamin.zaheri@umontreal.ca
   intro: 
     Disponibilités à venir.
 
-- name: À venir
+- name: Jessie GALASSO-CARBONNEL
   role: assistant
   title: Auxiliaire d'enseignement
-  local: "???"
-  web: "#"
-  photo: https://media2.giphy.com/media/xUOxfjsW9fWPqEWouI/200.gif
-  email: "#"
+  local: Bureau 2347 Pav. André-Aisenstadt
+  web: https://jgalasso.github.io/
+  photo: https://geodes.iro.umontreal.ca/images/people/people/jessie.png
+  email: jessie.galasso-carbonnel@umontreal.ca
   intro: 
     Disponibilités à venir.

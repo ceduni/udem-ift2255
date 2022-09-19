@@ -1,6 +1,6 @@
 import {
     createDiv, createI, createListItem, createSpan, createUnorderedList,
-    getElements, getElement, isEmpty, shortDate
+    getElements, getElement, isEmpty, shortDate, isNullOrUndefined
 } from 'zenkai'
 const DATA_TEAMS = require(`./teams.json`);
 
@@ -20,9 +20,15 @@ const fullName = (fName, lName) => fName + " " + lName.toUpperCase();
  * @param {*} person 
  * @returns {string}
  */
-const getFullName = (person) => fullName(person.firstName, person.lastName);
+function getFullName(person) {
+    if (isNullOrUndefined(person)) {
+        return "N/A";
+    }
 
-const CURRENT_WEEK = Math.ceil((Date.now() - new Date(2022, 4, 13).getTime()) / (60 * 60 * 24 * 1000) / 7);
+    return fullName(person.firstName, person.lastName);
+}
+
+const CURRENT_WEEK = Math.ceil((Date.now() - new Date(2022, 9, 13).getTime()) / (60 * 60 * 24 * 1000) / 7);
 
 let teamsSection = getElement(`[data-display="teams"]`);
 
@@ -53,7 +59,7 @@ DATA_TEAMS.forEach(team => {
     });
     let icon = createI({
         class: ["icon", "icon-person"]
-    });
+    }); console.log(responsable);
     let groupResponsable = createSpan({
         class: ["team-captain", "fit-content"],
         title: getFullName(responsable)
@@ -99,7 +105,7 @@ let outValues = getElements("[data-ruleng]");
  */
 function upperToHyphenLower(match, string, offset) {
     let prop = match.substring(1).trim();
-    
+
     if (prop === "CURRENT_WEEK") {
         return CURRENT_WEEK;
     }

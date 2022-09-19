@@ -1,24 +1,25 @@
 [
     {
         "id": 1,
-        "name": "Castlevania",
-        "responsable": "20146099",
+        "name": "SPARK",
+        "responsable": "20189960",
         "members": [
-            { "firstName": "Jean-Yves", "lastName": "Grenier", "matricule": "20146099" },
-            { "firstName": "Noémie", "lastName": "Arbour", "matricule": "20186881" },
-            { "firstName": "Ismail", "lastName": "El-Azhari", "matricule": "20196185" }
+            { "firstName": "Vyncent", "lastName": "Larose", "matricule": "20189960" },
+            { "firstName": "Haunui", "lastName": "Louis", "matricule": "20189376" },
+            { "firstName": "Sara", "lastName": "Gair", "matricule": "20216922" },
+            { "firstName": "Alexandre", "lastName": "Eyrolle", "matricule": "20134593" }
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": true },
+                { "week": 1, "used": false }, 
+                { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
         },
         "dm2": {
             "meetings": [
                 { "week": 6, "used": false }, 
-                { "week": 7, "used": true }
+                { "week": 7, "used": false }
             ]
         },
         "dm3": {
@@ -29,19 +30,19 @@
     },
     {
         "id": 2,
-        "name": "Vacuum",
-        "responsable": "1047266",
+        "name": "Oscar",
+        "responsable": "20030603",
         "members": [
-            { "firstName": "Malik", "lastName": "Abada", "matricule": "20173066" },
-            { "firstName": "Félix", "lastName": "Cormier", "matricule": "20212545" },
-            { "firstName": "Mathieu", "lastName": "Morin", "matricule": "20163634" },
-            { "firstName": "Gabriel", "lastName": "Ste-Marie", "matricule": "1047266" }
+            { "firstName": "Cynthia-Alexandra", "lastName": "Vargas", "matricule": "20030603" },
+            { "firstName": "Geneviève", "lastName": "Ouellette", "matricule": "20141307" },
+            { "firstName": "Snkar", "lastName": "Mam", "matricule": "20180113" },
+            { "firstName": "Vincent", "lastName": "Clouâtre", "matricule": "20248263" }
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": true }, 
+                { "week": 1, "used": false }, 
                 { "week": 2, "used": false },
-                { "week": 3, "used": true }
+                { "week": 3, "used": false }
             ]
         },
         "dm2": {
@@ -58,109 +59,110 @@
     },
     {
         "id": 3,
-        "name": "A+",
-        "responsable": "20189679",
+        "name": "DeLTA",
+        "responsable": "20119289",
         "members": [
-            { "firstName": "Man Ping", "lastName": "Li", "matricule": "968527" },
-            { "firstName": "Hengxin", "lastName": "Lian", "matricule": "20139565" },
-            { "firstName": "Hanz", "lastName": "Schepens", "matricule": "20189679" }
+            { "firstName": "Camille", "lastName": "DIVISIA", "matricule": "20119289" },
+            { "firstName": "Jonathan", "lastName": "THERRIEN", "matricule": "20157376" },
+            { "firstName": "Olivier", "lastName": "Langelier-Mainville", "matricule": "20220165" },
+            { "firstName": "Abderrezak", "lastName": "Agsous", "matricule": "20189331" }
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": true },
-                { "week": 3, "used": true }
-            ]
-        },
-        "dm2": {
-            "meetings": [
-                { "week": 6, "used": true }, 
-                { "week": 7, "used": false }
-            ]
-        },
-        "dm3": {
-            "meetings": [
-                { "week": 11, "used": true }
-            ]
-        }
-    },
-    {
-        "id": 4,
-        "name": "Equipe_11",
-        "responsable": "20170651",
-        "members": [
-            { "firstName": "Fannie", "lastName": "Filion-Bienvenue", "matricule": "20104125" },
-            { "firstName": "Patrick", "lastName": "Lanoie", "matricule": "20212654" },
-            { "firstName": "Gabriel", "lastName": "Ménard", "matricule": "20159443" },
-            { "firstName": "Thierry Manuel", "lastName": "Tchoumkeu Djeumen", "matricule": "20170651" }
-        ],
-        "dm1": {
-            "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": true },
-                { "week": 3, "used": true }
+                { "week": 1, "used": false }, 
+                { "week": 2, "used": false },
+                { "week": 3, "used": false }
             ]
         },
         "dm2": {
             "meetings": [
                 { "week": 6, "used": false }, 
-                { "week": 7, "used": true }
+                { "week": 7, "used": false }
             ]
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": true }
+                { "week": 11, "used": false }
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "name": "TBD",
+        "responsable": "20131841",
+        "members": [
+            { "firstName": "Killian", "lastName": "Gervais", "matricule": "20131841" },
+            { "firstName": "Garen", "lastName": "Yelegen", "matricule": "20152234" },
+            { "firstName": "Ithri", "lastName": "Kendi", "matricule": "20222832" },
+            { "firstName": "Hichem", "lastName": "Agrane", "matricule": "20232132" }
+        ],
+        "dm1": {
+            "meetings": [
+                { "week": 1, "used": false }, 
+                { "week": 2, "used": false },
+                { "week": 3, "used": false }
+            ]
+        },
+        "dm2": {
+            "meetings": [
+                { "week": 6, "used": false }, 
+                { "week": 7, "used": false }
+            ]
+        },
+        "dm3": {
+            "meetings": [
+                { "week": 11, "used": false }
             ]
         }
     },
     {
         "id": 5,
-        "name": "Big G",
-        "responsable": "20150696",
+        "name": "KFE",
+        "responsable": "20215539",
         "members": [
-            { "firstName": "Mingze", "lastName": "Li", "matricule": "20150696" },
-            { "firstName": "Duola", "lastName": "Peng", "matricule": "20150698" },
-            { "firstName": "Qianyun", "lastName": "Shen", "matricule": "20180792" },
-            { "firstName": "Shilong", "lastName": "Zhou", "matricule": "20151238" }
+            { "firstName": "Kim", "lastName": "Trinh", "matricule": "20215539" },
+            { "firstName": "Miliya", "lastName": "Ai", "matricule": "20180783" },
+            { "firstName": "Eed Flory", "lastName": "Jean-Baptiste", "matricule": "20168335" }
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": true }, 
+                { "week": 1, "used": false }, 
                 { "week": 2, "used": false },
-                { "week": 3, "used": true }
+                { "week": 3, "used": false }
             ]
         },
         "dm2": {
             "meetings": [
-                { "week": 6, "used": true }, 
-                { "week": 7, "used": true }
+                { "week": 6, "used": false }, 
+                { "week": 7, "used": false }
             ]
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": true }
+                { "week": 11, "used": false }
             ]
         }
     },
     {
         "id": 6,
-        "name": "Raptors",
-        "responsable": "B9592",
+        "name": "NATO",
+        "responsable": "20215539",
         "members": [
-            { "firstName": "Mériadec", "lastName": "Finoude", "matricule": "B9592" },
-            { "firstName": "Guillaume", "lastName": "Fortin", "matricule": "20218488" },
-            { "firstName": "Alexandre", "lastName": "Gilbert", "matricule": "20164925" }
+            { "firstName": "Charle-Antoine", "lastName": "Lord", "matricule": "20217010" },
+            { "firstName": "Malik", "lastName": "Abada", "matricule": "20173066" },
+            { "firstName": "DaoHan", "lastName": "Li", "matricule": "20209828" },
+            { "firstName": "Pirasana", "lastName": "Ariyam", "matricule": "20199437" }
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": true },
-                { "week": 3, "used": true }
+                { "week": 1, "used": false }, 
+                { "week": 2, "used": false },
+                { "week": 3, "used": false }
             ]
         },
         "dm2": {
             "meetings": [
-                { "week": 6, "used": true }, 
+                { "week": 6, "used": false }, 
                 { "week": 7, "used": false }
             ]
         },
@@ -172,191 +174,19 @@
     },
     {
         "id": 7,
-        "name": "Coders5",
-        "responsable": "20181966",
+        "name": "DDOS",
+        "responsable": "20214226",
         "members": [
-            { "firstName": "Salam Sam", "lastName": "Abdul-Samad", "matricule": "20066575" },
-            { "firstName": "Tarek Adel", "lastName": "Noui", "matricule": "20202425" },
-            { "firstName": "Athavan", "lastName": "Pathmanathan", "matricule": "20181966" },
-            { "firstName": "Ruo Tian", "lastName": "Tang", "matricule": "20090404" }
-        ],
-        "dm1": {
-            "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": false },
-                { "week": 3, "used": true }
-            ]
-        },
-        "dm2": {
-            "meetings": [
-                { "week": 6, "used": true }, 
-                { "week": 7, "used": true }
-            ]
-        },
-        "dm3": {
-            "meetings": [
-                { "week": 11, "used": true }
-            ]
-        }
-    },
-    {
-        "id": 8,
-        "name": "Omega",
-        "responsable": "20215658",
-        "members": [
-            { "firstName": "Carlos Eduardo", "lastName": "Calle Guerrero", "matricule": "20220633" },
-            { "firstName": "Xavier", "lastName": "Dontigny", "matricule": "20215658" },
-            { "firstName": "Maxence", "lastName": "Puech", "matricule": "20177121" }
+            { "firstName": "Satyam", "lastName": "Chowdhury", "matricule": "20214226" },
+            { "firstName": "Simon", "lastName": "Guy", "matricule": "20215130" },
+            { "firstName": "Louis-Pierre", "lastName": "Bastien", "matricule": "0886038" },
+            { "firstName": "Médéric", "lastName": "Bouchard", "matricule": "20187931" }
         ],
         "dm1": {
             "meetings": [
                 { "week": 1, "used": false }, 
                 { "week": 2, "used": false },
-                { "week": 3, "used": true }
-            ]
-        },
-        "dm2": {
-            "meetings": [
-                { "week": 6, "used": false }, 
-                { "week": 7, "used": false }
-            ]
-        },
-        "dm3": {
-            "meetings": [
-                { "week": 11, "used": false }
-            ]
-        }
-    },
-    {
-        "id": 9,
-        "name": "123Prog",
-        "responsable": "20190082",
-        "members": [
-            { "firstName": "Walid", "lastName": "Boudehane", "matricule": "20206664" },
-            { "firstName": "Juba", "lastName": "Foul", "matricule": "20186314" },
-            { "firstName": "Marianne Schmit", "lastName": "Pemmerl", "matricule": "20192143" },
-            { "firstName": "Patrick", "lastName": "Symenouh", "matricule": "20190082" }
-        ],
-        "dm1": {
-            "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": true },
-                { "week": 3, "used": true }
-            ]
-        },
-        "dm2": {
-            "meetings": [
-                { "week": 6, "used": true }, 
-                { "week": 7, "used": true }
-            ]
-        },
-        "dm3": {
-            "meetings": [
-                { "week": 11, "used": false }
-            ]
-        }
-    },
-    {
-        "id": 10,
-        "name": "Trinary Tree Traversal",
-        "responsable": "20214818",
-        "members": [
-            { "firstName": "Hassan", "lastName": "Abass", "matricule": "20178701" },
-            { "firstName": "Alban", "lastName": "Guyon", "matricule": "20206315" },
-            { "firstName": "Arsene", "lastName": "Mitohade", "matricule": "20094950" },
-            { "firstName": "Samy", "lastName": "Rasmy", "matricule": "20214818" }
-        ],
-        "dm1": {
-            "meetings": [
-                { "week": 1, "used": false }, 
-                { "week": 2, "used": true },
                 { "week": 3, "used": false }
-            ]
-        },
-        "dm2": {
-            "meetings": [
-                { "week": 6, "used": false }, 
-                { "week": 7, "used": true }
-            ]
-        },
-        "dm3": {
-            "meetings": [
-                { "week": 11, "used": false }
-            ]
-        }
-    },
-    {
-        "id": 11,
-        "name": "HMF",
-        "responsable": "20184235",
-        "members": [
-            { "firstName": "Fatiha", "lastName": "Sahmi", "matricule": "40323" },
-            { "firstName": "Mariam", "lastName": "Traore", "matricule": "20114254" },
-            { "firstName": "Hatim", "lastName": "Zakaria", "matricule": "20184235" }
-        ],
-        "dm1": {
-            "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": true },
-                { "week": 3, "used": false }   
-            ]
-        },
-        "dm2": {
-            "meetings": [
-                { "week": 6, "used": false }, 
-                { "week": 7, "used": false }
-            ]
-        },
-        "dm3": {
-            "meetings": [
-                { "week": 11, "used": true }
-            ]
-        }
-    },
-    {
-        "id": 12,
-        "name": "Hobbits",
-        "responsable": "20002732",
-        "members": [
-            { "firstName": "Stéphane", "lastName": "Atallah", "matricule": "20057564" },
-            { "firstName": "Hadrien", "lastName": "de Ryck", "matricule": "20180452" },
-            { "firstName": "Linda", "lastName": "Nguyen", "matricule": "20002732" },
-            { "firstName": "Félix", "lastName": "Pigeon", "matricule": "20153060" }
-        ],
-        "dm1": {
-            "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": true },
-                { "week": 3, "used": true }
-            ]
-        },
-        "dm2": {
-            "meetings": [
-                { "week": 6, "used": true }, 
-                { "week": 7, "used": false }
-            ]
-        },
-        "dm3": {
-            "meetings": [
-                { "week": 11, "used": false }
-            ]
-        }
-    },
-    {
-        "id": 13,
-        "name": "No Errors_Warnings",
-        "responsable": "20156589",
-        "members": [
-            { "firstName": "Laurent", "lastName": "Charlebois", "matricule": "20156589" },
-            { "firstName": "Aleck Tardelli", "lastName": "Gibbs", "matricule": "20096971" },
-            { "firstName": "Nisrine", "lastName": "Mastas", "matricule": "20147955" },
-            { "firstName": "Zhaoyi", "lastName": "Zhang", "matricule": "20121638" }
-        ],
-        "dm1": {
-            "meetings": [
-                { "week": 1, "used": true }, 
-                { "week": 2, "used": true }, 
-                { "week": 3, "used": true }   
             ]
         },
         "dm2": {
