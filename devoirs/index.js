@@ -35,6 +35,10 @@ let teamsSection = getElement(`[data-display="teams"]`);
 let teamsList = createUnorderedList({
     class: ["bare-list", "teams"]
 });
+
+let numParticipants = 0;
+const NUM_TEAMS = DATA_TEAMS.length;
+
 DATA_TEAMS.forEach(team => {
     let responsable = team.members.find(e => e.matricule === team.responsable);
     const { meetings } = team[id];
@@ -86,6 +90,7 @@ DATA_TEAMS.forEach(team => {
         })
     }
 
+    numParticipants += team.members.length;
 
     item.append(info, group, questions);
 
@@ -111,6 +116,12 @@ function upperToHyphenLower(match, string, offset) {
     }
     if (prop === "WEEK_END") {
         return WEEK_END;
+    }
+    if (prop === "NUM_PARTICIPANTS") {
+        return numParticipants;
+    }
+    if (prop === "NUM_TEAMS") {
+        return NUM_TEAMS;
     }
 
     return prop;
