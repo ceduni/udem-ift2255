@@ -1,9 +1,5 @@
-import {
-    createDiv, createI, createListItem, createSpan, createUnorderedList,
-    getElements, getElement, isEmpty, shortDate, isNullOrUndefined
-} from 'zenkai'
+import { createDiv, createI, createListItem, createSpan, createUnorderedList, getElements, getElement, isEmpty, isNullOrUndefined } from 'zenkai'
 const DATA_TEAMS = require(`./teams.json`);
-
 
 const { id } = document.body.dataset;
 
@@ -28,7 +24,7 @@ function getFullName(person) {
     return fullName(person.firstName, person.lastName);
 }
 
-const CURRENT_WEEK = Math.ceil((Date.now() - new Date(2022, 9, 13).getTime()) / (60 * 60 * 24 * 1000) / 7);
+const CURRENT_WEEK = Math.ceil((Date.now() - new Date("2022-09-18").getTime()) / (60 * 60 * 24 * 1000) / 7);
 
 let teamsSection = getElement(`[data-display="teams"]`);
 
@@ -36,7 +32,7 @@ let teamsList = createUnorderedList({
     class: ["bare-list", "teams"]
 });
 
-let numParticipants = 0;
+const numParticipants = DATA_TEAMS.reduce((prev, curr) => prev + curr.members.length, 0);
 const NUM_TEAMS = DATA_TEAMS.length;
 
 DATA_TEAMS.forEach(team => {
@@ -63,7 +59,7 @@ DATA_TEAMS.forEach(team => {
     });
     let icon = createI({
         class: ["icon", "icon-person"]
-    }); console.log(responsable);
+    });
     let groupResponsable = createSpan({
         class: ["team-captain", "fit-content"],
         title: getFullName(responsable)
@@ -89,8 +85,6 @@ DATA_TEAMS.forEach(team => {
             questions.append(questionItem);
         })
     }
-
-    numParticipants += team.members.length;
 
     item.append(info, group, questions);
 

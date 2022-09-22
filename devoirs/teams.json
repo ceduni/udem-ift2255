@@ -576,7 +576,7 @@
         }
     },
     {
-        "id": 22,
+        "id": 21,
         "name": "Whoknows",
         "responsable": "20093507",
         "members": [
@@ -605,7 +605,7 @@
         }
     },
     {
-        "id": 23,
+        "id": 22,
         "name": "SI7H",
         "responsable": "20198680",
         "members": [
@@ -634,7 +634,7 @@
         }
     },
     {
-        "id": 24,
+        "id": 23,
         "name": "Ecolowkey",
         "responsable": "20066734",
         "members": [
@@ -663,7 +663,7 @@
         }
     },
     {
-        "id": 25,
+        "id": 24,
         "name": "Lakitu",
         "responsable": "20188987",
         "members": [
@@ -692,7 +692,7 @@
         }
     },
     {
-        "id": 26,
+        "id": 25,
         "name": "VDB",
         "responsable": "20141971",
         "members": [
@@ -720,7 +720,7 @@
         }
     },
     {
-        "id": 27,
+        "id": 26,
         "name": "GPB",
         "responsable": "20184162",
         "members": [
@@ -749,13 +749,96 @@
         }
     },
     {
-        "id": 28,
+        "id": 27,
         "name": "ASeriousName",
         "responsable": "20134401",
         "members": [
             { "firstName": "Jianxin", "lastName": "You", "matricule": "20134401" },
             { "firstName": "Zeinab", "lastName": "Taleb", "matricule": "20102655" },
             { "firstName": "Harold-Andrew", "lastName": "Jose-Cruz", "matricule": "20227229" }
+        ],
+        "dm1": {
+            "meetings": [
+                { "week": 1, "used": false }, 
+                { "week": 2, "used": false },
+                { "week": 3, "used": false }
+            ]
+        },
+        "dm2": {
+            "meetings": [
+                { "week": 6, "used": false }, 
+                { "week": 7, "used": false }
+            ]
+        },
+        "dm3": {
+            "meetings": [
+                { "week": 11, "used": false }
+            ]
+        }
+    },
+    {
+        "id": 28,
+        "name": "SweetnessAndPower",
+        "responsable": "20009293",
+        "members": [
+            { "firstName": "Sen", "lastName": "Zeng", "matricule": "20009293" },
+            { "firstName": "Yuning", "lastName": "Sun", "matricule": "20141918" }
+        ],
+        "dm1": {
+            "meetings": [
+                { "week": 1, "used": false }, 
+                { "week": 2, "used": false },
+                { "week": 3, "used": false }
+            ]
+        },
+        "dm2": {
+            "meetings": [
+                { "week": 6, "used": false }, 
+                { "week": 7, "used": false }
+            ]
+        },
+        "dm3": {
+            "meetings": [
+                { "week": 11, "used": false }
+            ]
+        }
+    },
+    {
+        "id": 29,
+        "name": "ZCK",
+        "responsable": "20161653",
+        "members": [
+            { "firstName": "Khaled", "lastName": "Tetbirt", "matricule": "20161653" },
+            { "firstName": "Zacharie", "lastName": "Martel", "matricule": "20231059" },
+            { "firstName": "Christophe", "lastName": "Bouchard", "matricule": "20176209" }
+        ],
+        "dm1": {
+            "meetings": [
+                { "week": 1, "used": false }, 
+                { "week": 2, "used": false },
+                { "week": 3, "used": false }
+            ]
+        },
+        "dm2": {
+            "meetings": [
+                { "week": 6, "used": false }, 
+                { "week": 7, "used": false }
+            ]
+        },
+        "dm3": {
+            "meetings": [
+                { "week": 11, "used": false }
+            ]
+        }
+    },
+    {
+        "id": 30,
+        "name": "Soussa",
+        "responsable": "20170474",
+        "members": [
+            { "firstName": "Yacine", "lastName": "Mkhinini", "matricule": "20170474" },
+            { "firstName": "Mouhib", "lastName": "Aydi", "matricule": "20202744" },
+            { "firstName": "Mahmoud", "lastName": "Labidi", "matricule": "20176755" }
         ],
         "dm1": {
             "meetings": [

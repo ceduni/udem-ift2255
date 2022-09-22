@@ -304,6 +304,11 @@
             .evaluation-section .section-title {
                 color: #000;
             }
+        
+        .calendar-link {
+            font-weight: 500;
+            color: royalblue;
+        }
 
         .template-link {
             display: block;
@@ -569,6 +574,7 @@
                 <p>
                     Équipes: <strong data-ruleng="">$NUM_TEAMS</strong> <br>
                     Participants: <strong data-ruleng="">$NUM_PARTICIPANTS</strong> <br>
+                    Semaine: <strong data-ruleng="">$CURRENT_WEEK</strong> <br>
                     Fin du jalon: <strong>2022-10-11</strong>
                 </p>
             </aside>
@@ -707,14 +713,18 @@
                 <li>Rencontre 2: <strong>2 questions max</strong></li>
                 <li>Rencontre 3: <strong>1 question max</strong></li>
             </ul>
+
+
             <p>
-                Envoyez-les à notre responsable, Louis-Edouard LAFONTANT.
+                Pour plannifier une rencontre, utilisez le <a class="calendar-link" href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>
+                ou envoyez vos questions à notre responsable, Louis-Edouard LAFONTANT.
             </p>
             <ul class="bare-list contacts">
                 <li class="contact contact--discord">Discord: <strong>L-E#2545</strong></li>
-                <li class="contact contact--mail">Courriel: <a
-                        href="mailto:louis.edouard.lafontant@umontreal.ca">louis.edouard.lafontant@umontreal.ca</a></li>
+                <li class="contact contact--mail">Courriel: <a href="mailto:louis.edouard.lafontant@umontreal.ca">louis.edouard.lafontant@umontreal.ca</a></li>
             </ul>
+
+            
         </section>
 
         <section class="task-section">
@@ -739,8 +749,8 @@
             <ul class="tasks">
                 <li class="task">Hypothèses: Hypothèses émises dans l'élaboration des exigences</li>
                 <li class="task">Glossaire: Liste des termes et expressions clés caractérisant le domaine</li>
-                <li class="task">Besoins fonctionnels: Fonctionnalité du logiciel à offrir traduit par des Cus et scénarios</li>
-                <li class="task">Besoins non fonctionnels: Attributs du logiciel recherchés affectant l'expérience utilisateur (avec justification)</li>
+                <li class="task">Besoins fonctionnels: Fonctionnalité du logiciel à offrir traduit par des cas d'utilisation et scénarios</li>
+                <li class="task">Besoins non fonctionnels: 5 caractéristiques du logiciel affectant l'expérience utilisateur (avec justification)</li>
             </ul>
 
             <h3>Analyse</h3>
@@ -749,16 +759,10 @@
                 <li class="task">Besoins matériels: Partie à informatiser, matériels nécessaires, solutions de stockage</li>
                 <li class="task">Contraintes physiques et conceptuelles</li>
                 <li class="task">Prototype: 5 dessins illustrant différentes vues/interactions avec la plateforme</li>
+                <li class="task">Proposition: Description de votre solution</li>
             </ul>
 
-            <h3>Livrables</h3>
-            <ul class="tasks">
-                <li class="task">Rapport</li>
-                <li class="task">CUs et scénarios</li>
-                <li class="task">Prototype</li>
-            </ul>
-
-            <!-- <a class="bare-link template-link" target="_blank" href="template.html">Template pour le rapport</a> -->
+            <a class="bare-link template-link" target="_blank" href="template.html">Template pour le rapport</a>
         </section>
 
         <section class="evaluation-section">
