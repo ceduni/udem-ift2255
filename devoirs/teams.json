@@ -11,7 +11,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -40,7 +40,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -62,14 +62,14 @@
         "name": "DeLTA",
         "responsable": "20119289",
         "members": [
-            { "firstName": "Camille", "lastName": "DIVISIA", "matricule": "20119289" },
-            { "firstName": "Jonathan", "lastName": "THERRIEN", "matricule": "20157376" },
+            { "firstName": "Camille", "lastName": "Divisia", "matricule": "20119289" },
+            { "firstName": "Jonathan", "lastName": "Therrien", "matricule": "20157376" },
             { "firstName": "Olivier", "lastName": "Langelier-Mainville", "matricule": "20220165" },
             { "firstName": "Abderrezak", "lastName": "Agsous", "matricule": "20189331" }
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -98,7 +98,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -126,7 +126,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -155,7 +155,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -184,7 +184,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -213,7 +213,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -242,7 +242,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -271,7 +271,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -300,7 +300,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -358,7 +358,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -386,7 +386,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -529,7 +529,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -558,7 +558,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -587,7 +587,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -616,7 +616,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -645,7 +645,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -674,7 +674,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -759,7 +759,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -786,7 +786,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]
@@ -814,7 +814,7 @@
         ],
         "dm1": {
             "meetings": [
-                { "week": 1, "used": false }, 
+                { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
                 { "week": 3, "used": false }
             ]

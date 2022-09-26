@@ -89,6 +89,11 @@
             display: flex;
             flex-direction: column;
         }
+
+        .listing {
+            font-style: normal;
+            display: block;
+        }
                 
         .dash:before { 
             content: '-'; 
@@ -223,6 +228,10 @@
             color: #EF4E36;
         }
 
+        .subsection-title--activity {
+            color: #fff;
+        }
+
         .paragraph-title {
             font-weight: 500;
             margin-bottom: 6px;
@@ -268,18 +277,25 @@
         .requirement {
             margin-bottom: 6px;
             margin-right: 6px;
-            padding: 6px 8px;
+            padding: 6px 12px 8px;
             color: #333;
-            line-height: 1.5;
             width: calc(50% - 12px);
             background-color: #fff;
-            border-radius: 2px;
+            border-radius: 3px;
             border-bottom: 4px solid #6667AB;
+            box-shadow: 0 -1px 2px -1px #d5d5d5;
         }
 
         .requirement-title {
             display: block;
+            color: royalblue;
+            margin-top: 0; margin-bottom: 6px;
             font-size: 1.1em; font-weight: 300;
+        }
+
+        .requirement-description {
+            font-size: 1.4rem;
+            line-height: 1.5;
         }
 
         .requirement .label {
@@ -534,13 +550,7 @@
             .requirement {
                 margin-bottom: 6px;
                 margin-right: 6px;
-                padding: 6px 8px;
-                color: #333;
-                line-height: 1.5;
                 width: calc(50% - 12px);
-                background-color: #fff;
-                border-radius: 2px;
-                border-bottom: 4px solid #6667AB;
             }
         }
     </style>
@@ -606,12 +616,12 @@
                             Ainsi nous proposons la création d'un outil, <em>“l'outil <b>Bineco</b>”</em> qui permettra à tout résident de:
                         </p>
                         <ul class="bare-list">
-                            <li class="dash">Faire le suivi des recyclables</li>
-                            <li class="dash">Faire le suivi des résidus alimentaires</li>
-                            <li class="dash">Faire le suivi des déchets organiques</li>
-                            <li class="dash">Visualiser l'efficacité des activités de recyclages et compostages</li>
-                            <li class="dash">Signaler un problème à la ville</li>
-                            <li class="dash">Trouver un consommateur de déchets</li>
+                            <li class="check">Faire le suivi des recyclables</li>
+                            <li class="check">Faire le suivi des <ins>déchets organiques (résidus alimentaires)</ins></li>
+                            <li class="check"><del>Faire le suivi des déchets organiques</del></li>
+                            <li class="check">Visualiser l'efficacité des activités de recyclages et compostages</li>
+                            <li class="check">Signaler un problème à la ville</li>
+                            <li class="check">Trouver un consommateur de <ins>déchets organiques ou matières recyclables</ins></li>
                         </ul>
 
                         <p style="margin-top: 12px;">
@@ -621,7 +631,7 @@
                 </section>
 
                <section class="problem-subsection problem-subsection--activity">
-                   <h3 class="subsection-title">Activités</h3>
+                   <h3 class="subsection-title subsection-title--activity">Activités</h3>
                    <!-- <img class="project-intro-img" src="https://res.cloudinary.com/villemontreal/image/upload/v1582302005/portail/axgnbss3a6hlpmchosx2.jpg" alt="">                       -->
                    <ul class="bare-list activities">
                        <li class="activity activity--publications">
@@ -654,33 +664,92 @@
                     <h3 class="subsection-title">Liste de souhaits</h3>
                     
                     <p>
-                        Une fois connecté à Bineco, un résident peut envoyer diverses requêtes pour faire son suivi ou communiquer avec la ville ou une tierce partie.
-                    </p>       
+                        Une fois connecté à Bineco, un résident (utilisateur) peut effectuer diverses requêtes (opérations et interactions) pour
+                        faire le suivi de ses déchets, du traitement des déchets à l'échelle municipale et entrer en contact avec des consommateurs.
+                    </p>
+                    <p>
+                        <ins>
+                            Pour le fonctionnement efficace de cet outil, nous assumons la présence d'un mécanisme d'inventorisation du contenu des bacs, tel que l'usage de capteurs.
+                            En utilisant les données collectées sur la composition des bacs de chaque résident, nous pouvons formuler des ratios ou métriques pour refléter 
+                            la tendance au niveau résidentiel. Des métriques peuvent aussi être formulées pour refléter l'efficacité du traitement des déchets au niveau municipal. 
+                        </ins>
+                        <br>
+                        <ins>
+                            Pour faciliter le traitement électronique (virtuel) des bacs, ceux-ci seront identifiés par un code QR émis par la municipalité.
+                        </ins>
+                    </p>
                     
                     <ul class="bare-list requirements">
                         <li class="requirement">
-                            <span class="requirement-title dash">Enregistrer mes bacs</span>
+                            <h4 class="requirement-title"><ins>S'inscrire comme résident</ins></h4>
+                            <span class="requirement-description">
+                                Pour s'inscrire comme résident, il faut fournir les informations suivantes:
+                                <i class="listing dash">Profil: nom, prénom, adresse courriel, téléphone</i>
+                                <i class="listing dash">Adresse de la résidence: permet de l'associer à une municipalité</i>
+                                <i class="listing dash">Numéro d'un bac: utile pour valider l'authenticité du résident</i>
+                            </span>
                         </li>
                         <li class="requirement">
-                            <span class="requirement-title dash">Afficher l'état des mes bacs</span>
+                            <h4 class="requirement-title">Enregistrer un bac</h4>
+                            <span class="requirement-description">
+                                Chaque résident est habituellement responsable de 2 ou 3 bacs (bac brun, bac de recyclage et bac à ordures). En tout temps, il devrait pouvoir enregistrer et suivre un nouveau bac.
+                                Pour enregistrer un nouveau bac, il faut scanner le code QR du bac et l'identifier par un nom et un type.
+                            </span>
                         </li>
                         <li class="requirement">
-                            <span class="requirement-title dash">Afficher les métriques de l'activité écologique</span>
+                            <h4 class="requirement-title">Afficher l'état des mes bacs</h4>
+                            <span class="requirement-description">
+                                L'état d'un bac présente sa capacité actuelle (niveau de remplissage), sa composition actuelle (contenu) et son usage (lié aux métriques écologiques).
+                                L'usage trace l'évolution de sa composition de manière périodique et par rapport à la municipalité.
+                                <!-- Il pourrait être utilisé pour signaler la présence d'éléments non compostables dans le bac de résidus alimentaires. -->
+                            </span>
                         </li>
                         <li class="requirement">
-                            <span class="requirement-title dash">Voir l'état de traitement de mes déchets</span>
+                            <h4 class="requirement-title">Afficher les métriques écologiques</h4>
+                            <span class="requirement-description">
+                                Les métriques (indicateurs, ratios) écologiques sont réparties entre celles liées à l'usage des bacs (niveau résidentiel) 
+                                et celles liées au traitement des déchets (niveau municipal). Ces métriques devraient être facilement interprétables 
+                                par tout utilisateur et significatives (pertinentes) pour mesurer correctement l'activité écologique.
+                            </span>
                         </li>
                         <li class="requirement">
-                            <span class="requirement-title dash">Voir les activités auxquels je participe</span>
+                            <h4 class="requirement-title">Voir l'état de traitement de mes déchets</h4>  
+                            <span class="requirement-description">
+                                Le traitement des déchets est segmenté en points de contrôle (<em>checkpoint</em>) permettant le suivi du processus.
+                                <i class="listing dash">Récupération des déchets (passage des camions)</i>
+                                <i class="listing dash">Livraison des déchets (date, consommateur ou dépôt, état des déchets)</i>
+                                <i class="listing dash">Usage des déchets (consommateur, activité, proportions exploitées)</i>
+                                À chaque point de contrôle, nous collectons des données permettant de fabriquer des métriques montrant l'efficacité du traitement des déchets à l'échelle municipale.
+                            </span>
                         </li>
                         <li class="requirement">
-                            <span class="requirement-title dash">Signaler un problème à la ville</span>
+                            <h4 class="requirement-title">Voir les activités que je maintiens</h4>  
+                            <span class="requirement-description">
+                                Les consommateurs utilisent les déchets pour des activités diverses de compostage et recyclages (ex: Fabrication de bouteille, sacs à partir de plastiques recyclés; Fabrication d'engrais).
+                                Les résidents étant la source des matières premières fournies par la ville, ils participent indirectement aux activités menées par les consommateurs.
+                            </span>
                         </li>
                         <li class="requirement">
-                            <span class="requirement-title dash">Trouver un consommateur</span> 
+                            <h4 class="requirement-title">Signaler un problème à la ville</h4>  
+                            <span class="requirement-description">
+                                Les bacs étant la propriété de la ville, pour tout problème rencontré avec un bac ou demande de nouveau bac, le résident peut envoyer une requête à la ville.
+                            </span>
                         </li>
                         <li class="requirement">
-                            <span class="requirement-title dash">S'inscrire comme consommateur</span> 
+                            <h4 class="requirement-title">Trouver un consommateur</h4>   
+                            <span class="requirement-description">
+                                Un résident peut naviguer à travers la liste des consommateurs enregistrés en utilisant un mécanisme de recherche et de filtre facilitant la localisation de consommateur spécifique.
+                            </span>
+                        </li>
+                        <li class="requirement">
+                            <h4 class="requirement-title">S'inscrire comme consommateur</h4>   
+                            <span class="requirement-description">
+                                Pour s'inscrire comme consommateur, il faut d'abord être enregistré auprès de la ville (prérequis) et fournir:
+                                <i class="listing dash">Profil: nom, adresse, email, téléphone</i>
+                                <i class="listing dash">Type de déchets traités</i>
+                                <i class="listing dash">Capacité de traitement </i>
+                                <i class="listing dash">Activités d'exploitation</i>
+                            </span>
                         </li>
                     </ul>
 
@@ -690,6 +759,12 @@
                         Suite à l'authentification, l'outil devrait afficher un menu principal présentant les actions possibles pour l'utilisateur connecté. <br>
                         Les actions peuvent être imbriquées pour éviter d'afficher trop d'options à l'utilisateur. Cependant, le menu ne devrait pas avoir plus
                         de 3 niveaux d'imbrication. Bien entendu, il devrait toujours être possible de retourner au menu principal sans quitter l'application.
+                    </p>
+                    <p>
+                        <ins>
+                            Pour le prototype interactif (<em>bonus</em>), il n'est pas nécessaire d'implémenter tous les CUs. L'implémentation peut assumer que les bacs sont déjà enregistrés.
+                            Veuillez plannifier une rencontre avec Louis-Edouard pour vous assurer d'avoir une couverture minimale des CUs.
+                        </ins>
                     </p>
                 </section>
             </div>
@@ -759,7 +834,7 @@
                 <li class="task">Besoins matériels: Partie à informatiser, matériels nécessaires, solutions de stockage</li>
                 <li class="task">Contraintes physiques et conceptuelles</li>
                 <li class="task">Prototype: 5 dessins illustrant différentes vues/interactions avec la plateforme</li>
-                <li class="task">Proposition: Description de votre solution</li>
+                <li class="task">Proposition: Choix de métriques et analyse de votre solution</li>
             </ul>
 
             <a class="bare-link template-link" target="_blank" href="template.html">Template pour le rapport</a>
