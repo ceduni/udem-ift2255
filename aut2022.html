@@ -16,13 +16,17 @@
     
     <link rel="stylesheet" href="dist/style.min.css?v=007">
     <style>
+        .week-section-body {
+            padding-top: 6px;
+        }
+        
         .week-section-header {
             display: flex;
             margin-bottom: 6px;
         }
 
         .week-section-title {
-            margin-top: 0; 
+            margin: 0; 
             font-size: 2em;
             font-weight: 300;
             text-transform: uppercase;
@@ -199,7 +203,7 @@
         <aside class="body-navigation">
             <ul class="bare-list weeks">
                 <li class="week">
-                    <h4 class="week-title">Semaine 01 (05 Septembre)</h4>
+                    <h4 class="week-title">Semaine 01 (5 Septembre)</h4>
                     <ul class="bare-list week-content th">
                         <li class="week-content-item">
                             <span class="week-content-title">Présentation</span>
@@ -302,12 +306,6 @@
                                 <li class="lecture">
                                     📖 <strong>Ch.2-3</strong> (<em>SE practice</em>, Rajlich)
                                 </li>
-                                <li class="lecture">
-                                    📖 <strong>Vie de logiciel</strong> (StudiUM)
-                                </li>
-                                <li class="lecture">
-                                    📖 <strong>Équipe de développement</strong> (StudiUM)
-                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -328,6 +326,12 @@
                         </li>
                         <li class="week-content-item">
                             <span class="week-content-title">Exercices</span>
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Quiz</li>
+                                <li class="week-content-detail">Flux des exigences</li>
+                                <li class="week-content-detail">Risques</li>
+                                <li class="week-content-detail">Exigences non-fonctionnelles</li>
+                            </ul>
                         </li>
                     </ul>
                     <strong style="margin-top: 6px; font-size: 1.1em;">DM1 disponible (18 Septembre) 📅</strong>
@@ -348,12 +352,15 @@
                             <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Exigences conceptuelles</li>
                                 <li class="week-content-detail">Exigences matérielles</li>
+                                <li class="week-content-detail">Modèle d'analyse</li>
                             </ul>
                         </li>
                         <li class="week-content-item week-content-item--video">
                             <span class="week-content-title week-content-title--video">Capsule</span>
                             <a class="bare-link week-content-video" title="Analyse fonctionnelle: Scénarios des CUs"
                                 href="https://youtu.be/j33UHLcGKEw">🎬 Analyse des besoins</a>
+                            <a class="bare-link week-content-video" title="Révision CUs, Exigences matérielles, Modèle d'analyse" 
+                                href="https://youtu.be/uynA_ktxJ98">🎬 Révision CUs + Analyse</a>
                         </li>
                         <li class="week-content-item week-content-item--video">
                             <span class="week-content-title week-content-title--video">Lecture</span>
@@ -367,25 +374,24 @@
                     <ul class="bare-list week-content tp">
                         <li class="week-content-item">
                             <span class="week-content-title">Suivi DM1</span>
-                            <!-- <ul class="bare-list week-content-details">
+                            <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Questions-réponses</li>
-                            </ul> -->
+                            </ul>
                         </li>
                         <li class="week-content-item">
                             <span class="week-content-title">Démo Visual Paradigm</span>
-                            <!-- <ul class="bare-list week-content-details">
+                            <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Diagramme de cas d'utilisation</li>
-                            </ul> -->
+                            </ul>
                         </li>
                         <li class="week-content-item">
                             <span class="week-content-title">Exercices</span>
-                            <!-- <ul class="bare-list week-content-details">
+                            <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Quiz</li>
                                 <li class="week-content-detail">Flux des exigences</li>
-                                <li class="week-content-detail">Risques</li>
-                                <li class="week-content-detail">Exigences non-fonctionnelles</li>
-                                <li class="week-content-detail">Cas d'étude: #GYM</li>
-                            </ul> -->
+                                <li class="week-content-detail">Cas d'utilisation</li>
+                                <li class="week-content-detail">Cas d'étude: Borne de rechargement OPUS</li>
+                            </ul>
                         </li>
                     </ul>
                 </li>
@@ -394,28 +400,26 @@
                     <ul class="bare-list week-content th">
                         <li class="week-content-item">
                             <span class="week-content-title">Modèle d'analyse</span>
-                            <!-- <ul class="bare-list week-content-details">
+                            <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Diagramme d'activités</li>
+                                <li class="week-content-detail">Modèle d'objet</li>
                                 <li class="week-content-detail">Diagramme ECB</li>
-                                <li class="week-content-detail">Cas d'étude: MSG</li>
-                            </ul> -->
+                            </ul>
                         </li>
                         <li class="week-content-item">
                             <span class="week-content-title">Conception</span>
-                            <!-- <ul class="bare-list week-content-details">
+                            <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">Vue architecturale</li>
                                 <li class="week-content-detail">Vue détaillée</li>
-                                <li class="week-content-detail">Décomposition</li>
                                 <li class="week-content-detail">Modules</li>
-                                <li class="week-content-detail" title="Conception orientée-objet">Conception OO</li>
-                            </ul> -->
+                            </ul>
                         </li>
-                        <!-- <li class="week-content-item week-content-item--video">
+                        <li class="week-content-item week-content-item--video">
                             <span class="week-content-title week-content-title--video">Capsule</span>
-                            <a class="bare-link week-content-video" title="Révision CUs, Exigences matérielles, Modèle" 
-                                href="https://classe.iro.umontreal.ca/w/tfgyF2yePfo3A7JUtiLhRT">Révision CUs + Besoins matériels</a>
                             <a class="bare-link week-content-video" title="Diagramme d'activités (Modèle dynamique)" 
-                                href="https://classe.iro.umontreal.ca/w/hN4mwRvWxsDz5ZFvFfJ4Tw">Diagramme d'activités</a>
+                                href="https://youtu.be/_JU-PgiAaUE">🎬 Diagramme d'activités</a>
+                            <a class="bare-link week-content-video" title="Diagramme ECB (Modèle d'objet)" 
+                                href="https://youtu.be/9MkYczLkFJE">🎬 Diagramme ECB</a>
                         </li>
                         <li class="week-content-item week-content-item--video">
                             <span class="week-content-title week-content-title--video">Lecture</span>
@@ -424,7 +428,7 @@
                                     📖 <strong>Ch.17.4,17.5 + Ch.13</strong> (<em>OO and classical SE</em>, Schach)
                                 </li>
                             </ul>
-                        </li> -->
+                        </li>
                     </ul>
                     <ul class="bare-list week-content tp">
                         <li class="week-content-item">
@@ -510,10 +514,10 @@
                             </ul> -->
                         </li>
                     </ul>
-                    <strong style="margin-top: 6px; font-size: 1.1em">Remise DM1 (9 Octobre)</strong> 🎯
                 </li>
                 <li class="week">
                     <h4 class="week-title">Semaine 06 (10 Octobre)</h4>
+                    <strong style="margin-top: 6px; font-size: 1.1em">Remise DM1 (11 Octobre)</strong> 🎯
                     <ul class="bare-list week-content th">
                         <li class="week-content-item">
                             <span class="week-content-title">Modélisation: Diagramme de classe</span>
@@ -563,7 +567,7 @@
                             </ul> -->
                         </li>
                     </ul>
-                    <strong style="margin-top: 6px; font-size: 1.1em;">DM2 disponible (21 Octobre) 📅</strong>
+                    <strong style="margin-top: 6px; font-size: 1.1em;">DM2 disponible (16 Octobre) 📅</strong>
                 </li>
                 <li class="week">
                     <h4 class="week-title">Semaine 07 (17 Octobre)</h4>
@@ -937,7 +941,7 @@
                 </div>
             </section>
 
-            <section class="body-content-section collapsible" data-collapsible="expanded">
+            <section class="body-content-section collapsible" data-collapsible="collapsed">
                 <div class="body-content-section-header" data-collapsible-header="">
                     <h2 class="body-content-title">Semaine 2: Processus de développement + Exigences</h2>
                 </div>
@@ -1031,7 +1035,6 @@
                     </ul>
                 </div>
             </section>
-
             
             <section class="body-content-section collapsible" data-collapsible="expanded">
                 <div class="body-content-section-header" data-collapsible-header="">
@@ -1040,27 +1043,101 @@
 
                 <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
-                        <h3 class="week-section-title">Case d'utilisation</h3>
-                        <!-- <a class="week-section-doc" href="./assets/docs/02-agile.pdf" target="_blank">
+                        <h3 class="week-section-title">Cas d'utilisation</h3>
+                        <a class="week-section-doc" href="./assets/docs/05-cas_utilisation.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
-                        </a> -->
+                        </a>
                     </div>
 
-                    <ul class="bare-list">
-                        <li class="dash">Diagramme de cas d'utilisation UML</li>
-                        <li class="dash">Acteurs</li>
-                        <li class="dash">Description des cas: Scénarios</li>
-                    </ul>
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/05-cas_utilisation.svg" alt="Agile">
+                            <p>
+                                Le diagramme de cas d'utilisation permet de répertorier toutes les interactions entres les différents acteurs d'un système et le système.
+                                Un acteur ici n'est pas forcément un humain (ex: horloge, capteur). Il est important de se rappeler que l'objectif est de comprendre
+                                et modéliser les besoins du client.
+                            </p>
+                        </div>
 
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/05-cas_utilisation_scenario.svg" alt="Scrum">
+                            <p>
+                                Un cas d'utilisation (CU) est décrit à travers un scénario principal présentant l'exécution du CU étapes par étapes et des scénarios alternatifs présentant le traitement des erreurs et les alternatives.
+                                La description du CU peut aussi être accompagnée de préconditions et postconditions imposant des contraintes sur l'état du système avant et après le scénario principal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Analyse</h3>
+                        <a class="week-section-doc" href="./assets/docs/06-analyse_dynamique.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/06-analyse_modele.svg" alt="Modèle d'analyse">
+                            <p>
+                                L'analyse consiste à encadrer le projet de sorte à pouvoir concevoir une solution. 
+                                Durant l'analyse nous élaborons les <strong>contraintes conceptuelles</strong> (structure de données, manipulation et présentation d'information, contrôle d'accès)
+                                <strong>et physiques</strong> (support nécessaire, environnement, interactions possibles).
+                            </p>
+                        </div>
+
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/06-analyse_activite.svg" alt="Diagramme d'activité">
+                            <p>
+                                L'activité d'analyse utilise et produit de nombreux modèles d'analyse (fonctionnel, dyanmique, objet) permettant de visualiser et communiquer le cadre de la solution. 
+                                Le diagramme d'activités permet de présenter une <strong>vue de haut-niveau du comportement dynamique</strong> attendu par la solution.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item">
+                            Cas d'utilisation: Diagramme UML et scénarios
+                        </li>                      
+                        <li class="section-summary-list-item">
+                            Analyse: Exigences conceptuelles et matérielles, Modèle fonctionnel et dynamique
+                        </li>
+                        <li class="section-summary-list-item">
+                            Diagramme d'activités
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 4: Analyse + Conception</h2>
+                </div>
+
+                <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Analyse</h3>
                     </div>
 
                     <ul class="bare-list">
-                        <li class="dash">Contraintes conceptuelles et physiques</li>
-                        <li class="dash">Analyse fonctionnelle</li>
-                        <li class="dash">Analyse dynamique</li>
-                        <li class="dash">Analyse objet</li>
+                        <li class="dash">Diagramme d'activités (rappel)</li>
+                        <li class="dash">Modèle d'objet</li>
+                        <li class="dash">Diagramme ECB (entity-control-boundary)</li>
+                    </ul>
+
+                    <br>
+
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Conception</h3>
+                    </div>
+
+                    <ul class="bare-list">
+                        <li class="dash">Vue architecturale</li>
+                        <li class="dash">Vue détaillée</li>
+                        <li class="dash">Décomposition fonctionnelle</li>
+                        <li class="dash">Modules</li>
                     </ul>
                 </div>
 
@@ -1068,13 +1145,10 @@
                     <h3 class="section-summary-title">Contenu</h3>
                     <ul class="bare-list section-summary-list">
                         <li class="section-summary-list-item">
-                            Méthodes agiles: TDD, XP, Scrum
+                            Analyse: Modèle d'objet, Diagramme ECB
                         </li>                      
                         <li class="section-summary-list-item">
-                            Processus de développement: Flux de travail / Phases de développement
-                        </li>
-                        <li class="section-summary-list-item">
-                            Exigences: Déterminer ce dont le client a besoin
+                            Conception: Vue architecturale, Vue détaillée, Modules
                         </li>
                     </ul>
                 </div>
@@ -1097,7 +1171,7 @@
             </div> -->
             <p class="footer-maintenance">
                 Maintenu par: Louis-Edouard LAFONTANT (<a class="bare-link footer__link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">LELAFONTANT</a>) <br>
-                Dernière mis à jour: 2022-09-18
+                Dernière mis à jour: 2022-09-26
             </p>
             <p class="copyright">&copy; 2021 &ndash; 2022 Ceduni</p>
         </div>
