@@ -156,7 +156,7 @@
         "dm1": {
             "meetings": [
                 { "week": 1, "used": true }, 
-                { "week": 2, "used": false },
+                { "week": 2, "used": true },
                 { "week": 3, "used": false }
             ]
         },
@@ -703,7 +703,7 @@
         "dm1": {
             "meetings": [
                 { "week": 1, "used": false }, 
-                { "week": 2, "used": false },
+                { "week": 2, "used": true },
                 { "week": 3, "used": false }
             ]
         },
