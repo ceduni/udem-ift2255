@@ -185,7 +185,7 @@
         "dm1": {
             "meetings": [
                 { "week": 1, "used": true }, 
-                { "week": 2, "used": false },
+                { "week": 2, "used": true },
                 { "week": 3, "used": false }
             ]
         },
@@ -330,7 +330,7 @@
         "dm1": {
             "meetings": [
                 { "week": 1, "used": false }, 
-                { "week": 2, "used": false },
+                { "week": 2, "used": true },
                 { "week": 3, "used": false }
             ]
         },
@@ -782,7 +782,8 @@
         "responsable": "20009293",
         "members": [
             { "firstName": "Sen", "lastName": "Zeng", "matricule": "20009293" },
-            { "firstName": "Yuning", "lastName": "Sun", "matricule": "20141918" }
+            { "firstName": "Yuning", "lastName": "Sun", "matricule": "20141918" },
+            { "firstName": "Mohamed", "lastName": "Mehdi Lakhdhar", "matricule": "20181433" }
         ],
         "dm1": {
             "meetings": [
