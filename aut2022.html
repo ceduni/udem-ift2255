@@ -458,17 +458,15 @@
                                 <li class="week-content-detail">Décomposition</li>
                                 <li class="week-content-detail">Modules</li>
                                 <li class="week-content-detail" title="Conception orientée-objet">Conception OO</li>
-                                <li class="week-content-detail">Diagramme de classe</li>
-                                <li class="week-content-detail">Diagramme de séquence</li>
                             </ul>
                         </li>
                         <li class="week-content-item">
                             <span class="week-content-title">Modélisation</span>
-                            <!-- <ul class="bare-list week-content-details">
+                            <ul class="bare-list week-content-details">
                                 <li class="week-content-detail">UML</li>
                                 <li class="week-content-detail">Diagramme de classe</li>
                                 <li class="week-content-detail">Diagramme de séquence</li>
-                            </ul> -->
+                            </ul>
                         </li>
                         <li class="week-content-item week-content-item--video">
                             <span class="week-content-title week-content-title--video">Capsule</span>
@@ -1112,17 +1110,51 @@
 
                 <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
-                        <h3 class="week-section-title">Analyse</h3>
+                        <h3 class="week-section-title">Analyse (modèle d'objet)</h3>
+                        <a class="week-section-doc" href="./assets/docs/06-analyse_objet.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a>
                     </div>
 
-                    <ul class="bare-list">
-                        <li class="dash">Diagramme d'activités (rappel)</li>
-                        <li class="dash">Modèle d'objet</li>
-                        <li class="dash">Diagramme ECB (entity-control-boundary)</li>
+                    
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/06-analyse_ecb.svg" alt="Modèle ECB">
+                            <p>
+                                Le modèle d'objet fournit une vue de haut-niveau des objets encapsulant la structure du système. Le formalisme ECB catégorise les objets 
+                                en <strong>classes d'entités</strong> (concepts et information qui vit et persiste dans le système), <strong>classes d'interfaces</strong> (interactions entre le système et l'environnement)
+                                et en <strong>classes de contrôle</strong> (traitement de données, calculs et algorithmes complexes). 
+                            </p>
+                        </div>
+
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/06-analyse_ecb_example.svg" alt="Exemple de modèle ECB">
+                            <p>
+                                Dans un modèle ECB robuste, un acteur ne peut communiquer avec le système que via une classe d'interface.
+                                Celle-ci peut communiquer avec une classe de contrôle (pouvant se succéder) qui fait le lien avec les classes entités.
+                                Le modèle ECB facilite le travail de conception (en OO) et favorise une architecture MVC.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">
+                        <li class="section-summary-list-item">
+                            Analyse: Modèle d'objet, Diagramme ECB
+                        </li>
                     </ul>
+                </div>
+            </section>
 
-                    <br>
+            
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 5: Conception</h2>
+                </div>
 
+                <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Conception</h3>
                     </div>
@@ -1133,16 +1165,25 @@
                         <li class="dash">Décomposition fonctionnelle</li>
                         <li class="dash">Modules</li>
                     </ul>
+
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Modélisation</h3>
+                    </div>
+
+                    <ul class="bare-list">
+                        <li class="dash">Diagramme de classe</li>
+                        <li class="dash">Diagramme de séquence</li>
+                    </ul>
                 </div>
 
                 <div class="section-summary collapsible-preview">
                     <h3 class="section-summary-title">Contenu</h3>
-                    <ul class="bare-list section-summary-list">
-                        <li class="section-summary-list-item">
-                            Analyse: Modèle d'objet, Diagramme ECB
-                        </li>                      
+                    <ul class="bare-list section-summary-list">                   
                         <li class="section-summary-list-item">
                             Conception: Vue architecturale, Vue détaillée, Modules
+                        </li>
+                        <li class="section-summary-list-item">
+                            Modélisation: Diagramme de classe, Diagramme de séquence
                         </li>
                     </ul>
                 </div>
