@@ -695,7 +695,11 @@
                             <h4 class="requirement-title">Afficher l'état des mes bacs</h4>
                             <span class="requirement-description">
                                 L'état d'un bac présente sa capacité actuelle (niveau de remplissage), sa composition actuelle (contenu) et son usage (lié aux métriques écologiques).
-                                L'usage trace l'évolution de sa composition de manière périodique et par rapport à la municipalité.
+                                <!-- L'usage trace l'évolution de sa composition de manière périodique et par rapport à la municipalité. -->
+                                <ins>
+                                    L'usage fait référence à l'évolution (périodique) du contenu des bacs, offrant ainsi une trace (historique). 
+                                    Il est à noter que l'usage des bacs est indépendant du traitement subi par les déchets.
+                                </ins>
                                 <!-- Il pourrait être utilisé pour signaler la présence d'éléments non compostables dans le bac de résidus alimentaires. -->
                             </span>
                         </li>
@@ -708,8 +712,9 @@
                             </span>
                         </li>
                         <li class="requirement">
-                            <h4 class="requirement-title">Voir l'état de traitement de mes déchets</h4>  
+                            <h4 class="requirement-title">Voir l'état de traitement des déchets municipaux</h4>  
                             <span class="requirement-description">
+                                <ins>Le suivi du traitement des déchets ne considère pas celui de chaque résident individuellement, mais plutôt l'ensemble des déchets de la ville (du résident).</ins>
                                 Le traitement des déchets est segmenté en points de contrôle (<em>checkpoint</em>) permettant le suivi du processus.
                                 <i class="listing dash">Récupération des déchets (passage des camions)</i>
                                 <i class="listing dash">Livraison des déchets (date, consommateur ou dépôt, état des déchets)</i>
@@ -728,6 +733,10 @@
                             <h4 class="requirement-title">Signaler un problème à la ville</h4>  
                             <span class="requirement-description">
                                 Les bacs étant la propriété de la ville, pour tout problème rencontré avec un bac ou demande de nouveau bac, le résident peut envoyer une requête à la ville.
+                                <ins>
+                                    Pour signaler tout problème, les informations envoyées sont toujours les mêmes (nom du résident, adresse du résident, courriel, type de problème). 
+                                    Le type varie selon la requête envoyée à la ville. Le suivi est fait à l'externe pour éviter de surcharger Bineco.
+                                </ins>
                             </span>
                         </li>
                         <li class="requirement">
@@ -746,6 +755,16 @@
                                 <i class="listing dash">Activités d'exploitation</i>
                             </span>
                         </li>
+                        <!-- <li class="requirement">
+                            <h4 class="requirement-title">Notifier les résidents</h4>
+                            <span class="requirement-description">
+                                Les consommateurs peuvent notifier l'ensemble des résidents d'un besoin en matière première.
+                                <i class="listing dash">Profil: nom, adresse, email, téléphone</i>
+                                <i class="listing dash">Type de déchets traités</i>
+                                <i class="listing dash">Capacité de traitement </i>
+                                <i class="listing dash">Activités d'exploitation</i>
+                            </span>
+                        </li> -->
                     </ul>
 
                     <h4 class="paragraph-title">Prototype</h4>

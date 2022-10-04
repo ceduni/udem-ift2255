@@ -761,7 +761,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
