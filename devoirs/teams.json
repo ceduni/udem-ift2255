@@ -100,7 +100,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -128,7 +128,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -186,7 +186,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -215,7 +215,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -244,7 +244,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -273,7 +273,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -388,7 +388,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -416,7 +416,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": false },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -444,7 +444,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -473,7 +473,7 @@
             "meetings": [
                 { "week": 1, "used": false }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -502,7 +502,7 @@
             "meetings": [
                 { "week": 1, "used": false }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -589,7 +589,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -647,7 +647,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -676,7 +676,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -845,7 +845,7 @@
             "meetings": [
                 { "week": 1, "used": false }, 
                 { "week": 2, "used": false },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
