@@ -71,7 +71,7 @@
             "meetings": [
                 { "week": 1, "used": true }, 
                 { "week": 2, "used": true },
-                { "week": 3, "used": false }
+                { "week": 3, "used": true }
             ]
         },
         "dm2": {
@@ -122,7 +122,8 @@
         "members": [
             { "firstName": "Kim", "lastName": "Trinh", "matricule": "20215539" },
             { "firstName": "Miliya", "lastName": "Ai", "matricule": "20180783" },
-            { "firstName": "Eed Flory", "lastName": "Jean-Baptiste", "matricule": "20168335" }
+            { "firstName": "Eed Flory", "lastName": "Jean-Baptiste", "matricule": "20168335" },
+            { "firstName": "Xavier", "lastName": "Laperriere", "matricule": "20157146" }
         ],
         "dm1": {
             "meetings": [
@@ -349,9 +350,8 @@
     {
         "id": 13,
         "name": "STPL",
-        "responsable": "20086365",
+        "responsable": "20167690",
         "members": [
-            { "firstName": "Amine", "lastName": "Sami", "matricule": "20086365" },
             { "firstName": "Guillaume", "lastName": "Tardif", "matricule": "20167690" },
             { "firstName": "Dereck", "lastName": "Piché", "matricule": "20177385" },
             { "firstName": "Élie", "lastName": "Leblanc", "matricule": "20221308" }
@@ -693,9 +693,10 @@
     },
     {
         "id": 25,
-        "name": "VDB",
-        "responsable": "20141971",
+        "name": "GreenStreets",
+        "responsable": "20215400",
         "members": [
+            { "firstName": "Stefan", "lastName": "Roman", "matricule": "20215400" },
             { "firstName": "Thihang", "lastName": "Vo", "matricule": "20141971" },
             { "firstName": "Naomi", "lastName": "De Grace", "matricule": "20168512" },
             { "firstName": "Khaoula", "lastName": "Benzaarit", "matricule": "20176850" }
