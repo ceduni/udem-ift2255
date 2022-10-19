@@ -124,7 +124,7 @@ th { text-align: center; }
 .helper {
     position: absolute;
     top: 100%; left: 0;
-    min-width: 100%;
+    min-width: 60px;
     padding: 3px 6px 4px;
     border-radius: 1px;
     font-size: 1.3rem; font-weight: 500; font-style: normal;
