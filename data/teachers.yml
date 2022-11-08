@@ -6,8 +6,8 @@
   photo: ./assets/images/photo_louis_edouard_lafontant.jpeg
   email: louis.edouard.lafontant@umontreal.ca
   intro: 
-    Envoyez-moi vos messages par <a href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via Discord (#LE2545). 
-    Pour plannifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
+    Envoyez-moi vos messages par <a href="mailto:louis.edouard.lafontant@umontreal.ca">courriel</a> ou via Discord (L-E#2545). 
+    Pour planifier une rencontre, utilisez le <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation">calendrier</a>.
 
 - name: Hanfia BARRY
   role: assistant
@@ -17,7 +17,7 @@
   photo: ./assets/images/photo_Hanifa_Barry.jpeg
   email: hanifa.barry@umontreal.ca
   intro: 
-    Disponibilités à venir.
+    Envoyez-moi vos messages par <a href="mailto:hanifa.barry@umontreal.ca">courriel</a> ou via Discord (Hanifa#9235).
 
 - name: Mohammadamin ZAHERI
   role: assistant
@@ -27,7 +27,7 @@
   photo: https://geodes.iro.umontreal.ca/images/people/people/mohammadamin.png
   email: mohammadamin.zaheri@umontreal.ca
   intro: 
-    Disponibilités à venir.
+    Envoyez-moi vos messages par <a href="mailto:mohammadamin.zaheri@umontreal.ca">courriel</a> ou via Discord (MohammadAmin#2772).
 
 - name: Jessie GALASSO-CARBONNEL
   role: assistant

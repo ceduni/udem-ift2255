@@ -1225,7 +1225,7 @@
                 </div>
             </section>
             
-            <section class="body-content-section collapsible" data-collapsible="expanded">
+            <section class="body-content-section collapsible" data-collapsible="collapsed">
                 <div class="body-content-section-header" data-collapsible-header="">
                     <h2 class="body-content-title">Semaine 5: Conception</h2>
                 </div>
@@ -1445,48 +1445,90 @@
                 <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Styles d'architecture</h3>
-                        <!-- <a class="week-section-doc" href="./assets/docs/ift2255_revision_intra.pdf" target="_blank">
+                        <a class="week-section-doc" href="./assets/docs/10-style_architecture.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
-                        </a> -->
+                        </a>
                     </div>
 
-                    <ul class="bare-list">
-                        <li class="dash">Pipe-et-filtre</li>
-                        <li class="dash">En couche</li>
-                        <li class="dash">MVC</li>
-                        <li class="dash">Client-serveur</li>
-                        <li class="dash">Peer-to-peer</li>
-                        <li class="dash">Micro-services</li>
-                    </ul>
+                       
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/10-architecture_style.svg" alt="Diagramme de classe">
+                            <p>
+                                La plupart des systèmes emploient une formule hybride pour optimiser chaque secteur de service.
+                                Le choix du style architectural est dirigé par les besoins non fonctionnelles. 
+                                Il représente une approche générale de résolution (haut niveau) qui sera ensuite spécifié à travers un design implémentable.
+                                Il est donc difficile (couteux) de pivoter d'un style architectural à un autre.
+                        </div>
+
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/10-architecture_mvc.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                Le modèle MVC, couramment utilisé pour développer les applications web, divise une application en 3 parties interconnectées: Modèle, Vue, Controleur.
+                                Le modèle communique son état à la vue chargé de la présentation. Le contrôleur traite les interactions reçues par la vue et envoie des requêtes au modèle.
+                                Il ne faut pas le confondre avec l'architecture 3-tier (complémentaire) qui divise un système en 3 couches distinctes, où une couche ne peut communiquer qu'avec ces couches voisines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/10-architecture_pipe.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/10-architecture_p2p.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
                     <div class="week-section-header">
-                        <h3 class="week-section-title">OOP</h3>
-                        <!-- <a class="week-section-doc" href="./assets/docs/ift2255_revision_intra.pdf" target="_blank">
+                        <h3 class="week-section-title">Paradigme orienté-objet</h3>
+                        <a class="week-section-doc" href="./assets/docs/11-oop.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
-                        </a> -->
+                        </a>
                     </div>
 
-                    <ul class="bare-list">
-                        <li class="dash">Classes et objets</li>
-                        <li class="dash">Héritage</li>
-                        <li class="dash">Polymorphisme</li>
-                        <li class="dash">Abstraction</li>
-                        <li class="dash">Encapsulation</li>
-                    </ul>
+                       
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/11-oop.svg" alt="Diagramme de classe">
+                            <p>
+                                Le paradigme orienté-objet favorise la modularité par la classification, la réutilisabilité par l'héritage et la généricité et la flexibilité le polymorphisme.
+                                Il offre aussi de bons mécanismes d'abstraction et dissimulation (modificateurs, classes abstraites, interfaces).
+                                Cependant, il résulte sur des programmes plus larges que d'autres paradigmes et n'est pas idéal pour certains développements (ex: interface graphique).
+                        </div>
+                    </div>
+
 
                     <div class="week-section-header">
-                        <h3 class="week-section-title">Patron de conception</h3>
-                        <!-- <a class="week-section-doc" href="./assets/docs/ift2255_revision_intra.pdf" target="_blank">
+                        <h3 class="week-section-title">Patrons de conception</h3>
+                        <a class="week-section-doc" href="./assets/docs/12-patron_conception.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
-                        </a> -->
+                        </a>
                     </div>
 
-                    <ul class="bare-list">
-                        <li class="dash">Singleton</li>
-                        <li class="dash">Composite</li>
-                        <li class="dash">Méthode</li>
-                        <li class="dash">Stratégie</li>
-                    </ul>
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/12-patron_conception.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                Les patrons de conception découlent d'expériences pratiques. Les patrons sont formulés comme schéma générique d'une solution à un problème récurrent dans un contexte donné.
+                                Chaque patron a une portée clairement définie et a un effet sur la construction, la structure ou le comportement des classes et objets.
+                                L'usage de patron promeut la réutilisabilité et facilite la compréhension du programme entre experts (ingénieur, architecte, développeur).
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/12-patron_conception_solid.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                L'usage systématique de patrons peut inutilement complexifier un programme. Provenant de la pratique, ils ne sont pas fondamentaux à la réalisation d'une bonne conception.
+                                Le respect des principes de conception comme SOLID, GRASP ou KISS amène naturellement à des programmes flexibles, modulaires et maintenables.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="section-summary collapsible-preview">
@@ -1497,6 +1539,38 @@
                         </li>
                         <li class="section-summary-list-item">
                             Architecture
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 10: Implémentation</h2>
+                </div>
+
+                <div class="week-section-body collapsible-content" data-collapsible-content="">
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Flux d'implémentation</h3>
+                        <!-- <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a> -->
+                    </div>
+
+                    <ul class="bare-list">
+                        <li class="dash">Langage de programmation</li>
+                        <li class="dash">Normes et bonnes pratiques</li>
+                        <li class="dash">Outils de programmation</li>
+                        <li class="dash">Débogage</li>
+                    </ul>
+                </div>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">                   
+                        <li class="section-summary-list-item">
+                            Implémentation
                         </li>
                     </ul>
                 </div>
