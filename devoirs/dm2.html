@@ -224,6 +224,25 @@
             color: #fff;
         }
 
+        .api-item {
+            display: flex; flex-direction: column;
+            margin-bottom: 6px;
+        }
+
+        .api-request-path {
+            font-size: 1.1em; font-weight: 300;
+        }
+
+        .api-request-note {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .api-item-title {
+            margin-top: 0; margin-bottom: 2px;
+            font-size: 0.9em; font-weight: 500;
+        }
+
         .paragraph-title {
             font-weight: 500;
             margin-bottom: 6px;
@@ -687,7 +706,7 @@
                             <h4 class="requirement-title">S'inscrire comme consommateur</h4>   
                             <span class="requirement-description">
                                 Pour s'inscrire comme consommateur, il faut d'abord être enregistré auprès de la ville (prérequis) et fournir:
-                                <i class="listing dash">Profil: nom, adresse, email, téléphone</i>
+                                <i class="listing dash">Profil: code, nom, adresse, email, téléphone</i>
                                 <i class="listing dash">Type de déchets traités</i>
                                 <i class="listing dash">Capacité de traitement </i>
                                 <i class="listing dash">Activités d'exploitation</i>
@@ -734,13 +753,13 @@
                                 À chaque point de contrôle, nous collectons des données permettant de fabriquer des métriques montrant l'efficacité du traitement des déchets à l'échelle municipale.
                             </span>
                         </li>
-                        <li class="requirement">
+                        <!-- <li class="requirement">
                             <h4 class="requirement-title">Voir les activités que je maintiens</h4>  
                             <span class="requirement-description">
                                 Les consommateurs utilisent les déchets pour des activités diverses de compostage et recyclages (ex: Fabrication de bouteille, sacs à partir de plastiques recyclés; Fabrication d'engrais).
                                 Les résidents étant la source des matières premières fournies par la ville, ils participent indirectement aux activités menées par les consommateurs.
                             </span>
-                        </li>
+                        </li> -->
                         <li class="requirement">
                             <h4 class="requirement-title">Signaler un problème à MunicipInfo</h4>  
                             <span class="requirement-description">
@@ -786,10 +805,11 @@
                     <h4 class="paragraph-title">Utilisateurs</h4>
 
                     <p>
-                        Les utilisateurs de Bineco sont les résidents et les consommateurs (comptes distincts).
-                        Leur inscription à Bineco se fait de la même manière pour la création du profil et varie pour les détails propre au type de compte.
-                        Lors de la création du compte, si les informations ne sont pas validées par MunicipInfo, l'inscription est annulée. 
-                        Sinon, il est en attente de confirmation pendant 3 jours. Passé ce délai, l'inscription est annulée. <br>
+                        Les utilisateurs de Bineco sont les résidents et les consommateurs. Un compte distinct est associé à chacun.
+                        Lors de la création d'un compte, un lien de confirmation (expirant après 3 jours) est envoyé à l'utilisateur.
+                        Passé le délai de confirmation, l'inscription est annulée.
+                        Lors de l'inscription comme résident, MunicipInfo est utilisé pour valider le bac enregistré.
+                        Lors de l'inscription comme consommateur, MunicipInfo est utilisé pour valider le code du consommateur.
                         Lors de l'authentification, un utilisateur fournit son adresse courriel et son mot de passe. 
                         Si l'authentification réussit, l'utilisateur est amené à l'écran d'accueil propre à son type de compte.
                     </p>
@@ -802,6 +822,103 @@
                         Les métriques peuvent être composées de sous facteurs explorables et configurables par le résident.
                         Certaines de ces métriques doivent s'afficher sur l'écran d'accueil (du résident), pour faciliter une consultation rapide.
                     </p>
+
+                    <h4 class="paragraph-title">MunicipInfo</h4>
+                
+                    <p>
+                        Les requêtes suivantes peuvent être envoyées à MunicipInfo.
+                    </p>
+
+                    <ul class="bare-list api">
+                        <li class="api-item">
+                            <strong class="api-request-path">list-consommateur</strong>
+                            
+                            <span class="api-request-desc">Récupère la liste des consommateurs</span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>LISTE <strong>--&gt;</strong></code> 
+                                    <i>Consommateur[]</i> (code, nom, details)
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">get-consommateur</strong>
+                            <span>params: <code>code</code></span>
+                            <span class="api-request-desc">Récupère les informations d'un consomateur</span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>TROUVE <strong>--&gt;</strong></code> 
+                                    <i>Consommateur</i> (code, nom, adresse, email, téléphone, details, type_dechets, capacité)
+                                </li>
+                                <li class="dash">
+                                    <code>ABSENT <strong>--&gt;</strong></code> 
+                                    <i>Aucun consommateur trouvé pour ce code</i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">get-bac</strong>
+                            <span class="api-request-desc">Récupère les informations d'un bac</span>
+                            <span>params: <code>codeqr</code></span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>TROUVE <strong>--&gt;</strong></code> 
+                                    <i>Bac</i> (codeqr, adresse, date_emission)
+                                </li>
+                                <li class="dash">
+                                    <code>ABSENT <strong>--&gt;</strong></code> 
+                                    <i>Aucun bac trouvé pour ce code</i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">list-lot</strong>
+                            
+                            <span class="api-request-desc">Récupère la liste des lots de déchets</span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>LISTE <strong>--&gt;</strong></code> 
+                                    <i>Lot[]</i> (numero, type, date_ramassage, date_livraison, statut)
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">get-lot</strong>
+                            <span class="api-request-desc">Récupère les informations d'un lot de déchets</span>
+                            <span>params: <code>numero</code></span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>TROUVE <strong>--&gt;</strong></code> 
+                                    <i>Lot</i> (numero, type, date_ramassage, date_livraison, statut, qte_total, qte_traite, taux_rejet, cout, consomateurs)
+                                </li>
+                                <li class="dash">
+                                    <code>ABSENT <strong>--&gt;</strong></code> 
+                                    <i>Aucun lot trouvé pour ce numero</i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">post-message</strong>
+                            <span>body: <code>form</code></span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>TRANSMIS <strong>--&gt;</strong></code> 
+                                    <i>Le message a été transmis avec succès</i>
+                                </li>
+                                <li class="dash">
+                                    <code>ERREUR <strong>--&gt;</strong></code> 
+                                    <i>Une erreur est survenue lors de la transmissoin du message</i>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
 
                     <h4 class="paragraph-title">Prototype</h4>
 
