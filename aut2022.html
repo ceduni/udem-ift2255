@@ -61,6 +61,10 @@
             border-radius: 3px;
             box-shadow: 1px 2px 1px -1px #999;
         }
+
+        .helper {
+            min-width: 200px;
+        }
     </style>
 </head>
 
@@ -158,8 +162,9 @@
                                     </a>
                                 </li>
                                 <li class="plan-eval-assignment">
-                                    Jalon 3 (<strong>25%</strong>)
-                                    <!-- <a class="plan-evaluation__link" href="devoirs/dm3.html">Énoncé DM3</a> -->
+                                    <a class="bare-link" href="#">
+                                        Jalon 3 (<strong>25%</strong>)
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -744,7 +749,6 @@
                                 <li class="week-content-detail">succès</li>
                                 <li class="week-content-detail">échec</li>
                                 <li class="week-content-detail">sanitaire</li>
-                                <li class="week-content-detail">JUnit</li>
                             </ul>
                         </li>
                     </ul>
@@ -1298,7 +1302,7 @@
                 </div>
             </section>
       
-            <section class="body-content-section collapsible" data-collapsible="expanded">
+            <section class="body-content-section collapsible" data-collapsible="collapsed">
                 <div class="body-content-section-header" data-collapsible-header="">
                     <h2 class="body-content-title">Semaine 6: Modélisation + Révision</h2>
                 </div>
@@ -1378,7 +1382,7 @@
                 </div>
             </section>
       
-            <section class="body-content-section collapsible" data-collapsible="expanded">
+            <section class="body-content-section collapsible" data-collapsible="collapsed">
                 <div class="body-content-section-header" data-collapsible-header="">
                     <h2 class="body-content-title">Semaine 7: Intra + Architecture</h2>
                 </div>
@@ -1437,7 +1441,7 @@
                 </div>
             </section>
 
-            <section class="body-content-section collapsible" data-collapsible="expanded">
+            <section class="body-content-section collapsible" data-collapsible="expanded" style="margin-top: 60px;">
                 <div class="body-content-section-header" data-collapsible-header="">
                     <h2 class="body-content-title">Semaine 9: Style d'architecture + OOP</h2>
                 </div>
@@ -1455,8 +1459,8 @@
                         <div class="week-section-part">
                             <img class="week-section-image" src="assets/images/10-architecture_style.svg" alt="Diagramme de classe">
                             <p>
-                                La plupart des systèmes emploient une formule hybride pour optimiser chaque secteur de service.
-                                Le choix du style architectural est dirigé par les besoins non fonctionnelles. 
+                                La plupart des systèmes emploient une formule <strong>hybride</strong> pour optimiser chaque secteur de service.
+                                Le choix du style architectural est <strong>dirigé par les besoins non fonctionnelles</strong>. 
                                 Il représente une approche générale de résolution (haut niveau) qui sera ensuite spécifié à travers un design implémentable.
                                 Il est donc difficile (couteux) de pivoter d'un style architectural à un autre.
                         </div>
@@ -1464,7 +1468,7 @@
                         <div class="week-section-part">
                             <img class="week-section-image" src="assets/images/10-architecture_mvc.svg" alt="Équivalence avec les attributs">
                             <p>
-                                Le modèle MVC, couramment utilisé pour développer les applications web, divise une application en 3 parties interconnectées: Modèle, Vue, Controleur.
+                                Le modèle MVC divise une application en 3 parties interconnectées: Modèle, Vue, Controleur.
                                 Le modèle communique son état à la vue chargé de la présentation. Le contrôleur traite les interactions reçues par la vue et envoie des requêtes au modèle.
                                 Il ne faut pas le confondre avec l'architecture 3-tier (complémentaire) qui divise un système en 3 couches distinctes, où une couche ne peut communiquer qu'avec ces couches voisines.
                             </p>
@@ -1473,15 +1477,18 @@
 
                     <div class="week-section-parts">
                         <div class="week-section-part">
-                            <img class="week-section-image" src="assets/images/10-architecture_pipe.svg" alt="Équivalence avec les attributs">
+                            <img class="week-section-image" src="assets/images/10-architecture_pipe.svg" alt="Architecture pipe-et-filtre">
                             <p>
-                                
+                                L'architecture <strong>pipe-et-filtre</strong> permet de traiter efficacement les flux comme le traitement d'images, la compilation et le déploiement automatisé.
+                                Les actions du flux sont décrits comme des filtres à appliquer sur une entrée donnée.
                             </p>
                         </div>
                         <div class="week-section-part">
-                            <img class="week-section-image" src="assets/images/10-architecture_p2p.svg" alt="Équivalence avec les attributs">
+                            <img class="week-section-image" src="assets/images/10-architecture_p2p.svg" alt="Architecture peer-to-peer">
                             <p>
-                                
+                                Dans une architecture <strong>client-serveur</strong> (<i class="has-helper">centralisé<i class="helper">En général le serveur fournissant les services aux clients est centralisé</i></i>), 
+                                les nœuds (machine) participants à un système se divisent en deux parties: serveur et clients. Le serveur fourni des services aux clients qui contacte le serveur. <br>
+                                Dans une architecture <strong>peer-to-peer (décentralisé)</strong>, chaque nœud (<i>peer</i>) joue à la fois le rôle du client et du serveur.
                             </p>
                         </div>
                     </div>
@@ -1516,7 +1523,7 @@
                         <div class="week-section-part">
                             <img class="week-section-image" src="assets/images/12-patron_conception.svg" alt="Équivalence avec les attributs">
                             <p>
-                                Les patrons de conception découlent d'expériences pratiques. Les patrons sont formulés comme schéma générique d'une solution à un problème récurrent dans un contexte donné.
+                                Les patrons de conception découlent d'expériences pratiques. Les patrons sont formulés comme <strong>schéma générique d'une solution à un problème récurrent dans un contexte donné</strong>.
                                 Chaque patron a une portée clairement définie et a un effet sur la construction, la structure ou le comportement des classes et objets.
                                 L'usage de patron promeut la réutilisabilité et facilite la compréhension du programme entre experts (ingénieur, architecte, développeur).
                             </p>
@@ -1525,7 +1532,7 @@
                             <img class="week-section-image" src="assets/images/12-patron_conception_solid.svg" alt="Équivalence avec les attributs">
                             <p>
                                 L'usage systématique de patrons peut inutilement complexifier un programme. Provenant de la pratique, ils ne sont pas fondamentaux à la réalisation d'une bonne conception.
-                                Le respect des principes de conception comme SOLID, GRASP ou KISS amène naturellement à des programmes flexibles, modulaires et maintenables.
+                                Le respect des <strong>principes de conception comme SOLID, GRASP ou KISS</strong> amène naturellement à des programmes flexibles, modulaires et maintenables.
                             </p>
                         </div>
                     </div>
@@ -1543,8 +1550,7 @@
                     </ul>
                 </div>
             </section>
-
-            
+     
             <section class="body-content-section collapsible" data-collapsible="expanded">
                 <div class="body-content-section-header" data-collapsible-header="">
                     <h2 class="body-content-title">Semaine 10: Implémentation</h2>
@@ -1553,16 +1559,109 @@
                 <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Flux d'implémentation</h3>
+                        <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/13-implementation.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                Dans le flux d'implémentation, nous utilisons les langages de programmation pour implémenter le produit logiciel cible. 
+                                Cependant, de nombreuses contraintes (contrat, environnement de déploiement, équipe de développement) peuvent limitées le choix du langage.
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/13-implementation_bonne_pratique.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                Le code décrit un programme exécuté par la machine, mais maintenu par des humains. Donc, il doit être lisible, facile à comprendre et modifier.
+                                Ceci est obtenu en respectant les bonnes pratiques (nomenclature pratique et cohérente) et documentant tous les aspects publiques du code.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/13-implementation_ide.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                Les outils de programmation couramment utilisés sont les environnement de développement intégré (IDE) et les éditeurs.
+                                Un <strong>IDE</strong>  regroupe tous les outils (éditeur, débugger, controle de version) nécessaires pour le développement dans une interface commune et uniforme.
+                                Un <strong>éditeur</strong> permet principalement d'écrire et d'explorer du code. Certains éditeurs peuvent être augementé de services additionnelles via de extensions et plugins.
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/13-implementation_debug.svg" alt="Équivalence avec les attributs">
+                            <p>
+                                Durant le développement et après le déploiement, le programme peut présenter certains <strong>défauts (<em>bugs</em>) classés comme bloqueur, critique, majeur, mineur, inconséquent</strong>.
+                                Pour les repérer et les corriger, plusieurs <strong>méthodes de débogage</strong> peuvent être utilisées: 
+                                <em class="has-helper">Assertion
+                                    <i class="helper">Vérifier une <strong>condition</strong> lors de l'exécution (<code>if-else</code>) et mettre fin au programme en cas d'échec. Aussi utilisé dans les tests unitaires</i>
+                                </em>,
+                                <em class="has-helper">Exception
+                                    <i class="helper">Détecter une erreur logique ou un cas extrême. <strong>Lancer</strong> une exception quand une erreur se produit. <strong>Traiter</strong> une exception pour corriger l'erreur</i>
+                                </em>,
+                                <em class="has-helper">Traçage
+                                    <i class="helper">Produire la <strong>trace d'appels</strong> (stack trace) retraçant l'historique d'exécution du programme</i>
+                                </em>,
+                                <em class="has-helper">Log manuel
+                                    <i class="helper">Afficher l'information sur <strong>l'état du programme</strong> ou son flux de contrôle dans un log (ex: fichier texte)</i>
+                                </em>,
+                                <em>Débogage interactif</em>,
+                                <em>Débogage en direct</em>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">                   
+                        <li class="section-summary-list-item">
+                            Implémentation: Respect des normes de programmation, Documentation
+                        </li>
+                        <li class="section-summary-list-item">
+                            Outils de programmation: IDE et Éditeur
+                        </li>
+                        <li class="section-summary-list-item">
+                            Méthodes de débogage: Assertions, Exceptions, Traçage, Log manuel, Débogueur interactif, Débogage en direct
+                        </li>
+                    </ul>
+                </div>
+            </section>
+     
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 11: Vérification & Validation</h2>
+                </div>
+
+                <div class="week-section-body collapsible-content" data-collapsible-content="">
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Flux de tests</h3>
                         <!-- <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
                         </a> -->
                     </div>
 
                     <ul class="bare-list">
-                        <li class="dash">Langage de programmation</li>
-                        <li class="dash">Normes et bonnes pratiques</li>
-                        <li class="dash">Outils de programmation</li>
-                        <li class="dash">Débogage</li>
+                        <li class="dash">Qualités du logiciel (ISO)</li>
+                        <li class="dash">Vérification & Validation</li>
+                        <li class="dash">Types de tests</li>
+                        <li class="dash">Tests unitaires</li>
+                    </ul>
+
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Tests unitaires</h3>
+                        <!-- <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a> -->
+                    </div>
+
+                    <ul class="bare-list">
+                        <li class="dash">Succès</li>
+                        <li class="dash">Échec</li>
+                        <li class="dash">Sanitaire</li>
+                        <li class="dash">Tests unitaires</li>
                     </ul>
                 </div>
 
@@ -1570,7 +1669,13 @@
                     <h3 class="section-summary-title">Contenu</h3>
                     <ul class="bare-list section-summary-list">                   
                         <li class="section-summary-list-item">
-                            Implémentation
+                            Qualités du logiciel
+                        </li>
+                        <li class="section-summary-list-item">
+                            Vérification & Validation
+                        </li>
+                        <li class="section-summary-list-item">
+                            Tests unitaires
                         </li>
                     </ul>
                 </div>
@@ -1593,7 +1698,7 @@
             </div> -->
             <p class="footer-maintenance">
                 Maintenu par: Louis-Edouard LAFONTANT (<a class="bare-link footer__link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">LELAFONTANT</a>) <br>
-                Dernière mise à jour: 2022-11-01
+                Dernière mise à jour: 2022-11-14
             </p>
             <p class="copyright">&copy; 2021 &ndash; 2022 Ceduni</p>
         </div>

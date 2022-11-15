@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFT2255 | DM2</title>
+    <title>IFT2255 | DM3</title>
     <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./../dist/style.min.css?v=008">
     <link rel="stylesheet" href="./../assets/css/teams.css?v=003">
@@ -179,7 +179,7 @@
 
         .problem-subsection--activity {
             padding: 12px 5%;
-            background: url(https://res.cloudinary.com/villemontreal/image/upload/v1582302005/portail/axgnbss3a6hlpmchosx2.jpg) 100%/cover no-repeat;
+            background: url(./images/collecte.jpg) 100%/cover no-repeat;
         }
 
         .problem-subsection--request {
@@ -578,7 +578,7 @@
     </style>
 </head>
 
-<body data-id="dm2">
+<body data-id="dm3">
     <header class="page-header">
         <section class="teaching">
             <div class="teaching-header">
@@ -589,7 +589,7 @@
                     </a>
                 </div>
                 <div class="teaching-info teaching-info--large">
-                    <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Devoir 2</h1>
+                    <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Devoir 3</h1>
                     <p class="teaching-term">Automne 2022</p>
                 </div>
             </div>
@@ -613,7 +613,8 @@
 
             <div class="problem-section-content">
                 <div class="project-intro">
-                    <img class="project-intro-img" src="https://images.lpcdn.ca/924x615/201112/09/449069-moins-quart-matieres-residuelles-collectees.jpg" alt="">
+                    <img class="project-intro-img" src="./images/bineco_recyclage.webp" alt="">
+                    
                     <div class="project-intro-desc">
                         <p>
                             La ville de Montréal a entrepris depuis 2010 de nombreuses initiatives pour encourager le recyclage et réduire le gaspillage des résidus alimentaires.
@@ -969,48 +970,30 @@
                 <h3>Définition du domaine (mis à jour)</h3>
 
                 <h3>Analyse (mis à jour)</h3>
-                <ul class="tasks">
-                    <li class="task">Modèle dynamique: Diagrammes d'activités (<strong>nouveau</strong>)</li>
-                </ul>
                 
-                <h3>Conception</h3>
+                <h3>Conception (mis à jour)</h3>
+
+                <h3 class="task-subsection-title">Implémentation</h3>
                 <ul class="tasks">
-                    <li class="task">Modélisation de la structure: Diagramme de classes</li>
-                    <li class="task">Modélisation du comportement: Diagrammes de séquence</li>
-                    <li class="task">Justification des choix du design: Abstraction, Couplage et cohésion, Encapsulation</li>
-                </ul>
-    
-                <h3>Implémentation</h3>
-                <ul class="tasks">
-                    <li class="task">Implémentation du design: Prototype fonctionnel</li>
+                    <li class="task">Implémentation du design: Application fonctionnel</li>
                     <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
+                    <li class="task">Documentation: Documentation technique du code source (JavaDoc)</li>
+                </ul>
+
+                <h3 class="task-subsection-title">Tests</h3>
+                <ul class="tasks">
+                    <li class="task">Rapport de tests unitaires (JUnit)</li>
                 </ul>
     
                 <h3 class="task-subsection-title task-subsection-title--document">Livrables</h3>
                 <ul class="task-documents bare-list">
                     <li class="task-document check check--color-inherit">Cas d'utilisation et scénarios (mis à jour)</li>
-                    <li class="task-document check check--color-inherit">Diagramme d'activités
-                        <ul class="bare-list" style="padding-left: 12px;">
-                            <li class="dash">Couvrir les CUs des résidents uniquement</li>
-                            <li class="dash">Pas besoin de montrer l'inscription à Bineco</li>
-                        </ul>
-                    </li>
-                    <li class="task-document check check--color-inherit">Diagramme de classes</li>
-                    <li class="task-document check check--color-inherit">Diagramme de séquence
-                        <ul class="bare-list" style="padding-left: 12px;">
-                            <li class="dash">Afficher l'état du bac de recyclage</li>
-                            <li class="dash">Demander un nouveau bac à MunicipInfo</li>
-                            <li class="dash">Trouver un consommateur et noter une activité</li>
-                            <li class="dash">Notifier les résidents d'un besoin de plastique</li>
-                        </ul>
-                    </li>
-                    <li class="task-document check check--color-inherit">Prototype fonctionnel
-                        <ul class="bare-list" style="padding-left: 12px;">
-                            <li class="dash">Fonctionnalités requises: Tous les CUs du résident devraient être testables</li>
-                            <li class="dash">Conformité au diagramme de classe: Le code peut différer un peu du diagramme de classe.</li>
-                            <li class="dash">Fichier et stockage: Pas besoin de sauvegarder les données au-delà d'une session</li>
-                        </ul>
-                    </li>
+                    <li class="task-document check check--color-inherit">Diagramme d'activités (mis à jour)</li>
+                    <li class="task-document check check--color-inherit">Diagramme de classes (mis à jour)</li>
+                    <li class="task-document check check--color-inherit">Diagramme de séquence (mis à jour)</li>
+                    <li class="task-document check check--color-inherit">Application: Exécutable JAR</li>
+                    <li class="task-document check check--color-inherit">Tests: 3 tests unitaires par membre</li>
+                    <li class="task-document check check--color-inherit">Documentation: Javadoc généré et README</li>
                 </ul>
             </div>
         </section>
@@ -1018,10 +1001,8 @@
         <section class="evaluation-section">
             <h2 class="section-title">Évaluation</h2>
             <p>
-                Ce devoir compte pour <strong>15% de la note final</strong>. <br>
-                Le rapport et tous les artéfacts produits sont à <strong>remettre au plus tard le dimanche 20 novembre</strong> par le responsable d'équipe. <br>
-                Des <strong> pénalités de 10% par jour de retard </strong> seront accordées <strong>jusqu'au 22 novembre</strong>.
-                Au-delà de cette date, la moitié des points sera transférée au prochain devoir.
+                Ce devoir compte pour <strong>25% de la note final</strong>. <br>
+                Le rapport et tous les artéfacts produits sont à <strong>remettre au plus tard le dimanche 23 décembre</strong> par le responsable d'équipe.
             </p>
 
             <div class="marking-scheme">
@@ -1029,46 +1010,41 @@
                 <table class="tbl-evaluation">
                     <tr class="tbl-evaluation-row">
                         <td>Révision</td>
-                        <td>10%</td>
+                        <td>5%</td>
                     </tr>
                     <tr class="tbl-evaluation-row">
-                        <td>Diagramme d'activités</td>
-                        <td>20%</td>
+                        <td>Analyse</td>
+                        <td>5%</td>
                     </tr>
                     <tr class="tbl-evaluation-row">
-                        <td>Diagramme de classe</td>
+                        <td>Conception</td>
                         <td>25%</td>
                     </tr>
                     <tr class="tbl-evaluation-row">
-                        <td>Diagramme de séquence</td>
-                        <td>15%</td>
-                    </tr>
-                    <tr class="tbl-evaluation-row">
-                        <td>Discussion design</td>
-                        <td>5%</td>
-                    </tr>
-                    <tr class="tbl-evaluation-row">
-                        <td>Prototype fonctionnel</td>
+                        <td>Application</td>
                         <td>20%</td>
                     </tr>
                     <tr class="tbl-evaluation-row">
-                        <td>Rapports</td>
-                        <td>5%</td>
+                        <td>Code</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr class="tbl-evaluation-row">
+                        <td>Tests</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr class="tbl-evaluation-row">
+                        <td>Documentation</td>
+                        <td>10%</td>
                     </tr>
                     <tr class="tbl-evaluation-row tbl-evaluation-row--bonus">
-                        <td><strong> Bonus:</strong> Exploitation de Git</td>
+                        <td><strong>Bonus:</strong> Démonstration</td>
                         <td>5%</td>
                     </tr>
                 </table>
             </div>
             <p style="margin-bottom: 2px;">
-                Le <em>Bonus</em> consiste en un usage accru et efficace de Git, démontrant une bonne maitrise.
+                Le <em>Bonus</em> s'obtient en fournissant une vidéo de 5 minutes qui introduit l'application et démontre ces fonctionnalités.
             </p>
-            <ul class="bare-list">
-                <li class="check check--color-inherit">Commits réguliers et descriptifs de chaque membre.</li>
-                <li class="check check--color-inherit">Usage de branches pour le développement du code source.</li>
-                <li class="check check--color-inherit">Gestion de projet par les tiquets.</li>
-            </ul>
         </section>
     </main>
 
@@ -1076,7 +1052,7 @@
         <div class="content-wrapper">
             <p>
                 IFT2255 &ndash; Génie logiciel <br>
-                Devoir 2
+                Devoir 3
             </p>
             <p class="footer-maintenance">
                 Maintenu par: Louis-Edouard LAFONTANT (<a class="bare-link footer__link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">LELAFONTANT</a>) <br>
