@@ -24,7 +24,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -53,7 +53,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -82,7 +82,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -111,7 +111,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -134,13 +134,13 @@
         },
         "dm2": {
             "meetings": [
-                { "week": 8, "used": false }, 
-                { "week": 9, "used": false }
+                { "week": 8, "used": true }, 
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -169,7 +169,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -198,7 +198,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -227,7 +227,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -256,7 +256,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -285,7 +285,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -314,7 +314,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -343,7 +343,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -371,7 +371,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -399,7 +399,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -427,7 +427,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -455,7 +455,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -484,7 +484,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -513,7 +513,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -542,7 +542,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -571,7 +571,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -600,7 +600,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -629,7 +629,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -658,7 +658,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -687,7 +687,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -716,7 +716,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -745,7 +745,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -773,7 +773,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -801,7 +801,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -829,7 +829,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     },
@@ -852,12 +852,12 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": false }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
             "meetings": [
-                { "week": 11, "used": false }
+                { "week": 12, "used": false }
             ]
         }
     }
