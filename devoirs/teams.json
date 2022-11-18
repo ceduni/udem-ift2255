@@ -77,7 +77,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": false }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
@@ -338,7 +338,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": false },
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
@@ -422,7 +422,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": false }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
@@ -624,7 +624,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": true }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
@@ -653,7 +653,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": true }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
@@ -796,7 +796,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": false }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
