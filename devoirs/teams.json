@@ -292,9 +292,8 @@
     {
         "id": 11,
         "name": "DreamTeam",
-        "responsable": "20154866",
+        "responsable": "20162465",
         "members": [
-            { "firstName": "Olivier", "lastName": "Guénette", "matricule": "20154866" },
             { "firstName": "Mylène", "lastName": "Gagné", "matricule": "20162465" },
             { "firstName": "Alvin", "lastName": "Arevalo", "matricule": "20111892" },
             { "firstName": "Yassine", "lastName": "Kalyati", "matricule": "20163111" }
@@ -309,7 +308,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": false },
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
@@ -537,7 +536,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": false }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
@@ -595,7 +594,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": true }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {
@@ -768,7 +767,7 @@
         "dm2": {
             "meetings": [
                 { "week": 8, "used": true }, 
-                { "week": 9, "used": false }
+                { "week": 9, "used": true }
             ]
         },
         "dm3": {

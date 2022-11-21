@@ -1559,7 +1559,7 @@
                 <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Flux d'implémentation</h3>
-                        <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
+                        <a class="week-section-doc" href="./assets/docs/13-implementation.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
                         </a>
                     </div>
@@ -1638,18 +1638,64 @@
                 <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Flux de tests</h3>
-                        <!-- <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
+                        <a class="week-section-doc" href="./assets/docs/14-verification_validation.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
-                        </a> -->
+                        </a>
                     </div>
 
-                    <ul class="bare-list">
-                        <li class="dash">Qualités du logiciel (ISO)</li>
-                        <li class="dash">Vérification & Validation</li>
-                        <li class="dash">Types de tests</li>
-                        <li class="dash">Tests unitaires</li>
-                    </ul>
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/14-verification_validation_qualite.svg" alt="Qualités du logiciel ISO">
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/14-verification_validation.svg" alt="Vérification vs Validation">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/14-verification_validation_boite_noire_blanche.svg" alt="Test à la boite noire et test à la boite blanche">
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/14-verification_validation_type_test.svg" alt="Types de tests">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">                   
+                        <li class="section-summary-list-item">
+                            Qualités du logiciel
+                        </li>
+                        <li class="section-summary-list-item">
+                            Vérification & Validation
+                        </li>
+                        <li class="section-summary-list-item">
+                            Tests unitaires
+                        </li>
+                    </ul>
+                </div>
+            </section>
+     
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 12: Tests unitaires & Déploiement</h2>
+                </div>
+
+                <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Tests unitaires</h3>
                         <!-- <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
@@ -1669,13 +1715,10 @@
                     <h3 class="section-summary-title">Contenu</h3>
                     <ul class="bare-list section-summary-list">                   
                         <li class="section-summary-list-item">
-                            Qualités du logiciel
-                        </li>
-                        <li class="section-summary-list-item">
-                            Vérification & Validation
-                        </li>
-                        <li class="section-summary-list-item">
                             Tests unitaires
+                        </li>
+                        <li class="section-summary-list-item">
+                            Déploiement
                         </li>
                     </ul>
                 </div>
@@ -1698,7 +1741,7 @@
             </div> -->
             <p class="footer-maintenance">
                 Maintenu par: Louis-Edouard LAFONTANT (<a class="bare-link footer__link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">LELAFONTANT</a>) <br>
-                Dernière mise à jour: 2022-11-14
+                Dernière mise à jour: 2022-11-20
             </p>
             <p class="copyright">&copy; 2021 &ndash; 2022 Ceduni</p>
         </div>
@@ -1739,9 +1782,13 @@
     <template id="tpl-week-content">
         <li class="week-content-item">
             <span class="week-content-title">#title</span>
-            <!-- <ul class="bare-list week-content-details" data-item="children" data-bind="details">
-                <li class="week-content-detail" data-template="">$value</li>
-            </ul> -->
+            <ul class="bare-list week-content-details" data-item="tpl-week-detail" data-bind="details"></ul>
+        </li>
+    </template>
+
+    <template id="tpl-week-detail">
+        <li class="week-content-detail">
+            $value
         </li>
     </template>
 

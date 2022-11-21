@@ -31,39 +31,57 @@ if (weeks) {
 
     WEEK_DATA.forEach(data => {
         let tplElement = htmlToElement(parse(content, data));
-        let items = getElements(`[data-item]`, tplElement);
-        
-        items.forEach(it => {
-            const { item, bind } = it.dataset;
 
-            let bindData = data[bind];
-            let tplWeek = getTemplate(`#${item}`);
-            let content = tplWeek.innerHTML;
+        bindContent(tplElement, data);
 
-            bindData.forEach(bd => {
-                let tplWeekElement = htmlToElement(parse(content, bd))
-                it.append(tplWeekElement);
-            })
-
-        })
         weeks.append(tplElement);
     });
 }
 
 Collapsible(body);
 
+function bindContent(element, data) {
+    let children = getElements(`[data-item]`, element);
+
+    children.forEach(child => {
+        const { item, bind } = child.dataset;
+
+        let bindData = data[bind];
+        let template = getTemplate(`#${item}`);
+        let content = template.innerHTML;
+
+        bindData.forEach(bd => {
+            let parsedElement = htmlToElement(parse(content, bd))
+
+            let subitems = getElements(`[data-item]`, parsedElement);
+            if (subitems) {
+                bindContent(parsedElement, bd);
+            }
+
+            child.append(parsedElement);
+        })
+    });
+}
 
 function parse(content, data) {
     var result = content.trim();
 
-    let matches = result.match(/(#[A-Za-z0-9_]+)/g)
+    let matches_value = result.match(/(\$value)/g)
+    if (matches_value) {
+        matches_value.forEach((key, i) => {
+            result = result.replace(key, data);
+        });
+    }
 
-    matches.forEach((key, i) => {
-        let attr = key.substring(1);
-        if (hasOwn(data, attr)) {
-            result = result.replace(key, data[attr]);
-        }
-    });
+    let matches = result.match(/(#[A-Za-z0-9_]+)/g)
+    if (matches) {
+        matches.forEach((key, i) => {
+            let attr = key.substring(1);
+            if (hasOwn(data, attr)) {
+                result = result.replace(key, data[attr]);
+            }
+        });
+    }
 
     return result;
 }
