@@ -1,12 +1,12 @@
 # README
 
-Cette application est un prototype de Roundtable permettant de...
+Cette application est un prototype en ligne de commande de Bineco permettant de...
 
 ## Fonctionnalités
 
-- Parcourir l'ensemble des membres
-  - Visualiser la liste des membres
-  - Effectuer une recherche sur la liste des membres
+- Parcourir l'ensemble des résidents
+  - Visualiser la liste des résidents
+  - Effectuer une recherche sur la liste des résidents
   - Visualiser la fiche d'un membre
 - Parcourir l'ensemble des articles
   - Visualiser la liste des articles
@@ -43,22 +43,20 @@ Pour utiliser l'application, il vous faut exécuter la commande suivante: `java 
 
 Pour se connecter à l'application, veuillez utiliser un des identifiants suivants:
 
-- Rôle du membre
+- Rôle du résident
   - email: jessie.galasso-carbonnel@umontreal.ca | password: jessie#pass | statut: VALIDE
   - email: oussama.ben.sghaier@umontreal.ca | password: oussama#pass | statut: VALIDE
   - email: aurelien.ducoin@umontreal.ca | password: aurelien#pass | statut: SUSPENDU
   - email: meriem.ben.chaaben@umontreal.ca | password: meriem#pass | statut: EN_ATTENTE
-- Rôle du supervisuer
+- Rôle du consommateur
   - email: syriani@iro.umontreal.ca | password: syriani#pass | statut: VALIDE
   - email: sahraouh@iro.umontreal.ca | password: sahraouh#pass | statut: EN_ATTENTE
-- Rôle de l'administrateur
-  - email: louis.edouard.lafontant@umontreal.ca | password: lelafontant#pass | statut: VALIDE
 
-### Menu principal (Membre)
+### Menu principal (Résident)
 
 À partir du menu principal, dans le rôle du membre, vous pouvez choisir l'une des options suivantes en tapant le chiffre correspondant.
 
-- [1] Trouver un membre: Accédez à la liste des membres ou effectuer une recherche.
+- [1] Trouver un membre: Accédez à la liste des résidents ou effectuer une recherche.
 - [2] Trouver un article: Accédez à la liste des articles ou effectuer une recherche.
 - [3] Trouver un outil: Accédez à la liste des articles ou effectuer une recherche.
 - [4] Trouver un projet: Accédez à la liste des articles ou effectuer une recherche.

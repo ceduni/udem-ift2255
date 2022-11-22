@@ -174,8 +174,21 @@
         }
         
         .problem-subsection--problem {
-            padding: 12px 5%;
+            /* padding: 12px 5%; */
+            display: flex;
         }
+
+            .problem-subsection--problem .proposition {
+                padding: 12px 24px;
+                line-height: 1.5;
+                background-color: #1b1b1b;
+                color: #fff;
+            }
+
+            .proposition p,
+            .proposition li {
+                font-size: 1.7em;
+            }
 
         .problem-subsection--activity {
             padding: 12px 5%;
@@ -267,6 +280,64 @@
             .spec-label:after {
                 content: ":";
             }
+
+
+            .spec-user-list {
+        display: flex; flex-direction: column;
+    }
+
+        .spec-user {
+            display: flex; flex-direction: column;
+            padding: 3px 0;
+        }
+            
+            .spec-user-id {
+                display: inline-flex; align-items: center;
+                font-weight: 500;
+            }
+                .user-icon {
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    margin-right: 3px;
+                }
+
+                .user-icon--member {
+                    background-color: #006aff;
+                }
+
+                .user-icon--supervisor {
+                    background-color: #e87429;
+                }
+
+                .user-icon--admin {
+                    background-color: #f32357;
+                }
+
+            .spec-user-desc {
+                font-size: 0.9em;
+                color: #555;
+            }
+
+        .spec-actor-list {
+            display: flex; flex-direction: column;
+        }
+    
+            .spec-actor {
+                display: flex; flex-direction: column;
+                padding: 3px 0;
+            }
+                .spec-actor-id {
+                    display: inline-flex; align-items: center;
+                    font-weight: 500;
+                }
+                .spec-actor-desc {
+                    font-size: 0.9em;
+                    color: #555;
+                }
+
+
 
         .definitions {
             display: flex; flex-direction: row;
@@ -616,10 +687,12 @@
                     <img class="project-intro-img" src="./images/bineco_recyclage.webp" alt="">
                     
                     <div class="project-intro-desc">
+                        <h3 class="subsection-title" style="margin: 0;">Problème</h3>
+
                         <p>
                             La ville de Montréal a entrepris depuis 2010 de nombreuses initiatives pour encourager le recyclage et réduire le gaspillage des résidus alimentaires.
-                            Ceci s'est traduit par l'introduction de poubelle spécialisée (bac de recyclage, bac de compostage) dans la plupart des foyers (immeubles de huit logements et moins).
-                            Un système de collecte a aussi été mis en place pour récupérer le contenu des bacs à des horaires fixes (varie par quartier).
+                            Ceci s'est traduit par l'introduction de poubelle spécialisée (bac de recyclage, bac de compostage) dans la plupart des foyers.
+                            Un système de collecte a aussi été mis en place pour récupérer le contenu des bacs à des horaires fixes.
                         </p>
                         <p>
                             Actuellement, les résidents reçoivent peu d'information sur l'acheminement de leurs déchets et ont peu de controle
@@ -630,56 +703,222 @@
                 </div>
 
                 <section class="problem-subsection problem-subsection--problem">
-                    <h3 class="subsection-title">Proposition</h3>
-                    <div>
+                    <div class="proposition">
+                        <h3 class="subsection-title" style="margin: 0;">Proposition</h3>
                         <p>
                             Nous pensons qu'une meilleur communication des activités de recyclage et compostage résultant du travail de tri effectué dans les foyers,
                             et des métriques accessibles à tous réduiront la distance entre les acteurs.
                             Ainsi nous proposons la création d'un outil, <em>“l'outil <b>Bineco</b>”</em> qui a pour objectif de:
                         </p>
                         <ul class="bare-list">
-                            <li class="check">Faire le suivi des recyclables et des déchets organiques</li>
-                            <li class="check">Visualiser l'efficacité des activités de réutilisation des déchets</li>
-                            <li class="check">Sensibiliser les résidents à l'impact écologique des actions quotidiennes</li>
-                            <li class="check">Faciliter la communication entre la municipalité et les résidents</li>
-                            <li class="check">Mettre en relation les consommateurs de déchets et les résidents</li>
+                            <li class="check check--color-inherit">Faire le suivi des recyclables et des déchets organiques</li>
+                            <li class="check check--color-inherit">Visualiser l'efficacité des activités de réutilisation des déchets</li>
+                            <li class="check check--color-inherit">Sensibiliser les résidents à l'impact écologique de leurs actions</li>
+                            <li class="check check--color-inherit">Faciliter la communication entre la municipalité et les résidents</li>
+                            <li class="check check--color-inherit">Mettre en relation les consommateurs de déchets et les résidents</li>
                         </ul>
-
-                        <p style="margin-top: 12px;">
-                            Étant limité en temps, nous ne vous demandons pas plus qu'une implémentation où l'<strong>interaction est en ligne de commande</strong>.
-                        </p>
                     </div>
+                    <img class="project-intro-img" src="./images/collecte.jpg" alt="">
                 </section>
 
-               <section class="problem-subsection problem-subsection--activity">
-                   <h3 class="subsection-title subsection-title--activity">Activités</h3>
-                   <!-- <img class="project-intro-img" src="https://res.cloudinary.com/villemontreal/image/upload/v1582302005/portail/axgnbss3a6hlpmchosx2.jpg" alt="">                       -->
-                   <ul class="bare-list activities">
-                       <li class="activity activity--publications">
-                           <h4 class="activity-title">Compostage</h4>
-                           <p>
-                                Les bacs de résidus alimentaires sont la propriété de la Ville (chaque bac est lié à une adresse) et servent à faire du compostage.
-                                Le compostage est un procédé de traitement biologique qui permet la biodégradation des matières organiques, 
-                                sous l'action de microorganismes aérobies. Dans certains quartiers, des composteurs communautaires sont mis à la disposition des résidents.
-                           </p>
-                       </li>
-                       <li class="activity activity--tools">
-                            <h4 class="activity-title">Recyclage</h4>
-                            <p>
-                                Les bacs de recyclage sont aussi la propriété de la ville et chacun est lié à une adresse.
-                                De nombreuses matières peuvent être recyclés, telle que le verre, le métal, le papier et carton ainsi que le plastique.
+               <section class="problem-subsection problem-subsection--request">
+                    <h3 class="subsection-title">Exigences</h3>
 
-                            </p>
-                        </li>
-                        <li class="activity activity--projects">
-                            <h4 class="activity-title">Ordures</h4>
-                            <p>
-                                Les ordures ne devraient pas contenir de matières recyclables ni de résidus alimentaires. Cette catégorie est un peu moins intéressante 
-                                que les deux autres, mais elle est importante à surveiller. Ces déchets non recyclables et non compostables doivent être minimisés.
-                            </p>
-                        </li>
-                   </ul> 
-               </section>
+                    <div class="problem-spec-section-group">
+                        <div class="spec-group spec-group--main">
+                            <h3 class="spec-group-title">Fonctionnalités</h3>
+
+                            <ul class="bare-list spec-func-list">
+                                <li class="spec-func">
+                                    Se connecter
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Parcourir l'ensemble des membres
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste/Recherche:</strong> nom complet, adresse courriel et numéro de téléphone.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> nom complet, adresse courriel, numéro de téléphone, intérêts, 
+                                        5 derniers articles (où il fait partie des auteurs).
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Parcourir l'ensemble des articles
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste/Recherche:</strong> titre, auteurs, statut et date de publication.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> titre, résumé, statut, responsable, auteurs, collaborateurs, date de publication et lien de la publication.
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Parcourir l'ensemble des outils
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> nom, version, responsable et collaborateurs.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> nom, description, version, responsable, collaborateurs, liens du répertoire
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Parcourir l'ensemble des projets
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> titre et responsable.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> titre, description, période et responsable.
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter ses notifications
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> nom/titre de l'activité, date de l'action (création, modification, suppression), auteur et descriptif
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    S'inscrire ou se désinscrire à un intérêt
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    S'inscrire ou se désinscrire à une activité
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Modifier la liste des intérêts suivis
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Créer une activité (article/outil/projet)
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Modifier une activité (article/outil/projet)
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                    </div>
+                                </li>
+
+                                
+                                <li class="spec-func">
+                                    Créer un intérêt
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Modifier un intérêt
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Supprimer un intérêt
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="spec-group spec-group--aside">
+                            <h3 class="spec-group-title">Utilisateurs</h3>
+
+                            <ul class="bare-list spec-user-list">
+                                <li class="spec-user spec-user--member">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--member"></i> Résident</span>
+                                    <span class="spec-user-desc">Role de base attribué à tout nouveau compte pour utiliser l'application. </span>
+                                </li>
+                                <li class="spec-user spec-user--supervisor">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--supervisor"></i> Consommateur</span>
+                                    <span class="spec-user-desc">Ce role permet à l'utilisateur de gérer les intérêts de recherche et lui donne accès aux fonctionnalités des membres.</span>
+                                </li>
+                            </ul>
+
+                            <h3 class="spec-group-title">Notes</h3>
+
+                            <ul class="bare-list spec-constraint-list">
+                                <li class="spec-constraint">
+                                    <strong>Connexion</strong>
+                                    Pour se connecter à la plateforme, un membre utilise son adresse courriel et son mot de passe. 
+                                    Il accède au menu principal si son statut est <em>VALIDE</em>.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Statut</strong>
+                                    Lorsqu'un compte est créé, il a un statut <em>EN_ATTENTE</em>.
+                                    Si un administrateur valide le compte, celui-ci passe au statut <em>VALIDE</em>.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Recherche membre</strong>
+                                    La recherche d'un membre peut se faire par nom, prénom ou intérêt. Les accents ne sont pas pris en considération.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Recherche article</strong>
+                                    La recherche d'un article peut se faire par titre ou mot-clé. Les accents ne sont pas pris en considération.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Modification d'une activité</strong>
+                                    Seuls les responsables (créateur et superviseur) d'une activité peuvent la modifier.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Article</strong>
+                                    Si un membre fait partie des auteurs ou collaborateurs, il est automatiquement inscrit à l'article.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Outil</strong>
+                                    Si un membre fait partie des collaborateurs, il est automatiquement inscrit à l'outil. 
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Notification</strong>
+                                    Un membre peut choisir de recevoir ces notifications par courriel. À la fin de toute action portée sur une activité, 
+                                    le membre est invité à inscrire un court descriptif décrivant l'action.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
                 <section class="problem-subsection problem-subsection--request">
                     <h3 class="subsection-title">Besoins</h3>
@@ -796,8 +1035,12 @@
                     </ul>
                 </section>
 
-                   <section class="problem-subsection problem-subsection--request">
+                <section class="problem-subsection problem-subsection--request">
                     <h3 class="subsection-title">Spécifications</h3>
+
+                    <p>
+                        Étant limité en temps, nous ne vous demandons pas plus qu'une implémentation où l'<strong>interaction est en ligne de commande</strong>.
+                    </p>
 
                     <p>
                         Dans l'élaboration de votre solution, nous vous demandons de bien vouloir respecter les spécifications suivantes.
@@ -937,17 +1180,14 @@
             <h2 class="section-title">Règles du jeu</h2>
             <div class="section-content">
                 <p>
-                    Vous avez droit à <strong>2 rencontres avec le client (1 rencontre par semaine)</strong>. <br>
+                    Vous avez droit à <strong>1 rencontre avec le client</strong>. <br>
                     La semaine commence le lundi et se termine le vendredi à 22h. Les questions doivent être communiquées <strong>avant la fin de la semaine</strong>
-                    Passez ce délai, elles seront attribuées à la prochaine semaine. <br>
-                    Les réponses aux questions (générales) seront ajoutées au corps du texte plus haut.
-                    Jusqu'au 6 novembre, des précisions peuvent être rajoutées au texte.  <br>
-                    À noter qu' <strong>une équipe qui n'a jamais rencontré le client sera pénalisée.</strong>
                 </p>
     
                 <p>
                     Pour planifier une rencontre ou soumettre vos questions, communiquez avec notre responsable, Louis-Edouard LAFONTANT.
                 </p>
+
                 <ul class="bare-list contacts">
                     <li class="contact contact--discord">Calendrier: <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation" title="Période de consultation">Période de consultation</a></li>
                     <li class="contact contact--discord">Discord: <strong>L-E#2545</strong></li>
@@ -961,8 +1201,8 @@
 
             <div class="section-content">
                 <p>
-                    Pour ce second jalon, vous devez produire un rapport en HTML présentant votre analyse approfondie du problème, votre conception et une première implémentation. <br>
-                    Il devra aussi présenter les éléments du premier jalon (DM1) mis à jour.
+                    Pour ce troisième et dernier jalon, vous devez produire un rapport en HTML présentant votre conception détaillée et livrer l'application complète et documentée.<br>
+                    Il devra présenter tous les éléments produits durant le projet, <strong>mis à jour</strong>.
                 </p>
     
                 <h3>Cadre du projet (mis à jour)</h3>
@@ -973,14 +1213,14 @@
                 
                 <h3>Conception (mis à jour)</h3>
 
-                <h3 class="task-subsection-title">Implémentation</h3>
+                <h3>Implémentation</h3>
                 <ul class="tasks">
                     <li class="task">Implémentation du design: Application fonctionnel</li>
                     <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
                     <li class="task">Documentation: Documentation technique du code source (JavaDoc)</li>
                 </ul>
 
-                <h3 class="task-subsection-title">Tests</h3>
+                <h3>Tests</h3>
                 <ul class="tasks">
                     <li class="task">Rapport de tests unitaires (JUnit)</li>
                 </ul>
@@ -992,10 +1232,13 @@
                     <li class="task-document check check--color-inherit">Diagramme de classes (mis à jour)</li>
                     <li class="task-document check check--color-inherit">Diagramme de séquence (mis à jour)</li>
                     <li class="task-document check check--color-inherit">Application: Exécutable JAR</li>
+                    <li class="task-document check check--color-inherit">Code source</li>
                     <li class="task-document check check--color-inherit">Tests: 3 tests unitaires par membre</li>
-                    <li class="task-document check check--color-inherit">Documentation: Javadoc généré et README</li>
+                    <li class="task-document check check--color-inherit">Documentation: Génération Javadoc et README</li>
                 </ul>
             </div>
+
+            <a class="bare-link template-link" target="_blank" href="README.md">Template pour le README</a>
         </section>
 
         <section class="evaluation-section">
@@ -1009,12 +1252,8 @@
                 <h3 class="marking-scheme-title">Barème</h3>
                 <table class="tbl-evaluation">
                     <tr class="tbl-evaluation-row">
-                        <td>Révision</td>
-                        <td>5%</td>
-                    </tr>
-                    <tr class="tbl-evaluation-row">
                         <td>Analyse</td>
-                        <td>5%</td>
+                        <td>10%</td>
                     </tr>
                     <tr class="tbl-evaluation-row">
                         <td>Conception</td>
@@ -1043,8 +1282,13 @@
                 </table>
             </div>
             <p style="margin-bottom: 2px;">
-                Le <em>Bonus</em> s'obtient en fournissant une vidéo de 5 minutes qui introduit l'application et démontre ces fonctionnalités.
+                Le <em>Bonus</em> consiste à faire une démonstration de l'application dans une vidéo de 5 minutes.
             </p>
+            <ul class="bare-list">
+                <li class="check check--color-inherit">Présentation du contexte et de la problématique.</li>
+                <li class="check check--color-inherit">Mention des objectifs.</li>
+                <li class="check check--color-inherit">Démonstration d'au moins 3 fonctionnalités.</li>
+            </ul>
         </section>
     </main>
 
@@ -1056,7 +1300,7 @@
             </p>
             <p class="footer-maintenance">
                 Maintenu par: Louis-Edouard LAFONTANT (<a class="bare-link footer__link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">LELAFONTANT</a>) <br>
-                Dernière mise à jour: 2022-11-14
+                Dernière mise à jour: 2022-11-21
             </p>
             <p class="copyright">&copy; 2021 &ndash; 2022 Ceduni</p>
         </div>

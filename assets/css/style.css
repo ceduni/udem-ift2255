@@ -1146,7 +1146,7 @@
 
         .spec-func {
             position: relative;
-            display: flex;
+            display: flex; flex-wrap: wrap;
             font-size: 1.6em;
             font-weight: 400;
             padding: 6px 0px;
