@@ -1116,11 +1116,11 @@
     }
 
         .spec-group--main {
-            width: 100%;
+            min-width: 50%;
         }
 
         .spec-group--aside {
-            min-width: 300px;
+            min-width: 240px;
             background-color: #d5d5d5;
         }     
 

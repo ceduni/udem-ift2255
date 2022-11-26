@@ -191,12 +191,16 @@
             }
 
         .problem-subsection--activity {
-            padding: 12px 5%;
+            padding: 12px 2%;
             background: url(./images/collecte.jpg) 100%/cover no-repeat;
         }
 
         .problem-subsection--request {
-            padding: 12px 5%;
+            padding: 12px 2%;
+        }
+
+        .problem-subsection--data {
+            padding: 12px 2%;
         }
 
         .activities {
@@ -228,6 +232,7 @@
         }
         
         .subsection-title {
+            margin-top: 0;
             margin-bottom: 12px;
             font-size: 3em; font-weight: 300;
             color: #EF4E36;
@@ -336,27 +341,28 @@
                     font-size: 0.9em;
                     color: #555;
                 }
+            .spec-func-desc {
+                width: 100%;
+                padding-left: 24px;
+                font-size: 0.9em;
+            }
 
 
-
-        .definitions {
+        .precisions {
             display: flex; flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: wrap;   
         }
         
-        .definition {
+        .precision {
             flex: 1 1 ;
             margin-bottom: 6px; margin-right: 6px;
             padding: 4px 12px 8px;
-            font-weight: 500;
+            font-weight: 500; font-size: 1.3em;
             color: #fff;
             background-color: #6667AB;
             border-radius: 1px;
         }
 
-            .definition ins {
-                color: #000;
-            }
 
         .requirements {
             display: flex; flex-direction: row;
@@ -724,11 +730,24 @@
                <section class="problem-subsection problem-subsection--request">
                     <h3 class="subsection-title">Exigences</h3>
 
+                    
+                    <p>
+                        Étant limité en temps, nous ne vous demandons pas plus qu'une implémentation où l'<strong>interaction est en ligne de commande</strong>. <br>
+                        Dans l'élaboration de votre solution, nous vous demandons de bien vouloir respecter les spécifications suivantes.
+                    </p>
+
                     <div class="problem-spec-section-group">
                         <div class="spec-group spec-group--main">
                             <h3 class="spec-group-title">Fonctionnalités</h3>
 
                             <ul class="bare-list spec-func-list">
+                                <li class="spec-func">
+                                    Créer un compte
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
                                 <li class="spec-func">
                                     Se connecter
                                     <div class="spec-func-users">
@@ -737,125 +756,109 @@
                                     </div>
                                 </li>
                                 <li class="spec-func">
-                                    Parcourir l'ensemble des membres
-                                    <div class="spec-func-users">
-                                        <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Liste/Recherche:</strong> nom complet, adresse courriel et numéro de téléphone.
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> nom complet, adresse courriel, numéro de téléphone, intérêts, 
-                                        5 derniers articles (où il fait partie des auteurs).
-                                    </div>
-                                </li>
-                                <li class="spec-func">
-                                    Parcourir l'ensemble des articles
-                                    <div class="spec-func-users">
-                                        <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Liste/Recherche:</strong> titre, auteurs, statut et date de publication.
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> titre, résumé, statut, responsable, auteurs, collaborateurs, date de publication et lien de la publication.
-                                    </div>
-                                </li>
-                                <li class="spec-func">
-                                    Parcourir l'ensemble des outils
-                                    <div class="spec-func-users">
-                                        <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> nom, version, responsable et collaborateurs.
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> nom, description, version, responsable, collaborateurs, liens du répertoire
-                                    </div>
-                                </li>
-                                <li class="spec-func">
-                                    Parcourir l'ensemble des projets
-                                    <div class="spec-func-users">
-                                        <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> titre et responsable.
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> titre, description, période et responsable.
-                                    </div>
-                                </li>
-                                <li class="spec-func">
-                                    Consulter ses notifications
-                                    <div class="spec-func-users">
-                                        <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
-                                    </div>
-                                    <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">i</i> Liste:</strong> nom/titre de l'activité, date de l'action (création, modification, suppression), auteur et descriptif
-                                    </div>
-                                </li>
-                                <li class="spec-func">
-                                    S'inscrire ou se désinscrire à un intérêt
+                                    Modifier son profil
                                     <div class="spec-func-users">
                                         <i class="user-icon user-icon--member"></i>
                                         <i class="user-icon user-icon--supervisor"></i>
                                     </div>
                                 </li>
                                 <li class="spec-func">
-                                    S'inscrire ou se désinscrire à une activité
+                                    Enregistrer un bac
                                     <div class="spec-func-users">
                                         <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                   
+                                </li>
+                                <li class="spec-func">
+                                    Supprimer un bac
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
                                     </div>
                                 </li>
                                 <li class="spec-func">
-                                    Modifier la liste des intérêts suivis
+                                    Afficher l'état des bacs
                                     <div class="spec-func-users">
                                         <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
                                     </div>
-                                </li>
-                                <li class="spec-func">
-                                    Créer une activité (article/outil/projet)
-                                    <div class="spec-func-users">
-                                        <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
-                                    </div>                              
                                     <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                        <strong class="label"><i class="ico-info">i</i> Vue général:</strong> Afficher le nom, le niveau de remplissage et un indicateur de composition valide.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Vue complète:</strong> Afficher la composition d'un bac et l'historique.
                                     </div>
                                 </li>
                                 <li class="spec-func">
-                                    Modifier une activité (article/outil/projet)
+                                    Afficher l'état du traitement d'un lot de déchets
                                     <div class="spec-func-users">
                                         <i class="user-icon user-icon--member"></i>
-                                        <i class="user-icon user-icon--supervisor"></i>
-                                    </div>                              
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter les métriques
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Paramétriser les métriques
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Signaler un problème à MunicipInfo
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Trouver un consommateur
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
                                     <div class="spec-func-desc">
-                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                        <strong class="label"><i class="ico-info">i</i> Liste/Recherche:</strong> Afficher uniquement le nom et les types de déchets traités.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> Afficher toutes les informations (publiques)
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Noter une activité
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
                                     </div>
                                 </li>
 
-                                
                                 <li class="spec-func">
-                                    Créer un intérêt
+                                    Ajouter une activité 
                                     <div class="spec-func-users">
                                         <i class="user-icon user-icon--supervisor"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
                                     </div>
                                 </li>
                                 <li class="spec-func">
-                                    Modifier un intérêt
+                                    Modifier une activité 
                                     <div class="spec-func-users">
                                         <i class="user-icon user-icon--supervisor"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
                                     </div>
                                 </li>
                                 <li class="spec-func">
-                                    Supprimer un intérêt
+                                    Supprimer une activité 
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Notifier les résidents d'un besoin
                                     <div class="spec-func-users">
                                         <i class="user-icon user-icon--supervisor"></i>
                                     </div>
@@ -869,11 +872,11 @@
                             <ul class="bare-list spec-user-list">
                                 <li class="spec-user spec-user--member">
                                     <span class="spec-user-id"><i class="user-icon user-icon--member"></i> Résident</span>
-                                    <span class="spec-user-desc">Role de base attribué à tout nouveau compte pour utiliser l'application. </span>
+                                    <span class="spec-user-desc">Utilisateur principal de Bineco faisant le suivi de ses bacs et du traitement des déchets.</span>
                                 </li>
                                 <li class="spec-user spec-user--supervisor">
                                     <span class="spec-user-id"><i class="user-icon user-icon--supervisor"></i> Consommateur</span>
-                                    <span class="spec-user-desc">Ce role permet à l'utilisateur de gérer les intérêts de recherche et lui donne accès aux fonctionnalités des membres.</span>
+                                    <span class="spec-user-desc">Utilisateur secondaire de Bineco gérant les activités d'exploitant et communiquant diverses besoins aux résidents.</span>
                                 </li>
                             </ul>
 
@@ -881,39 +884,33 @@
 
                             <ul class="bare-list spec-constraint-list">
                                 <li class="spec-constraint">
-                                    <strong>Connexion</strong>
-                                    Pour se connecter à la plateforme, un membre utilise son adresse courriel et son mot de passe. 
-                                    Il accède au menu principal si son statut est <em>VALIDE</em>.
+                                    <strong>Inscription</strong>
+                                    Lors de la création d'un compte, un lien de confirmation (expirant après 3 jours) est envoyé à l'utilisateur.
+                                    Passé le délai de confirmation, l'inscription est annulée. Pour un consomateur, MunicipInfo est utilisé pour valider le code du consommateur.
                                 </li>
                                 <li class="spec-constraint">
-                                    <strong>Statut</strong>
-                                    Lorsqu'un compte est créé, il a un statut <em>EN_ATTENTE</em>.
-                                    Si un administrateur valide le compte, celui-ci passe au statut <em>VALIDE</em>.
+                                    <strong>Authentification</strong>
+                                    Lors de l'authentification, un utilisateur fournit son adresse courriel et son mot de passe. 
+                                    Si l'authentification réussit, l'utilisateur est amené à l'écran d'accueil propre à son type de compte.
                                 </li>
                                 <li class="spec-constraint">
-                                    <strong>Recherche membre</strong>
-                                    La recherche d'un membre peut se faire par nom, prénom ou intérêt. Les accents ne sont pas pris en considération.
+                                    <strong>Bac</strong>
+                                    En tout temps, un résident devrait pouvoir enregistrer et suivre un nouveau bac. 
+                                    Pour enregistrer un nouveau bac, il faut scanner le code QR du bac et l'identifier par un nom et un type.
+                                    MunicipInfo est utilisé pour valider le bac. Si un résident n'a pas de bac enregistré à son compte, il ne peut utiliser le reste de l'application.
                                 </li>
                                 <li class="spec-constraint">
-                                    <strong>Recherche article</strong>
-                                    La recherche d'un article peut se faire par titre ou mot-clé. Les accents ne sont pas pris en considération.
+                                    <strong>Trouver un consommateur</strong>
+                                    La recherche de consomateur peut se faire, au moins, par nom et par type d'activités. Les accents ne sont pas pris en considération.
                                 </li>
                                 <li class="spec-constraint">
-                                    <strong>Modification d'une activité</strong>
-                                    Seuls les responsables (créateur et superviseur) d'une activité peuvent la modifier.
-                                </li>
-                                <li class="spec-constraint">
-                                    <strong>Article</strong>
-                                    Si un membre fait partie des auteurs ou collaborateurs, il est automatiquement inscrit à l'article.
-                                </li>
-                                <li class="spec-constraint">
-                                    <strong>Outil</strong>
-                                    Si un membre fait partie des collaborateurs, il est automatiquement inscrit à l'outil. 
+                                    <strong>Métriques</strong>
+                                    L'application devrait présenter près de 3 métriques pour chaque niveau (résidentiel et municipal). 
+                                    Les métriques peuvent être composées de sous facteurs explorables et configurables par le résident.
                                 </li>
                                 <li class="spec-constraint">
                                     <strong>Notification</strong>
-                                    Un membre peut choisir de recevoir ces notifications par courriel. À la fin de toute action portée sur une activité, 
-                                    le membre est invité à inscrire un court descriptif décrivant l'action.
+                                    Un résident peut choisir de recevoir ces notifications par courriel. 
                                 </li>
                             </ul>
                         </div>
@@ -921,153 +918,7 @@
                 </section>
 
                 <section class="problem-subsection problem-subsection--request">
-                    <h3 class="subsection-title">Besoins</h3>
-                    
-                    <p>
-                        Pour le fonctionnement efficace de Bineco, nous assumons la présence d'un mécanisme d'inventorisation du contenu des bacs, tel que l'usage de capteurs (fournis par la municipalité).
-                        En utilisant les données collectées sur la composition des bacs de chaque résident, nous pouvons les catégoriser et formuler des ratios ou métriques pour refléter diverses tendances au niveau résidentiel. 
-                        Pour faciliter le traitement électronique des bacs, ceux-ci seront identifiés par un <a href="https://fr.wikipedia.org/wiki/Code_QR">code QR</a> (imprimé sur les bacs) émis par la municipalité.
-                    </p>
-                    <p>
-                        Afin de simplifier l'expression des besoins et spécifications, nous utiliserons <em>MunicipInfo</em> pour faire référence au système externe fournissant les informations détenues par la municipalité (ville).
-                    </p>
-                    
-                    <ul class="bare-list requirements">
-                        <li class="requirement">
-                            <h4 class="requirement-title">S'inscrire comme résident</h4>
-                            <span class="requirement-description">
-                                Pour s'inscrire comme résident, il faut fournir les informations suivantes:
-                                <i class="listing dash">Profil: nom, prénom, adresse courriel, téléphone</i>
-                                <i class="listing dash">Adresse de la résidence: permet de l'associer à une municipalité</i>
-                                <i class="listing dash">Bac (enregistrement): permet de valider l'authenticité du résident</i>
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">S'inscrire comme consommateur</h4>   
-                            <span class="requirement-description">
-                                Pour s'inscrire comme consommateur, il faut d'abord être enregistré auprès de la ville (prérequis) et fournir:
-                                <i class="listing dash">Profil: code, nom, adresse, email, téléphone</i>
-                                <i class="listing dash">Type de déchets traités</i>
-                                <i class="listing dash">Capacité de traitement </i>
-                                <i class="listing dash">Activités d'exploitation</i>
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">Enregistrer un bac</h4>
-                            <span class="requirement-description">
-                                Chaque résident est habituellement responsable de 2 ou 3 bacs (bac brun, bac de recyclage et bac à ordures). En tout temps, il devrait pouvoir enregistrer et suivre un nouveau bac.
-                                Pour enregistrer un nouveau bac, il faut scanner le code QR du bac et l'identifier par un nom et un type.
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">Afficher l'état des mes bacs</h4>
-                            <span class="requirement-description">
-                                L'état d'un bac présente sa capacité actuelle (niveau de remplissage), sa composition actuelle (contenu) et son usage (lié aux métriques écologiques).
-                                L'usage fait référence à l'évolution (périodique) du contenu des bacs, offrant ainsi une trace (historique). 
-                                Il est à noter que l'usage des bacs est indépendant du traitement subi par les déchets.
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">Afficher les métriques écologiques</h4>
-                            <span class="requirement-description">
-                                Les métriques (indicateurs, ratios) écologiques sont réparties entre celles liées à l'usage des bacs (niveau résidentiel) 
-                                et celles liées au traitement des déchets (niveau municipal). Ces métriques devraient être facilement interprétables 
-                                par tout utilisateur et significatives (pertinentes) pour mesurer correctement l'activité écologique.
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">Paramétriser les métriques</h4>
-                            <span class="requirement-description">
-                                Un résident devrait pouvoir pondérer ou configurer les métriques pour les orienter selon certaines préférences (facteurs de calcul).
-                                Ces préférences dépendent des métriques choisies.
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">Voir l'état de traitement des déchets municipaux</h4>  
-                            <span class="requirement-description">
-                                Le suivi du traitement des déchets ne considère pas celui de chaque résident individuellement, mais plutôt l'ensemble des déchets de la ville (du résident).
-                                Le traitement des déchets est segmenté en points de contrôle (<em>checkpoint</em>) permettant le suivi du processus.
-                                <i class="listing dash">Récupération des déchets (passage des camions)</i>
-                                <i class="listing dash">Livraison des déchets (date, consommateur ou dépôt, état des déchets)</i>
-                                <i class="listing dash">Usage des déchets (consommateur, activité, proportions exploitées)</i>
-                                À chaque point de contrôle, nous collectons des données permettant de fabriquer des métriques montrant l'efficacité du traitement des déchets à l'échelle municipale.
-                            </span>
-                        </li>
-                        <!-- <li class="requirement">
-                            <h4 class="requirement-title">Voir les activités que je maintiens</h4>  
-                            <span class="requirement-description">
-                                Les consommateurs utilisent les déchets pour des activités diverses de compostage et recyclages (ex: Fabrication de bouteille, sacs à partir de plastiques recyclés; Fabrication d'engrais).
-                                Les résidents étant la source des matières premières fournies par la ville, ils participent indirectement aux activités menées par les consommateurs.
-                            </span>
-                        </li> -->
-                        <li class="requirement">
-                            <h4 class="requirement-title">Signaler un problème à MunicipInfo</h4>  
-                            <span class="requirement-description">
-                                Les bacs étant la propriété de la ville, pour tout problème rencontré avec un bac ou demande de nouveau bac, le résident peut envoyer une requête à MunicipInfo.
-                                Pour signaler tout problème, les informations envoyées sont toujours les mêmes (nom du résident, adresse du résident, courriel, type de problème). 
-                                Le type varie selon la requête envoyée à MunicipInfo. Le suivi est fait à l'externe pour éviter de surcharger Bineco.
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">Trouver un consommateur</h4>   
-                            <span class="requirement-description">
-                                Un résident peut naviguer à travers la liste des consommateurs enregistrés en utilisant un mécanisme de recherche et de filtre facilitant la localisation de consommateur spécifique.
-                                Les consommateurs devraient être catégorisés pour faciliter la recherche.
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">Noter un consommateur</h4>
-                            <span class="requirement-description">
-                                Les résidents peuvent noter un consommateur en offrant un avis sur leurs activités. 
-                                Pour chaque activité d'un consommateur, un utilisateur peut fournir une note de 1 à 5.
-                                L'agrégation de ces notes produira une note générale attribuée au consommateur.
-                            </span>
-                        </li>
-                        <li class="requirement">
-                            <h4 class="requirement-title">Notifier les résidents</h4>
-                            <span class="requirement-description">
-                                Les consommateurs peuvent notifier l'ensemble des résidents d'un besoin en déchets spécifiques ou pour les sensibiliser au traitement de certains déchets. 
-                                Une notification de sensibilisation vise à encourager les résidents à porter une attention particulière à certains déchets.
-                                Une notification d'accumulation vise à demander aux résidents d'accumuler un type de déchet ou un déchet spécifique.
-                            </span>
-                        </li>
-                      
-                    </ul>
-                </section>
-
-                <section class="problem-subsection problem-subsection--request">
-                    <h3 class="subsection-title">Spécifications</h3>
-
-                    <p>
-                        Étant limité en temps, nous ne vous demandons pas plus qu'une implémentation où l'<strong>interaction est en ligne de commande</strong>.
-                    </p>
-
-                    <p>
-                        Dans l'élaboration de votre solution, nous vous demandons de bien vouloir respecter les spécifications suivantes.
-                    </p>
-        
-                    <h4 class="paragraph-title">Utilisateurs</h4>
-
-                    <p>
-                        Les utilisateurs de Bineco sont les résidents et les consommateurs. Un compte distinct est associé à chacun.
-                        Lors de la création d'un compte, un lien de confirmation (expirant après 3 jours) est envoyé à l'utilisateur.
-                        Passé le délai de confirmation, l'inscription est annulée.
-                        Lors de l'inscription comme résident, MunicipInfo est utilisé pour valider le bac enregistré.
-                        Lors de l'inscription comme consommateur, MunicipInfo est utilisé pour valider le code du consommateur.
-                        Lors de l'authentification, un utilisateur fournit son adresse courriel et son mot de passe. 
-                        Si l'authentification réussit, l'utilisateur est amené à l'écran d'accueil propre à son type de compte.
-                    </p>
-
-                    <h4 class="paragraph-title">Métriques</h4>
-
-                    <p>
-                        L'application devrait présenter près de 3 métriques pour chaque niveau (résidentiel et municipal). 
-                        Afin de réduire le bruit cognitif dû à la surcharge d'information, l'application ne devrait pas présenter plus de 10 métriques. 
-                        Les métriques peuvent être composées de sous facteurs explorables et configurables par le résident.
-                        Certaines de ces métriques doivent s'afficher sur l'écran d'accueil (du résident), pour faciliter une consultation rapide.
-                    </p>
-
-                    <h4 class="paragraph-title">MunicipInfo</h4>
+                    <h3 class="subsection-title">MunicipInfo</h3>
                 
                     <p>
                         Les requêtes suivantes peuvent être envoyées à MunicipInfo.
@@ -1161,17 +1012,34 @@
                                 </li>
                             </ul>
                         </li>
-
                     </ul>
+                </section>
 
-                    <h4 class="paragraph-title">Prototype</h4>
+                
+                <section class="problem-subsection problem-subsection--data">
+                    <h3 class="subsection-title">Données</h3>
 
                     <p>
-                        L'application devrait être initialisée avec plus de 10 consommateurs, plus de 3 résidents avec des bacs en utilisation et des déchets en traitement. 
-                        Les métriques doivent être pleinement implémentées (formule présent dans le code), mais les données peuvent être fabriquées.<br>
-                        Les actions présentées dans le menu peuvent être imbriquées pour éviter d'afficher trop d'options à l'utilisateur. 
-                        Cependant, le menu ne devrait pas avoir plus de 3 niveaux d'imbrication. Bien entendu, il devrait toujours être possible de retourner au menu principal sans quitter l'application.
+                        L'application devrait être initialisée avec la configuration minimale suivante:
                     </p>
+
+                    <ul class="bare-list data-list font-code">
+                        <li class="data-item dash">
+                            3 comptes résidents
+                        </li>
+                        <li class="data-item dash">
+                            10 comptes consommateurs
+                        </li>
+                        <li class="data-item dash">
+                            2 bacs en utilisation pour chaque résident
+                        </li>
+                        <li class="data-item dash">
+                            5 lots de déchets dont 1 en cours de traitement
+                        </li>
+                        <li class="data-item dash">
+                            3 activités par consommateurs
+                        </li>
+                    </ul>
                 </section>
             </div>
         </section>
@@ -1180,11 +1048,7 @@
             <h2 class="section-title">Règles du jeu</h2>
             <div class="section-content">
                 <p>
-                    Vous avez droit à <strong>1 rencontre avec le client</strong>. <br>
-                    La semaine commence le lundi et se termine le vendredi à 22h. Les questions doivent être communiquées <strong>avant la fin de la semaine</strong>
-                </p>
-    
-                <p>
+                    Vous avez droit à <strong>1 rencontre avec le client</strong>.  <br>
                     Pour planifier une rencontre ou soumettre vos questions, communiquez avec notre responsable, Louis-Edouard LAFONTANT.
                 </p>
 
@@ -1215,7 +1079,13 @@
 
                 <h3>Implémentation</h3>
                 <ul class="tasks">
-                    <li class="task">Implémentation du design: Application fonctionnel</li>
+                    <li class="task">Implémentation du design: 
+                        <ul class="bare-list" style="padding-left: 12px;">
+                            <li class="dash">Application complète et robuste: Toutes les fonctionnalités sont implémentées et les entrées sont validées</li>
+                            <li class="dash">Conforme au design: Toutes les classes du diagramme de classe doivent être présent dans le code.</li>
+                            <li class="dash">Fichier et stockage: Les données doivent être préservées au-delà d'une session</li>
+                        </ul>
+                    </li>
                     <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
                     <li class="task">Documentation: Documentation technique du code source (JavaDoc)</li>
                 </ul>
@@ -1227,7 +1097,7 @@
     
                 <h3 class="task-subsection-title task-subsection-title--document">Livrables</h3>
                 <ul class="task-documents bare-list">
-                    <li class="task-document check check--color-inherit">Cas d'utilisation et scénarios (mis à jour)</li>
+                    <li class="task-document check check--color-inherit">Cas d'utilisation (mis à jour)</li>
                     <li class="task-document check check--color-inherit">Diagramme d'activités (mis à jour)</li>
                     <li class="task-document check check--color-inherit">Diagramme de classes (mis à jour)</li>
                     <li class="task-document check check--color-inherit">Diagramme de séquence (mis à jour)</li>
@@ -1238,14 +1108,14 @@
                 </ul>
             </div>
 
-            <a class="bare-link template-link" target="_blank" href="README.md">Template pour le README</a>
+            <!-- <a class="bare-link template-link" target="_blank" href="README.md">Template pour le README</a> -->
         </section>
 
         <section class="evaluation-section">
             <h2 class="section-title">Évaluation</h2>
             <p>
                 Ce devoir compte pour <strong>25% de la note final</strong>. <br>
-                Le rapport et tous les artéfacts produits sont à <strong>remettre au plus tard le dimanche 23 décembre</strong> par le responsable d'équipe.
+                Le rapport et tous les artéfacts produits sont à <strong>remettre au plus tard le vendredi 23 décembre</strong> par le responsable d'équipe.
             </p>
 
             <div class="marking-scheme">
@@ -1277,7 +1147,7 @@
                     </tr>
                     <tr class="tbl-evaluation-row tbl-evaluation-row--bonus">
                         <td><strong>Bonus:</strong> Démonstration</td>
-                        <td>5%</td>
+                        <td>10%</td>
                     </tr>
                 </table>
             </div>
@@ -1286,8 +1156,8 @@
             </p>
             <ul class="bare-list">
                 <li class="check check--color-inherit">Présentation du contexte et de la problématique.</li>
-                <li class="check check--color-inherit">Mention des objectifs.</li>
-                <li class="check check--color-inherit">Démonstration d'au moins 3 fonctionnalités.</li>
+                <li class="check check--color-inherit">Mention des objectifs et des métriques.</li>
+                <li class="check check--color-inherit">Démonstration d'au moins 3 fonctionnalités (répondant aux objectifs).</li>
             </ul>
         </section>
     </main>
@@ -1300,7 +1170,7 @@
             </p>
             <p class="footer-maintenance">
                 Maintenu par: Louis-Edouard LAFONTANT (<a class="bare-link footer__link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">LELAFONTANT</a>) <br>
-                Dernière mise à jour: 2022-11-21
+                Dernière mise à jour: 2022-11-25
             </p>
             <p class="copyright">&copy; 2021 &ndash; 2022 Ceduni</p>
         </div>
