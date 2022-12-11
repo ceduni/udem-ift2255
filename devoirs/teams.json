@@ -483,7 +483,7 @@
         },
         "dm3": {
             "meetings": [
-                { "week": 12, "used": false }
+                { "week": 12, "used": true }
             ]
         }
     },
@@ -722,9 +722,9 @@
     {
         "id": 26,
         "name": "GPB",
-        "responsable": "20184162",
+        "responsable": "20178538",
         "members": [
-            { "firstName": "Laurent", "lastName": "Bouchard", "matricule": "20184162" },
+            { "firstName": "Laurent", "lastName": "Bouchard", "matricule": "20184162", "flag": true, "note": "did not commit because he wasn't there (check if drop)" },
             { "firstName": "Qiwu", "lastName": "Wen", "matricule": "20230961" },
             { "firstName": "Le Kinh", "lastName": "Vi Phung", "matricule": "20178538" },
             { "firstName": "Patrick", "lastName": "Langlois", "matricule": "20197071" }

@@ -837,6 +837,18 @@
                                 <li class="week-content-detail">Refactoring</li>
                             </ul>
                         </li>
+                        <li class="week-content-item">
+                            <span class="week-content-title">Éthiques et Licenses</span> 
+                            <ul class="bare-list week-content-details">
+                                <li class="week-content-detail">Éthique professionnelle</li>
+                                <li class="week-content-detail">Code d'éthique</li>
+                                <li class="week-content-detail">EULA</li>
+                                <li class="week-content-detail">Licenses courantes</li>
+                                <li class="week-content-detail">Creative-commons</li>
+                                <li class="week-content-detail">Dark patterns</li>
+                                <li class="week-content-detail">Protection des utilisateurs</li>
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="bare-list week-content tp">
                         <li class="week-content-item">
@@ -863,17 +875,6 @@
                     <h4 class="week-title">Semaine 14 (5 Décembre)</h4>
                     
                     <ul class="bare-list week-content th">
-                        <li class="week-content-item">
-                            <span class="week-content-title">Éthiques et Licenses</span> 
-                            <ul class="bare-list week-content-details">
-                                <li class="week-content-detail">Code-ethique</li>
-                                <li class="week-content-detail">EULA</li>
-                                <li class="week-content-detail">Apache</li>
-                                <li class="week-content-detail">MIT</li>
-                                <li class="week-content-detail">GPL</li>
-                                <li class="week-content-detail">Creative-commons</li>
-                            </ul>
-                        </li>
                         <li class="week-content-item">
                             <span class="week-content-title">Conclusion</span> 
                             <ul class="bare-list week-content-details">
@@ -1704,31 +1705,35 @@
                 <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Tests unitaires</h3>
-                        <!-- <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
+                        <a class="week-section-doc" href="./assets/docs/15-test_unitaire.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
-                        </a> -->
+                        </a>
                     </div>
 
                     <div class="week-section-parts">
                         <div class="week-section-part">
                             <img class="week-section-image" src="assets/images/15-test_unitaire.svg" alt="Qualités du logiciel ISO">
                             <p>
-                                
+                               Les tests unitaires visent à démontrer la présence d'erreur, c.-à-d. que l'implémentation d'une unité donnée contredit sa spécification.
+                               Pour une unité donnée, diverses formes (types) de tests peuvent être formuler pour vérifier son cas de succès (sortie est correcte pour une entrée correcte), 
+                               d'échec (échoue, tel qu'attendu, pour une mauvaise entrée) ou son invariance (test sanitaire).
                             </p>
                         </div>
                         <div class="week-section-part">
                             <img class="week-section-image" src="assets/images/15-test_unitaire_outils.svg" alt="Vérification vs Validation">
                             <p>
-                                
+                                Pour assurer une bonne couverture des tests, il faut une bonne variabilité dans les valeurs utilisées pour les tests. 
+                                Ainsi, nous pouvons identifier des valeurs « normales » (couvrant l'usage habituel), des valeurs extrêmes (0, tableau vide, valeur maximale), 
+                                des valeurs inattendues (null, index négatif) et autres combinaisons de valeurs servant à parcourir tous les chemins de l'unité.
                             </p>
                         </div>
                     </div>
 
                     <div class="week-section-header">
                         <h3 class="week-section-title">Déploiement</h3>
-                        <!-- <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
+                        <a class="week-section-doc" href="./assets/docs/16-deploiment.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
-                        </a> -->
+                        </a>
                     </div>
 
                     <div class="week-section-parts">
@@ -1740,6 +1745,20 @@
                         </div>
                         <div class="week-section-part">
                             <img class="week-section-image" src="assets/images/16-deploiment_virtualization.svg" alt="Vérification vs Validation">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/16-deploiment_cicd2.svg" alt="Qualités du logiciel ISO">
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/16-deploiment_cicd.svg" alt="Vérification vs Validation">
                             <p>
                                 
                             </p>
@@ -1768,27 +1787,97 @@
                 <div class="week-section-body collapsible-content" data-collapsible-content="">
                     <div class="week-section-header">
                         <h3 class="week-section-title">Maintenance</h3>
-                        <!-- <a class="week-section-doc" href="./assets/docs/08-diagramme_classe.pdf" target="_blank">
+                        <a class="week-section-doc" href="./assets/docs/17-maintenance.pdf" target="_blank">
                             <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
-                        </a> -->
+                        </a>
                     </div>
-
-                    <ul class="bare-list">
-                        <li class="dash">Types de changement</li>
-                        <li class="dash">Difficultés</li>
-                        <li class="dash">Étapes de changement post-déploiement</li>
-                        <li class="dash">Outils et techniques</li>
-                    </ul>
+                    
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/17-maintenance_types.svg" alt="Types de changement">
+                            <p>
+                                La maintenance représente <strong>plus de 60% du cout des activités de développement</strong> logiciel. Elle incorpore tous les flux de développement et regroupe tout changement nécessaire après le déploiement:
+                                <strong>perfectif</strong> (ajout/amélioration de fonctionnalités), <strong>adaptatif</strong> (ajustement aux changements de l'environnement), <strong>correctif</strong> (correction des défauts), <strong>préventif</strong> (anticipation de changement).
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/17-maintenance_phases.svg" alt="Étapes de changement post-déploiement">
+                            <p>
+                                La modification d'un système suit certaines étapes clés, en commençant par l'initiation, où les programmeurs découvrent les problèmes et exigences et planifient leur résolution.
+                                Suite à cela, ils identifient (via recherche textuelle ou graphes de dépendances) les concepts (modules) concernés par le problème et analysent l'impact du changement (modules à modifier).
+                                Ils modifient ensuite le programme accompagné de nouveaux tests, et optimisent sa structure par des opérations de refactoring.
+                                Finalement ils déploient la nouvelle version du programme.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="section-summary collapsible-preview">
                     <h3 class="section-summary-title">Contenu</h3>
                     <ul class="bare-list section-summary-list">                   
                         <li class="section-summary-list-item">
-                            Tests unitaires
+                            Maintenance
                         </li>
                         <li class="section-summary-list-item">
-                            Déploiement
+                            Éthique
+                        </li>
+                    </ul>
+                </div>
+            </section>
+     
+            <section class="body-content-section collapsible" data-collapsible="expanded">
+                <div class="body-content-section-header" data-collapsible-header="">
+                    <h2 class="body-content-title">Semaine 14: Conclusion</h2>
+                </div>
+
+                <div class="week-section-body collapsible-content" data-collapsible-content="">
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Conclusion</h3>
+                        <a class="week-section-doc" href="./assets/docs/20-conclusion.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/20-conclusion_suite.svg" alt="Types de changement">
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/20-conclusion_feedback.svg" alt="Étapes de changement post-déploiement">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="week-section-header">
+                        <h3 class="week-section-title">Révision</h3>
+                        <a class="week-section-doc" href="./assets/docs/ift2255_revision_final.pdf" target="_blank">
+                            <img class="week-section-doc-icon" src="assets/images/icon-pdf.svg" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="week-section-parts">
+                        <div class="week-section-part">
+                            <img class="week-section-image" src="assets/images/ift2255_revision_final.svg" alt="Types de changement">
+                            <p>
+                                <strong>Bonne fin de session!</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-summary collapsible-preview">
+                    <h3 class="section-summary-title">Contenu</h3>
+                    <ul class="bare-list section-summary-list">                   
+                        <li class="section-summary-list-item">
+                            Conclusion
+                        </li>
+                        <li class="section-summary-list-item">
+                            Révision
                         </li>
                     </ul>
                 </div>
