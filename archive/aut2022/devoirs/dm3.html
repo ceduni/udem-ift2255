@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT2255 | DM3</title>
+    <link rel="shortcut icon" href="./../../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./../../../dist/style.min.css?v=009">
+    <link rel="stylesheet" href="./../../../assets/css/teams.css?v=009">
+    <style>
+        .content-wrapper { 
+            position: relative; 
+            padding: 10px 5%; 
+        }
+
+        .page-header {
+            position: relative;
+            padding-bottom: 12px;
+            background-color: #fff;
+        }
+
+        .page-header .content-wrapper {
+            padding-top: 24px;
+            display: flex; justify-content: center;
+        }
+                
+        .teaching {
+            display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between;
+            padding: 24px 5vw 0;
+            margin-bottom: 18px;
+        }
+
+        .teaching-header {
+            display: flex;
+        }
+                    
+        .teaching-info {
+            flex-grow: 2;
+        }
+
+        .teaching-term {
+            margin: 0;
+            margin-bottom: 4px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .teaching-schedule {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .teaching-title {
+            margin: 0;
+            font-size: 2.8em; font-weight: 300;
+        }
+        
+            .teaching-links {
+                display: flex; flex-direction: row;
+            }
+
+            .teaching-link {
+                color: #555;
+            }
+            .teaching-link:not(:last-child) {
+                margin-right: 12px;
+            }
+
+            .teaching-link__link {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 10px 18px 12px;
+                font-size: 1.6rem; font-weight: 500;
+                border-radius: 2px;
+                text-align: center; 
+                border: 2px solid currentColor;
+                color: #fff;
+            }
+
+        .teaching-header {
+            align-items: center;
+        }
+
+        .page-body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .listing {
+            font-style: normal;
+            display: block;
+        }
+                
+        .dash:before { 
+            content: '-'; 
+            margin-left: 4px;
+            margin-right: 8px; 
+            font-weight: bold;
+            color: currentColor;
+        } 
+       
+        .section-title {
+            margin-bottom: 12px;
+            font-weight: 300; font-size: 2.6em;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        .problem-section {
+            display: flex;
+        }
+
+        .problem-section p {
+            line-height: 1.5;
+            margin-top: 0;
+        }
+
+        .problem-section-aside {
+            flex: 1 1;
+            display: flex; flex-direction: column;
+            padding-top: 24px;
+            padding-left: 5vw;
+            padding-right: 24px;
+            min-width: 300px;
+            color: #222;
+            background-color: #33302B;
+            background-color: #88B04B;
+        }
+
+            .problem-section-aside .section-title {
+                color: #f5f5f5;
+            }
+
+        .problem-section-content {
+            flex-grow: 2;
+            display: flex; flex-direction: column;
+            background-color: #f5f5f5;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .project-intro {
+            display: flex;
+        }
+
+        .project-intro-img {
+            display: block;
+            max-width: 50%;
+            height: auto;
+            flex: 1 1;
+        }
+
+        .project-intro-desc {
+            flex: 1 1;
+            padding: 12px 24px;
+            line-height: 1.5;
+            background-color: #1b1b1b;
+            color: #fff;
+        }
+
+            .project-intro-desc p {
+                font-size: 1.8em;
+            }
+
+        .project-intro-desc-title {
+            text-transform: uppercase;
+            color: #0d0d0d;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        
+        .problem-subsection--problem {
+            /* padding: 12px 5%; */
+            display: flex;
+        }
+
+            .problem-subsection--problem .proposition {
+                padding: 12px 24px;
+                line-height: 1.5;
+                background-color: #1b1b1b;
+                color: #fff;
+            }
+
+            .proposition p,
+            .proposition li {
+                font-size: 1.7em;
+            }
+
+        .problem-subsection--activity {
+            padding: 12px 2%;
+            background: url(./images/collecte.jpg) 100%/cover no-repeat;
+        }
+
+        .problem-subsection--request {
+            padding: 12px 2%;
+        }
+
+        .problem-subsection--data {
+            padding: 12px 2%;
+        }
+
+        .activities {
+            display: flex;
+        }
+
+        .activity {
+            flex: 1 1;
+            padding: 12px 18px 6px;
+            border-radius: 1px;
+            color: #fff;
+        }
+
+        .activity--publications {
+            background-color: #8f3e22ee;
+        }
+
+        .activity--projects {
+            background-color: #232425ee;
+        }
+
+        .activity--tools {
+            background-color: #3a8c37ee;
+        }
+
+        .activity-title {
+            margin-top: 0; margin-bottom: 6px;
+            font-size: 1.7em;
+        }
+        
+        .subsection-title {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 3em; font-weight: 300;
+            color: #EF4E36;
+        }
+
+        .subsection-title--activity {
+            color: #fff;
+        }
+
+        .api-item {
+            display: flex; flex-direction: column;
+            margin-bottom: 6px;
+        }
+
+        .api-request-path {
+            font-size: 1.1em; font-weight: 300;
+        }
+
+        .api-request-note {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .api-item-title {
+            margin-top: 0; margin-bottom: 2px;
+            font-size: 0.9em; font-weight: 500;
+        }
+
+        .paragraph-title {
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .paragraph-title + p {
+            margin-top: 0;
+        }
+
+        .title {
+            margin-bottom: 2px;
+        }
+
+        .rule-section {
+            padding: 24px 5vw;
+            background-color: #fff;
+        }
+        
+        .spec-label {
+            font-weight: 500;
+        }
+            .spec-label:after {
+                content: ":";
+            }
+
+
+            .spec-user-list {
+        display: flex; flex-direction: column;
+    }
+
+        .spec-user {
+            display: flex; flex-direction: column;
+            padding: 3px 0;
+        }
+            
+            .spec-user-id {
+                display: inline-flex; align-items: center;
+                font-weight: 500;
+            }
+                .user-icon {
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    margin-right: 3px;
+                }
+
+                .user-icon--member {
+                    background-color: #006aff;
+                }
+
+                .user-icon--supervisor {
+                    background-color: #e87429;
+                }
+
+                .user-icon--admin {
+                    background-color: #f32357;
+                }
+
+            .spec-user-desc {
+                font-size: 0.9em;
+                color: #555;
+            }
+
+        .spec-actor-list {
+            display: flex; flex-direction: column;
+        }
+    
+            .spec-actor {
+                display: flex; flex-direction: column;
+                padding: 3px 0;
+            }
+                .spec-actor-id {
+                    display: inline-flex; align-items: center;
+                    font-weight: 500;
+                }
+                .spec-actor-desc {
+                    font-size: 0.9em;
+                    color: #555;
+                }
+            .spec-func-desc {
+                width: 100%;
+                padding-left: 24px;
+                font-size: 0.9em;
+            }
+
+
+        .precisions {
+            display: flex; flex-direction: row;
+            flex-wrap: wrap;   
+        }
+        
+        .precision {
+            flex: 1 1 ;
+            margin-bottom: 6px; margin-right: 6px;
+            padding: 4px 12px 8px;
+            font-weight: 500; font-size: 1.3em;
+            color: #fff;
+            background-color: #6667AB;
+            border-radius: 1px;
+        }
+
+
+        .requirements {
+            display: flex; flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .requirements--admin .requirement {
+            border-color: #F24738;
+        }
+
+        .requirement {
+            margin-bottom: 6px;
+            margin-right: 6px;
+            padding: 6px 12px 8px;
+            color: #333;
+            width: calc(50% - 12px);
+            background-color: #fff;
+            border-radius: 3px;
+            border-bottom: 4px solid #6667AB;
+            box-shadow: 0 -1px 2px -1px #d5d5d5;
+        }
+
+        .requirement-title {
+            display: block;
+            color: royalblue;
+            margin-top: 0; margin-bottom: 6px;
+            font-size: 1.1em; font-weight: 300;
+        }
+
+        .requirement-description {
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+
+        .requirement .label {
+            color: #555;
+        }
+
+        .task-section {
+            padding: 24px 5vw;
+            color: #fff;
+            background-color: #3573DD;
+        }
+
+            .task-section .section-title {
+                color: #fff;
+            }
+
+        .evaluation-section {
+            padding: 24px 5vw;
+            color: #000;
+            background-color: #FF9147;
+        }
+            .evaluation-section .section-title {
+                color: #000;
+            }
+        
+        .calendar-link {
+            font-weight: 500;
+            color: royalblue;
+        }
+
+        .template-link {
+            display: block;
+            margin-top: 24px;
+            padding: 6px 12px;
+            width: 100%; max-width: 300px;
+            font-weight: 500; font-size: 1.5rem;
+            text-align: center;
+            color: #3573DD;
+            border-radius: 1px;
+            background-color: #fff;
+            transition: .2s;
+        }
+            .template-link:hover {
+                color: #fff;
+                background-color: #E87429;
+            }
+
+        .contact-discord {
+            color: #5865F2
+        }
+
+        table, tr, td {
+            border: 0 none;
+        }
+
+        ins {
+            text-decoration: none;
+            background-color: rgb(255, 234, 112);
+        }
+
+        .tasks {
+            margin-top: -12px;
+        }
+
+        .marking-scheme {
+            display: flex; flex-direction: column;
+            width: 100%; max-width: 300px;
+        }
+
+        .marking-scheme-title {
+            margin-top: 0;
+        }
+
+        .tbl-evaluation {
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        .tbl-evaluation td {
+            padding: 4px 6px;
+        }
+
+        .tbl-evaluation td:last-child {
+            font-weight: bold;
+            background-color: #f36523;
+        }
+
+        .tbl-evaluation-row {
+            background-color: #FFA061;
+        }
+
+        .tbl-evaluation-row {
+            border-bottom: 3px solid #ff9147;
+        }
+
+            .tbl-evaluation-row:last-child {
+                border-bottom: 0 none;
+            }
+
+            .tbl-evaluation-row--bonus {
+                border-top: 9px solid #ff9147;
+            }
+
+        @media only screen and (min-width: 0em) {
+            .problem-section-aside {
+                display: none;
+            }   
+            
+            .project-intro {
+                display: flex; flex-direction: column;
+            }
+
+                
+            .project-intro-img {
+                max-width: 100%;
+            }
+
+            .project-intro-desc {
+                margin-left: 0;
+            }
+
+            .activities {
+                flex-direction: column;
+            }
+
+            .activity {
+                margin-bottom: 12px;
+            }
+
+            .definitions {
+                flex-direction: column;
+            }
+
+            .requirements {
+                display: flex; flex-direction: column;
+            }
+
+            .requirement {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 40em) {
+            .problem-section-aside {
+                min-width: 300px;
+                padding-left: 2vw;
+                padding-right: 12px;
+            }
+
+            .problem-section-content {
+                flex-direction: column;
+            }        
+                
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 2vw;
+            }
+
+            .team-count  {
+                width: 20px;
+            }
+
+            .definitions {
+                flex-direction: row;
+            }
+        }
+
+        @media only screen and (min-width: 56em) {
+            .problem-section-aside {
+                display: flex;
+                min-width: 320px;
+                padding-left: 3vw;
+                padding-right: 18px;
+            }
+
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 3vw;
+            }
+
+            .team-count  {
+                width: auto;
+            }
+
+            .definitions {
+                display: flex; flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .definition {
+                flex: 1 1 ;
+                margin-bottom: 6px; margin-right: 6px;
+                padding: 4px 12px 8px;
+                font-weight: 500;
+                color: #fff;
+                background-color: #6667AB;
+                border-radius: 1px;
+            }
+        }
+
+        @media only screen and (min-width: 80em) {
+            .problem-section-aside {
+                padding-left: 5vw;
+                padding-right: 24px;
+            }
+
+            .project-intro {
+                display: flex; flex-direction: row;
+            }
+
+            
+            .project-intro-img {
+                max-width: 50%;
+            }
+
+            .rule-section,
+            .task-section,
+            .evaluation-section {
+                padding: 24px 5vw;
+            }
+            
+            .activities {
+                flex-direction: row;
+            }
+
+            .activity {
+                margin-right: 12px;
+            }
+
+            .definitions {
+                display: flex; flex-direction: row;
+                flex-wrap: wrap;
+            }
+        
+            .definition {
+                flex: 1 1 ;
+                margin-bottom: 6px; margin-right: 6px;
+                padding: 4px 12px 8px;
+                font-weight: 500;
+                color: #fff;
+                background-color: #6667AB;
+                border-radius: 1px;
+            }
+
+            .requirements {
+                display: flex; flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .requirement {
+                margin-bottom: 6px;
+                margin-right: 6px;
+                width: calc(50% - 12px);
+            }
+        }
+    </style>
+</head>
+
+<body data-id="dm3">
+    <header class="page-header">
+        <section class="teaching">
+            <div class="teaching-header">
+                <div class="teaching-logo">
+                    <a href="./../aut2022.html" class="bare-link teaching-logo-name">
+                        <span class="teaching-logo-code">IFT</span>
+                        <span class="teaching-logo-number">2255</span>
+                    </a>
+                </div>
+                <div class="teaching-info teaching-info--large">
+                    <h1 class="teaching-title" title="IFT2255 &ndash; Génie Logiciel">Devoir 3</h1>
+                    <p class="teaching-term">Automne 2022</p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="page-body">
+        <section class="problem-section">
+            <aside class="problem-section-aside">
+                <h2 class="section-title">Équipes</h2>
+                <div data-display="teams"></div>
+
+                <h2 class="section-title" style="margin-top: 12px;">Infos</h2>
+                <p>
+                    Équipes: <strong data-ruleng="">$NUM_TEAMS</strong> <br>
+                    Participants: <strong data-ruleng="">$NUM_PARTICIPANTS</strong> <br>
+                    Semaine: <strong data-ruleng="">$CURRENT_WEEK</strong> <br>
+                    Fin du jalon: <strong>2022-12-23</strong>
+                </p>
+            </aside>
+
+            <div class="problem-section-content">
+                <div class="project-intro">
+                    <img class="project-intro-img" src="./images/bineco_recyclage.webp" alt="">
+                    
+                    <div class="project-intro-desc">
+                        <h3 class="subsection-title" style="margin: 0;">Problème</h3>
+
+                        <p>
+                            La ville de Montréal a entrepris depuis 2010 de nombreuses initiatives pour encourager le recyclage et réduire le gaspillage des résidus alimentaires.
+                            Ceci s'est traduit par l'introduction de poubelle spécialisée (bac de recyclage, bac de compostage) dans la plupart des foyers.
+                            Un système de collecte a aussi été mis en place pour récupérer le contenu des bacs à des horaires fixes.
+                        </p>
+                        <p>
+                            Actuellement, les résidents reçoivent peu d'information sur l'acheminement de leurs déchets et ont peu de controle
+                            sur la destination ou l'utilisation de leurs déchets. Cette distance rend difficile toute forme de suivi de la part
+                            des résidents et atténue la motivation collective pour soutenir ces actions écologiques.
+                        </p>
+                    </div>
+                </div>
+
+                <section class="problem-subsection problem-subsection--problem">
+                    <div class="proposition">
+                        <h3 class="subsection-title" style="margin: 0;">Proposition</h3>
+                        <p>
+                            Nous pensons qu'une meilleur communication des activités de recyclage et compostage résultant du travail de tri effectué dans les foyers,
+                            et des métriques accessibles à tous réduiront la distance entre les acteurs.
+                            Ainsi nous proposons la création d'un outil, <em>“l'outil <b>Bineco</b>”</em> qui a pour objectif de:
+                        </p>
+                        <ul class="bare-list">
+                            <li class="check check--color-inherit">Faire le suivi des recyclables et des déchets organiques</li>
+                            <li class="check check--color-inherit">Visualiser l'efficacité des activités de réutilisation des déchets</li>
+                            <li class="check check--color-inherit">Sensibiliser les résidents à l'impact écologique de leurs actions</li>
+                            <li class="check check--color-inherit">Faciliter la communication entre la municipalité et les résidents</li>
+                            <li class="check check--color-inherit">Mettre en relation les consommateurs de déchets et les résidents</li>
+                        </ul>
+                    </div>
+                    <img class="project-intro-img" src="./images/collecte.jpg" alt="">
+                </section>
+
+               <section class="problem-subsection problem-subsection--request">
+                    <h3 class="subsection-title">Exigences</h3>
+
+                    
+                    <p>
+                        Étant limité en temps, nous ne vous demandons pas plus qu'une implémentation où l'<strong>interaction est en ligne de commande</strong>. <br>
+                        Dans l'élaboration de votre solution, nous vous demandons de bien vouloir respecter les spécifications suivantes.
+                    </p>
+
+                    <div class="problem-spec-section-group">
+                        <div class="spec-group spec-group--main">
+                            <h3 class="spec-group-title">Fonctionnalités</h3>
+
+                            <ul class="bare-list spec-func-list">
+                                <li class="spec-func">
+                                    Créer un compte
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Se connecter
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Modifier son profil
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Enregistrer un bac
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                   
+                                </li>
+                                <li class="spec-func">
+                                    Supprimer un bac
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Afficher l'état des bacs
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Vue général:</strong> Afficher le nom, le niveau de remplissage et un indicateur de composition valide.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Vue complète:</strong> Afficher la composition d'un bac et l'historique.
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Afficher l'état du traitement d'un lot de déchets
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Consulter les métriques
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    <del>Paramétriser les métriques
+                                    </del>
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Signaler un problème à MunicipInfo
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Trouver un consommateur
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Liste/Recherche:</strong> Afficher uniquement le nom et les types de déchets traités.
+                                    </div>
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">i</i> Fiche:</strong> Afficher toutes les informations (publiques)
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Noter une activité
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--member"></i>
+                                    </div>
+                                </li>
+
+                                <li class="spec-func">
+                                    Ajouter une activité 
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Modifier une activité 
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Supprimer une activité 
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>                              
+                                    <div class="spec-func-desc">
+                                        <strong class="label"><i class="ico-info">!</i> Post:</strong> Envoyer une notification
+                                    </div>
+                                </li>
+                                <li class="spec-func">
+                                    Notifier les résidents d'un besoin
+                                    <div class="spec-func-users">
+                                        <i class="user-icon user-icon--supervisor"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="spec-group spec-group--aside">
+                            <h3 class="spec-group-title">Utilisateurs</h3>
+
+                            <ul class="bare-list spec-user-list">
+                                <li class="spec-user spec-user--member">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--member"></i> Résident</span>
+                                    <span class="spec-user-desc">Utilisateur principal de Bineco faisant le suivi de ses bacs et du traitement des déchets.</span>
+                                </li>
+                                <li class="spec-user spec-user--supervisor">
+                                    <span class="spec-user-id"><i class="user-icon user-icon--supervisor"></i> Consommateur</span>
+                                    <span class="spec-user-desc">Utilisateur secondaire de Bineco gérant les activités d'exploitant et communiquant diverses besoins aux résidents.</span>
+                                </li>
+                            </ul>
+
+                            <h3 class="spec-group-title">Notes</h3>
+
+                            <ul class="bare-list spec-constraint-list">
+                                <li class="spec-constraint">
+                                    <strong>Inscription</strong>
+                                    Lors de la création d'un compte, un lien de confirmation (expirant après 3 jours) est envoyé à l'utilisateur.
+                                    Passé le délai de confirmation, l'inscription est annulée. Pour un consomateur, MunicipInfo est utilisé pour valider le code du consommateur.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Authentification</strong>
+                                    Lors de l'authentification, un utilisateur fournit son adresse courriel et son mot de passe. 
+                                    Si l'authentification réussit, l'utilisateur est amené à l'écran d'accueil propre à son type de compte.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Bac</strong>
+                                    En tout temps, un résident devrait pouvoir enregistrer et suivre un nouveau bac. 
+                                    Pour enregistrer un nouveau bac, il faut scanner le code QR du bac et l'identifier par un nom et un type.
+                                    MunicipInfo est utilisé pour valider le bac. Si un résident n'a pas de bac enregistré à son compte, il ne peut utiliser le reste de l'application.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Trouver un consommateur</strong>
+                                    La recherche de consomateur peut se faire, au moins, par nom et par type d'activités. Les accents ne sont pas pris en considération.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Métriques</strong>
+                                    L'application devrait présenter près de 3 métriques pour chaque niveau (résidentiel et municipal). 
+                                    Les métriques peuvent être composées de sous facteurs explorables et configurables par le résident.
+                                </li>
+                                <li class="spec-constraint">
+                                    <strong>Notification</strong>
+                                    Un résident peut choisir de recevoir ces notifications par courriel. 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="problem-subsection problem-subsection--request">
+                    <h3 class="subsection-title">MunicipInfo</h3>
+                
+                    <p>
+                        Les requêtes suivantes peuvent être envoyées à MunicipInfo.
+                    </p>
+
+                    <ul class="bare-list api">
+                        <li class="api-item">
+                            <strong class="api-request-path">list-consommateur</strong>
+                            
+                            <span class="api-request-desc">Récupère la liste des consommateurs</span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>LISTE <strong>--&gt;</strong></code> 
+                                    <i>Consommateur[]</i> (code, nom, details)
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">get-consommateur</strong>
+                            <span>params: <code>code</code></span>
+                            <span class="api-request-desc">Récupère les informations d'un consomateur</span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>TROUVE <strong>--&gt;</strong></code> 
+                                    <i>Consommateur</i> (code, nom, adresse, email, téléphone, details, type_dechets, capacité)
+                                </li>
+                                <li class="dash">
+                                    <code>ABSENT <strong>--&gt;</strong></code> 
+                                    <i>Aucun consommateur trouvé pour ce code</i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">get-bac</strong>
+                            <span class="api-request-desc">Récupère les informations d'un bac</span>
+                            <span>params: <code>codeqr</code></span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>TROUVE <strong>--&gt;</strong></code> 
+                                    <i>Bac</i> (codeqr, adresse, date_emission)
+                                </li>
+                                <li class="dash">
+                                    <code>ABSENT <strong>--&gt;</strong></code> 
+                                    <i>Aucun bac trouvé pour ce code</i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">list-lot</strong>
+                            
+                            <span class="api-request-desc">Récupère la liste des lots de déchets</span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>LISTE <strong>--&gt;</strong></code> 
+                                    <i>Lot[]</i> (numero, type, date_ramassage, date_livraison, statut)
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">get-lot</strong>
+                            <span class="api-request-desc">Récupère les informations d'un lot de déchets</span>
+                            <span>params: <code>numero</code></span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>TROUVE <strong>--&gt;</strong></code> 
+                                    <i>Lot</i> (numero, type, date_ramassage, date_livraison, statut, qte_total, qte_traite, taux_rejet, cout, consomateurs)
+                                </li>
+                                <li class="dash">
+                                    <code>ABSENT <strong>--&gt;</strong></code> 
+                                    <i>Aucun lot trouvé pour ce numero</i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="api-item">
+                            <strong class="api-request-path">post-message</strong>
+                            <span>body: <code>form</code></span>
+                            <h5 class="api-item-title">Réponse</h5>
+                            <ul class="bare-list">
+                                <li class="dash">
+                                    <code>TRANSMIS <strong>--&gt;</strong></code> 
+                                    <i>Le message a été transmis avec succès</i>
+                                </li>
+                                <li class="dash">
+                                    <code>ERREUR <strong>--&gt;</strong></code> 
+                                    <i>Une erreur est survenue lors de la transmissoin du message</i>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                
+                <section class="problem-subsection problem-subsection--data">
+                    <h3 class="subsection-title">Données</h3>
+
+                    <p>
+                        L'application devrait être initialisée avec la configuration minimale suivante:
+                    </p>
+
+                    <ul class="bare-list data-list font-code">
+                        <li class="data-item dash">
+                            3 comptes résidents
+                        </li>
+                        <li class="data-item dash">
+                            10 comptes consommateurs
+                        </li>
+                        <li class="data-item dash">
+                            2 bacs en utilisation pour chaque résident
+                        </li>
+                        <li class="data-item dash">
+                            5 lots de déchets dont 1 en cours de traitement
+                        </li>
+                        <li class="data-item dash">
+                            3 activités par consommateurs
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+        <section class="rule-section">
+            <h2 class="section-title">Règles du jeu</h2>
+            <div class="section-content">
+                <p>
+                    Vous avez droit à <strong>1 rencontre avec le client</strong>.  <br>
+                    Pour planifier une rencontre ou soumettre vos questions, communiquez avec notre responsable, Louis-Edouard LAFONTANT.
+                </p>
+
+                <ul class="bare-list contacts">
+                    <li class="contact contact--discord">Calendrier: <a href="https://calendly.com/lelafontant/ift2255-periode-de-consultation" title="Période de consultation">Période de consultation</a></li>
+                    <li class="contact contact--discord">Discord: <strong>L-E#2545</strong></li>
+                    <li class="contact contact--mail">Courriel: <a href="mailto:louis.edouard.lafontant@umontreal.ca">louis.edouard.lafontant@umontreal.ca</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2 class="section-title">Tâches</h2>
+
+            <div class="section-content">
+                <p>
+                    Pour ce troisième et dernier jalon, vous devez produire un rapport en HTML présentant votre conception détaillée et livrer l'application complète et documentée.<br>
+                    Il devra présenter tous les éléments produits durant le projet, <strong>mis à jour</strong>.
+                </p>
+    
+                <h3>Cadre du projet (mis à jour)</h3>
+    
+                <h3>Définition du domaine (mis à jour)</h3>
+
+                <h3>Analyse (mis à jour)</h3>
+                
+                <h3>Conception (mis à jour)</h3>
+
+                <h3>Implémentation</h3>
+                <ul class="tasks">
+                    <li class="task">Implémentation du design: 
+                        <ul class="bare-list" style="padding-left: 12px;">
+                            <li class="dash">Application complète et robuste: Toutes les fonctionnalités sont implémentées et les entrées sont validées</li>
+                            <li class="dash">Conforme au design: Toutes les classes du diagramme de classe doivent être présent dans le code.</li>
+                            <li class="dash">Fichier et stockage: Les données doivent être préservées au-delà d'une session</li>
+                        </ul>
+                    </li>
+                    <li class="task">Manuel d'utilisation: README décrivant comment utiliser l'application</li>
+                    <li class="task">Documentation: Documentation technique du code source (JavaDoc)</li>
+                </ul>
+
+                <h3>Tests</h3>
+                <ul class="tasks">
+                    <li class="task">
+                        Rapport de tests unitaires (JUnit)
+                        <ul class="bare-list" style="padding-left: 12px;">
+                            <li class="dash">3 tests unitaires par membre</li>
+                            <li class="dash">Méthodes non valides pour les tests: Constructeur, Getter et Setter, Méthode privée</li>
+                            <li class="dash">Tous les tests doivent passer</li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <h3 class="task-subsection-title task-subsection-title--document">Livrables</h3>
+                <ul class="task-documents bare-list">
+                    <li class="task-document check check--color-inherit">Cas d'utilisation (mis à jour)</li>
+                    <li class="task-document check check--color-inherit">Diagramme d'activités (mis à jour)</li>
+                    <li class="task-document check check--color-inherit">Diagramme de classes (mis à jour)</li>
+                    <li class="task-document check check--color-inherit">Diagramme de séquence (mis à jour)</li>
+                    <li class="task-document check check--color-inherit">Application: Exécutable JAR</li>
+                    <li class="task-document check check--color-inherit">Code source</li>
+                    <li class="task-document check check--color-inherit">Tests</li>
+                    <li class="task-document check check--color-inherit">Documentation: Génération Javadoc et README</li>
+                </ul>
+            </div>
+
+            <!-- <a class="bare-link template-link" target="_blank" href="README.md">Template pour le README</a> -->
+        </section>
+
+        <section class="evaluation-section">
+            <h2 class="section-title">Évaluation</h2>
+            <p>
+                Ce devoir compte pour <strong>25% de la note final</strong>. <br>
+                Le rapport et tous les artéfacts produits sont à <strong>remettre au plus tard le vendredi 23 décembre</strong> par le responsable d'équipe.
+            </p>
+
+            <div class="marking-scheme">
+                <h3 class="marking-scheme-title">Barème</h3>
+                <table class="tbl-evaluation">
+                    <tr class="tbl-evaluation-row">
+                        <td><del>Analyse</del></td>
+                        <td><del>10%</del></td>
+                    </tr>
+                    <tr class="tbl-evaluation-row">
+                        <td>Conception</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr class="tbl-evaluation-row">
+                        <td>Application</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr class="tbl-evaluation-row">
+                        <td>Code</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr class="tbl-evaluation-row">
+                        <td>Tests</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr class="tbl-evaluation-row">
+                        <td>Documentation</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr class="tbl-evaluation-row tbl-evaluation-row--bonus">
+                        <td><strong>Bonus:</strong> Démonstration</td>
+                        <td>10%</td>
+                    </tr>
+                </table>
+            </div>
+            <p style="margin-bottom: 2px;">
+                Le <em>Bonus</em> consiste à faire une démonstration de l'application dans une vidéo de 5 minutes.
+            </p>
+            <ul class="bare-list">
+                <li class="check check--color-inherit">Présentation du contexte et de la problématique.</li>
+                <li class="check check--color-inherit">Mention des objectifs et des métriques.</li>
+                <li class="check check--color-inherit">Démonstration d'au moins 3 fonctionnalités (répondant aux objectifs).</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="content-wrapper">
+            <p>
+                IFT2255 &ndash; Génie logiciel <br>
+                Devoir 3
+            </p>
+            <p class="footer-maintenance">
+                Maintenu par: Louis-Edouard LAFONTANT (<a class="bare-link footer__link" href="http://www-ens.iro.umontreal.ca/~lafontle/" target="_blank">LELAFONTANT</a>) <br>
+                Dernière mise à jour: 2022-12-22
+            </p>
+            <p class="copyright">&copy; 2021 &ndash; 2022 Ceduni</p>
+        </div>
+    </footer>
+
+    <script src="../dist/data.js?v=006"></script>
+</body>
+
+</html>

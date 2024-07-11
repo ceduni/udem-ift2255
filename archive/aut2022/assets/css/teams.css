@@ -1,0 +1,96 @@
+.teams {
+    display: flex; flex-direction: column;
+}
+
+.team {
+    display: flex; flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.team-info {
+    display: flex; align-items: center; 
+    margin-bottom: 4px;
+}
+
+    .team-name {
+        margin-right: 6px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    
+    .team-count {                    
+        padding-left: 2px; padding-right: 2px;
+        font-size: 0.9em; font-weight: 600;
+        color: #f36523;
+        border-bottom: 2px solid #f36523;
+    }
+
+.team-group {
+    display: flex;
+}
+
+.team-captain {
+    font-size: 0.9em;
+    font-weight: 500;
+    width: 100%;
+    color: #555;
+}
+
+
+.icon {
+    display: inline-block;
+    font-style: normal;
+}
+
+.icon-person {
+    position: relative;
+    margin-right: 3px;
+    width: 16px; min-width: 16px;
+    height: 16px;
+    font-size: 1rem;
+    z-index: 5;
+}
+
+.icon-person:before {
+    content: "";
+    position: absolute;
+    top: 0; left: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #FFD300;
+    box-shadow: 0 1px 2px #333;
+    z-index: -1;
+}
+
+.icon-person:after {
+    content: "";
+    position: absolute;
+    top: 6px; bottom: 0; left: 0; right: 0;
+    border-radius: 180px 180px 30px 30px;
+    background-color: #555;
+    box-shadow: 0 2px 4px -2px #f5f5f5;
+    z-index: -2;
+}
+
+
+.questions {
+    margin-top: 6px;
+    display: flex;
+}
+
+.question {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.question.used {
+    background-color: #FF6F61;
+}
+
+.question.missed {
+    background-color: #555;
+}
