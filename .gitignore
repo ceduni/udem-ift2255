@@ -18,7 +18,7 @@ coverage
 # development specific files
 .dev.*
 
-temp
+temp/
 
 # Optional eslint cache
 .eslintcache
