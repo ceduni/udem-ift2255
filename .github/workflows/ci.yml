@@ -33,11 +33,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # Exécuter les tests Maven
-      - name: Run Maven tests
-        run: mvn clean test
+      # Exécuter les tests Maven avec JaCoCo
+      - name: Run Maven tests with JaCoCo
+        run: mvn clean verify
 
-      # Step 5: Upload coverage report
+      # Téléverser le rapport de couverture
       - name: Upload JaCoCo coverage report
         uses: actions/upload-artifact@v3
         with:
