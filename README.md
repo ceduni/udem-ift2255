@@ -1,5 +1,8 @@
 # IFT2255 - Génie Logiciel
 
+![Java CI](https://github.com/ceduni/udem-ift2255/actions/workflows/ci.yml/badge.svg)
+
+
 > Cours enseigné à l'Université de Montréal
 
 Le cours porte sur la théorie du génie logiciel et vise à donner aux étudiants une expérience pratique de développement de logiciel.

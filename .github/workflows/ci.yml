@@ -1,0 +1,38 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Vérifier le code source depuis le dépôt
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      # Configurer Java (choisissez la version de Java requise par votre projet)
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17' # Ou '11', '8', etc. selon votre projet
+          distribution: 'temurin'
+
+      # Mettre en cache les dépendances Maven
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # Exécuter les tests Maven
+      - name: Run Maven tests
+        run: mvn clean test
