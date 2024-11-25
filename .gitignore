@@ -20,6 +20,8 @@ coverage
 
 temp/
 
+target/
+
 # Optional eslint cache
 .eslintcache
 

@@ -36,3 +36,10 @@ jobs:
       # Exécuter les tests Maven
       - name: Run Maven tests
         run: mvn clean test
+
+      # Step 5: Upload coverage report
+      - name: Upload JaCoCo coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: jacoco-report
+          path: target/site/jacoco/
