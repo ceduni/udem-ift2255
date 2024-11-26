@@ -21,12 +21,11 @@ import com.ift2255a24.Project;
 import com.ift2255a24.ProjectService;
 
 class ProjectServiceTest {
-
     @Mock
     private IRepository<Project> mockProjectRepository;
 
     @InjectMocks
-    private ProjectService mockProjectService;
+    private ProjectService projectService;
 
     @BeforeEach
     void setUp() {
@@ -41,7 +40,7 @@ class ProjectServiceTest {
         when(mockProjectRepository.save(any(Project.class))).thenReturn(project);
 
         // Act
-        Project createdProject = mockProjectService.createProject(name);
+        Project createdProject = projectService.createProject(name);
 
         // Assert
         assertNotNull(createdProject, "Le projet créé ne doit pas être null");
@@ -60,7 +59,7 @@ class ProjectServiceTest {
 
         try {
             // Act
-            Project fetchedProject = mockProjectService.getProjectById(1);
+            Project fetchedProject = projectService.getProjectById(1);
 
             // Assert
             assertNotNull(fetchedProject);
@@ -81,7 +80,7 @@ class ProjectServiceTest {
 
         // Act & Assert
         Exception exception = assertThrows(Exception.class, () -> {
-            mockProjectService.getProjectById(badId);
+            projectService.getProjectById(badId);
         });
 
         // Assert
@@ -100,7 +99,7 @@ class ProjectServiceTest {
         when(mockProjectRepository.save(existingProject)).thenReturn(existingProject);
 
         // Act
-        Project updatedProject = mockProjectService.updateProject(1, new Project(newName));
+        Project updatedProject = projectService.updateProject(1, new Project(newName));
 
         // Assert
         assertEquals(newName, updatedProject.getName());
@@ -117,7 +116,7 @@ class ProjectServiceTest {
         when(mockProjectRepository.getAll()).thenReturn(mockProjects);
 
         // Act
-        List<Project> allProjects = mockProjectService.getAllProjects();
+        List<Project> allProjects = projectService.getAllProjects();
 
         // Assert
         assertEquals(mockProjects.size(), allProjects.size());
@@ -134,7 +133,7 @@ class ProjectServiceTest {
         when(mockProjectRepository.getAll()).thenReturn(mockProjects);
 
         // Act
-        List<Project> result = mockProjectService.searchProjectsByName("A");
+        List<Project> result = projectService.searchProjectsByName("A");
 
         // Assert
         assertEquals(1, result.size());
@@ -151,8 +150,8 @@ class ProjectServiceTest {
         when(mockProjectRepository.save(any(Project.class))).thenAnswer(invocation -> invocation.getArgument(0));
 
         // Act
-        Project updatedProject = mockProjectService.updateProject(1, new Project(newName));
-        Project fetchedProject = mockProjectService.getProjectById(1);
+        Project updatedProject = projectService.updateProject(1, new Project(newName));
+        Project fetchedProject = projectService.getProjectById(1);
 
         // Assert
         // Vérifier que le projet a été mis à jour correctement

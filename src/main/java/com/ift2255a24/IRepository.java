@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface IRepository<T> {
-    Project save(Project project);
-    List<Project> getAll();
-    Optional<Project> get(int id);
+    T save(T project);
+    List<T> getAll();
+    Optional<T> get(int id);
     boolean delete(int id);
 }
 
